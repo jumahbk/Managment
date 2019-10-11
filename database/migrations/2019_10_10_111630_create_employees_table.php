@@ -17,6 +17,12 @@ class CreateEmployeesTable extends Migration
             $table->bigIncrements('id');
             $table->string('englishName');
             $table->string('arabicName');
+            $table->string('idNo');
+            $table->date('idExp');
+            $table->unsignedBigInteger('nationality_id');
+
+
+            $table->index('nationality_id');
             $table->timestamps();
         });
     }
