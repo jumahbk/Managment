@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-
+<?php
+$arabic = true;
+?>
 <!--
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4 & Angular 8
 Author: KeenThemes
@@ -12,8 +14,13 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
 License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 -->
+@if(App::isLocale('en'))
 <html lang="en">
+@else
 
+    <html direction="rtl" dir="rtl" style="direction: rtl" >
+
+@endif
 <!-- begin::Head -->
 <head>
     <base href="../../">
@@ -61,7 +68,14 @@ r
     <link href="assets/plugins/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
 
     <!--end:: Vendor Plugins -->
-    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+
+    @if(App::isLocale('en'))
+        <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+
+    @else
+        <link href="assets/css/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
+
+    @endif
 
     <!--begin:: Vendor Plugins for custom pages -->
     <link href="assets/plugins/custom/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
@@ -883,33 +897,25 @@ r
 
                             <!--begin: Language bar -->
                             <div class="kt-header__topbar-item kt-header__topbar-item--langs">
-                                <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,10px">
-											<span class="kt-header__topbar-icon">
-												<img class="" src="assets/media/flags/012-uk.svg" alt="" />
-											</span>
+                                <div class="kt-header__topbar-wrapper" >
+                                            <a href="/en" class="kt-nav__link">
+                                                <span class="kt-nav__link-icon"><img width="25" src="assets/media/flags/012-uk.svg" alt="" /></span>
+                                            </a>
+
+
+
+
                                 </div>
-                                <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim">
-                                    <ul class="kt-nav kt-margin-t-10 kt-margin-b-10">
-                                        <li class="kt-nav__item kt-nav__item--active">
-                                            <a href="#" class="kt-nav__link">
-                                                <span class="kt-nav__link-icon"><img src="assets/media/flags/020-flag.svg" alt="" /></span>
-                                                <span class="kt-nav__link-text">English</span>
-                                            </a>
-                                        </li>
-                                        <li class="kt-nav__item">
-                                            <a href="#" class="kt-nav__link">
-                                                <span class="kt-nav__link-icon"><img src="assets/media/flags/016-spain.svg" alt="" /></span>
-                                                <span class="kt-nav__link-text">Spanish</span>
-                                            </a>
-                                        </li>
-                                        <li class="kt-nav__item">
-                                            <a href="#" class="kt-nav__link">
-                                                <span class="kt-nav__link-icon"><img src="assets/media/flags/017-germany.svg" alt="" /></span>
-                                                <span class="kt-nav__link-text">German</span>
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <div>--</div>
+                                <div class="kt-header__topbar-wrapper" >
+
+                                    <a href="/ar" class="kt-nav__link">
+                                        <span class="kt-nav__link-icon"><img width="25" src="assets/media/flags/008-saudi-arabia.svg" alt="" /></span>
+                                    </a>
+
+
                                 </div>
+
                             </div>
 
                             <!--end: Language bar -->
