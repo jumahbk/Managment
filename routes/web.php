@@ -16,6 +16,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::resource('employee','EmployeeController');
+Route::resource('title','TitleController');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/{locale}', function ($locale) {

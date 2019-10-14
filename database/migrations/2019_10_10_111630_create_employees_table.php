@@ -15,13 +15,15 @@ class CreateEmployeesTable extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('englishName');
-            $table->string('arabicName');
-            $table->string('idNo');
-            $table->date('idExp');
+            $table->unsignedBigInteger('title_id')->nullable();
+            $table->string('englishName')->nullable();
+            $table->string('arabicName')->nullable();
+            $table->string('idNo')->nullable()->unique();
+            $table->date('idExp')->nullable();
             $table->unsignedBigInteger('nationality_id');
+            $table->boolean('delete')->default(false);
 
-
+            $table->index('title_id');
             $table->index('nationality_id');
             $table->timestamps();
         });
