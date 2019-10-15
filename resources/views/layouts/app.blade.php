@@ -35,7 +35,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!--end::Fonts -->
 
     <!--begin::Global Theme Styles(used by all pages) -->
-r
+
     <!--begin:: Vendor Plugins -->
     <link href="{{  asset('assets/plugins/general/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />

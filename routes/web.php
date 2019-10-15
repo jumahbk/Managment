@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
 Route::resource('employee','EmployeeController');
 Route::resource('title','TitleController');
 

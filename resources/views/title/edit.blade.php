@@ -22,11 +22,11 @@
                 <div class="form-group row form-group-marginless kt-margin-t-20">
                     <label class="col-lg-3 col-form-label">English Name:</label>
                     <div class="col-lg-3">
-                        <input id="englishName" name="englishName" type="text" class="form-control" placeholder="Full name" value="{{$title->englishName}}">
+                        <input id="englishName" name="englishName" type="text" class="form-control" placeholder="Full name" value="{{$t->englishName}}">
                     </div>
                     <label class="col-lg-3 col-form-label">Arabic Name:</label>
                     <div class="col-lg-3">
-                        <input id="arabicName" name="arabicName" type="text" class="form-control" placeholder="الاسم العربي" value="{{$title->arabicName}}">
+                        <input id="arabicName" name="arabicName" type="text" class="form-control" placeholder="الاسم العربي" value="{{$t->arabicName}}">
                     </div>
 
 

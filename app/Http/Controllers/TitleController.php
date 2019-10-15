@@ -63,9 +63,10 @@ class TitleController extends Controller
      * @param  \App\Title  $title
      * @return \Illuminate\Http\Response
      */
-    public function edit(Title $title)
+    public function edit(Title $t)
     {
-        return view('title.edit', compact('title'));
+ 
+        return view('title.edit', compact('t','t'));
     }
 
     /**
