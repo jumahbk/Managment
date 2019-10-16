@@ -92,7 +92,7 @@
                                         <a href="#" class="btn btn-label-primary btn-bold btn-icon-h kt-margin-l-10">
                                             View All Records
                                         </a>
-                                        <a href="#" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                        <a href="/title/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                             Edit
                                         </a>
 

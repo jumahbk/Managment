@@ -14,7 +14,10 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
 License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 -->
-@if(App::isLocale('en'))
+<?php
+App::setLocale(Session::get('applocale'));
+?>
+@if(Session::get('applocale') == 'en')
 <html lang="en">
 @else
 
@@ -912,7 +915,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             <!--begin: Language bar -->
                             <div class="kt-header__topbar-item kt-header__topbar-item--langs">
                                 <div class="kt-header__topbar-wrapper" >
-                                            <a href="/en" class="kt-nav__link">
+                                            <a href="/lang/en" class="kt-nav__link">
                                                 <span class="kt-nav__link-icon"><img width="25" src="assets/media/flags/012-uk.svg" alt="" /></span>
                                             </a>
 
@@ -923,7 +926,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div>--</div>
                                 <div class="kt-header__topbar-wrapper" >
 
-                                    <a href="/ar" class="kt-nav__link">
+                                    <a href="/lang/ar" class="kt-nav__link">
                                         <span class="kt-nav__link-icon"><img width="25" src="assets/media/flags/008-saudi-arabia.svg" alt="" /></span>
                                     </a>
 

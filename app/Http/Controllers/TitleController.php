@@ -30,7 +30,16 @@ class TitleController extends Controller
         return view('title.create');
 
     }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function batch()
+    {
+        return view('title.batch');
 
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -79,11 +88,34 @@ class TitleController extends Controller
     public function update(Request $request, Title $title)
     {
         $this->save($request, $title->id);
-        redirect('/title');
+       return redirect('/title');
     }
+    public function saveBatch(Request $request)
+    {
+        $data = $request['data'];
 
+        $lines = explode("\n", $data);
+
+        foreach ($lines as $d)
+        {
+
+            $tokens = explode(";", $d);
+            $title = new Title();
+            $title->englishName = $tokens[0];
+            $title->arabicName = $tokens[1];
+            $title->push();
+
+        }
+
+        redirect('/title');
+
+    }
     public function save(Request $request, $id)
     {
+        if($request['batch'] == 1)
+        {
+            return $this->saveBatch($request);
+        }
         $title = new Title();
         if($id !== -1)
         {
@@ -93,6 +125,8 @@ class TitleController extends Controller
         $title->arabicName = $request['arabicName'];
 
         $title->push();
+
+
 
     }
 
@@ -104,6 +138,10 @@ class TitleController extends Controller
      */
     public function destroy(Title $title)
     {
+        $title->delete = true;
+        $title->push();
+        redirect('/title');
+
         //
     }
 }
