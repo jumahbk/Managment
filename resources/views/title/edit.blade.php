@@ -21,7 +21,7 @@ App::setLocale(Session::get('applocale'));
         <div class="kt-portlet__head">
             <div class="kt-portlet__head-label">
                 <h3 class="kt-portlet__head-title">
-                    Create Title
+
                     {{    __('messages.edittitle')}}
                 </h3>
             </div>
@@ -38,11 +38,11 @@ App::setLocale(Session::get('applocale'));
 
                     <div class="kt-portlet__body col-md-9">
                 <div class="form-group row form-group-marginless kt-margin-t-20">
-                    <label class="col-lg-3 col-form-label">English Name:</label>
+                    <label class="col-lg-3 col-form-label">                    {{    __('messages.englishName')}}:</label>
                     <div class="col-lg-3">
                         <input id="englishName" name="englishName" type="text" class="form-control" placeholder="Full name" value="{{$t->englishName}}">
                     </div>
-                    <label class="col-lg-3 col-form-label">Arabic Name:</label>
+                    <label class="col-lg-3 col-form-label"> {{    __('messages.arabicName')}}:</label>
                     <div class="col-lg-3">
                         <input id="arabicName" name="arabicName" type="text" class="form-control" placeholder="الاسم العربي" value="{{$t->arabicName}}">
                     </div>
@@ -57,7 +57,7 @@ App::setLocale(Session::get('applocale'));
                     <div class="row">
                         <div class="col-lg-5"></div>
                         <div class="col-lg-7">
-                            <button type="submit" class="btn btn-brand">Submit</button>
+                            <button type="submit" class="btn btn-brand"> {{    __('messages.save')}}</button>
                         </div>
                     </div>
                 </div>

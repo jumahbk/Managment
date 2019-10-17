@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php
 $arabic = true;
+App::setLocale(Session::get('applocale'));
+
 ?>
 <!--
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4 & Angular 8
@@ -14,12 +16,10 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
 License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 -->
-<?php
-App::setLocale(Session::get('applocale'));
-?>
+
 @if(Session::get('applocale') == 'en')
 <html lang="en">
-@else
+@elseif(Session::get('applocale') == 'ar')
 
     <html direction="rtl" dir="rtl" style="direction: rtl" >
 

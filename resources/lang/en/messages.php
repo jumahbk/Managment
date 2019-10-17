@@ -13,6 +13,8 @@ return [
     */
 
     'test' => 'ssss',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-
+    'edittitle' => 'Edit title.',
+    'englishName' => 'English Name',
+    'arabicName' => 'Arabic Name',
+    'save' => 'Save',
 ];

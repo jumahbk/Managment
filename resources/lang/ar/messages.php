@@ -13,6 +13,9 @@ return [
     */
 
     'test' => 'تجربه',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'edittitle' => 'تعديل مسمى المهنه',
+    'englishName' => 'الاسم الانجليزي',
+    'arabicName' => 'الاسم العربي',
+    'save' => 'حفظ',
 
 ];
