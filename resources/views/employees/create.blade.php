@@ -25,6 +25,37 @@
 
 
             <div class="kt-portlet__body col-md-9">
+
+
+                <div class="form-group row form-group-marginless kt-margin-t-20">
+
+
+
+
+
+
+
+
+
+                    <label class="col-lg-3 col-form-label">      {{    __('messages.englishName')}}:</label>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="exampleSelect1">
+                        @foreach($titles as $t)
+                            <option id="{{$t->id}}"> {{$t->englishName}} -  {{$t->arabicName}} </option>
+                            @endforeach
+                        </select>                    </div>
+                    <label class="col-lg-3 col-form-label">{{    __('messages.arabicName')}}:</label>
+                    <div class="col-lg-3">
+                        <select class="form-control" id="exampleSelect1">
+                            @foreach($nats as $t)
+                                <option id="{{$t->id}}"> {{$t->englishName}} -  {{$t->arabicName}} </option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+
+
+
                 <div class="form-group row form-group-marginless kt-margin-t-20">
                     <label class="col-lg-3 col-form-label">      {{    __('messages.englishName')}}:</label>
                     <div class="col-lg-3">

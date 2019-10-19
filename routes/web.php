@@ -15,6 +15,7 @@ Route::get('/types/batch', 'TypeeController@batch')->name('typebatch');
 Route::resource('types','TypeController');
 Route::resource('nationalities','NationalityController');
 Route::resource('employees','EmployeeController');
+Route::resource('companies','CompanyController');
 
 Route::get('/lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
 
