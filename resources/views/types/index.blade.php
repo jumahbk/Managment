@@ -16,7 +16,7 @@
 												<i class="kt-font-brand flaticon2-line-chart"></i>
 											</span>
                 <h3 class="kt-portlet__head-title">
-                    {{    __('messages.titlelist')}}
+                    {{    __('messages.typelist')}}
                 </h3>
             </div>
             <div class="kt-portlet__head-toolbar">
@@ -24,7 +24,7 @@
                     <div class="kt-portlet__head-actions">
 
                         &nbsp;
-                        <a href="./title/create" class="btn btn-brand btn-elevate btn-icon-sm">
+                        <a href="./types/create" class="btn btn-brand btn-elevate btn-icon-sm">
                             <i class="la la-plus"></i>
                             {{    __('messages.addnew')}}
                         </a>
@@ -42,7 +42,7 @@
                             <tr>
                                 <th>
 
-                                    {{    __('messages.englishname')}}
+                                    {{    __('messages.englishName')}}
 
                                 </th>
                                 <th>

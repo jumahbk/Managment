@@ -20,7 +20,7 @@
         <!--begin::Form-->
 
 
-            <form method="POST" action="/title"  class="kt-form kt-form--label-right">
+            <form method="POST" action="/types"  class="kt-form kt-form--label-right">
                 @csrf
 
 
@@ -34,6 +34,33 @@
                     <div class="col-lg-3">
                         <input id="arabicName" name="arabicName" type="text" class="form-control" placeholder="الاسم العربي">
                     </div>
+                </div>
+
+                <div class="form-group row form-group-marginless kt-margin-t-20">
+                    <label class="col-lg-3 col-form-label">      {{    __('messages.idNo')}}:</label>
+                    <div class="col-lg-3">
+                        <input id="idNo" name="idNo" type="text" class="form-control" placeholder="">
+                    </div>
+                    <label class="col-lg-3 col-form-label">{{    __('messages.idExp')}}:</label>
+                    <div class="col-lg-3">
+                        <input id="idExp" name="idExp" type="date" class="form-control" >
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="form-group row form-group-marginless kt-margin-t-20">
+                    <label class="col-lg-3 col-form-label">      {{    __('messages.mobile')}}:</label>
+                    <div class="col-lg-3">
+                        <input id="mobile" name="mobile" type="text" class="form-control">
+                    </div>
+                    <label class="col-lg-3 col-form-label">{{    __('messages.email')}}:</label>
+                    <div class="col-lg-3">
+                        <input id="email" name="email" type="email" class="form-control" >
+                    </div>
+
 
                 </div>
 

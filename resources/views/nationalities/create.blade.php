@@ -20,7 +20,7 @@
         <!--begin::Form-->
 
 
-            <form method="POST" action="/title"  class="kt-form kt-form--label-right">
+            <form method="POST" action="/nationalities"  class="kt-form kt-form--label-right">
                 @csrf
 
 

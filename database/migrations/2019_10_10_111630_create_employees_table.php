@@ -22,6 +22,8 @@ class CreateEmployeesTable extends Migration
             $table->date('idExp')->nullable();
             $table->unsignedBigInteger('nationality_id');
             $table->boolean('delete')->default(false);
+            $table->string('email')->nullable()->unique();
+            $table->string('mobile')->nullable()->unique();
 
             $table->index('title_id');
             $table->index('nationality_id');

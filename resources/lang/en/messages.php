@@ -17,4 +17,19 @@ return [
     'englishName' => 'English Name',
     'arabicName' => 'Arabic Name',
     'save' => 'Save',
+    'titlelist' => 'Job Titles List',
+    'addnew' => 'Add new record',
+    'actions' => 'Actions',
+    'viewall' => 'View all records',
+    'edit' => 'Edit',
+    'createNew' => 'Add new record',
+    'typelist' => 'Data Types',
+    'email' => 'Email Address',
+    'mobile' => 'Mobile Number',
+    'idNo' => 'ID Number',
+
+    'idExp' => 'ID Expiry',
+
+
+
 ];

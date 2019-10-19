@@ -10,11 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/{locale}', function ($locale) {
-    App::setLocale($locale);
-    return redirect('/title/1/edit');
-    //
-});
+Route::get('/nationalities/batch', 'NationalityController@batch')->name('nationalitybatch');
+Route::get('/types/batch', 'TypeeController@batch')->name('typebatch');
+Route::resource('types','TypeController');
+Route::resource('nationalities','NationalityController');
+Route::resource('employees','EmployeeController');
+
 Route::get('/lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
 
 Route::get('/', function () {
@@ -23,6 +24,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/title/batch', 'TitleController@batch')->name('titlebatch');
+
 
 Route::resource('employee','EmployeeController');
 Route::resource('title','TitleController');

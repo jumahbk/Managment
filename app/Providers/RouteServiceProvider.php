@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Nationality;
 use App\Title;
+use App\Type;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +30,13 @@ class RouteServiceProvider extends ServiceProvider
 
         parent::boot();
         Route::model('title', Title::class);
+        Route::model('types', Type::class);
+        Route::model('type', Type::class);
+        Route::model('nationalities', Nationality::class);
+        Route::model('nationality', Nationality::class);
+
+
+
 
     }
 

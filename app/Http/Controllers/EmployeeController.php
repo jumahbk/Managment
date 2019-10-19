@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Employee;
+use App\Nationality;
+use App\Title;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
@@ -14,7 +16,10 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+
+        $data = Employee::all();
+
+        return view('employees.index', compact('data'));
     }
 
     /**
@@ -24,9 +29,21 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('employee.create');
-    }
+        $titles = Title::all();
+        $nats = Nationality::all();
+        return view('employees.create', compact('nats','titles') );
 
+    }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function batch()
+    {
+        return view('employees.batch');
+
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -35,7 +52,11 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->save($request, -1);
+        return redirect('/employees');
+
+
+
     }
 
     /**
@@ -55,9 +76,10 @@ class EmployeeController extends Controller
      * @param  \App\Employee  $employee
      * @return \Illuminate\Http\Response
      */
-    public function edit(Employee $employee)
+    public function edit(Employee $t)
     {
-        //
+
+        return view('employees.edit', compact('t','t'));
     }
 
     /**
@@ -69,7 +91,47 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, Employee $employee)
     {
-        //
+        $this->save($request, $employee->id);
+        return redirect('/employees');
+    }
+    public function saveBatch(Request $request)
+    {
+        $data = $request['data'];
+
+        $lines = explode("\n", $data);
+
+        foreach ($lines as $d)
+        {
+
+            $tokens = explode(",", $d);
+            $employee = new Employee();
+            $employee->englishName = $tokens[0];
+            $employee->arabicName = $tokens[1];
+            $employee->push();
+
+        }
+
+        redirect('/employees');
+
+    }
+    public function save(Request $request, $id)
+    {
+        if($request['batch'] == 1)
+        {
+            return $this->saveBatch($request);
+        }
+        $employee = new Employee();
+        if($id !== -1)
+        {
+            $employee = Employee::find($id);
+        }
+        $employee->englishName = $request['englishName'];
+        $employee->arabicName = $request['arabicName'];
+
+        $employee->push();
+
+
+
     }
 
     /**
@@ -80,6 +142,10 @@ class EmployeeController extends Controller
      */
     public function destroy(Employee $employee)
     {
+        $employee->delete = true;
+        $employee->push();
+        redirect('/employees');
+
         //
     }
 }
