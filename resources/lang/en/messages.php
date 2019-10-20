@@ -27,9 +27,20 @@ return [
     'email' => 'Email Address',
     'mobile' => 'Mobile Number',
     'idNo' => 'ID Number',
+    'nat' => 'Nationality',
 
     'idExp' => 'ID Expiry',
+    'title' => 'Job Title',
 
+    'home' => 'Home',
+    'staff' => 'Employees',
+    'docs' => 'Documents',
+    'assets' => 'Assets',
+    'showall'=>'Show All',
+    'companyname' => 'Company Name',
+
+    'companies'=> 'Companies',
+        'summery' => 'Summery',
 
 
 ];

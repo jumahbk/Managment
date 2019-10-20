@@ -20,7 +20,7 @@
         <!--begin::Form-->
 
 
-            <form method="POST" action="/types"  class="kt-form kt-form--label-right">
+            <form method="POST" action="/employees"  class="kt-form kt-form--label-right">
                 @csrf
 
 
@@ -29,26 +29,39 @@
 
                 <div class="form-group row form-group-marginless kt-margin-t-20">
 
-
-
-
-
-
-
-
-
-                    <label class="col-lg-3 col-form-label">      {{    __('messages.englishName')}}:</label>
+                    <label class="col-lg-3 col-form-label">      {{    __('messages.companyname')}}:</label>
                     <div class="col-lg-3">
-                        <select class="form-control" id="exampleSelect1">
-                        @foreach($titles as $t)
-                            <option id="{{$t->id}}"> {{$t->englishName}} -  {{$t->arabicName}} </option>
+                        <select class="form-control" name="company_id">
+                            @foreach($comps as $t)
+                                <option value="{{$t->id}}"> {{$t->englishName}} -  {{$t->arabicName}} </option>
                             @endforeach
                         </select>                    </div>
-                    <label class="col-lg-3 col-form-label">{{    __('messages.arabicName')}}:</label>
+
+                </div>
+
+
+
+                <div class="form-group row form-group-marginless kt-margin-t-20">
+
+
+
+
+
+
+
+
+                    <label class="col-lg-3 col-form-label">      {{    __('messages.title')}}:</label>
                     <div class="col-lg-3">
-                        <select class="form-control" id="exampleSelect1">
+                        <select class="form-control" name="title_id">
+                        @foreach($titles as $t)
+                            <option value="{{$t->id}}"> {{$t->englishName}} -  {{$t->arabicName}} </option>
+                            @endforeach
+                        </select>                    </div>
+                    <label class="col-lg-3 col-form-label">{{    __('messages.nat')}}:</label>
+                    <div class="col-lg-3">
+                        <select class="form-control" name="nationality_id">
                             @foreach($nats as $t)
-                                <option id="{{$t->id}}"> {{$t->englishName}} -  {{$t->arabicName}} </option>
+                                <option value="{{$t->id}}"> {{$t->englishName}} -  {{$t->arabicName}} </option>
                             @endforeach
                         </select>
                     </div>
@@ -57,7 +70,7 @@
 
 
                 <div class="form-group row form-group-marginless kt-margin-t-20">
-                    <label class="col-lg-3 col-form-label">      {{    __('messages.englishName')}}:</label>
+                    <label class="col-lg-3 col-form-label">      {{    __('messages.englishname')}}:</label>
                     <div class="col-lg-3">
                         <input id="englishName" name="englishName" type="text" class="form-control" placeholder="Full name">
                     </div>

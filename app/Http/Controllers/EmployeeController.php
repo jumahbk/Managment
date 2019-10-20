@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Company;
 use App\Employee;
 use App\Nationality;
 use App\Title;
@@ -31,7 +32,8 @@ class EmployeeController extends Controller
     {
         $titles = Title::all();
         $nats = Nationality::all();
-        return view('employees.create', compact('nats','titles') );
+        $comps = Company::all();
+        return view('employees.create', compact('nats','titles', 'comps') );
 
     }
     /**
@@ -116,6 +118,7 @@ class EmployeeController extends Controller
     }
     public function save(Request $request, $id)
     {
+     
         if($request['batch'] == 1)
         {
             return $this->saveBatch($request);
@@ -127,6 +130,15 @@ class EmployeeController extends Controller
         }
         $employee->englishName = $request['englishName'];
         $employee->arabicName = $request['arabicName'];
+        $employee->company_id = $request['company_id'];
+        $employee->title_id = $request['title_id'];
+        $employee->nationality_id = $request['nationality_id'];
+        $employee->idNo = $request['idNo'];
+        $employee->idExp = $request['idExp'];
+        $employee->email = $request['email'];
+        $employee->mobile = $request['mobile'];
+
+
 
         $employee->push();
 
