@@ -26,6 +26,16 @@ class CreateEmployeesTable extends Migration
             $table->boolean('delete')->default(false);
             $table->string('email')->nullable()->unique();
             $table->string('mobile')->nullable()->unique();
+
+            $table->string('gosi')->nullable()->unique();
+            $table->string('lic')->nullable()->unique();
+            $table->string('licExp')->nullable()->unique();
+
+
+            $table->string('moh')->nullable()->unique();
+            $table->string('mohExp')->nullable()->unique();
+
+
             $table->index('company_id');
 
             $table->index('title_id');

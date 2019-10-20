@@ -118,7 +118,7 @@ class EmployeeController extends Controller
     }
     public function save(Request $request, $id)
     {
-     
+
         if($request['batch'] == 1)
         {
             return $this->saveBatch($request);

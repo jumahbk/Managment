@@ -95,6 +95,37 @@
 
                 </div>
 
+
+                <div class="form-group row form-group-marginless kt-margin-t-20">
+                    <label class="col-lg-3 col-form-label">      {{    __('messages.idNo')}}:</label>
+                    <div class="col-lg-3">
+                        <input id="idNo" name="mohNo" type="text" class="form-control" placeholder="">
+                    </div>
+                    <label class="col-lg-3 col-form-label">{{    __('messages.idExp')}}:</label>
+                    <div class="col-lg-3">
+                        <input id="idExp" name="mohExp" type="date" class="form-control" >
+                    </div>
+
+
+
+
+                </div>
+
+
+                <div class="form-group row form-group-marginless kt-margin-t-20">
+                    <label class="col-lg-3 col-form-label">      {{    __('messages.idNo')}}:</label>
+                    <div class="col-lg-3">
+                        <input id="idNo" name="licNo" type="text" class="form-control" placeholder="">
+                    </div>
+                    <label class="col-lg-3 col-form-label">{{    __('messages.idExp')}}:</label>
+                    <div class="col-lg-3">
+                        <input id="idExp" name="licExp" type="date" class="form-control" >
+                    </div>
+
+
+
+
+                </div>
                 <div class="form-group row form-group-marginless kt-margin-t-20">
                     <label class="col-lg-3 col-form-label">      {{    __('messages.mobile')}}:</label>
                     <div class="col-lg-3">
