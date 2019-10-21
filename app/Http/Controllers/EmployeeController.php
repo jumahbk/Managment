@@ -137,15 +137,15 @@ class EmployeeController extends Controller
         $employee->email = $request['email'];
         $employee->mobile = $request['mobile'];
 
-        $employee->mohNo = $request['mohNo'];
+        $employee->moh = $request['mohNo'];
         $employee->mohExp = $request['mohExp'];
 
-        $employee->licNo = $request['licNo'];
+        $employee->lic = $request['licNo'];
         $employee->licExp = $request['licExp'];
 
         $employee->gosi = $request['gosi'];
         $employee->bankcode = $request['bankcode'];
-        $employee->brithdate = $request['brithdate'];
+        $employee->birthdate = $request['brithdate'];
 
         $employee->passNo = $request['passNo'];
         $employee->passExp = $request['passExp'];

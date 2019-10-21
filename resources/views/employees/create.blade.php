@@ -166,7 +166,6 @@
                         <input id="email" name="email" type="email" class="form-control" >
                     </div>
 
-
                 </div>
 
                 <div class="form-group row form-group-marginless kt-margin-t-20">

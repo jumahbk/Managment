@@ -21,6 +21,8 @@ return [
     'addnew' => 'Add new record',
     'createNewEmployee' => 'Add new ُ employee record',
     'birthdate' => 'Birthday',
+    'settings' => 'Settings',
+    'nationalities' => 'Nationalities',
 
     'actions' => 'Actions',
     'viewall' => 'View all records',
@@ -54,4 +56,7 @@ return [
     'bankno' => 'IBAN',
     'bankcode' => 'BANK CODE',
 
+    'name' => 'Name',
+    'lic' => 'Licenses & IDs',
+    'general' => 'General Info',
 ];

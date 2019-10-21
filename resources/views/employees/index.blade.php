@@ -9,14 +9,14 @@
 
     ?>
 
-    <div class="kt-portlet kt-portlet--mobile col-md-9 ">
+    <div class="kt-portlet kt-portlet--mobile col-md-12 ">
         <div class="kt-portlet__head kt-portlet__head--lg">
             <div class="kt-portlet__head-label">
 											<span class="kt-portlet__head-icon">
 												<i class="kt-font-brand flaticon2-line-chart"></i>
 											</span>
                 <h3 class="kt-portlet__head-title">
-                    {{    __('messages.typelist')}}
+                    {{    __('messages.general')}}
                 </h3>
             </div>
             <div class="kt-portlet__head-toolbar">
@@ -42,20 +42,58 @@
                             <tr>
                                 <th>
 
-                                    {{    __('messages.englishName')}}
+                                    {{    __('messages.name')}}
 
                                 </th>
                                 <th>
 
-                                    {{    __('messages.arabicName')}}
+                                    {{    __('messages.companyname')}}
 
 
                                 </th>
                                 <th>
 
-                                    {{    __('messages.actions')}}
+                                    {{    __('messages.nat')}}
 
                                 </th>
+
+
+                                <th>
+
+                                    {{    __('messages.title')}}
+
+                                </th>
+                                <th>
+
+                                    {{    __('messages.gosi')}}
+
+
+                                </th>
+
+
+                                <th>
+
+                                    {{    __('messages.mobile')}}
+
+
+                                </th>
+                                <th>
+
+                                    {{    __('messages.email')}}
+
+                                </th>
+                                <th>
+
+                                    {{    __('messages.birthdate')}}
+
+
+                                </th>
+                                <th>
+
+                                    {{    __('messages.bankno')}}
+
+                                </th>
+
                             </tr>
                             </thead>
                             <tbody>
@@ -67,18 +105,27 @@
                                     <td class="">{{$d->arabicName}}</td>
 
                                     <td class="">
-
-                                        <a href="#" class="btn btn-label-primary btn-bold btn-icon-h kt-margin-l-10">
-                                            {{    __('messages.viewall')}}
-
-                                        </a>
-                                        <a href="/title/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
-                                            {{    __('messages.edit')}}
-
-                                        </a>
-
-
+                                        @if($locale == 'ar')
+                                            {{$d->company->arabicName}}
+                                        @else
+                                            {{$d->company->englishName}}
+                                        @endif
                                     </td>
+                                    <td class="">
+                                    @if($locale == 'ar')
+                                       {{$d->nationality->arabicName}}
+                                    @else
+                                       {{$d->nationality->englishName}}
+                                    @endif
+                                        </td>
+                                    <td class="">{{$d->gosi}}</td>
+                                    <td class="">{{$d->mobile}}</td>
+                                    <td class="">{{$d->email}}</td>
+
+                                    <td class="">{{$d->birthdate}}</td>
+                                    <td class="">{{$d->iban}}</td>
+
+
 
                                 </tr>
                             @endforeach

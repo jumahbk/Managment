@@ -1080,7 +1080,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                             <ul class="kt-menu__subnav">
                                                 <li class="kt-menu__item " aria-haspopup="true"><a href="employees/summery" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">{{    __('messages.summery')}}</span></a></li>
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="employees/" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">{{    __('messages.showall')}}</span></a></li>
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="employees/" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">{{    __('messages.general')}}</span></a></li>
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="employees/lic" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">{{    __('messages.lic')}}</span></a></li>
+
                                                 <li class="kt-menu__item " aria-haspopup="true"><a href="employees/create" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">{{    __('messages.addnew')}}</span></a></li>
                                             </ul>
                                         </div>
@@ -1102,6 +1104,16 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <li class="kt-menu__item " aria-haspopup="true"><a href="assets/summery" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">{{    __('messages.summery')}}</span></a></li>
                                                 <li class="kt-menu__item " aria-haspopup="true"><a href="assets/" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">{{    __('messages.showall')}}</span></a></li>
                                                 <li class="kt-menu__item " aria-haspopup="true"><a href="assets/create" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">{{    __('messages.addnew')}}</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">  {{    __('messages.settings')}}</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                        <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
+                                            <ul class="kt-menu__subnav">
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="title/" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">{{    __('messages.titlelist')}}</span></a></li>
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="nationalities/" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">{{    __('messages.nationalities')}}</span></a></li>
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="types/" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">{{    __('messages.typelist')}}</span></a></li>
                                             </ul>
                                         </div>
                                     </li>

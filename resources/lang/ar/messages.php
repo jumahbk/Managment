@@ -11,6 +11,7 @@ return [
     | these language lines according to your application's requirements.
     |
     */
+    'settings' => 'الاعدادات',
 
     'test' => 'تجربه',
     'edittitle' => 'تعديل مسمى المهنه',
@@ -57,6 +58,13 @@ return [
 
     'bankno' => 'رقم الحساب البنكي',
     'bankcode' => 'كود البنك',
+
+    'nationalities' => 'الجنسيات',
+
+    'name' => 'الاسم',
+    'lic' => 'قائمة التصاريح',
+    'general' => 'معلومات عامه',
+
 
 
 ];
