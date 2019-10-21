@@ -18,6 +18,7 @@ class CreateTitlesTable extends Migration
             $table->string('arabicName')->nullable();
             $table->string('englishName')->nullable();
             $table->boolean('delete')->default(false);
+            $table->boolean('isMedical')->default(false);
             $table->timestamps();
         });
     }

@@ -118,7 +118,6 @@ class EmployeeController extends Controller
     }
     public function save(Request $request, $id)
     {
-
         if($request['batch'] == 1)
         {
             return $this->saveBatch($request);
@@ -138,7 +137,20 @@ class EmployeeController extends Controller
         $employee->email = $request['email'];
         $employee->mobile = $request['mobile'];
 
+        $employee->mohNo = $request['mohNo'];
+        $employee->mohExp = $request['mohExp'];
 
+        $employee->licNo = $request['licNo'];
+        $employee->licExp = $request['licExp'];
+
+        $employee->gosi = $request['gosi'];
+        $employee->bankcode = $request['bankcode'];
+        $employee->brithdate = $request['brithdate'];
+
+        $employee->passNo = $request['passNo'];
+        $employee->passExp = $request['passExp'];
+
+        $employee->iban = $request['iban'];
 
         $employee->push();
 

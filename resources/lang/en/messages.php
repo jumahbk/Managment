@@ -19,6 +19,9 @@ return [
     'save' => 'Save',
     'titlelist' => 'Job Titles List',
     'addnew' => 'Add new record',
+    'createNewEmployee' => 'Add new ُ employee record',
+    'birthdate' => 'Birthday',
+
     'actions' => 'Actions',
     'viewall' => 'View all records',
     'edit' => 'Edit',
@@ -38,9 +41,17 @@ return [
     'assets' => 'Assets',
     'showall'=>'Show All',
     'companyname' => 'Company Name',
-
+    'passNo' => 'Passport No.',
+    'passExp' => 'Passport EXP',
     'companies'=> 'Companies',
-        'summery' => 'Summery',
+    'summery' => 'Summery',
+    'mohNo' => 'MOH No.',
+    'mohExp' => 'MOH EXP',
+    'licNo' => 'Work License',
+    'licExp' => 'License Exp',
+    'gosi' => 'GOSI No',
 
+    'bankno' => 'IBAN',
+    'bankcode' => 'BANK CODE',
 
 ];

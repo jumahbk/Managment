@@ -22,18 +22,29 @@ class CreateEmployeesTable extends Migration
             $table->string('arabicName')->nullable();
             $table->string('idNo')->nullable()->unique();
             $table->date('idExp')->nullable();
+
+            $table->string('passNo')->nullable()->unique();
+            $table->date('passExp')->nullable();
+
+
             $table->unsignedBigInteger('nationality_id');
             $table->boolean('delete')->default(false);
             $table->string('email')->nullable()->unique();
             $table->string('mobile')->nullable()->unique();
 
             $table->string('gosi')->nullable()->unique();
+
             $table->string('lic')->nullable()->unique();
             $table->string('licExp')->nullable()->unique();
+            $table->string('birthdate')->nullable()->unique();
 
 
             $table->string('moh')->nullable()->unique();
             $table->string('mohExp')->nullable()->unique();
+
+
+            $table->string('iban')->nullable();
+            $table->string('bankcode')->nullable();
 
 
             $table->index('company_id');
