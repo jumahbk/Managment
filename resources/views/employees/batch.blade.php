@@ -14,7 +14,7 @@
         <!--begin::Form-->
 
 
-            <form method="POST" action="/title"  class="kt-form kt-form--label-right">
+            <form method="POST" action="/employees"  class="kt-form kt-form--label-right">
                 @csrf
 
 

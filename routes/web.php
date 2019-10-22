@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/employees/batch', 'EmployeeController@batch')->name('employeebatch');
+
 Route::get('/nationalities/batch', 'NationalityController@batch')->name('nationalitybatch');
 Route::get('/types/batch', 'TypeeController@batch')->name('typebatch');
 Route::resource('types','TypeController');

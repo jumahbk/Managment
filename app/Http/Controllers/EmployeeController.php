@@ -102,6 +102,8 @@ class EmployeeController extends Controller
 
         $lines = explode("\n", $data);
 
+        $nats = Nationality::all();
+        $ts = Title::all();
         foreach ($lines as $d)
         {
 
@@ -109,6 +111,58 @@ class EmployeeController extends Controller
             $employee = new Employee();
             $employee->englishName = $tokens[0];
             $employee->arabicName = $tokens[1];
+
+
+            $employee->company_id = $tokens[2];
+
+
+
+            $natInput = $tokens[3];
+            foreach ($ts as $n)
+            {
+                if($n->arabicName == $natInput || $n->englishName == $natInput )
+                {
+                    $employee->title_id = $n->id;
+                    break;
+                }
+
+            }
+
+            $natInput = $tokens[4];
+            foreach ($nats as $n)
+            {
+                if($n->arabicName == $natInput || $n->englishName == $natInput )
+                {
+                    $employee->nationality_id = $n->id;
+                    break;
+                }
+
+            }
+
+            $employee->idNo = $tokens[4];
+            $employee->idExp = $tokens[5];
+            $employee->email = $tokens[6];
+            $employee->mobile =$tokens[7];
+
+            $employee->moh = $tokens[8];
+            $employee->mohExp = $tokens[9];
+
+            $employee->lic = $tokens[10];
+            $employee->licExp = $tokens[11];
+
+            $employee->gosi = $tokens[12];
+            $employee->bankcode = $tokens[13];
+            $employee->birthdate = $tokens[14];
+
+            $employee->passNo = $tokens[15];
+            $employee->passExp = $tokens[16];
+
+            $employee->iban = $tokens[17];
+
+
+
+
+
             $employee->push();
 
         }
