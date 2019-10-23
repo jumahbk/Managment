@@ -19,7 +19,7 @@ class EmployeeController extends Controller
     {
 
         $data = Employee::all();
-
+        //dd(Employee::find(1));
         return view('employees.index', compact('data'));
     }
 
@@ -108,6 +108,7 @@ class EmployeeController extends Controller
         {
 
             $tokens = explode(",", $d);
+         //   dd($tokens);
             //dd($tokens);
             $employee = new Employee();
             $employee->englishName = $tokens[0];
@@ -142,25 +143,25 @@ class EmployeeController extends Controller
 
             }
 
-            $employee->idNo = $tokens[4];
-            $employee->idExp = $tokens[5];
-            $employee->email = $tokens[6];
-            $employee->mobile =$tokens[7];
+            $employee->idNo = $tokens[5];
+            $employee->idExp = $tokens[6];
+            $employee->email = $tokens[7];
+            $employee->mobile =$tokens[8];
 
-            $employee->moh = $tokens[8];
-            $employee->mohExp = $tokens[9];
+            $employee->moh = $tokens[9];
+            $employee->mohExp = $tokens[10];
 
-            $employee->lic = $tokens[10];
-            $employee->licExp = $tokens[11];
+            $employee->lic = $tokens[11];
+            $employee->licExp = $tokens[12];
 
-            $employee->gosi = $tokens[12];
-            $employee->bankcode = $tokens[13];
-            $employee->birthdate = $tokens[14];
+            $employee->gosi = $tokens[13];
+            $employee->bankcode = $tokens[14];
+            $employee->birthdate = $tokens[15];
 
-            $employee->passNo = $tokens[15];
-            $employee->passExp = $tokens[16];
+            $employee->passNo = $tokens[16];
+            $employee->passExp = $tokens[17];
 
-            $employee->iban = $tokens[17];
+            $employee->iban = $tokens[18];
 
 
 

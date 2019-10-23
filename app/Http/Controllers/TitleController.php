@@ -99,7 +99,7 @@ class TitleController extends Controller
         foreach ($lines as $d)
         {
 
-            $tokens = explode(";", $d);
+            $tokens = explode(",", $d);
             $title = new Title();
             $title->englishName = $tokens[0];
             $title->arabicName = $tokens[1];
