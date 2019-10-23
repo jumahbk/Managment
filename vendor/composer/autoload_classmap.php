@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Company' => $baseDir . '/app/Company.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Data' => $baseDir . '/app/Data.php',
     'App\\Employee' => $baseDir . '/app/Employee.php',
@@ -16,11 +17,13 @@ return array(
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
+    'App\\Http\\Controllers\\CompanyController' => $baseDir . '/app/Http/Controllers/CompanyController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\DataController' => $baseDir . '/app/Http/Controllers/DataController.php',
     'App\\Http\\Controllers\\EmployeeController' => $baseDir . '/app/Http/Controllers/EmployeeController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\LanguageController' => $baseDir . '/app/Http/Controllers/LanguageController.php',
+    'App\\Http\\Controllers\\NationalityController' => $baseDir . '/app/Http/Controllers/NationalityController.php',
     'App\\Http\\Controllers\\TitleController' => $baseDir . '/app/Http/Controllers/TitleController.php',
     'App\\Http\\Controllers\\TypeController' => $baseDir . '/app/Http/Controllers/TypeController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',

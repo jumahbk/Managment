@@ -12,11 +12,9 @@
     <div class="kt-portlet kt-portlet--mobile col-md-9 ">
         <div class="kt-portlet__head kt-portlet__head--lg">
             <div class="kt-portlet__head-label">
-											<span class="kt-portlet__head-icon">
-												<i class="kt-font-brand flaticon2-line-chart"></i>
-											</span>
+
                 <h3 class="kt-portlet__head-title">
-                    {{    __('messages.typelist')}}
+                    {{    __('messages.companylist')}}
                 </h3>
             </div>
             <div class="kt-portlet__head-toolbar">
@@ -42,6 +40,11 @@
                             <tr>
                                 <th>
 
+                                    #
+
+                                </th>
+                                <th>
+
                                     {{    __('messages.englishName')}}
 
                                 </th>
@@ -62,7 +65,7 @@
 
                             @foreach($data as $d)
                                 <tr role="row" class="even">
-
+                                    <td class="">{{$d->id}}</td>
                                     <td class="">{{$d->englishName}}</td>
                                     <td class="">{{$d->arabicName}}</td>
 

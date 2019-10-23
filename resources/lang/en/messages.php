@@ -23,6 +23,7 @@ return [
     'birthdate' => 'Birthday',
     'settings' => 'Settings',
     'nationalities' => 'Nationalities',
+    'companylist' => 'Company List',
 
     'actions' => 'Actions',
     'viewall' => 'View all records',

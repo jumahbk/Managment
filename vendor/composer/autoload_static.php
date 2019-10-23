@@ -405,6 +405,7 @@ class ComposerStaticInitb213a1bcc34ad6bebd9e873e8464e745
     );
 
     public static $classMap = array (
+        'App\\Company' => __DIR__ . '/../..' . '/app/Company.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Data' => __DIR__ . '/../..' . '/app/Data.php',
         'App\\Employee' => __DIR__ . '/../..' . '/app/Employee.php',
@@ -415,11 +416,13 @@ class ComposerStaticInitb213a1bcc34ad6bebd9e873e8464e745
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\CompanyController' => __DIR__ . '/../..' . '/app/Http/Controllers/CompanyController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DataController' => __DIR__ . '/../..' . '/app/Http/Controllers/DataController.php',
         'App\\Http\\Controllers\\EmployeeController' => __DIR__ . '/../..' . '/app/Http/Controllers/EmployeeController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\LanguageController' => __DIR__ . '/../..' . '/app/Http/Controllers/LanguageController.php',
+        'App\\Http\\Controllers\\NationalityController' => __DIR__ . '/../..' . '/app/Http/Controllers/NationalityController.php',
         'App\\Http\\Controllers\\TitleController' => __DIR__ . '/../..' . '/app/Http/Controllers/TitleController.php',
         'App\\Http\\Controllers\\TypeController' => __DIR__ . '/../..' . '/app/Http/Controllers/TypeController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

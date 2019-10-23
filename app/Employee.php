@@ -8,7 +8,7 @@ class Employee extends Model
 {
     public function company()
     {
-        return $this->belongsTo('App\Company');
+        return $this->belongsTo('App\Company','company_id', 'id');
     }
 
     public function nationality()
@@ -19,7 +19,7 @@ class Employee extends Model
 
     public function title()
     {
-        return $this->belongsTo('App\Title');
+        return $this->belongsTo('App\Title', 'title_id', 'id');
     }
 
 

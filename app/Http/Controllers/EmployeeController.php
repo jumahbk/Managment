@@ -108,32 +108,35 @@ class EmployeeController extends Controller
         {
 
             $tokens = explode(",", $d);
+            //dd($tokens);
             $employee = new Employee();
             $employee->englishName = $tokens[0];
             $employee->arabicName = $tokens[1];
 
 
-            $employee->company_id = $tokens[2];
+            $employee->company_id = 1;
 
 
 
-            $natInput = $tokens[3];
-            foreach ($ts as $n)
+            $natInput = preg_replace('/\s+/', ' ', trim($tokens[3]));
+            foreach ($nats as $n)
             {
-                if($n->arabicName == $natInput || $n->englishName == $natInput )
+                if(preg_replace('/\s+/', ' ', trim($n->arabicName)) == $natInput || preg_replace('/\s+/', ' ', trim($n->englishName))== $natInput )
                 {
-                    $employee->title_id = $n->id;
+                    $employee->nationality_id = $n->id;
+              
                     break;
                 }
 
             }
 
-            $natInput = $tokens[4];
-            foreach ($nats as $n)
+            $natInput = preg_replace('/\s+/', ' ', trim($tokens[4]));
+            //dd($natInput);
+            foreach ($ts as $n)
             {
-                if($n->arabicName == $natInput || $n->englishName == $natInput )
+                if(preg_replace('/\s+/', ' ', trim($n->arabicName)) == $natInput || preg_replace('/\s+/', ' ', trim($n->englishName))== $natInput )
                 {
-                    $employee->nationality_id = $n->id;
+                    $employee->title_id = $n->id;
                     break;
                 }
 

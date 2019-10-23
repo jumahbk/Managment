@@ -12,9 +12,7 @@
     <div class="kt-portlet kt-portlet--mobile col-md-12 ">
         <div class="kt-portlet__head kt-portlet__head--lg">
             <div class="kt-portlet__head-label">
-											<span class="kt-portlet__head-icon">
-												<i class="kt-font-brand flaticon2-line-chart"></i>
-											</span>
+
                 <h3 class="kt-portlet__head-title">
                     {{    __('messages.general')}}
                 </h3>
@@ -100,9 +98,12 @@
 
                             @foreach($data as $d)
                                 <tr role="row" class="even">
-
-                                    <td class="">{{$d->englishName}}</td>
-                                    <td class="">{{$d->arabicName}}</td>
+                                    <td class="">
+                                    @if($locale == 'ar')
+                                        {{$d->arabicName}}
+                                    @else
+                                        {{$d->englishName}}
+                                    @endif
 
                                     <td class="">
                                         @if($locale == 'ar')
@@ -118,6 +119,13 @@
                                        {{$d->nationality->englishName}}
                                     @endif
                                         </td>
+                                    <td class="">
+                                        @if($locale == 'ar')
+                                            {{$d->title->arabicName}}
+                                        @else
+                                            {{$d->title->englishName}}
+                                        @endif
+                                    </td>
                                     <td class="">{{$d->gosi}}</td>
                                     <td class="">{{$d->mobile}}</td>
                                     <td class="">{{$d->email}}</td>
