@@ -249,7 +249,7 @@
             <!--begin: Datatable -->
             <div id="kt_table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12">
 
-                        <table class="table">
+                        <table name="example" class="table">
                             <thead>
                             <tr>
                                 <th>
@@ -367,5 +367,10 @@
             <!--end: Datatable -->
         </div>
     </div>
+<script>
 
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script>
 @endsection
