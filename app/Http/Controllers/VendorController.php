@@ -17,7 +17,7 @@ class VendorController extends Controller
 
         $data = Company::all();
 
-        return view('inventory/vendors.index', compact('data'));
+        return view('vendors.index', compact('data'));
     }
 
     /**

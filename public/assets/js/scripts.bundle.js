@@ -9153,19 +9153,23 @@ var KTLayout = function() {
     var initHeader = function() {
         var tmp;
         var headerEl = KTUtil.get('kt_header');
+        var headerMobileEl = KTUtil.get('kt_header_mobile');
 
         var options = {
             classic: {
                 desktop: true,
-                mobile: false
+                mobile: true
             },
             offset: {
-                desktop: parseInt(KTUtil.css(headerEl, 'height')) + 200
+                desktop: parseInt(KTUtil.css(headerEl, 'height')) - 10,
+                mobile: parseInt(KTUtil.css(headerMobileEl, 'height')) - 10,
             },
             minimize: {
-                mobile: false,
                 desktop: {
                     on: 'kt-header--minimize'
+                },
+                mobile: {
+                    on: 'kt-header-mobile--scroll'
                 }
             }
         };
@@ -9318,7 +9322,7 @@ var KTLayout = function() {
                     var height;
 
                     if (KTUtil.isInResponsiveRange('desktop')) {
-                        height = parseInt(KTUtil.getViewPort().height) - parseInt(KTUtil.actualHeight('kt_header', false));
+                        height = parseInt(KTUtil.getViewPort().height) - parseInt(KTUtil.actualHeight('kt_header', false)) - parseInt(KTUtil.actualHeight('kt_footer', false));
                         height = height - parseInt(KTUtil.css(menu, 'marginTop')) - parseInt(KTUtil.css(menu, 'marginBottom'));
                     } else {
                         height = parseInt(KTUtil.getViewPort().height);
@@ -9356,44 +9360,38 @@ var KTLayout = function() {
         });
     }
 
-	// Init page sticky portlet
-	var initPageStickyPortlet = function() {
-		return new KTPortlet('kt_page_portlet', {
-			sticky: {
-				offset: parseInt(KTUtil.css(KTUtil.get('kt_header'), 'height')) + 200,
-				zIndex: 90,
-				position: {
-					top: function() {
-                        var pos = 0;
-
-						if (KTUtil.isInResponsiveRange('desktop')) {
-							pos = 60; // desktop header height
-						} else {
-							if (KTUtil.hasClass(body, 'kt-header-mobile--fixed')) {
-								pos = pos + parseInt(KTUtil.css(KTUtil.get('kt_header_mobile'), 'height'));
-							}
-						}
-
-						return pos;
-					},
-					left: function(portlet) {
+    // Init page sticky portlet
+    var initPageStickyPortlet = function() {
+        return new KTPortlet('kt_page_portlet', {
+            sticky: {
+                offset: parseInt(KTUtil.css( KTUtil.get('kt_header'), 'height')) + 200,
+                zIndex: 90,
+                position: {
+                    top: function() {
+                        if (KTUtil.isInResponsiveRange('desktop')) {
+                            return 60; //parseInt(KTUtil.actualHeight( KTUtil.get('kt_header'), 'height') );
+                        } else {
+                            return parseInt(KTUtil.css( KTUtil.get('kt_header_mobile'), 'height') );
+                        }
+                    },
+                    left: function(portlet) {
 						var porletEl = portlet.getSelf();
 
 						return KTUtil.offset(porletEl).left;
 					},
 					right: function(portlet) {
-						var porletEl = portlet.getSelf();
+                        var porletEl = portlet.getSelf();
 
-						var portletWidth = parseInt(KTUtil.css(porletEl, 'width'));
+                        var portletWidth = parseInt(KTUtil.css(porletEl, 'width'));
 						var bodyWidth = parseInt(KTUtil.css(KTUtil.get('body'), 'width'));
 						var portletOffsetLeft = KTUtil.offset(porletEl).left;
 
 						return bodyWidth - portletWidth - portletOffsetLeft;
 					}
-				}
-			}
-		});
-	}
+                }
+            }
+        });
+    }
 
 	// Calculate content available full height
 	var getContentHeight = function() {
@@ -9401,21 +9399,33 @@ var KTLayout = function() {
 
 		height = KTUtil.getViewPort().height;
 
-		if (KTUtil.getByID('kt_header')) {
-            height = height - KTUtil.actualHeight('kt_header');
-		}
+        var headerEl = KTUtil.getByID('kt_header');
+        var headerBottomEl = KTUtil.find(headerEl, '.kt-header__bottom')
+
+		if (headerEl && headerBottomEl) {
+            height = height - KTUtil.actualHeight(headerBottomEl, 'margin-top');
+            height = height - parseInt(KTUtil.css(headerBottomEl, 'margin-top')) - parseInt(KTUtil.css(headerBottomEl, 'margin-bottom'));
+	    }
 
 		if (KTUtil.getByID('kt_subheader')) {
             height = height - KTUtil.actualHeight('kt_subheader');
 		}
 
 		if (KTUtil.getByID('kt_footer')) {
-			height = height - 40; //parseInt(KTUtil.css('kt_footer', 'height'));
+			height = height - parseInt(KTUtil.css('kt_footer', 'height'));
+        }
+
+        if (KTUtil.getByID('kt_wrapper')) {
+			height = height - parseInt(KTUtil.css('kt_wrapper', 'padding-top')) - parseInt(KTUtil.css('kt_wrapper', 'padding-bottom'));
+		}
+
+        if (KTUtil.getByID('kt_body')) {
+			height = height - parseInt(KTUtil.css('kt_body', 'padding-top')) - parseInt(KTUtil.css('kt_body', 'padding-bottom'));
 		}
 
 		if (KTUtil.getByID('kt_content')) {
 			height = height - parseInt(KTUtil.css('kt_content', 'padding-top')) - parseInt(KTUtil.css('kt_content', 'padding-bottom'));
-        }
+		}
 
 		return height;
 	}

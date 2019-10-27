@@ -37,7 +37,7 @@ return [
 
     'idExp' => 'ID Expiry',
     'title' => 'Job Title',
-
+    'employeeList' =>'Employee List',
     'home' => 'Home',
     'staff' => 'Employees',
     'docs' => 'Documents',

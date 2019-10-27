@@ -18,7 +18,7 @@ Route::resource('types','TypeController');
 Route::resource('nationalities','NationalityController');
 Route::resource('employees','EmployeeController');
 Route::resource('companies','CompanyController');
-Route::resource('inventory/vendors','VendorController');
+Route::resource('vendors','VendorController');
 
 Route::get('/lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
 

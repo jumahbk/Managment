@@ -24,6 +24,28 @@ class EmployeeController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function lic()
+    {
+
+        $data = Employee::all();
+        //dd(Employee::find(1));
+        return view('employees.exp', compact('data'));
+    }
+
+
+    public function createData(Employee $employee)
+    {
+
+        return view('employees.createData', $employee);
+
+    }
+
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

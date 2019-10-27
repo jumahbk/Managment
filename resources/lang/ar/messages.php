@@ -36,6 +36,7 @@ return [
     'home' => 'الرئيسيه',
     'title' => 'المهنه',
     'createNewEmployee' => 'اضافة موظف',
+    'employeeList' => 'قائمة الموظفين',
 
     'companyname' => 'اسم الشركه',
 

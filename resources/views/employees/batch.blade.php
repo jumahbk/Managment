@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+<?php
 
+        $title = "Batch Add";
+
+?>
     <div class="kt-portlet col-md-9">
         <div class="kt-portlet__head">
             <div class="kt-portlet__head-label">
