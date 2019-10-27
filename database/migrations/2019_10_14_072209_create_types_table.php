@@ -17,6 +17,12 @@ class CreateTypesTable extends Migration
             $table->bigIncrements('id');
             $table->string('arabicName')->nullable();
             $table->string('englishName')->nullable();
+
+            $table->boolean('employee')->default(true);
+            $table->boolean('company')->default(true);
+            $table->boolean('vendor')->default(true);
+
+
             $table->boolean('delete')->default(false);
             $table->timestamps();
         });
