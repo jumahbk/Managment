@@ -19,11 +19,12 @@ class CreateDataTable extends Migration
             $table->unsignedBigInteger('company_id')->nullable();
             $table->unsignedBigInteger('type_id')->nullable();
 
-
+            $table->unsignedBigInteger('vendor_id')->nullable();
             $table->string('details')->nullable();
             $table->date('startDate')->nullable();
             $table->date('endDate')->nullable();
             $table->string('url')->nullable()->default('none');
+            $table->index('vendor_id');
 
             $table->index('employee_id');
             $table->index('company_id');
