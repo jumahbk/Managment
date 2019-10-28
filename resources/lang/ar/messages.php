@@ -31,12 +31,14 @@ return [
     'idNo' => 'رقم الاثبات',
     'nat' => 'الجنسيه',
     'birthdate' => 'تاريخ الميلاد',
-
+    'unitlist' => 'قائمة الوحدات',
     'idExp' => 'تاريخ الانتهاء',
     'home' => 'الرئيسيه',
     'title' => 'المهنه',
     'createNewEmployee' => 'اضافة موظف',
     'employeeList' => 'قائمة الموظفين',
+    'activate' => 'اخفاء',
+    'deactivate' => 'تفعيل',
 
     'companyname' => 'اسم الشركه',
 

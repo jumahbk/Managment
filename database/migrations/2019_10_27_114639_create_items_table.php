@@ -21,9 +21,8 @@ class CreateItemsTable extends Migration
             $table->string('englishName')->nullable();
 
             $table->integer('unit')->default(1);
+            $table->unsignedBigInteger('unit_id');
 
-
-            $table->unsignedBigInteger('unittype_id')->nullable();
 
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('warehouse_id')->nullable();
@@ -35,7 +34,7 @@ class CreateItemsTable extends Migration
 
 
 
-            $table->index('unittype_id');
+            $table->index('unit_id');
             $table->index('stock_id');
             $table->index('warehouse_id');
             $table->index('user_id');

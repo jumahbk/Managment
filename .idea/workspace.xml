@@ -2,94 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14d71528-7b63-4ee8-b313-02f2a717b2f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/employees/exp.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/units/batch.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/units/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/units/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/units/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VendorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VendorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/faq/faq-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/faq/faq-1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/faq/faq-1.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/faq/faq-1.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/faq/faq-1.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/faq/faq-1.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/faq/faq-1.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/faq/faq-1.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/inbox/inbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/inbox/inbox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/inbox/inbox.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/inbox/inbox.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/inbox/inbox.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/inbox/inbox.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/inbox/inbox.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/inbox/inbox.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-1.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-1.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-1.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-1.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-1.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-1.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-3.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-3.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-3.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-3.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-3.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-3.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-3.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-4.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-4.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-4.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-4.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-4.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-4.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-4.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-4.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-5.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-5.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-5.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-5.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-5.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-5.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-5.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-5.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-6.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-6.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-6.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-6.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-6.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-6.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/login/login-6.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/login/login-6.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-2.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-2.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-2.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-2.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-2.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-2.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-3.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-3.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-3.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-3.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-3.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-3.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/pricing/pricing-3.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/support-center/home-2.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/support-center/home-2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/support-center/home-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/support-center/home-2.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/support-center/home-2.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/support-center/home-2.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/support-center/home-2.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/support-center/home-2.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/tasks/tasks.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/tasks/tasks.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/tasks/tasks.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/tasks/tasks.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/tasks/tasks.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/tasks/tasks.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/tasks/tasks.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/tasks/tasks.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/todo/tasks.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/todo/tasks.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/todo/tasks.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/todo/tasks.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/todo/tasks.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/todo/tasks.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/todo/tasks.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/todo/tasks.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/todo/todo.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/todo/todo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/todo/todo.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/todo/todo.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/todo/todo.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/todo/todo.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/todo/todo.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/todo/todo.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-1.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-1.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-1.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-1.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-1.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-1.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-2.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-2.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-2.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-2.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-2.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-2.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-3.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-3.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-3.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-3.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-3.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-3.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-3.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-3.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-4.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-4.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-4.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-4.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-4.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-4.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-4.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/pages/wizard/wizard-4.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/style.bundle.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/style.bundle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/style.bundle.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/style.bundle.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/style.bundle.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/style.bundle.rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/css/style.bundle.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/css/style.bundle.rtl.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/scripts.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/js/scripts.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/assets/js/scripts.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/assets/js/scripts.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_114639_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_114639_create_items_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employees/batch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employees/batch.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inventory/vendors/batch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendors/batch.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inventory/vendors/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendors/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inventory/vendors/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendors/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inventory/vendors/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendors/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -196,18 +121,17 @@
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1SndN7ShDN7ZKdEBuMofqkfbqXH" />
+  <component name="ProjectId" id="1Sojiht90UVnn89XQ8yZcUWwMsh" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/employees" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/employees" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/inventory" />
     </key>
   </component>
@@ -229,11 +153,11 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="14d71528-7b63-4ee8-b313-02f2a717b2f9" name="Default Changelist" comment="" />
-      <created>1572203251219</created>
+      <created>1572236972397</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572203251219</updated>
-      <workItem from="1572203254049" duration="1132000" />
+      <updated>1572236972397</updated>
+      <workItem from="1572236979032" duration="6566000" />
     </task>
     <servers />
   </component>

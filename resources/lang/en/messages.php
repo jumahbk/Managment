@@ -34,7 +34,7 @@ return [
     'mobile' => 'Mobile Number',
     'idNo' => 'ID Number',
     'nat' => 'Nationality',
-
+    'unitlist' => 'Units List',
     'idExp' => 'ID Expiry',
     'title' => 'Job Title',
     'employeeList' =>'Employee List',
@@ -56,7 +56,8 @@ return [
 
     'bankno' => 'IBAN',
     'bankcode' => 'BANK CODE',
-
+    'activate' => 'Activate',
+    'deactivate' => 'Deactivate',
     'name' => 'Name',
     'lic' => 'Licenses & IDs',
     'general' => 'General Info',

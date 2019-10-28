@@ -34,60 +34,60 @@ License: You must have a valid license purchased only from themeforest(the above
     <!--begin::Global Theme Styles(used by all pages) -->
 
     <!--begin:: Vendor Plugins -->
-    <link href="assets/plugins/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/quill/dist/quill.snow.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/dual-listbox/dist/dual-listbox.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/morris.js/morris.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/plugins/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/plugins/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/plugins/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/owl.carousel/dist//assets/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/owl.carousel/dist//assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/quill/dist/quill.snow.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/dual-listbox/dist/dual-listbox.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/morris.js/morris.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/plugins/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/plugins/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/plugins/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
 
     <!--end:: Vendor Plugins -->
-    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 
     <!--begin:: Vendor Plugins for custom pages -->
-    <link href="assets/plugins/custom/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/@fullcalendar/core/main.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/@fullcalendar/daygrid/main.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/@fullcalendar/list/main.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/@fullcalendar/timegrid/main.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/datatables.net-autofill-bs4/css/autoFill.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/datatables.net-colreorder-bs4/css/colReorder.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/datatables.net-fixedcolumns-bs4/css/fixedColumns.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/datatables.net-fixedheader-bs4/css/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/datatables.net-keytable-bs4/css/keyTable.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/datatables.net-rowgroup-bs4/css/rowGroup.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/datatables.net-rowreorder-bs4/css/rowReorder.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/datatables.net-scroller-bs4/css/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/datatables.net-select-bs4/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/jstree/dist/themes/default/style.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/jqvmap/dist/jqvmap.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/custom/uppy/dist/uppy.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/@fullcalendar/core/main.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/@fullcalendar/daygrid/main.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/@fullcalendar/list/main.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/@fullcalendar/timegrid/main.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables.net-autofill-bs4/css/autoFill.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables.net-colreorder-bs4/css/colReorder.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables.net-fixedcolumns-bs4/css/fixedColumns.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables.net-fixedheader-bs4/css/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables.net-keytable-bs4/css/keyTable.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables.net-rowgroup-bs4/css/rowGroup.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables.net-rowreorder-bs4/css/rowReorder.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables.net-scroller-bs4/css/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables.net-select-bs4/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/jstree/dist/themes/default/style.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/jqvmap/dist/jqvmap.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/uppy/dist/uppy.min.css" rel="stylesheet" type="text/css" />
 
     <!--end:: Vendor Plugins for custom pages -->
 
@@ -96,7 +96,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <!--begin::Layout Skins(used by all pages) -->
 
     <!--end::Layout Skins -->
-    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <link rel="shortcut icon" href="/assets/media/logos/favicon.ico" />
 </head>
 
 <!-- end::Head -->
@@ -110,7 +110,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
     <div class="kt-header-mobile__logo">
         <a href="index.html">
-            <img alt="Logo" src="assets/media/logos/logo-10-sm.png" />
+            <img alt="Logo" src="/assets/media/logos/logo-10-sm.png" />
         </a>
         <div class="dropdown">
             <button type="button" class="btn btn-pill btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -179,7 +179,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
                             <div class="kt-header__brand-logo">
                                 <a href="index.html">
-                                    <img alt="Logo" src="assets/media/logos/logo-10.png" class="kt-header__brand-logo-default" />
+                                    <img alt="Logo" src="/assets/media/logos/logo-10.png" class="kt-header__brand-logo-default" />
                                 </a>
                             </div>
                             <div class="kt-header__brand-nav">
@@ -745,7 +745,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                         <!-- begin:: Mycart -->
                                         <div class="kt-mycart">
-                                            <div class="kt-mycart__head kt-head" style="background-image: url(assets/media/misc/bg-1.jpg);">
+                                            <div class="kt-mycart__head kt-head" style="background-image: url(/assets/media/misc/bg-1.jpg);">
                                                 <div class="kt-mycart__info">
                                                     <span class="kt-mycart__icon"><i class="flaticon2-shopping-cart-1 kt-font-success"></i></span>
                                                     <h3 class="kt-mycart__title">My Cart</h3>
@@ -773,7 +773,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             </div>
                                                         </div>
                                                         <a href="#" class="kt-mycart__pic">
-                                                            <img src="assets/media/products/product9.jpg" title="">
+                                                            <img src="/assets/media/products/product9.jpg" title="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -795,7 +795,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             </div>
                                                         </div>
                                                         <a href="#" class="kt-mycart__pic">
-                                                            <img src="assets/media/products/product13.jpg" title="">
+                                                            <img src="/assets/media/products/product13.jpg" title="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -817,7 +817,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             </div>
                                                         </div>
                                                         <a href="#" class="kt-mycart__pic">
-                                                            <img src="assets/media/products/product16.jpg" title="">
+                                                            <img src="/assets/media/products/product16.jpg" title="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -839,7 +839,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             </div>
                                                         </div>
                                                         <a href="#" class="kt-mycart__pic">
-                                                            <img src="assets/media/products/product15.jpg" title="" alt="">
+                                                            <img src="/assets/media/products/product15.jpg" title="" alt="">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -883,26 +883,26 @@ License: You must have a valid license purchased only from themeforest(the above
                             <div class="kt-header__topbar-item kt-header__topbar-item--langs">
                                 <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
 											<span class="kt-header__topbar-icon kt-header__topbar-icon--info">
-												<img class="" src="assets/media/flags/012-uk.svg" alt="" />
+												<img class="" src="/assets/media/flags/012-uk.svg" alt="" />
 											</span>
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim">
                                     <ul class="kt-nav kt-margin-t-10 kt-margin-b-10">
                                         <li class="kt-nav__item kt-nav__item--active">
                                             <a href="#" class="kt-nav__link">
-                                                <span class="kt-nav__link-icon"><img src="assets/media/flags/020-flag.svg" alt="" /></span>
+                                                <span class="kt-nav__link-icon"><img src="/assets/media/flags/020-flag.svg" alt="" /></span>
                                                 <span class="kt-nav__link-text">English</span>
                                             </a>
                                         </li>
                                         <li class="kt-nav__item">
                                             <a href="#" class="kt-nav__link">
-                                                <span class="kt-nav__link-icon"><img src="assets/media/flags/016-spain.svg" alt="" /></span>
+                                                <span class="kt-nav__link-icon"><img src="/assets/media/flags/016-spain.svg" alt="" /></span>
                                                 <span class="kt-nav__link-text">Spanish</span>
                                             </a>
                                         </li>
                                         <li class="kt-nav__item">
                                             <a href="#" class="kt-nav__link">
-                                                <span class="kt-nav__link-icon"><img src="assets/media/flags/017-germany.svg" alt="" /></span>
+                                                <span class="kt-nav__link-icon"><img src="/assets/media/flags/017-germany.svg" alt="" /></span>
                                                 <span class="kt-nav__link-text">German</span>
                                             </a>
                                         </li>
@@ -917,7 +917,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
                                     <span class="kt-hidden kt-header__topbar-welcome">Hi,</span>
                                     <span class="kt-hidden kt-header__topbar-username">Nick</span>
-                                    <img class="kt-hidden-" alt="Pic" src="assets/media/users/300_21.jpg" />
+                                    <img class="kt-hidden-" alt="Pic" src="/assets/media/users/300_21.jpg" />
                                     <span class="kt-header__topbar-icon kt-header__topbar-icon--brand kt-hidden"><b>S</b></span>
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-xl">
@@ -925,7 +925,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <!--begin: Head -->
                                     <div class="kt-user-card kt-user-card--skin-light kt-notification-item-padding-x">
                                         <div class="kt-user-card__avatar">
-                                            <img class="kt-hidden-" alt="Pic" src="assets/media/users/300_25.jpg" />
+                                            <img class="kt-hidden-" alt="Pic" src="/assets/media/users/300_25.jpg" />
 
                                             <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
                                             <span class="kt-badge kt-badge--username kt-badge--unified-success kt-badge--lg kt-badge--rounded kt-badge--bold kt-hidden">S</span>
@@ -1545,6 +1545,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
                     <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
+                        @yield('content')
 
                     </div>
                 </div>
@@ -2014,7 +2015,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 1
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo1.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo1.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="https://keenthemes.com/metronic/preview/demo1/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                     <a href="https://keenthemes.com/metronic/preview/demo1/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -2026,7 +2027,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 2
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo2.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo2.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="https://keenthemes.com/metronic/preview/demo2/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                     <a href="https://keenthemes.com/metronic/preview/demo2/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -2038,7 +2039,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 3
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo3.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo3.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="https://keenthemes.com/metronic/preview/demo3/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                     <a href="https://keenthemes.com/metronic/preview/demo3/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -2050,7 +2051,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 4
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo4.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo4.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="https://keenthemes.com/metronic/preview/demo4/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                     <a href="https://keenthemes.com/metronic/preview/demo4/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -2062,7 +2063,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 5
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo5.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo5.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="https://keenthemes.com/metronic/preview/demo5/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                     <a href="https://keenthemes.com/metronic/preview/demo5/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -2074,7 +2075,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 6
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo6.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo6.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="https://keenthemes.com/metronic/preview/demo6/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                     <a href="https://keenthemes.com/metronic/preview/demo6/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -2086,7 +2087,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 7
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo7.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo7.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="https://keenthemes.com/metronic/preview/demo7/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                     <a href="https://keenthemes.com/metronic/preview/demo7/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -2098,7 +2099,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 8
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo8.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo8.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="https://keenthemes.com/metronic/preview/demo8/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                     <a href="https://keenthemes.com/metronic/preview/demo8/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -2110,7 +2111,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 9
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo9.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo9.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="https://keenthemes.com/metronic/preview/demo9/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                     <a href="https://keenthemes.com/metronic/preview/demo9/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -2122,7 +2123,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 10
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo10.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo10.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="https://keenthemes.com/metronic/preview/demo10/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                     <a href="https://keenthemes.com/metronic/preview/demo10/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -2134,7 +2135,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 11
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo11.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo11.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="https://keenthemes.com/metronic/preview/demo11/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                     <a href="https://keenthemes.com/metronic/preview/demo11/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -2146,7 +2147,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 12
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo12.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo12.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="https://keenthemes.com/metronic/preview/demo12/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
                     <a href="https://keenthemes.com/metronic/preview/demo12/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
@@ -2158,7 +2159,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 13
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo13.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo13.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                 </div>
@@ -2169,7 +2170,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 Demo 14
             </div>
             <div class="kt-demo-panel__item-preview">
-                <img src="assets/media//demos/preview/demo14.jpg" alt="" />
+                <img src="/assets/media//demos/preview/demo14.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
                     <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
                 </div>
@@ -2268,7 +2269,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="kt-chat__message kt-chat__message--success">
                                     <div class="kt-chat__user">
 												<span class="kt-media kt-media--circle kt-media--sm">
-													<img src="assets/media/users/100_12.jpg" alt="image">
+													<img src="/assets/media/users/100_12.jpg" alt="image">
 												</span>
                                         <a href="#" class="kt-chat__username">Jason Muller</span></a>
                                         <span class="kt-chat__datetime">2 Hours</span>
@@ -2282,7 +2283,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <span class="kt-chat__datetime">30 Seconds</span>
                                         <a href="#" class="kt-chat__username">You</span></a>
                                         <span class="kt-media kt-media--circle kt-media--sm">
-													<img src="assets/media/users/300_21.jpg" alt="image">
+													<img src="/assets/media/users/300_21.jpg" alt="image">
 												</span>
                                     </div>
                                     <div class="kt-chat__text">
@@ -2292,7 +2293,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="kt-chat__message kt-chat__message--success">
                                     <div class="kt-chat__user">
 												<span class="kt-media kt-media--circle kt-media--sm">
-													<img src="assets/media/users/100_12.jpg" alt="image">
+													<img src="/assets/media/users/100_12.jpg" alt="image">
 												</span>
                                         <a href="#" class="kt-chat__username">Jason Muller</span></a>
                                         <span class="kt-chat__datetime">30 Seconds</span>
@@ -2306,7 +2307,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <span class="kt-chat__datetime">Just Now</span>
                                         <a href="#" class="kt-chat__username">You</span></a>
                                         <span class="kt-media kt-media--circle kt-media--sm">
-													<img src="assets/media/users/300_21.jpg" alt="image">
+													<img src="/assets/media/users/300_21.jpg" alt="image">
 												</span>
                                     </div>
                                     <div class="kt-chat__text">
@@ -2316,7 +2317,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="kt-chat__message kt-chat__message--success">
                                     <div class="kt-chat__user">
 												<span class="kt-media kt-media--circle kt-media--sm">
-													<img src="assets/media/users/100_12.jpg" alt="image">
+													<img src="/assets/media/users/100_12.jpg" alt="image">
 												</span>
                                         <a href="#" class="kt-chat__username">Jason Muller</span></a>
                                         <span class="kt-chat__datetime">2 Hours</span>
@@ -2330,7 +2331,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <span class="kt-chat__datetime">30 Seconds</span>
                                         <a href="#" class="kt-chat__username">You</span></a>
                                         <span class="kt-media kt-media--circle kt-media--sm">
-													<img src="assets/media/users/300_21.jpg" alt="image">
+													<img src="/assets/media/users/300_21.jpg" alt="image">
 												</span>
                                     </div>
                                     <div class="kt-chat__text">
@@ -2340,7 +2341,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="kt-chat__message kt-chat__message--success">
                                     <div class="kt-chat__user">
 												<span class="kt-media kt-media--circle kt-media--sm">
-													<img src="assets/media/users/100_12.jpg" alt="image">
+													<img src="/assets/media/users/100_12.jpg" alt="image">
 												</span>
                                         <a href="#" class="kt-chat__username">Jason Muller</span></a>
                                         <span class="kt-chat__datetime">30 Seconds</span>
@@ -2354,7 +2355,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <span class="kt-chat__datetime">Just Now</span>
                                         <a href="#" class="kt-chat__username">You</span></a>
                                         <span class="kt-media kt-media--circle kt-media--sm">
-													<img src="assets/media/users/300_21.jpg" alt="image">
+													<img src="/assets/media/users/300_21.jpg" alt="image">
 												</span>
                                     </div>
                                     <div class="kt-chat__text">
@@ -2416,125 +2417,125 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--begin::Global Theme Bundle(used by all pages) -->
 
 <!--begin:: Vendor Plugins -->
-<script src="assets/plugins/general/jquery/dist/jquery.js" type="text/javascript"></script>
-<script src="assets/plugins/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
-<script src="assets/plugins/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
-<script src="assets/plugins/general/moment/min/moment.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
-<script src="assets/plugins/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/wnumb/wNumb.js" type="text/javascript"></script>
-<script src="assets/plugins/general/jquery-form/dist/jquery.form.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/block-ui/jquery.blockUI.js" type="text/javascript"></script>
-<script src="assets/plugins/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/js/global/integration/plugins/bootstrap-datepicker.init.js" type="text/javascript"></script>
-<script src="assets/plugins/general/bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/js/global/integration/plugins/bootstrap-timepicker.init.js" type="text/javascript"></script>
-<script src="assets/plugins/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
-<script src="assets/plugins/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
-<script src="assets/plugins/general/bootstrap-maxlength/src/bootstrap-maxlength.js" type="text/javascript"></script>
-<script src="assets/plugins/general/plugins/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/bootstrap-select/dist/js/bootstrap-select.js" type="text/javascript"></script>
-<script src="assets/plugins/general/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
-<script src="assets/plugins/general/js/global/integration/plugins/bootstrap-switch.init.js" type="text/javascript"></script>
-<script src="assets/plugins/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
-<script src="assets/plugins/general/ion-rangeslider/js/ion.rangeSlider.js" type="text/javascript"></script>
-<script src="assets/plugins/general/typeahead.js/dist/typeahead.bundle.js" type="text/javascript"></script>
-<script src="assets/plugins/general/handlebars/dist/handlebars.js" type="text/javascript"></script>
-<script src="assets/plugins/general/inputmask/dist/jquery.inputmask.bundle.js" type="text/javascript"></script>
-<script src="assets/plugins/general/inputmask/dist/inputmask/inputmask.date.extensions.js" type="text/javascript"></script>
-<script src="assets/plugins/general/inputmask/dist/inputmask/inputmask.numeric.extensions.js" type="text/javascript"></script>
-<script src="assets/plugins/general/nouislider/distribute/nouislider.js" type="text/javascript"></script>
-<script src="assets/plugins/general/owl.carousel/dist/owl.carousel.js" type="text/javascript"></script>
-<script src="assets/plugins/general/autosize/dist/autosize.js" type="text/javascript"></script>
-<script src="assets/plugins/general/clipboard/dist/clipboard.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/dropzone/dist/dropzone.js" type="text/javascript"></script>
-<script src="assets/plugins/general/js/global/integration/plugins/dropzone.init.js" type="text/javascript"></script>
-<script src="assets/plugins/general/quill/dist/quill.js" type="text/javascript"></script>
-<script src="assets/plugins/general/@yaireo/tagify/dist/tagify.polyfills.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/@yaireo/tagify/dist/tagify.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/summernote/dist/summernote.js" type="text/javascript"></script>
-<script src="assets/plugins/general/markdown/lib/markdown.js" type="text/javascript"></script>
-<script src="assets/plugins/general/bootstrap-markdown/js/bootstrap-markdown.js" type="text/javascript"></script>
-<script src="assets/plugins/general/js/global/integration/plugins/bootstrap-markdown.init.js" type="text/javascript"></script>
-<script src="assets/plugins/general/bootstrap-notify/bootstrap-notify.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/js/global/integration/plugins/bootstrap-notify.init.js" type="text/javascript"></script>
-<script src="assets/plugins/general/jquery-validation/dist/jquery.validate.js" type="text/javascript"></script>
-<script src="assets/plugins/general/jquery-validation/dist/additional-methods.js" type="text/javascript"></script>
-<script src="assets/plugins/general/js/global/integration/plugins/jquery-validation.init.js" type="text/javascript"></script>
-<script src="assets/plugins/general/toastr/build/toastr.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/dual-listbox/dist/dual-listbox.js" type="text/javascript"></script>
-<script src="assets/plugins/general/raphael/raphael.js" type="text/javascript"></script>
-<script src="assets/plugins/general/morris.js/morris.js" type="text/javascript"></script>
-<script src="assets/plugins/general/chart.js/dist/Chart.bundle.js" type="text/javascript"></script>
-<script src="assets/plugins/general/plugins/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/plugins/jquery-idletimer/idle-timer.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/waypoints/lib/jquery.waypoints.js" type="text/javascript"></script>
-<script src="assets/plugins/general/counterup/jquery.counterup.js" type="text/javascript"></script>
-<script src="assets/plugins/general/es6-promise-polyfill/promise.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
-<script src="assets/plugins/general/js/global/integration/plugins/sweetalert2.init.js" type="text/javascript"></script>
-<script src="assets/plugins/general/jquery.repeater/src/lib.js" type="text/javascript"></script>
-<script src="assets/plugins/general/jquery.repeater/src/jquery.input.js" type="text/javascript"></script>
-<script src="assets/plugins/general/jquery.repeater/src/repeater.js" type="text/javascript"></script>
-<script src="assets/plugins/general/dompurify/dist/purify.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/moment/min/moment.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/tooltip.js/dist/umd/tooltip.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/perfect-scrollbar/dist/perfect-scrollbar.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/sticky-js/dist/sticky.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/wnumb/wNumb.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/jquery-form/dist/jquery.form.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/block-ui/jquery.blockUI.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/js/global/integration/plugins/bootstrap-datepicker.init.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/bootstrap-timepicker/js/bootstrap-timepicker.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/js/global/integration/plugins/bootstrap-timepicker.init.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/bootstrap-maxlength/src/bootstrap-maxlength.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/plugins/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/bootstrap-select/dist/js/bootstrap-select.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/bootstrap-switch/dist/js/bootstrap-switch.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/js/global/integration/plugins/bootstrap-switch.init.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/select2/dist/js/select2.full.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/ion-rangeslider/js/ion.rangeSlider.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/typeahead.js/dist/typeahead.bundle.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/handlebars/dist/handlebars.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/inputmask/dist/jquery.inputmask.bundle.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/inputmask/dist/inputmask/inputmask.date.extensions.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/inputmask/dist/inputmask/inputmask.numeric.extensions.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/nouislider/distribute/nouislider.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/owl.carousel/dist/owl.carousel.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/autosize/dist/autosize.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/clipboard/dist/clipboard.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/dropzone/dist/dropzone.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/js/global/integration/plugins/dropzone.init.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/quill/dist/quill.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/@yaireo/tagify/dist/tagify.polyfills.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/@yaireo/tagify/dist/tagify.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/summernote/dist/summernote.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/markdown/lib/markdown.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/bootstrap-markdown/js/bootstrap-markdown.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/js/global/integration/plugins/bootstrap-markdown.init.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/bootstrap-notify/bootstrap-notify.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/js/global/integration/plugins/bootstrap-notify.init.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/jquery-validation/dist/jquery.validate.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/jquery-validation/dist/additional-methods.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/js/global/integration/plugins/jquery-validation.init.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/toastr/build/toastr.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/dual-listbox/dist/dual-listbox.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/raphael/raphael.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/morris.js/morris.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/chart.js/dist/Chart.bundle.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/plugins/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/plugins/jquery-idletimer/idle-timer.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/waypoints/lib/jquery.waypoints.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/counterup/jquery.counterup.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/es6-promise-polyfill/promise.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/sweetalert2/dist/sweetalert2.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/js/global/integration/plugins/sweetalert2.init.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/jquery.repeater/src/lib.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/jquery.repeater/src/jquery.input.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/jquery.repeater/src/repeater.js" type="text/javascript"></script>
+<script src="/assets/plugins/general/dompurify/dist/purify.js" type="text/javascript"></script>
 
 <!--end:: Vendor Plugins -->
-<script src="assets/js/scripts.bundle.js" type="text/javascript"></script>
+<script src="/assets/js/scripts.bundle.js" type="text/javascript"></script>
 
 <!--begin:: Vendor Plugins for custom pages -->
-<script src="assets/plugins/custom/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/@fullcalendar/core/main.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/@fullcalendar/daygrid/main.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/@fullcalendar/google-calendar/main.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/@fullcalendar/interaction/main.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/@fullcalendar/list/main.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/@fullcalendar/timegrid/main.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/gmaps/gmaps.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/flot/dist/es5/jquery.flot.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/flot/source/jquery.flot.resize.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/flot/source/jquery.flot.categories.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/flot/source/jquery.flot.pie.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/flot/source/jquery.flot.stack.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/flot/source/jquery.flot.crosshair.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/flot/source/jquery.flot.axislabels.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net/js/jquery.dataTables.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-bs4/js/dataTables.bootstrap4.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/js/global/integration/plugins/datatables.init.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-autofill/js/dataTables.autoFill.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-autofill-bs4/js/autoFill.bootstrap4.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/jszip/dist/jszip.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/pdfmake/build/pdfmake.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/pdfmake/build/vfs_fonts.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-buttons/js/buttons.colVis.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-buttons/js/buttons.flash.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-buttons/js/buttons.html5.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-buttons/js/buttons.print.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-colreorder/js/dataTables.colReorder.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-fixedcolumns/js/dataTables.fixedColumns.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-keytable/js/dataTables.keyTable.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-responsive/js/dataTables.responsive.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-rowgroup/js/dataTables.rowGroup.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-rowreorder/js/dataTables.rowReorder.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-scroller/js/dataTables.scroller.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-select/js/dataTables.select.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/jstree/dist/jstree.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/jqvmap/dist/jquery.vmap.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/jqvmap/dist/maps/jquery.vmap.world.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/jqvmap/dist/maps/jquery.vmap.russia.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/jqvmap/dist/maps/jquery.vmap.usa.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/jqvmap/dist/maps/jquery.vmap.germany.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/jqvmap/dist/maps/jquery.vmap.europe.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/uppy/dist/uppy.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/tinymce/tinymce.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/tinymce/themes/silver/theme.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/tinymce/themes/mobile/theme.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/@fullcalendar/core/main.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/@fullcalendar/daygrid/main.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/@fullcalendar/google-calendar/main.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/@fullcalendar/interaction/main.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/@fullcalendar/list/main.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/@fullcalendar/timegrid/main.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/gmaps/gmaps.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/flot/dist/es5/jquery.flot.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/flot/source/jquery.flot.resize.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/flot/source/jquery.flot.categories.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/flot/source/jquery.flot.pie.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/flot/source/jquery.flot.stack.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/flot/source/jquery.flot.crosshair.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/flot/source/jquery.flot.axislabels.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net/js/jquery.dataTables.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-bs4/js/dataTables.bootstrap4.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/js/global/integration/plugins/datatables.init.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-autofill/js/dataTables.autoFill.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-autofill-bs4/js/autoFill.bootstrap4.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/jszip/dist/jszip.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/pdfmake/build/pdfmake.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/pdfmake/build/vfs_fonts.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-buttons/js/buttons.colVis.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-buttons/js/buttons.flash.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-buttons/js/buttons.html5.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-buttons/js/buttons.print.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-colreorder/js/dataTables.colReorder.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-fixedcolumns/js/dataTables.fixedColumns.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-keytable/js/dataTables.keyTable.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-responsive/js/dataTables.responsive.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-rowgroup/js/dataTables.rowGroup.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-rowreorder/js/dataTables.rowReorder.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-scroller/js/dataTables.scroller.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/datatables.net-select/js/dataTables.select.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/jstree/dist/jstree.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/jqvmap/dist/jquery.vmap.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/jqvmap/dist/maps/jquery.vmap.world.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/jqvmap/dist/maps/jquery.vmap.russia.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/jqvmap/dist/maps/jquery.vmap.usa.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/jqvmap/dist/maps/jquery.vmap.germany.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/jqvmap/dist/maps/jquery.vmap.europe.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/uppy/dist/uppy.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/tinymce/tinymce.min.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/tinymce/themes/silver/theme.js" type="text/javascript"></script>
+<script src="/assets/plugins/custom/tinymce/themes/mobile/theme.js" type="text/javascript"></script>
 
 <!--end:: Vendor Plugins for custom pages -->
 
@@ -2546,7 +2547,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--end::Page Vendors -->
 
 <!--begin::Page Scripts(used by this page) -->
-<script src="assets/js/pages/dashboard.js" type="text/javascript"></script>
+<script src="/assets/js/pages/dashboard.js" type="text/javascript"></script>
 
 <!--end::Page Scripts -->
 </body>
