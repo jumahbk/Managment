@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
 
@@ -23,7 +23,7 @@ App::setLocale(Session::get('applocale'));
 
 
 
-                <form method="post" action="{{ route('companies.update',$t->id)}}" enctype="multipart/form-data" class="kt-form kt-form--label-right">
+                <form method="post" action="{{ route('vendors.update',$t->id)}}" enctype="multipart/form-data" class="kt-form kt-form--label-right">
                     @method('PATCH')
                     @csrf
 

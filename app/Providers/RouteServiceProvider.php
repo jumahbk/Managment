@@ -6,6 +6,7 @@ use App\Nationality;
 use App\Title;
 use App\Type;
 use App\Unit;
+use App\Vendor;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 
@@ -39,7 +40,8 @@ class RouteServiceProvider extends ServiceProvider
         Route::model('unit', Unit::class);
 
 
-
+        Route::model('vendors', Vendor::class);
+        Route::model('vendor', Vendor::class);
 
     }
 

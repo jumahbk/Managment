@@ -24,6 +24,7 @@ return [
     'settings' => 'Settings',
     'nationalities' => 'Nationalities',
     'companylist' => 'Company List',
+    'vendorlist' => 'Vendor List',
 
     'actions' => 'Actions',
     'viewall' => 'View all records',

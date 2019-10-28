@@ -12,6 +12,8 @@
 */
 Route::get('/employees/batch', 'EmployeeController@batch')->name('employeebatch');
 Route::resource('units','UnitController');
+Route::get('/vendors/{id}/deactivate', 'VendorController@deactivate');
+Route::get('/vendors/{id}/activate', 'VendorController@activate');
 
 Route::get('/nationalities/batch', 'NationalityController@batch')->name('nationalitybatch');
 Route::get('/types/batch', 'TypeeController@batch')->name('typebatch');

@@ -18,7 +18,7 @@ class CreateVendorsTable extends Migration
 
             $table->string('arabicName');
             $table->string('englishName');
-
+            $table->boolean('deleted')->default('false');
 
             $table->timestamps();
         });

@@ -80,20 +80,13 @@
         <div class="kt-portlet__body">
 
             <!--begin: Datatable -->
-<<<<<<< HEAD
             <div id="kt_table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12">
 
                         <table name="example" class="table">
                             <thead>
                             <tr>
                                 <th>
-=======
-            <table class="table table-striped- table-bordered table-hover table-checkable" id="kt_table_1">
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th >
->>>>>>> b12cbb334c5233aec20d012869bb19dd319fd9a4
+
 
                         {{    __('messages.name')}}
 

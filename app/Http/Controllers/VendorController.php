@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Company;
+use App\Vendor;
 use Illuminate\Http\Request;
 
 class VendorController extends Controller
@@ -15,7 +15,7 @@ class VendorController extends Controller
     public function index()
     {
 
-        $data = Company::all();
+        $data = Vendor::all();
 
         return view('vendors.index', compact('data'));
     }
@@ -27,7 +27,7 @@ class VendorController extends Controller
      */
     public function create()
     {
-        return view('companies.create');
+        return view('vendors.create');
 
     }
     /**
@@ -37,7 +37,7 @@ class VendorController extends Controller
      */
     public function batch()
     {
-        return view('companies.batch');
+        return view('vendors.batch');
 
     }
     /**
@@ -49,7 +49,47 @@ class VendorController extends Controller
     public function store(Request $request)
     {
         $this->save($request, -1);
-        return redirect('/companies');
+        return redirect('/vendors');
+
+
+
+    }
+
+
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function activate($id)
+    {
+        $request = Vendor::find($id);
+        $request->deleted = false;
+        $request->push();
+        return redirect('/vendors');
+
+
+
+    }
+
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function deactivate($id)
+    {
+        $vendor = Vendor::find($id);
+        $vendor->deleted = true;
+        $vendor->push();
+
+        return redirect('/vendors');
 
 
 
@@ -58,10 +98,10 @@ class VendorController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Company  $company
+     * @param  \App\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
-    public function show(Company $company)
+    public function show(Vendor $vendor)
     {
         //
     }
@@ -69,26 +109,26 @@ class VendorController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Company  $company
+     * @param  \App\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
-    public function edit(Company $t)
+    public function edit(Vendor $t)
     {
 
-        return view('company.edit', compact('t','t'));
+        return view('vendor.edit', compact('t','t'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Company  $company
+     * @param  \App\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Company $company)
+    public function update(Request $request, Vendor $vendor)
     {
-        $this->save($request, $company->id);
-        return redirect('/companies');
+        $this->save($request, $vendor->id);
+        return redirect('/vendors');
     }
     public function saveBatch(Request $request)
     {
@@ -100,14 +140,14 @@ class VendorController extends Controller
         {
 
             $tokens = explode(";", $d);
-            $company = new Company();
-            $company->englishName = $tokens[0];
-            $company->arabicName = $tokens[1];
-            $company->push();
+            $vendor = new Vendor();
+            $vendor->englishName = $tokens[0];
+            $vendor->arabicName = $tokens[1];
+            $vendor->push();
 
         }
 
-        redirect('/companies');
+        redirect('/vendors');
 
     }
     public function save(Request $request, $id)
@@ -116,15 +156,15 @@ class VendorController extends Controller
         {
             return $this->saveBatch($request);
         }
-        $company = new Company();
+        $vendor = new Vendor();
         if($id !== -1)
         {
-            $company = Company::find($id);
+            $vendor = Vendor::find($id);
         }
-        $company->englishName = $request['englishName'];
-        $company->arabicName = $request['arabicName'];
+        $vendor->englishName = $request['englishName'];
+        $vendor->arabicName = $request['arabicName'];
 
-        $company->push();
+        $vendor->push();
 
 
 
@@ -133,14 +173,14 @@ class VendorController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Company  $company
+     * @param  \App\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Company $company)
+    public function destroy(Vendor $vendor)
     {
-        $company->delete = true;
-        $company->push();
-        redirect('/companies');
+        $vendor->delete = true;
+        $vendor->push();
+        redirect('/vendors');
 
         //
     }

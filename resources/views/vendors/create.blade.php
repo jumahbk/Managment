@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
     <?php
@@ -20,7 +20,7 @@
         <!--begin::Form-->
 
 
-            <form method="POST" action="/companies"  class="kt-form kt-form--label-right">
+            <form method="POST" action="/vendors"  class="kt-form kt-form--label-right">
                 @csrf
 
 
