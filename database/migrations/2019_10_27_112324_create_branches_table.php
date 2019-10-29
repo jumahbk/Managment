@@ -18,6 +18,10 @@ class CreateBranchesTable extends Migration
             $table->string('arabicName');
             $table->string('englishName');
 
+            $table->unsignedBigInteger('company_id');
+
+            $table->index('company_id');
+
             $table->timestamps();
         });
     }

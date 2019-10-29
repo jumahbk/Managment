@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('products','ProductController');
+Route::resource('branches','BranchController');
+Route::resource('warehouses','WarehouseController');
+
 Route::get('/employees/batch', 'EmployeeController@batch')->name('employeebatch');
 Route::resource('units','UnitController');
 Route::get('/vendors/{id}/deactivate', 'VendorController@deactivate');

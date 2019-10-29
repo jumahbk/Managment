@@ -20,8 +20,21 @@
         <!--begin::Form-->
 
 
-            <form method="POST" action="/companies"  class="kt-form kt-form--label-right">
+            <form method="POST" action="/products"  class="kt-form kt-form--label-right">
                 @csrf
+
+                <div class="kt-portlet__body col-md-9">
+                <div class="form-group row form-group-marginless kt-margin-t-20">
+
+                    <label class="col-lg-3 col-form-label">      {{    __('messages.vendorname')}}:</label>
+                    <div class="col-lg-3">
+                        <select class="form-control" name="vendor_id">
+                            @foreach($vendors as $t)
+                                <option value="{{$t->id}}"> {{$t->englishName}} -  {{$t->arabicName}} </option>
+                            @endforeach
+                        </select>                    </div>
+
+                </div></div>
 
 
             <div class="kt-portlet__body col-md-9">

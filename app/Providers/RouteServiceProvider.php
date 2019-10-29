@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Nationality;
+use App\Product;
 use App\Title;
 use App\Type;
 use App\Unit;
@@ -42,6 +43,17 @@ class RouteServiceProvider extends ServiceProvider
 
         Route::model('vendors', Vendor::class);
         Route::model('vendor', Vendor::class);
+
+
+        Route::model('warehouse', Warehouse::class);
+        Route::model('warehouses', Warehouse::class);
+
+
+        Route::model('branches', Product::class);
+        Route::model('branches', Product::class);
+
+        Route::model('products', Product::class);
+        Route::model('product', Product::class);
 
     }
 

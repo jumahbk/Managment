@@ -33,7 +33,7 @@ return [
     'birthdate' => 'تاريخ الميلاد',
     'unitlist' => 'قائمة الوحدات',
     'vendorlist' => 'قائمة الموردين',
-
+    'productlist' => 'قائمة المنتجات',
     'idExp' => 'تاريخ الانتهاء',
     'home' => 'الرئيسيه',
     'title' => 'المهنه',
@@ -41,9 +41,9 @@ return [
     'employeeList' => 'قائمة الموظفين',
     'activate' => 'اخفاء',
     'deactivate' => 'تفعيل',
-
+    'vendorname' => 'اسم المورد',
     'companyname' => 'اسم الشركه',
-
+    'branchlist' => 'قائمة الافرع',
     'staff' => 'الموظفين',
     'docs' => 'المستندات',
     'assets' => 'الاملاك',
@@ -52,6 +52,9 @@ return [
     'summery' => 'عرض الملخص',
     'passNo' => 'رقم الجواز',
     'passExp' => 'تاريخ انتهاء الجوازه',
+    'warehouselist' => 'مستودعات التخزين',
+    'warehousename' => 'اسم المستودع',
+    'branchname' => 'اسم الفرع',
 
     'summery' => '',
 

@@ -10,4 +10,9 @@ class Company extends Model
     {
         return $this->hasMany('App\Employee');
     }
+
+    public function branches()
+    {
+        return $this->hasMany('App\Branch');
+    }
 }

@@ -25,6 +25,12 @@ return [
     'nationalities' => 'Nationalities',
     'companylist' => 'Company List',
     'vendorlist' => 'Vendor List',
+    'vendorname' => 'Vendor Name',
+    'productlist' => 'Product List',
+    'branchlist' => 'Branch List',
+    'warehouselist' => 'Storage Locations',
+    'warehousename' => 'Warehouse Name',
+    'branchname' => 'Branch Name',
 
     'actions' => 'Actions',
     'viewall' => 'View all records',

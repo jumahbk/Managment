@@ -17,18 +17,8 @@ class CreateWarehousesTable extends Migration
             $table->bigIncrements('id');
             $table->string('englishName')->nullable();
             $table->string('arabicName')->nullable();
-
-
-            $table->unsignedBigInteger('company_id')->nullable();
-
             $table->unsignedBigInteger('branch_id')->nullable();
-
-
-            $table->index('company_id');
             $table->index('branch_id');
-
-
-
             $table->timestamps();
         });
     }
