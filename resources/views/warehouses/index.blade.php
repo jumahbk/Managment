@@ -170,7 +170,7 @@
                                         </div>
                                     </div>
                                     &nbsp;
-                                    <a href="/warehousees/create" class="btn btn-brand btn-elevate btn-icon-sm">
+                                    <a href="/warehouses/create" class="btn btn-brand btn-elevate btn-icon-sm">
                                         <i class="la la-plus"></i>
                                         {{    __('messages.addnew')}}
                                     </a>
@@ -185,6 +185,11 @@
                                     <table class="table">
                                         <thead>
                                         <tr>
+                                            <th>
+
+                                                {{    __('messages.companyname')}}
+
+                                            </th>
                                             <th>
 
                                                 {{    __('messages.branchname')}}
@@ -212,7 +217,9 @@
 
                                         @foreach($data as $d)
                                             <tr role="row" class="even">
-                                                <td class="">{{$d->company->englishName}} - {{$d->company->arabicName}}</td>
+                                                <td class="">{{$d->branch->company->englishName}} - {{$d->branch->company->arabicName}}</td>
+                                                <td class="">{{$d->branch->englishName}} - {{$d->branch->arabicName}}</td>
+
                                                 <td class="">{{$d->englishName}}</td>
                                                 <td class="">{{$d->arabicName}}</td>
 

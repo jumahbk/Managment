@@ -2,33 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14d71528-7b63-4ee8-b313-02f2a717b2f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/branches/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/branches/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/branches/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/products/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/products/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/products/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/warehouses/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/warehouses/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/warehouses/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Branch.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Branch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Company.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Company.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BranchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BranchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WarehouseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WarehouseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Vendor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Vendor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Warehouse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Warehouse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_112324_create_branches_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_112324_create_branches_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_112345_create_warehouses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_112345_create_warehouses_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/companies/batch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companies/batch.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/companies/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companies/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/companies/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companies/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/companies/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/companies/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_112401_create_stocks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_112401_create_stocks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_114639_create_items_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_114639_create_items_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/warehouses/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/warehouses/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/warehouses/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/warehouses/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,11 +16,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -136,18 +129,18 @@
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1Sojiht90UVnn89XQ8yZcUWwMsh" />
+  <component name="ProjectId" id="1SndN7ShDN7ZKdEBuMofqkfbqXH" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/employees" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/employees" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/inventory" />
     </key>
   </component>
@@ -169,11 +162,13 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="14d71528-7b63-4ee8-b313-02f2a717b2f9" name="Default Changelist" comment="" />
-      <created>1572236972397</created>
+      <created>1572203251219</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572236972397</updated>
-      <workItem from="1572236979032" duration="13051000" />
+      <updated>1572203251219</updated>
+      <workItem from="1572203254049" duration="1448000" />
+      <workItem from="1572367064365" duration="563000" />
+      <workItem from="1572375736555" duration="830000" />
     </task>
     <servers />
   </component>

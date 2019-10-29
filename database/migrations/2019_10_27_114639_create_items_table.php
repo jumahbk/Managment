@@ -17,9 +17,6 @@ class CreateItemsTable extends Migration
             $table->bigIncrements('id');
 
 
-            $table->string('arabicName')->nullable();
-            $table->string('englishName')->nullable();
-
             $table->integer('unit')->default(1);
             $table->unsignedBigInteger('unit_id');
 

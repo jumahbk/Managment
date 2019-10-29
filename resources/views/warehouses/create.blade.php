@@ -20,7 +20,7 @@
         <!--begin::Form-->
 
 
-            <form method="POST" action="/branches"  class="kt-form kt-form--label-right">
+            <form method="POST" action="/warehouses"  class="kt-form kt-form--label-right">
                 @csrf
 
                 <div class="kt-portlet__body col-md-9">

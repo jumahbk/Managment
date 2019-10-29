@@ -16,21 +16,23 @@ class CreateStocksTable extends Migration
         Schema::create('stocks', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->unsignedBigInteger('vendor_id')->nullable();
+            $table->unsignedBigInteger('product_id')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('warehouse_id')->nullable();
 
-            $table->integer('Qty');
-            $table->integer('currentQty');
             $table->string('batch');
+
+            $table->string('serial');
+
             $table->string('notes')->nullable();
             $table->date('receivedDate')->nullable();
             $table->date('expDate')->nullable();
 
 
-            $table->index('vendor_id');
-
+            $table->index('product_id');
             $table->index('user_id');
+
+            $table->index('warehouse_id');
 
 
 
