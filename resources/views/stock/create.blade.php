@@ -51,13 +51,7 @@
                 <div class="kt-portlet__body col-md-9">
                     <div class="form-group row form-group-marginless kt-margin-t-20">
 
-                        <label class="col-lg-3 col-form-label">      {{    __('messages.unitname')}}:</label>
-                        <div class="col-lg-3">
-                            <select class="form-control" name="unit_id">
-                                @foreach($u as $t)
-                                    <option value="{{$t->id}}"> {{$t->englishName}} -  {{$t->arabicName}} </option>
-                                @endforeach
-                            </select>                    </div>
+
 
                         <label class="col-lg-3 col-form-label">{{    __('messages.numberofunits')}}:</label>
                         <div class="col-lg-3">

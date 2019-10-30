@@ -19,7 +19,7 @@ class CreateStocksTable extends Migration
             $table->unsignedBigInteger('product_id')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('warehouse_id')->nullable();
-            $table->unsignedBigInteger('unit_id')->nullable();
+
 
 
             $table->string('batch');
@@ -32,7 +32,7 @@ class CreateStocksTable extends Migration
 
 
 
-            $table->index('unit_id');
+
             $table->index('product_id');
             $table->index('user_id');
             $table->index('warehouse_id');

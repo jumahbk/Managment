@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Unit;
 use App\Vendor;
 use Illuminate\Http\Request;
 
@@ -18,8 +19,9 @@ class ProductController extends Controller
 
         $data = Product::all();
         $vendors = Vendor::all();
+        $u = Unit::all();
 
-        return view('products.index', compact('data', 'vendors'));
+        return view('products.index', compact('data', 'vendors', 'u'));
     }
 
     /**
@@ -30,7 +32,8 @@ class ProductController extends Controller
     public function create()
     {
         $vendors = Vendor::all();
-        return view('products.create' ,  compact( 'vendors'));
+        $u = Unit::all();
+        return view('products.create' ,  compact( 'vendors', 'u'));
 
     }
     /**
@@ -167,6 +170,10 @@ class ProductController extends Controller
         $product->englishName = $request['englishName'];
         $product->arabicName = $request['arabicName'];
         $product->vendor_id = $request['vendor_id'];
+
+        $product->low = $request['low'];
+
+        $product->unit_id = $request['unit_id'];
 
         $product->push();
 

@@ -72,4 +72,6 @@ return [
     'name' => 'Name',
     'lic' => 'Licenses & IDs',
     'general' => 'General Info',
+    'unitname' => 'Unit Name',
+    'min' => 'Reorder Point',
 ];

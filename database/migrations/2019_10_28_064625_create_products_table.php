@@ -18,8 +18,12 @@ class CreateProductsTable extends Migration
 
             $table->string('arabicName')->nullable();
             $table->string('englishName')->nullable();
+            $table->integer('low');
             $table->unsignedBigInteger('vendor_id');
+            $table->unsignedBigInteger('unit_id');
 
+
+            $table->index('unit_id');
 
             $table->index('vendor_id');
 

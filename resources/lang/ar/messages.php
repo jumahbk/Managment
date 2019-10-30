@@ -68,7 +68,8 @@ return [
     'bankno' => 'رقم الحساب البنكي',
     'bankcode' => 'كود البنك',
     'productname' => 'اسم المنتج',
-
+    'unitname' => 'اسم الوحده',
+    'min' => 'الحد الادنى',
     'nationalities' => 'الجنسيات',
 
     'name' => 'الاسم',
