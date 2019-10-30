@@ -11,8 +11,13 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-    'settings' => 'الاعدادات',
+    'serialnumbers' => 'الارقام التسلسليه',
 
+    'settings' => 'الاعدادات',
+    'batchname' => 'كود الدفعه',
+    'notes' => 'ملاحظات',
+    'receivedDate' => 'تاريخ الاستلام',
+    'expDate' => 'تاريخ الانتهاء',
     'test' => 'تجربه',
     'edittitle' => 'تعديل مسمى المهنه',
     'englishName' => 'الاسم الانجليزي',
@@ -23,6 +28,7 @@ return [
     'actions' => 'العمليات',
     'viewall' => 'عرض جميع السجلات',
     'edit' => 'تعديل',
+    'numberofunits' => 'عدد الوحدات',
     'createNew' => 'اضافة سجل',
     'typelist' => 'انواع السجلات',
     'email' => 'البريد الالكتروني',

@@ -8,7 +8,7 @@
     $locale = App::getLocale();
 
     ?>
-    <div class="kt-portlet col-md-9">
+    <div class="kt-portlet col-md-12">
         <div class="kt-portlet__head">
             <div class="kt-portlet__head-label">
                 <h3 class="kt-portlet__head-title">

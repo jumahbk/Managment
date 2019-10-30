@@ -51,6 +51,47 @@ class StockController extends Controller
         $wh = Warehouse::all();
         return view('stock.index', compact('data', 'wh', 'products'));
     }
+
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function move()
+    {
+        $products = Product::all();
+        $data= [];
+        $i = 0;
+        foreach($products as $p )
+        {
+            $s = $p->stocks;
+
+            $count = 0;
+
+            foreach($s as $ts)
+            {
+
+                $count = $ts->left() + $count;
+            }
+
+
+
+
+            $t = new StockItem();
+            $t->productID = $p->id;
+            $t->amountLeft = $count;
+            $t->vendorName = $p->vendor->englishName . '-' . $p->vendor->arabicName;
+            $t->productName = $p->englishName . '-' . $p->arabicName;
+
+            $data[$i] = $t;
+
+
+        }
+
+        $wh = Warehouse::all();
+        return view('stock.move  ', compact('data', 'wh', 'products'));
+    }
     /**
      * Display a listing of the resource.
      *

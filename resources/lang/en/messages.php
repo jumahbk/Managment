@@ -11,12 +11,16 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
-    'test' => 'ssss',
+    'numberofunits' => 'Count',
+    'expDate' => 'Expiry Date',
+    'serialnumbers' => 'Serial Numbers',
+    'notes' => 'Notes',
+    'batchname' => 'Batch Code',
     'edittitle' => 'Edit title.',
     'englishName' => 'English Name',
     'arabicName' => 'Arabic Name',
     'save' => 'Save',
+    'receivedDate' => 'Received Date',
     'titlelist' => 'Job Titles List',
     'addnew' => 'Add new record',
     'createNewEmployee' => 'Add new ُ employee record',

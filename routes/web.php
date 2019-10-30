@@ -11,6 +11,11 @@
 |
 */
 Auth::routes();
+
+Route::get('/stock/move', 'StockController@move')->middleware('auth');
+
+
+
 Route::get('/stock/{id}/product', 'StockController@product')->middleware('auth');
 
 Route::get('/employees/{id}/deactivate', 'EmployeeController@deactivate')->middleware('auth');
@@ -57,4 +62,4 @@ Route::get('/title/batch', 'TitleController@batch')->name('titlebatch')->middlew
 Route::resource('employee','EmployeeController')->middleware('auth');;
 Route::resource('title','TitleController')->middleware('auth');;
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');;
+Route::get('/home', 'StockController@index')->name('home')->middleware('auth');;
