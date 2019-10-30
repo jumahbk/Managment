@@ -11,4 +11,8 @@ class Warehouse extends Model
         return $this->belongsTo('App\Branch','branch_id', 'id');
     }
 
+    public function stocks()
+    {
+        return $this->hasMany('App\Stock');
+    }
 }

@@ -11,4 +11,9 @@ class Product extends Model
     {
         return $this->belongsTo('App\Vendor','vendor_id', 'id');
     }
+
+    public function stocks()
+    {
+        return $this->hasMany('App\Stock');
+    }
 }

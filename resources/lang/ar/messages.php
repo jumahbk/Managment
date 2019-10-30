@@ -55,17 +55,19 @@ return [
     'warehouselist' => 'مستودعات التخزين',
     'warehousename' => 'اسم المستودع',
     'branchname' => 'اسم الفرع',
-
+    'newstock' => 'تسجيل مخزون جديد',
     'summery' => '',
-
+    'stocksummery' => 'ملخص المخزون',
+    'stockdetails' => 'تفاصيل المخزون',
     'mohNo' => 'رقم تصريح الصحه',
     'mohExp' => 'تاريخ انتهاء تصريح الصحه',
     'licNo' => 'رقم رخصة العمل',
     'licExp' => 'تاريخ انتهاء رخصة العمل',
     'gosi' => 'رقم التأمينات',
-
+    'totalleft' => 'الكميه المتوفره',
     'bankno' => 'رقم الحساب البنكي',
     'bankcode' => 'كود البنك',
+    'productname' => 'اسم المنتج',
 
     'nationalities' => 'الجنسيات',
 

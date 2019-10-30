@@ -103,23 +103,25 @@
             <!-- begin:: Content -->
             <div class="kt-container  kt-grid__item kt-grid__item--fluid">
                 @if(isset($warning))
-                <div class="alert alert-light alert-elevate" role="alert">
+                    <div class="alert alert-light alert-elevate" role="alert">
 
 
-                    <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
-                    <div class="alert-text">
+                        <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+                        <div class="alert-text">
 
-                        {{$warning}}
-                       </div>
+                            {{$warning}}
+                        </div>
 
-                </div>
+                    </div>
                 @endif
                 <div class="kt-portlet kt-portlet--mobile">
                     <div class="kt-portlet__head kt-portlet__head--lg">
                         <div class="kt-portlet__head-label">
-
+			<span class="kt-portlet__head-icon">
+				<i class="kt-font-brand flaticon2-line-chart"></i>
+			</span>
                             <h3 class="kt-portlet__head-title">
-                                {{    __('messages.branchlist')}}
+                                {{    __('messages.stocksummery')}}
                             </h3>
                         </div>
                         <div class="kt-portlet__head-toolbar">
@@ -168,7 +170,7 @@
                                         </div>
                                     </div>
                                     &nbsp;
-                                    <a href="/branches/create" class="btn btn-brand btn-elevate btn-icon-sm">
+                                    <a href="/stock/create" class="btn btn-brand btn-elevate btn-icon-sm">
                                         <i class="la la-plus"></i>
                                         {{    __('messages.addnew')}}
                                     </a>
@@ -180,80 +182,53 @@
 
 
 
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th>
+                        <table class="table">
+                            <thead>
+                            <tr>
 
-                                                {{    __('messages.companyname')}}
+                                <th>
 
-                                            </th>
-                                            <th>
+                                    {{    __('messages.vendorname')}}
 
-                                                {{    __('messages.englishName')}}
+                                </th>
+                                <th>
 
-                                            </th>
-                                            <th>
+                                    {{    __('messages.productname')}}
 
-                                                {{    __('messages.arabicName')}}
+                                </th>
+                                <th>
 
+                                    {{    __('messages.totalleft')}}
 
-                                            </th>
-                                            <th>
-
-                                                {{    __('messages.actions')}}
-
-                                            </th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-
-                                        @foreach($data as $d)
-                                            <tr role="row" class="even">
-                                                <td class="">{{$d->company->englishName}} - {{$d->company->arabicName}}</td>
-                                                <td class="">{{$d->englishName}}</td>
-                                                <td class="">{{$d->arabicName}}</td>
-
-                                                <td class="">
-                                                    @if($d->deleted == 0)
-                                                    <a href="/branches/{{$d->id}}/deactivate" class="btn btn-label-danger btn-bold btn-icon-h kt-margin-l-10">
-                                                        {{    __('messages.deactivate')}}
-
-                                                    </a>
-                                                    @else
-
-                                                        <a href="/branches/{{$d->id}}/activate" class="btn btn-label-info btn-bold btn-icon-h kt-margin-l-10">
-                                                            {{    __('messages.activate')}}
-
-                                                        </a>
-
-                                                    @endif
-                                                    <a href="/branches/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
-                                                        {{    __('messages.edit')}}
-
-                                                    </a>
+                                </th>
 
 
-                                                </td>
+                            </tr>
+                            </thead>
+                            <tbody>
 
-                                            </tr>
-                                        @endforeach
-                                        </tbody>
-                                    </table>
+                            @foreach($s as $d)
+                                <tr role="row" class="even">
+                                    <td class="">{{$d->batch}}</td>
+                                    <td class="">{{$d->serial}} </td>
+                                    <td class="">{{$d->left()}}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
 
-
-
-
-
-
-                                </div></div>
 
                     </div>
-                </div>	</div>
-            <!-- end:: Content -->							</div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
     </div>
-
-
+    <!-- end:: Content -->
 
 
 

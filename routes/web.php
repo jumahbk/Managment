@@ -10,48 +10,51 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+Route::get('/stock/{id}/product', 'StockController@product')->middleware('auth');
 
-Route::get('/employees/{id}/deactivate', 'EmployeeController@deactivate');
-Route::get('/employees/{id}/activate', 'EmployeeController@activate');
+Route::get('/employees/{id}/deactivate', 'EmployeeController@deactivate')->middleware('auth');
+Route::get('/employees/{id}/activate', 'EmployeeController@activate')->middleware('auth');;
 
-Route::get('/warehouses/{id}/deactivate', 'WarehouseController@deactivate');
-Route::get('/warehouses/{id}/activate', 'WarehouseController@activate');
+Route::get('/warehouses/{id}/deactivate', 'WarehouseController@deactivate')->middleware('auth');;
+Route::get('/warehouses/{id}/activate', 'WarehouseController@activate')->middleware('auth');;
 
-Route::get('/branches/{id}/deactivate', 'BranchController@deactivate');
-Route::get('/branches/{id}/activate', 'BranchController@activate');
+Route::get('/branches/{id}/deactivate', 'BranchController@deactivate')->middleware('auth');;
+Route::get('/branches/{id}/activate', 'BranchController@activate')->middleware('auth');;
 
-Route::get('/products/{id}/deactivate', 'ProductController@deactivate');
-Route::get('/products/{id}/activate', 'ProductController@activate');
+Route::get('/products/{id}/deactivate', 'ProductController@deactivate')->middleware('auth');;
+Route::get('/products/{id}/activate', 'ProductController@activate')->middleware('auth');;
 
+Route::resource('stock','StockController')->middleware('auth');;
 
-Route::resource('products','ProductController');
-Route::resource('branches','BranchController');
-Route::resource('warehouses','WarehouseController');
+Route::resource('products','ProductController')->middleware('auth');;
+Route::resource('branches','BranchController')->middleware('auth');;
+Route::resource('warehouses','WarehouseController')->middleware('auth');;
 
-Route::get('/employees/batch', 'EmployeeController@batch')->name('employeebatch');
-Route::resource('units','UnitController');
-Route::get('/vendors/{id}/deactivate', 'VendorController@deactivate');
-Route::get('/vendors/{id}/activate', 'VendorController@activate');
+Route::get('/employees/batch', 'EmployeeController@batch')->name('employeebatch')->middleware('auth');;
+Route::resource('units','UnitController')->middleware('auth');;
+Route::get('/vendors/{id}/deactivate', 'VendorController@deactivate')->middleware('auth');;
+Route::get('/vendors/{id}/activate', 'VendorController@activate')->middleware('auth');;
 
-Route::get('/nationalities/batch', 'NationalityController@batch')->name('nationalitybatch');
-Route::get('/types/batch', 'TypeeController@batch')->name('typebatch');
-Route::resource('types','TypeController');
-Route::resource('nationalities','NationalityController');
-Route::resource('employees','EmployeeController');
-Route::resource('companies','CompanyController');
-Route::resource('vendors','VendorController');
+Route::get('/nationalities/batch', 'NationalityController@batch')->name('nationalitybatch')->middleware('auth');;
+Route::get('/types/batch', 'TypeeController@batch')->name('typebatch')->middleware('auth');;
+Route::resource('types','TypeController')->middleware('auth');;
+Route::resource('nationalities','NationalityController')->middleware('auth');;
+Route::resource('employees','EmployeeController')->middleware('auth');;
+Route::resource('companies','CompanyController')->middleware('auth');;
+Route::resource('vendors','VendorController')->middleware('auth');;
 
-Route::get('/lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang']);
+Route::get('/lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang'])->middleware('auth');;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-Auth::routes();
-Route::get('/title/batch', 'TitleController@batch')->name('titlebatch');
+})->middleware('auth');;
 
 
-Route::resource('employee','EmployeeController');
-Route::resource('title','TitleController');
+Route::get('/title/batch', 'TitleController@batch')->name('titlebatch')->middleware('auth');;
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('employee','EmployeeController')->middleware('auth');;
+Route::resource('title','TitleController')->middleware('auth');;
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');;

@@ -19,19 +19,22 @@ class CreateStocksTable extends Migration
             $table->unsignedBigInteger('product_id')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('warehouse_id')->nullable();
+            $table->unsignedBigInteger('unit_id')->nullable();
+
 
             $table->string('batch');
-
-            $table->string('serial');
-
+            $table->integer('total')->default(1);
+            $table->integer('usedUnits')->default(0);
+            $table->string('serial')->unique();
             $table->string('notes')->nullable();
             $table->date('receivedDate')->nullable();
             $table->date('expDate')->nullable();
 
 
+
+            $table->index('unit_id');
             $table->index('product_id');
             $table->index('user_id');
-
             $table->index('warehouse_id');
 
 
