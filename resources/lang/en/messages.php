@@ -11,6 +11,10 @@ return [
     | these language lines according to your application's requirements.
     |
     */
+    'pleaselogin' => 'Please log in',
+    'serialnumbertomove' => 'Serial Number to Move',
+    'request' => 'Request',
+
     'numberofunits' => 'Count',
     'expDate' => 'Expiry Date',
     'serialnumbers' => 'Serial Numbers',

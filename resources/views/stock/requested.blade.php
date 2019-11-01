@@ -17,7 +17,23 @@
             </div>
         </div>
 
-        <!--begin::Form-->
+        @if(isset($warning))
+            <div class="alert alert-light alert-elevate" role="alert">
+
+
+                <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+                <div class="alert-text">
+
+                    {{$warning}}
+
+
+                    <a href="/stock/move" ><b>Back</b> </a>
+                </div>
+
+            </div>
+
+
+        @else
 
 
         <form method="POST" action="/stock/move"  class="kt-form kt-form--label-right">
@@ -51,6 +67,7 @@
             </div>
         </form>
 
+    @endif
         <!--end::Form-->
     </div>
 

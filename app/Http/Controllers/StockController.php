@@ -52,7 +52,32 @@ class StockController extends Controller
         return view('stock.index', compact('data', 'wh', 'products'));
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function request(Request $request)
+    {
+        $warning = null;
 
+        $id = $request['serial'];
+
+        $stock = Stock::where('serial', $id)->get()->first();
+
+
+        if($stock == null)
+        {
+            $warning = "Invalid Serial Number";
+        }
+
+
+        return view('stock.requested' , compact('warning', 'stock'));
+
+
+
+    }
     /**
      * Display a listing of the resource.
      *

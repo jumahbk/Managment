@@ -12,7 +12,9 @@ return [
     |
     */
     'serialnumbers' => 'الارقام التسلسليه',
-
+    'pleaselogin' => 'الرجاء تسجيل الدخول',
+    'serialnumbertomove' => 'الرقم التسلسلي',
+    'request' => 'طلب',
     'settings' => 'الاعدادات',
     'batchname' => 'كود الدفعه',
     'notes' => 'ملاحظات',
