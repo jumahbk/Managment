@@ -29,7 +29,7 @@ class CreateStocksTable extends Migration
             $table->string('notes')->nullable();
             $table->date('receivedDate')->nullable();
             $table->date('expDate')->nullable();
-
+            $table->double('cost')->default(0);
 
 
 

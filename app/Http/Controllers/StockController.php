@@ -52,6 +52,48 @@ class StockController extends Controller
         return view('stock.index', compact('data', 'wh', 'products'));
     }
 
+    public function batchlist()
+    {
+        $products = Product::all();
+        $data= [];
+        $i = 0;
+        foreach($products as $p )
+        {
+            $s = $p->stocks;
+
+            $count = 0;
+
+            foreach($s as $ts)
+            {
+
+                $count = $ts->left() + $count;
+            }
+
+
+
+
+            $t = new StockItem();
+            $t->productID = $p->id;
+            $t->amountLeft = $count;
+            $t->vendorName = $p->vendor->englishName . '-' . $p->vendor->arabicName;
+            $t->productName = $p->englishName . '-' . $p->arabicName;
+
+            $data[$i] = $t;
+
+
+        }
+
+        $wh = Warehouse::all();
+        return view('stock.batchlist', compact('data', 'wh', 'products'));
+    }
+
+
+    public function productlist()
+    {
+        $data = Stock::all();
+        return view('stock.productlist', compact('data'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -278,7 +320,6 @@ class StockController extends Controller
             $stock->user_id = $id = \Auth::user()->id;
             $stock->warehouse_id = $request['warehouse_id'];
             $stock->product_id = $request['product_id'];
-            $stock->unit_id = $request['unit_id'];
             $stock->warehouse_id = $request['warehouse_id'];
             $stock->total = $request['total'];
             $stock->batch = trim($request['batch']);

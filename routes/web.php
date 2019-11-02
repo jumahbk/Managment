@@ -14,6 +14,8 @@ Auth::routes();
 Route::post('/stock/move','StockController@request' )->middleware('auth');
 Route::get('/stock/requested', 'StockController@requested')->middleware('auth');
 
+Route::get('/stock/batchlist', 'StockController@batchlist')->middleware('auth');
+Route::get('/stock/productlist', 'StockController@productlist')->middleware('auth');
 
 Route::get('/stock/move', 'StockController@move')->middleware('auth');
 

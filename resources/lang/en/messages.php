@@ -14,7 +14,9 @@ return [
     'pleaselogin' => 'Please log in',
     'serialnumbertomove' => 'Serial Number to Move',
     'request' => 'Request',
-
+    'batchcost'=>'Batch Cost',
+    'batchview' => 'Batch Details',
+    'productview'=>'Product Details',
     'numberofunits' => 'Count',
     'expDate' => 'Expiry Date',
     'serialnumbers' => 'Serial Numbers',

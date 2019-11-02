@@ -79,21 +79,13 @@
 				<i class="kt-font-brand flaticon2-line-chart"></i>
 			</span>
                             <h3 class="kt-portlet__head-title">
-                                {{    __('messages.stocksummery')}}
+                                {{    __('messages.productlist')}}
                             </h3>
                         </div>
                         <div class="kt-portlet__head-toolbar">
                             <div class="kt-portlet__head-wrapper">
                                 <div class="kt-portlet__head-actions">
 
-                                    <a href="/stock/batchlist" class="btn btn-google btn-elevate btn-icon-sm">
-                                        <i class="la la-folder"></i>
-                                        {{    __('messages.batchview')}}
-                                    </a>
-                                    <a href="/stock/productlist" class="btn btn-dark btn-elevate btn-icon-sm">
-                                        <i class="la la-barcode"></i>
-                                        {{    __('messages.productview')}}
-                                    </a>&nbsp;
                                     <a href="/stock/create" class="btn btn-brand btn-elevate btn-icon-sm">
                                         <i class="la la-plus"></i>
                                         {{    __('messages.addnew')}}
@@ -104,17 +96,12 @@
 
                     <div class="kt-portlet__body">
 
+                        <div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 2275px; padding-right: 0px;">
 
-
-                        <table class="table">
+                        <table id="kt_table_1"class="table table-striped- table-bordered table-hover table-checkable">
                             <thead>
                             <tr>
 
-                                <th>
-
-                                    {{    __('messages.vendorname')}}
-
-                                </th>
                                 <th>
 
                                     {{    __('messages.productname')}}
@@ -122,9 +109,55 @@
                                 </th>
                                 <th>
 
-                                    {{    __('messages.totalleft')}}
+                                    {{    __('messages.rby')}}
 
                                 </th>
+                                <th>
+
+                                    {{    __('messages.warehousename')}}
+
+                                </th>
+                                <th>
+
+                                    {{    __('messages.batch')}}
+
+                                </th>
+                                <th>
+
+                                    {{    __('messages.total')}}
+
+                                </th>
+                                <th>
+
+                                    {{    __('messages.usedunits')}}
+
+                                </th>
+                                <th>
+
+                                    {{    __('messages.remaining')}}
+
+                                </th>
+                                <th>
+
+                                    {{    __('messages.serial')}}
+
+                                </th>
+                                <th>
+
+                                    {{    __('messages.notes')}}
+
+                                </th>
+                                <th>
+
+                                    {{    __('messages.rdate')}}
+
+                                </th>
+                                <th>
+
+                                    {{    __('messages.expdate')}}
+
+                                </th>
+
 
 
                             </tr>
@@ -132,126 +165,31 @@
                             <tbody>
 
                             @foreach($data as $d)
-                                @if($d->low <= $d->amountLeft)
+                                @if($d->left() == 0)
                                     <tr role="row" class="even text-danger">
                                 @else
                                     <tr role="row" class="even text-info">
 
                                 @endif
-                                    <td class="">{{$d->vendorName}}</td>
-                                    <td class=""><a href="/stock/{{$d->productID}}/product">{{$d->productName}} </a> </td>
-                                    <td class="">{{$d->amountLeft}}</td>
-                                </tr>
+                                    <td class="">{{$d->product->englishName}}-{{$d->product->arabicName}}</td>
+                                    <td class="">{{$d->user->name}}</td>
+                                    <td class="">{{$d->warehouse->englishName}}</td>
+                                        <td class="">{{$d->batch}}</td>
+                                        <td class="">{{$d->total}}</td>
+                                        <td class="">{{$d->usedUnits}}</td>
+                                        <td class="">{{$d->total - $d->usedUnits}}</td>
+                                        <td class="">{{$d->serial}}</td>
+                                        <td class="">{{$d->notes}}</td>
+                                        <td class="">{{$d->receivedDate}}</td>
+                                        <td class="">{{$d->expDate}}</td>
+
+
+                                    </tr>
                             @endforeach
                             </tbody>
                         </table>
 
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-        @foreach($wh as $w)
-        <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-
-            <?php
-
-
-            $wdata= [];
-            $i = 0;
-            foreach($products as $p )
-            {
-                $s = $p->stocks;
-
-                $count = 0;
-
-                foreach($s as $ts)
-                {
-
-                    if($ts->warehouse_id == $w->id)
-                        {
-                            $count = $ts->left() + $count;
-                        }
-
-                }
-
-
-
-
-                $t = new App\StockItem();
-                $t->amountLeft = $count;
-                $t->vendorName = $p->vendor->englishName . '-' . $p->vendor->arabicName;
-                $t->productName = $p->englishName . '-' . $p->arabicName;
-
-                $wdata[$i] = $t;
-
-
-            }
-
-
-            ?>
-
-            <!-- end:: Content Head -->
-            <!-- begin:: Content -->
-            <div class="kt-container  kt-grid__item kt-grid__item--fluid">
-
-                <div class="kt-portlet kt-portlet--mobile">
-                    <div class="kt-portlet__head kt-portlet__head--lg">
-                        <div class="kt-portlet__head-label">
-			<span class="kt-portlet__head-icon">
-				<i class="kt-font-brand flaticon2-location"></i>
-			</span>
-                            <h3 class="kt-portlet__head-title">
-                                {{  $w->englishName  }} - {{ $w->arabicName }}
-                            </h3>
-                        </div>
-                        <div class="kt-portlet__head-toolbar">
-		</div>
-                    </div>
-
-                    <div class="kt-portlet__body">
-
-
-
-                        <table class="table">
-                            <thead>
-                            <tr>
-
-                                <th>
-
-                                    {{    __('messages.vendorname')}}
-
-                                </th>
-                                <th>
-
-                                    {{    __('messages.productname')}}
-
-                                </th>
-                                <th>
-
-                                    {{    __('messages.totalleft')}}
-
-                                </th>
-
-
-                            </tr>
-                            </thead>
-                            <tbody>
-
-                            @foreach($wdata as $d)
-                                <tr role="row" class="even">
-                                    <td class="">{{$d->vendorName}}</td>
-                                    <td class="">{{$d->productName}} </td>
-                                    <td class="">{{$d->amountLeft}}</td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
-
-
+                                </div></div></div>
                     </div>
                 </div>
 
@@ -260,7 +198,11 @@
 
 
 
-        @endforeach
+
+
+
+
+
 
 
 
