@@ -16,4 +16,10 @@ class Product extends Model
     {
         return $this->hasMany('App\Stock');
     }
+    public function unit()
+    {
+        return $this->belongsTo('App\Unit','unit_id', 'id');
+    }
+
+
 }

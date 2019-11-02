@@ -41,13 +41,19 @@
                                 <i class="flaticon2-settings"></i>
                             </a>
 
-                            <div class="dropdown dropdown-inline" data-toggle="kt-tooltip" title="" data-placement="left" data-original-title="Quick actions">
-                                <a href="#" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--md">
+                            <div class="dropdown dropdown-inline" data-toggle="kt-tooltip" title=""
+                                 data-placement="left" data-original-title="Quick actions">
+                                <a href="#" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         width="24px" height="24px" viewBox="0 0 24 24" version="1.1"
+                                         class="kt-svg-icon kt-svg-icon--success kt-svg-icon--md">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <polygon points="0 0 24 0 24 24 0 24"></polygon>
-                                            <path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
-                                            <path d="M11,14 L9,14 C8.44771525,14 8,13.5522847 8,13 C8,12.4477153 8.44771525,12 9,12 L11,12 L11,10 C11,9.44771525 11.4477153,9 12,9 C12.5522847,9 13,9.44771525 13,10 L13,12 L15,12 C15.5522847,12 16,12.4477153 16,13 C16,13.5522847 15.5522847,14 15,14 L13,14 L13,16 C13,16.5522847 12.5522847,17 12,17 C11.4477153,17 11,16.5522847 11,16 L11,14 Z" fill="#000000"></path>
+                                            <path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z"
+                                                  fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                                            <path d="M11,14 L9,14 C8.44771525,14 8,13.5522847 8,13 C8,12.4477153 8.44771525,12 9,12 L11,12 L11,10 C11,9.44771525 11.4477153,9 12,9 C12.5522847,9 13,9.44771525 13,10 L13,12 L15,12 C15.5522847,12 16,12.4477153 16,13 C16,13.5522847 15.5522847,14 15,14 L13,14 L13,16 C13,16.5522847 12.5522847,17 12,17 C11.4477153,17 11,16.5522847 11,16 L11,14 Z"
+                                                  fill="#000000"></path>
                                         </g>
                                     </svg>                        <!--<i class="flaticon2-plus"></i>-->
                                 </a>
@@ -91,118 +97,102 @@
                                         {{    __('messages.addnew')}}
                                     </a>
                                 </div>
-                            </div>		</div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="kt-portlet__body">
 
-                        <div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 2275px; padding-right: 0px;">
+                        <div class="table-wrapper-scroll-y my-custom-scrollbar">
 
-                        <table id="kt_table_1"class="table table-striped- table-bordered table-hover table-checkable">
-                            <thead>
-                            <tr>
+                            <table class="table table-bordered table-striped mb-0">
+                                <thead>
+                                <tr>
 
-                                <th>
+                                    <th>
 
-                                    {{    __('messages.productname')}}
+                                        {{    __('messages.productname')}}
 
-                                </th>
-                                <th>
+                                    </th>
+                                    <th>
 
-                                    {{    __('messages.rby')}}
+                                        {{    __('messages.rby')}}
 
-                                </th>
-                                <th>
+                                    </th>
+                                    <th>
 
-                                    {{    __('messages.warehousename')}}
+                                        {{    __('messages.warehousename')}}
 
-                                </th>
-                                <th>
+                                    </th>
+                                    <th>
 
-                                    {{    __('messages.batch')}}
+                                        {{    __('messages.batch')}}
 
-                                </th>
-                                <th>
+                                    </th>
 
-                                    {{    __('messages.total')}}
+                                    <th>
 
-                                </th>
-                                <th>
+                                        {{    __('messages.remaining')}}
 
-                                    {{    __('messages.usedunits')}}
+                                    </th>
+                                    <th>
 
-                                </th>
-                                <th>
+                                        {{    __('messages.serial')}}
 
-                                    {{    __('messages.remaining')}}
+                                    </th>
+                                    <th>
 
-                                </th>
-                                <th>
+                                        {{    __('messages.notes')}}
 
-                                    {{    __('messages.serial')}}
+                                    </th>
+                                    <th>
 
-                                </th>
-                                <th>
+                                        {{    __('messages.rdate')}}
 
-                                    {{    __('messages.notes')}}
+                                    </th>
+                                    <th>
 
-                                </th>
-                                <th>
+                                        {{    __('messages.expdate')}}
 
-                                    {{    __('messages.rdate')}}
-
-                                </th>
-                                <th>
-
-                                    {{    __('messages.expdate')}}
-
-                                </th>
+                                    </th>
 
 
+                                </tr>
+                                </thead>
+                                <tbody>
 
-                            </tr>
-                            </thead>
-                            <tbody>
+                                @foreach($data as $d)
+                                    @if($d->left() == 0)
+                                        <tr role="row" class="even text-danger">
+                                    @else
+                                        <tr role="row" class="even text-info">
 
-                            @foreach($data as $d)
-                                @if($d->left() == 0)
-                                    <tr role="row" class="even text-danger">
-                                @else
-                                    <tr role="row" class="even text-info">
-
-                                @endif
-                                    <td class="">{{$d->product->englishName}}-{{$d->product->arabicName}}</td>
-                                    <td class="">{{$d->user->name}}</td>
-                                    <td class="">{{$d->warehouse->englishName}}</td>
-                                        <td class="">{{$d->batch}}</td>
-                                        <td class="">{{$d->total}}</td>
-                                        <td class="">{{$d->usedUnits}}</td>
-                                        <td class="">{{$d->total - $d->usedUnits}}</td>
-                                        <td class="">{{$d->serial}}</td>
-                                        <td class="">{{$d->notes}}</td>
-                                        <td class="">{{$d->receivedDate}}</td>
-                                        <td class="">{{$d->expDate}}</td>
+                                            @endif
+                                            <td class="">{{$d->product->englishName}}-{{$d->product->arabicName}}</td>
+                                            <td class="">{{$d->user->name}}</td>
+                                            <td class="">{{$d->warehouse->englishName}}</td>
+                                            <td class="">{{$d->batch}}</td>
+                                            <td class="">{{$d->total - $d->usedUnits}} , {{$d->product->unit->englishName}}</td>
+                                            <td class="">{{$d->serial}}</td>
+                                            <td class="">{{$d->notes}}</td>
+                                            <td class="">{{$d->receivedDate}}</td>
+                                            <td class="">{{$d->expDate}}</td>
 
 
-                                    </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
+                                        </tr>
+                                        @endforeach
 
-                                </div></div></div>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
                     </div>
                 </div>
 
             </div>
         </div>
-
-
-
-
-
-
-
-
 
 
 

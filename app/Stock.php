@@ -24,10 +24,6 @@ class Stock extends Model
     }
 
 
-    public function unit()
-    {
-        return $this->belongsTo('App\Unit','unit_id', 'id');
-    }
 
     public function useSingleUnit()
     {

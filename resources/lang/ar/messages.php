@@ -12,6 +12,9 @@ return [
     |
     */
     'serialnumbers' => 'الارقام التسلسليه',
+    'expdate'=> 'تاريخ الانتهاء',
+    'location' => 'الموقع',
+
     'pleaselogin' => 'الرجاء تسجيل الدخول',
     'serialnumbertomove' => 'الرقم التسلسلي',
     'batchcost' => 'تكلفة الدفعه',
