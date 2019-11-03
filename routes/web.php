@@ -11,6 +11,8 @@
 |
 */
 Auth::routes();
+Route::post('/','StockController@index' )->middleware('auth');
+
 Route::post('/stock/move','StockController@request' )->middleware('auth');
 Route::get('/stock/requested', 'StockController@requested')->middleware('auth');
 
@@ -59,7 +61,7 @@ Route::resource('vendors','VendorController')->middleware('auth');;
 Route::get('/lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang'])->middleware('auth');;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/stock');
 })->middleware('auth');;
 
 

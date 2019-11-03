@@ -12,8 +12,11 @@ return [
     |
     */
     'serialnumbers' => 'الارقام التسلسليه',
+    'productinfo'=>'معلومات الصنف',
+
     'expdate'=> 'تاريخ الانتهاء',
     'location' => 'الموقع',
+    'consumeorrelocate' => 'استهلاك او تغيير الموقع',
     'productview'=> 'تفاصيل الصنف',
     'pleaselogin' => 'الرجاء تسجيل الدخول',
     'serialnumbertomove' => 'الرقم التسلسلي',
@@ -21,6 +24,7 @@ return [
     'batchview' => 'تفاصيل الدفعات',
     'productview'=>'تفاصيل المخزون',
     'request' => 'طلب',
+    'unitsav' => 'الكميه المتوفره',
     'settings' => 'الاعدادات',
     'batchname' => 'كود الدفعه',
     'notes' => 'ملاحظات',

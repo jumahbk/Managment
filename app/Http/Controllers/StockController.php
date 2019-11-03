@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Branch;
+use App\Employee;
 use App\Product;
 use App\Stock;
 use App\StockItem;
@@ -102,20 +103,22 @@ class StockController extends Controller
      */
     public function request(Request $request)
     {
-        $warning = null;
+//        $warning = null;
 
         $id = $request['serial'];
 
-        $stock = Stock::where('serial', $id)->get()->first();
+//        $stock = Stock::where('serial', $id)->get()->first();
+//
+//
+//        if($stock == null)
+//        {
+//            $warning = "Invalid Serial Number";
+//        }
 
 
-        if($stock == null)
-        {
-            $warning = "Invalid Serial Number";
-        }
+//        return view('stock.requested' , compact('warning', 'stock'));
 
-
-        return view('stock.requested' , compact('warning', 'stock'));
+        return redirect('/stock/'. $id . '/serial');
 
 
 
@@ -132,9 +135,10 @@ class StockController extends Controller
     public function serial($id)
     {
         $warning = null;
-
+        $emps = Employee::all();
 
         $stock = Stock::where('serial', $id)->get()->first();
+        $warehouses = Warehouse::where('id' , '<>', $stock->warehouse_id)->get();
 
 
         if($stock == null)
@@ -143,7 +147,7 @@ class StockController extends Controller
         }
 
 
-        return view('stock.requested' , compact('warning', 'stock'));
+        return view('stock.requested' , compact('warning', 'stock', 'warehouses', 'emps'));
 
 
 
