@@ -92,11 +92,12 @@
 
 
                                                                                 <select class="form-control" id="exampleSelect1">
-																<option>1</option>
-																<option>2</option>
-																<option>3</option>
-																<option>4</option>
-																<option>5</option>
+                                                                               <select class="form-control" name="employee_id" id="employee_id">
+
+                                                                                    @foreach($emps as $a)
+                                                                                       <option value="{{$a->id}}">{{$a->englishName}} - {{$a->arabicName}}</option>
+                                                                                   @endforeach
+															</select>
 															</select>
 
 																			</span>
