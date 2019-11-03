@@ -14,7 +14,7 @@ return [
     'serialnumbers' => 'الارقام التسلسليه',
     'expdate'=> 'تاريخ الانتهاء',
     'location' => 'الموقع',
-
+    'productview'=> 'تفاصيل الصنف',
     'pleaselogin' => 'الرجاء تسجيل الدخول',
     'serialnumbertomove' => 'الرقم التسلسلي',
     'batchcost' => 'تكلفة الدفعه',

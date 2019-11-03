@@ -14,6 +14,7 @@ return [
     'pleaselogin' => 'Please log in',
     'serialnumbertomove' => 'Serial Number to Move',
     'request' => 'Request',
+    'productview'=> 'Product View',
     'batchcost'=>'Batch Cost',
     'batchview' => 'Batch Details',
     'productview'=>'Product Details',

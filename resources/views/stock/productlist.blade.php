@@ -162,9 +162,9 @@
                                 <tbody>
 
                                 @foreach($data as $d)
-                                    @if($d->left() == 0)
-                                        <tr role="row" class="even text-danger">
-                                    @else
+
+
+                                        @if($d->left() > 0)
                                         <tr role="row" class="even text-info">
 
                                             @endif
@@ -173,9 +173,9 @@
                                             <td class="">{{$d->warehouse->englishName}}</td>
                                             <td class="">{{$d->batch}}</td>
                                             <td class="">{{$d->total - $d->usedUnits}} , {{$d->product->unit->englishName}}</td>
-                                            <td class="">{{$d->serial}}</td>
+                                            <td class=""><b><a href="/stock/{{$d->serial}}/serial">{{$d->serial}}</a></b></td>
                                             <td class="">{{$d->notes}}</td>
-                                            <td class="">{{$d->receivedDate}}</td>
+                                            <td class=""><a href="/stock/{{$d->serial}}">{{$d->receivedDate}}</a></td>
                                             <td class="">{{$d->expDate}}</td>
 
 

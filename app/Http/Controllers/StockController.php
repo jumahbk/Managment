@@ -120,6 +120,34 @@ class StockController extends Controller
 
 
     }
+
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function serial($id)
+    {
+        $warning = null;
+
+
+        $stock = Stock::where('serial', $id)->get()->first();
+
+
+        if($stock == null)
+        {
+            $warning = "Invalid Serial Number";
+        }
+
+
+        return view('stock.requested' , compact('warning', 'stock'));
+
+
+
+    }
     /**
      * Display a listing of the resource.
      *

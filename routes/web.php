@@ -19,6 +19,7 @@ Route::get('/stock/productlist', 'StockController@productlist')->middleware('aut
 
 Route::get('/stock/move', 'StockController@move')->middleware('auth');
 
+Route::get('/stock/{id}/serial', 'StockController@serial')->middleware('auth');
 
 
 
