@@ -40,6 +40,7 @@ class StockController extends Controller
 
             $t = new StockItem();
             $t->productID = $p->id;
+
             $t->amountLeft = $count;
             $t->vendorName = $p->vendor->englishName . '-' . $p->vendor->arabicName;
             $t->productName = $p->englishName . '-' . $p->arabicName;
