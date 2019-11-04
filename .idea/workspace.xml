@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d71528-7b63-4ee8-b313-02f2a717b2f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/vendors/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VendorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VendorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_112335_create_vendors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_112335_create_vendors_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendors/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendors/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/nats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tests/nats.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/titles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tests/titles.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendors/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendors/show.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +172,7 @@
       <workItem from="1572203254049" duration="1448000" />
       <workItem from="1572367064365" duration="563000" />
       <workItem from="1572375736555" duration="16038000" />
-      <workItem from="1572884399794" duration="5240000" />
+      <workItem from="1572884399794" duration="5524000" />
     </task>
     <servers />
   </component>

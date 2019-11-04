@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Vendor;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class VendorController extends Controller
 {
@@ -103,7 +104,10 @@ class VendorController extends Controller
      */
     public function show(Vendor $vendor)
     {
-        //
+        $products = $vendor->products;
+
+
+        return view('vendors.show', compact('vendor','data'));
     }
 
     /**
