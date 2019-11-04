@@ -16,8 +16,20 @@ class CreateVendorsTable extends Migration
         Schema::create('vendors', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->string('arabicName');
-            $table->string('englishName');
+            $table->string('arabicName')->nullable();
+            $table->string('englishName')->nullable();
+
+            $table->string('phone')->nullable();
+            $table->string('cr')->nullable();
+
+
+            $table->string('contactName')->nullable();
+            $table->string('mobile')->nullable();
+
+
+            $table->string('contactName2')->nullable();
+            $table->string('mobile2')->nullable();
+
             $table->boolean('deleted')->default('false');
 
             $table->timestamps();

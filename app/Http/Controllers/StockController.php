@@ -7,6 +7,7 @@ use App\Employee;
 use App\Product;
 use App\Stock;
 use App\StockItem;
+use App\Stocklog;
 use App\Unit;
 use App\Warehouse;
 use Illuminate\Http\Request;
@@ -143,6 +144,15 @@ class StockController extends Controller
         {
 
             $stock->usedUnits = $stock->usedUnits + $howMuch;
+
+            $stockLog = new Stocklog();
+
+            $stockLog->stock_id = $stockId;
+            $stockLog->user_id = Auth()->id();
+            $stockLog->amountUsed =$howMuch;
+            $stockLog->employee_id = $eID;
+
+
             $stock->push();
 
         }else

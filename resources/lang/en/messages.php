@@ -28,7 +28,12 @@ return [
     'rby' => 'Receiver',
     'consumeorrelocate' => 'Consume or Relocate',
     'unitsav' => 'Avaiable Amount',
-
+    'phone'=> 'Phone Number',
+    'contactName'=> 'Primary Representative',
+    'contactName2'=> 'Mobile',
+    'cr'=> 'Certificate',
+    'mobile2'=> 'Secondary Mobile',
+    'mobile' => 'Primary Mobile',
     'location' => 'Location',
     'serialnumbers' => 'Serial Numbers',
     'notes' => 'Notes',

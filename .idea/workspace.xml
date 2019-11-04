@@ -5,27 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d71528-7b63-4ee8-b313-02f2a717b2f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/vendors/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Stock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Stock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Stocklog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Stocklog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_112412_create_stocklogs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_112412_create_stocklogs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employees/batch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employees/batch.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employees/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employees/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employees/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employees/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employees/exp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employees/exp.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/employees/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/employees/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/nationalities/batch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nationalities/batch.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/nationalities/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nationalities/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/nationalities/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nationalities/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/nationalities/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/nationalities/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/stock/move.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock/move.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/stock/requested.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock/requested.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/title/batch.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/title/batch.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/title/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/title/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/title/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/title/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/title/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/title/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VendorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VendorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_112335_create_vendors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_112335_create_vendors_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendors/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendors/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/nats.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tests/nats.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/titles.csv" beforeDir="false" afterPath="$PROJECT_DIR$/tests/titles.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,11 +139,12 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/stock" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/vendors" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/vendors" />
       <recent name="$PROJECT_DIR$/resources/views/stock" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/employees" />
@@ -189,7 +179,7 @@
       <workItem from="1572203254049" duration="1448000" />
       <workItem from="1572367064365" duration="563000" />
       <workItem from="1572375736555" duration="16038000" />
-      <workItem from="1572884399794" duration="3863000" />
+      <workItem from="1572884399794" duration="5240000" />
     </task>
     <servers />
   </component>

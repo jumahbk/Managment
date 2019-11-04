@@ -164,6 +164,17 @@ class VendorController extends Controller
         $vendor->englishName = $request['englishName'];
         $vendor->arabicName = $request['arabicName'];
 
+        $vendor->phone = $request['phone'];
+        $vendor->cr = $request['cr'];
+
+
+        $vendor->contactName = $request['contactName'];
+        $vendor->mobile = $request['mobile'];
+
+
+        $vendor->contactName2 = $request['contactName2'];
+        $vendor->mobile2 = $request['mobile2'];
+
         $vendor->push();
 
 
