@@ -15,6 +15,20 @@ class CreateStocklogsTable extends Migration
     {
         Schema::create('stocklogs', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+
+            $table->unsignedBigInteger('employee_id');
+            $table->unsignedBigInteger('user_id');
+            $table->integer('amountUsed');
+
+            $table->unsignedBigInteger('stock_id');
+
+
+            $table->index('stock_id');
+            $table->index('employee_id');
+
+            $table->index('user_id');
+
             $table->timestamps();
         });
     }

@@ -24,7 +24,10 @@ class Stock extends Model
     }
 
 
-
+    public function Stocklog()
+    {
+        return $this->hasMany('App\Stocklog');
+    }
     public function useSingleUnit()
     {
         $this->usedUnits = $this->usedUnits + 1;

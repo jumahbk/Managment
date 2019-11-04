@@ -33,7 +33,7 @@
                     <h2> {{    __('messages.serialnumbertomove')}}</h2>
                     <div class="col-lg-12">
                         <input type="hidden" id="batch" name="batch" value="1" />
-                        <textarea id="serial" name="serial" type="text" class="form-control" rows="1" cols="500" ></textarea>
+                        <input id="serial" name="serial" type="text" class="form-control" rows="1" cols="500" ></input>
                     </div>
                 </div>
             </div>

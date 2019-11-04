@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('content')
     <?php
@@ -200,13 +200,11 @@
 
 
 
-<<<<<<< HEAD
             <!--end: Datatable -->
         </div>
     </div>
 <script>
-=======
->>>>>>> b12cbb334c5233aec20d012869bb19dd319fd9a4
+
 
     $(document).ready(function() {
         $('#example').DataTable();

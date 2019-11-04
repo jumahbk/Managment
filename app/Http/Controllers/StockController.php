@@ -124,7 +124,37 @@ class StockController extends Controller
 
 
     }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function savemove(Request $request)
+    {
+        $id = $request['serial'];
+        $stockId = $request['id'];
+        $howMuch = $request['howmuch'];
+        $option = $request['option'];
+        $eID = $request['employee_id'];
+        $wID = $request['warehouse_id'];
+        $stock = Stock::find($stockId);
+        if($option == '1')
+        {
 
+            $stock->usedUnits = $stock->usedUnits + $howMuch;
+            $stock->push();
+
+        }else
+        {
+            $stock->warehouse_id = $wID;
+            $stock->push();
+        }
+        return redirect('/stock/move');
+
+
+
+    }
 
 
     /**
@@ -139,13 +169,17 @@ class StockController extends Controller
         $emps = Employee::all();
 
         $stock = Stock::where('serial', $id)->get()->first();
-        $warehouses = Warehouse::where('id' , '<>', $stock->warehouse_id)->get();
 
-
+        $warehouses = null;
         if($stock == null)
         {
             $warning = "Invalid Serial Number";
+        }else{
+            $warehouses = Warehouse::where('id' , '<>', $stock->warehouse_id)->get();
+
         }
+
+
 
 
         return view('stock.requested' , compact('warning', 'stock', 'warehouses', 'emps'));
