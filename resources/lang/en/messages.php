@@ -31,7 +31,7 @@ return [
     'phone'=> 'Phone Number',
     'contactName'=> 'Primary Representative',
     'contactName2'=> 'Mobile',
-    'cr'=> 'Certificate',
+    'cr'=> 'Company Registration',
     'mobile2'=> 'Secondary Mobile',
     'mobile' => 'Primary Mobile',
     'location' => 'Location',

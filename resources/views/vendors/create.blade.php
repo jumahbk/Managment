@@ -28,11 +28,11 @@
                 <div class="form-group row form-group-marginless kt-margin-t-20">
                     <label class="col-lg-3 col-form-label">      {{    __('messages.englishName')}}:</label>
                     <div class="col-lg-3">
-                        <input id="englishName" name="englishName" type="text" class="form-control" placeholder="Full name">
+                        <input id="englishName" name="englishName" type="text" class="form-control" dlder="Full name">
                     </div>
                     <label class="col-lg-3 col-form-label">{{    __('messages.arabicName')}}:</label>
                     <div class="col-lg-3">
-                        <input id="arabicName" name="arabicName" type="text" class="form-control" placeholder="الاسم العربي">
+                        <input id="arabicName" name="arabicName" type="text" class="form-control" dlder="الاسم العربي">
                     </div>
 
                 </div>
@@ -40,11 +40,11 @@
                 <div class="form-group row form-group-marginless kt-margin-t-20">
                     <label class="col-lg-3 col-form-label">      {{    __('messages.phone')}}:</label>
                     <div class="col-lg-3">
-                        <input id="phone" name="phone" type="text" class="form-control" placeholder="Full name">
+                        <input id="phone" name="phone" type="text" class="form-control" dlder="Full name">
                     </div>
                     <label class="col-lg-3 col-form-label">{{    __('messages.cr')}}:</label>
                     <div class="col-lg-3">
-                        <input id="cr" name="cr" type="text" class="form-control" placeholder="الاسم العربي">
+                        <input id="cr" name="cr" type="text" class="form-control" dlder="الاسم العربي">
                     </div>
 
                 </div>
@@ -53,11 +53,11 @@
                 <div class="form-group row form-group-marginless kt-margin-t-20">
                     <label class="col-lg-3 col-form-label">      {{    __('messages.contactName')}}:</label>
                     <div class="col-lg-3">
-                        <input id="contactName" name="contactName" type="text" class="form-control" placeholder="Full name">
+                        <input id="contactName" name="contactName" type="text" class="form-control" dlder="Full name">
                     </div>
                     <label class="col-lg-3 col-form-label">{{    __('messages.mobile')}}:</label>
                     <div class="col-lg-3">
-                        <input id="mobile" name="mobile" type="text" class="form-control" placeholder="الاسم العربي">
+                        <input id="mobile" name="mobile" type="text" class="form-control" dlder="الاسم العربي">
                     </div>
 
                 </div>
@@ -65,11 +65,11 @@
                 <div class="form-group row form-group-marginless kt-margin-t-20">
                     <label class="col-lg-3 col-form-label">      {{    __('messages.contactName2')}}:</label>
                     <div class="col-lg-3">
-                        <input id="contactName2" name="contactName2" type="text" class="form-control" placeholder="Full name">
+                        <input id="contactName2" name="contactName2" type="text" class="form-control" dlder="Full name">
                     </div>
                     <label class="col-lg-3 col-form-label">{{    __('messages.mobile2')}}:</label>
                     <div class="col-lg-3">
-                        <input id="mobile2" name="mobile2" type="text" class="form-control" placeholder="الاسم العربي">
+                        <input id="mobile2" name="mobile2" type="text" class="form-control" dlder="الاسم العربي">
                     </div>
 
                 </div>

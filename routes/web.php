@@ -49,6 +49,8 @@ Route::resource('warehouses','WarehouseController')->middleware('auth');;
 Route::get('/employees/batch', 'EmployeeController@batch')->name('employeebatch')->middleware('auth');;
 Route::resource('units','UnitController')->middleware('auth');;
 Route::get('/vendors/{id}/deactivate', 'VendorController@deactivate')->middleware('auth');;
+Route::get('/vendors/{id}/show', 'VendorController@show')->middleware('auth');;
+
 Route::get('/vendors/{id}/activate', 'VendorController@activate')->middleware('auth');;
 
 Route::get('/nationalities/batch', 'NationalityController@batch')->name('nationalitybatch')->middleware('auth');;

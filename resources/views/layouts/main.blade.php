@@ -109,7 +109,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- begin:: Header Mobile -->
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
     <div class="kt-header-mobile__logo">
-        <a href="index.html">
+        <a href="/stock/">
             <img alt="Logo" src="/assets/media/logos/logo-10-sm.png" />
         </a>
 
@@ -183,7 +183,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- begin:: Brand -->
                         <div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
                             <div class="kt-header__brand-logo">
-                                <a href="index.html">
+                                <a href="/stock/">
                                     <img alt="Logo" src="/assets/media/logos/logo-10.png" class="kt-header__brand-logo-default" />
                                 </a>
                             </div>
@@ -770,8 +770,8 @@ License: You must have a valid license purchased only from themeforest(the above
             <div class="kt-demo-panel__item-preview">
                 <img src="/assets/media//demos/preview/demo1.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
-                    <a href="https://keenthemes.com/metronic/preview/demo1/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                    <a href="https://keenthemes.com/metronic/preview/demo1/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
+                    <a href="/stock/" class="btn btn-brand btn-elevate " target="_blank">Default</a>
+                    <a href="/stock/" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
                 </div>
             </div>
         </div>
@@ -782,8 +782,8 @@ License: You must have a valid license purchased only from themeforest(the above
             <div class="kt-demo-panel__item-preview">
                 <img src="/assets/media//demos/preview/demo2.jpg" alt="" />
                 <div class="kt-demo-panel__item-preview-overlay">
-                    <a href="https://keenthemes.com/metronic/preview/demo2/index.html" class="btn btn-brand btn-elevate " target="_blank">Default</a>
-                    <a href="https://keenthemes.com/metronic/preview/demo2/rtl/index.html" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
+                    <a href="/stock/" class="btn btn-brand btn-elevate " target="_blank">Default</a>
+                    <a href="/stock/" class="btn btn-light btn-elevate" target="_blank">RTL Version</a>
                 </div>
             </div>
         </div>

@@ -102,9 +102,10 @@ class VendorController extends Controller
      * @param  \App\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
-    public function show(Vendor $vendor)
+    public function show($id)
     {
-        $products = $vendor->products;
+        $vendor = Vendor::find($id);
+        $data = $vendor->products;
 
 
         return view('vendors.show', compact('vendor','data'));
