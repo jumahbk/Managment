@@ -37,7 +37,7 @@ return [
     'unitsav' => 'Avaiable Amount',
     'phone'=> 'Phone Number',
     'contactName'=> 'Primary Representative',
-    'contactName2'=> 'Mobile',
+    'contactName2'=> '2nd Contact',
     'cr'=> 'Company Registration',
     'mobile2'=> 'Secondary Mobile',
     'mobile' => 'Primary Mobile',
