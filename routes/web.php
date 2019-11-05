@@ -11,6 +11,8 @@
 |
 */
 Auth::routes();
+Route::get('/stock/log', 'StockController@log')->middleware('auth');
+
 Route::post('/','StockController@index' )->middleware('auth');
 Route::post('/stock/savemove','StockController@savemove' )->middleware('auth');
 

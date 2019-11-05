@@ -11,7 +11,12 @@ return [
     | these language lines according to your application's requirements.
     |
     */
+    'logview' =>'Consumption Log',
+    'usercheckout' =>'Checkout by',
+    'usedby' => 'Used by',
+    'nearestexp' => 'Nearest Expirey',
     'pleaselogin' => 'Please log in',
+    'locationview' => 'Location Details',
     'serialnumbertomove' => 'Serial Number to Move',
     'request' => 'Request',
     'productview'=> 'Product View',
@@ -19,6 +24,8 @@ return [
     'batchview' => 'Batch Details',
     'productview'=>'Product Details',
     'expdate' => 'Expiry',
+    'amountused' => 'Amount Used',
+    'date' => 'Consumption Date',
     'rdate' => 'Received',
     'numberofunits' => 'Amount to use',
     'productinfo'=>'Product Information',

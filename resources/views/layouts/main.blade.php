@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+<?php
 
+$title = 'Medart Inventory';
+?>
 <!--
 Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4 & Angular 8
 Author: KeenThemes
@@ -18,7 +21,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <head>
     <base href="">
     <meta charset="utf-8" />
-    <title>Metronic | kjnkjn</title>
+    <title>{{$title}}</title>
     <meta name="description" content="Latest updates and statistic charts">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

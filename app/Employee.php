@@ -27,4 +27,9 @@ class Employee extends Model
     {
         return $this->hasMany('App\Data');
     }
+
+    public function stocklogs()
+    {
+        return $this->hasMany('App\Stocklog');
+    }
 }

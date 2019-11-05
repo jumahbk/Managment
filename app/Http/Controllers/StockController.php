@@ -55,6 +55,13 @@ class StockController extends Controller
         return view('stock.index', compact('data', 'wh', 'products'));
     }
 
+    public function log()
+    {
+        $data = Stocklog::all();
+
+        return view('stock.log', compact('data'));
+
+    }
     public function batchlist()
     {
         $products = Product::all();
@@ -81,7 +88,7 @@ class StockController extends Controller
             $t->vendorName = $p->vendor->englishName . '-' . $p->vendor->arabicName;
             $t->productName = $p->englishName . '-' . $p->arabicName;
 
-            $data[$i] = $t;
+            $data[$i++] = $t;
 
 
         }

@@ -86,17 +86,14 @@
                             <div class="kt-portlet__head-wrapper">
                                 <div class="kt-portlet__head-actions">
 
-                                    <a href="/stock/create" class="btn btn-google btn-elevate btn-icon-sm">
-                                        <i class="la la-folder"></i>
-                                        {{    __('messages.batchview')}}
-                                    </a>
-                                    <a href="/stock/create" class="btn btn-dark btn-elevate btn-icon-sm">
+
+                                    <a href="/stock/productlist" class="btn btn-dark btn-elevate btn-icon-sm">
                                         <i class="la la-barcode"></i>
                                         {{    __('messages.productview')}}
                                     </a>&nbsp;
                                     <a href="/stock/create" class="btn btn-brand btn-elevate btn-icon-sm">
                                         <i class="la la-plus"></i>
-                                        {{    __('messages.addnew')}}
+                                        {{    __('messages.newstock')}}
                                     </a>
                                 </div>
                             </div>		</div>

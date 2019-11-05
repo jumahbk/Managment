@@ -11,6 +11,11 @@ return [
     | these language lines according to your application's requirements.
     |
     */
+    'logview' =>'سجل الاستهلاك',
+    'date' => 'تاريخ الاستهلاك',
+    'locationview' => 'توزيع المخزون',
+    'amountused' => 'الكمية المستخدمه',
+    'nearestexp' => 'صلاحية الانتهاء',
     'serialnumbers' => 'الارقام التسلسليه',
     'productinfo'=>'معلومات الصنف',
     'phone'=> 'رقم الهاتف',
