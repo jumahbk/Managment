@@ -106,9 +106,8 @@ class VendorController extends Controller
     {
         $vendor = Vendor::find($id);
         $data = $vendor->products;
-
-
-        return view('vendors.show', compact('vendor','data'));
+        $d=$vendor;
+        return view('vendors.show', compact('d','data' ));
     }
 
     /**
@@ -117,10 +116,11 @@ class VendorController extends Controller
      * @param  \App\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
-    public function edit(Vendor $t)
+    public function edit($vendor)
     {
 
-        return view('vendor.edit', compact('t','t'));
+        $d=$vendor;
+        return view('vendors.edit', compact('d' ));
     }
 
     /**
