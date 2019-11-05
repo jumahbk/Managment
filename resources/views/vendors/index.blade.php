@@ -198,6 +198,18 @@
                                             </th>
                                             <th>
 
+                                                {{    __('messages.contactName')}}
+
+
+                                            </th>
+                                            <th>
+
+                                                {{    __('messages.mobile')}}
+
+
+                                            </th>
+                                            <th>
+
                                                 {{    __('messages.actions')}}
 
                                             </th>
@@ -210,7 +222,8 @@
 
                                                 <td class="">{{$d->englishName}}</td>
                                                 <td class="">{{$d->arabicName}}</td>
-
+                                                <td class="">{{$d->contactName}}</td>
+                                                <td class="">{{$d->mobile}}</td>
                                                 <td class="">
                                                     @if($d->deleted == 0)
                                                     <a href="/vendors/{{$d->id}}/deactivate" class="btn btn-label-danger btn-bold btn-icon-h kt-margin-l-10">
