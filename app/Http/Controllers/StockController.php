@@ -395,7 +395,7 @@ class StockController extends Controller
 
         $data = $request['serial'];
 
-        $items = explode(PHP_EOL, $data);
+        $items = preg_split('/[\s]+/', $data );
 
         foreach ($items as $d)
         {

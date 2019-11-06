@@ -55,13 +55,13 @@
 
                         <label class="col-lg-3 col-form-label">{{    __('messages.numberofunits')}}:</label>
                         <div class="col-lg-3">
-                            <input id="total" name="total" type="number" class="form-control">
+                            <input id="total" value="1" name="total" type="number" class="form-control">
                         </div>
 
 
                         <label class="col-lg-3 col-form-label">{{    __('messages.batchcost')}}:</label>
                         <div class="col-lg-3">
-                            <input id="cost" name="cost" type="number" class="form-control">
+                            <input id="cost" name="cost"  value='0' type="number" class="form-control">
                         </div>
                     </div>
 
