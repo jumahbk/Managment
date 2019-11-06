@@ -68,7 +68,7 @@
                     </thead>
                     <tbody>
 
-                    @for($i = 0 ; $i <10 ; $i++)
+                    @for($i = 0 ; $i <20 ; $i++)
                         <tr role="row" class="even">
                             <td class="">
                                 <input id="englishName{{$i}}" name="englishName{{$i}}" type="text" class="form-control" >
@@ -90,7 +90,7 @@
                             </td>
                             <td class="">
 
-                                <input id="low{{$i}}" name="low{{$i}}" type="number" class="form-control">
+                                <input id="low{{$i}}" value='0' name="low{{$i}}" type="number" class="form-control">
 
                             </td>
 

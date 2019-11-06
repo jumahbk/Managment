@@ -94,9 +94,9 @@ class ProductController extends Controller
     public function deactivate($id)
     {
         $product = Product::find($id);
-        $product->deleted = true;
-        $product->push();
-
+//        $product->deleted = true;
+//        $product->push();
+        $product->delete();
         return redirect('/products');
 
 
@@ -144,7 +144,7 @@ class ProductController extends Controller
         $data = $request['data'];
 
         $lines = explode("\n", $data);
-        for($i = 0; $i < 10 ; $i++)
+        for($i = 0; $i < 20 ; $i++)
         {
             if($request['englishName'.$i] == null)
             {
@@ -154,8 +154,15 @@ class ProductController extends Controller
             $product->englishName = $request['englishName'.$i];
             $product->arabicName = $request['arabicName'.$i];
             $product->vendor_id = $request['vendor_id'];
+            if($request['low'.$i] == null || $request['low'.$i] ='')
+            {
+                $product->low = 0;
 
-            $product->low = $request['low'.$i];
+            }else
+            {
+                $product->low = $request['low'.$i];
+
+            }
 
             $product->unit_id = $request['unit_id'.$i];
 
