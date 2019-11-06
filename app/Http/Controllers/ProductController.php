@@ -122,8 +122,9 @@ class ProductController extends Controller
      */
     public function edit(Product $t)
     {
-
-        return view('products.edit', compact('t','t'));
+          $vendors = Vendor::all();
+           $u = Unit::all();
+        return view('products.edit', compact('t','vendors', 'u'));
     }
 
     /**
