@@ -30,7 +30,7 @@ return [
     'amountused' => 'Amount Used',
     'date' => 'Consumption Date',
     'rdate' => 'Received',
-    'numberofunits' => 'Amount to use',
+    'numberofunits' => 'Units per item',
     'productinfo'=>'Product Information',
     'expDate' => 'Expiry Date',
     'serial' =>'Serial No.',

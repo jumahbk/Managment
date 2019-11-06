@@ -412,7 +412,14 @@ class StockController extends Controller
             $stock->receivedDate = $request['receivedDate'];
             $stock->expDate = $request['expDate'];
 
-            $stock->push();
+            try {
+                $stock->push();
+            } catch (\Illuminate\Database\QueryException $e) {
+                continue;
+            }
+
+
+
 
         }
 
