@@ -168,6 +168,8 @@ License: You must have a valid license purchased only from themeforest(the above
          -->
     </div>
     <div class="kt-header-mobile__toolbar">
+
+
         <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
         <button class="kt-header-mobile__toolbar-topbar-toggler" id="kt_header_mobile_topbar_toggler"><i class="flaticon-more-1"></i></button>
     </div>
@@ -312,12 +314,19 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="kt-container ">
                     <div class="kt-footer__wrapper">
                         <div class="kt-footer__copyright">
-                            2019&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Keenthemes</a>
+                            <div class="  pt-3">
+                                    @if(Auth()->user())
+
+
+                                        <a href="{{ url('/logout') }}">  {{Auth()->user()->name}} logout </a>
+
+
+
+                                    @endif
+                            </div>
                         </div>
                         <div class="kt-footer__menu">
-                            <a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">About</a>
-                            <a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Team</a>
-                            <a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Contact</a>
+
                         </div>
                     </div>
                 </div>

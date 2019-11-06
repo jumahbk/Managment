@@ -10,7 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 Auth::routes();
+
 Route::get('/stock/log', 'StockController@log')->middleware('auth');
 Route::get('/products/batch', 'ProductController@batch')->middleware('auth');
 
