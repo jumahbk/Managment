@@ -20,7 +20,7 @@
         <!--begin::Form-->
 
 
-            <form method="POST" action="/stock"  class="kt-form kt-form--label-right">
+            <form method="POST" name="stockForm" action="/stock"  onsubmit="return validateForm()" class="kt-form kt-form--label-right">
                 @csrf
                 <div class="kt-portlet__body col-md-9">
                     <div class="form-group row form-group-marginless kt-margin-t-20">
@@ -99,7 +99,8 @@
                     <div class="form-group row form-group-marginless kt-margin-t-20">
                         <label class="col-lg-3 col-form-label">{{    __('messages.receivedDate')}}:</label>
                         <div class="col-lg-3">
-                            <input id="receivedDate" name="receivedDate" type="date" class="form-control">
+                            <input id="receivedDate" value="{{date('Y-m-d')}}" name="receivedDate" type="date" class="form-control">
+
                         </div>
                         <label class="col-lg-3 col-form-label">{{    __('messages.expDate')}}:</label>
                         <div class="col-lg-3">
@@ -140,5 +141,15 @@
 
         <!--end::Form-->
     </div>
+<script>
 
+    function validateForm() {
+        var x = document.forms["stockForm"]["expDate"].value;
+        if (x == "") {
+            alert("Expiry Must be set");
+            return false;
+        }
+    }
+
+</script>
 @endsection
