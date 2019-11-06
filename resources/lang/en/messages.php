@@ -108,6 +108,6 @@ return [
     'name' => 'Name',
     'lic' => 'Licenses & IDs',
     'general' => 'General Info',
-    'unitname' => 'Unit Name',
+    'unitname' => 'Unit of sale',
     'min' => 'Reorder Point',
 ];

@@ -31,10 +31,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $vendors = Vendor::all();
-        $u = Unit::all();
-        return view('products.create' ,  compact( 'vendors', 'u'));
-
+      //  $vendors = Vendor::all();
+     //   $u = Unit::all();
+    //    return view('products.create' ,  compact( 'vendors', 'u'));
+        return $this->batch();
     }
     /**
      * Show the form for creating a new resource.
@@ -43,7 +43,9 @@ class ProductController extends Controller
      */
     public function batch()
     {
-        return view('products.batch');
+        $vendors = Vendor::all();
+        $u = Unit::all();
+        return view('products.batch',compact( 'vendors', 'u'));
 
     }
     /**
@@ -138,19 +140,26 @@ class ProductController extends Controller
     }
     public function saveBatch(Request $request)
     {
+
         $data = $request['data'];
 
         $lines = explode("\n", $data);
-
-        foreach ($lines as $d)
+        for($i = 0; $i < 10 ; $i++)
         {
-
-            $tokens = explode(";", $d);
+            if($request['englishName'.$i] == null)
+            {
+                continue;
+            }
             $product = new Product();
-            $product->englishName = $tokens[0];
-            $product->arabicName = $tokens[1];
-            $product->push();
+            $product->englishName = $request['englishName'.$i];
+            $product->arabicName = $request['arabicName'.$i];
+            $product->vendor_id = $request['vendor_id'];
 
+            $product->low = $request['low'.$i];
+
+            $product->unit_id = $request['unit_id'.$i];
+
+            $product->push();
         }
 
         redirect('/products');
