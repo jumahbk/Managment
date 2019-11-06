@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d71528-7b63-4ee8-b313-02f2a717b2f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -173,7 +174,7 @@
       <workItem from="1572375736555" duration="16038000" />
       <workItem from="1572884399794" duration="5524000" />
       <workItem from="1572953020545" duration="3691000" />
-      <workItem from="1573013907835" duration="6433000" />
+      <workItem from="1573013907835" duration="6689000" />
     </task>
     <servers />
   </component>

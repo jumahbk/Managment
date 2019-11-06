@@ -34,6 +34,7 @@ return [
     'batchcost' => 'تكلفة الدفعه',
     'batchview' => 'تفاصيل الدفعات',
     'productview'=>'تفاصيل المخزون',
+    'batch' => 'كود الدفعه',
     'request' => 'طلب',
     'unitsav' => 'الكميه المتوفره',
     'settings' => 'الاعدادات',

@@ -25,6 +25,7 @@ return [
     'productview'=> 'Product View',
     'batchcost'=>'Batch Cost',
     'unit'=>'Unit of Sale',
+    'batch'=> 'Batch No.',
     'batchview' => 'Batch Details',
     'productview'=>'Product Details',
     'expdate' => 'Expiry',
