@@ -247,7 +247,21 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- end:: Brand -->
 
                         <!-- begin:: Header Topbar -->
+                        <div class="kt-header__topbar-item dropdown  pt-3">
+                            <div class="kt-header__topbar-wrapper" >
+                                @if(Auth()->user())
 
+                                <a href="{{ url('/logout') }}" class="btn btn-google btn-google btn-icon-sm">
+                                    <i class="la la-paypal"></i>
+                                    {{Auth()->user()->name}} logout
+                                </a>
+
+
+
+
+                                @endif
+                            </div>
+                        </div>
                         <!-- end:: Header Topbar -->
                     </div>
                 </div>
@@ -314,16 +328,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <div class="kt-container ">
                     <div class="kt-footer__wrapper">
                         <div class="kt-footer__copyright">
-                            <div class="  pt-3">
-                                    @if(Auth()->user())
-
-
-                                        <a href="{{ url('/logout') }}">  {{Auth()->user()->name}} logout </a>
-
-
-
-                                    @endif
-                            </div>
+                            2019&nbsp;&copy;&nbsp;<a href="https://medartclinics.com.com/" target="_blank" class="kt-link">Medart Clinics</a>
                         </div>
                         <div class="kt-footer__menu">
 
