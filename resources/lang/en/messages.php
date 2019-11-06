@@ -12,6 +12,8 @@ return [
     |
     */
     'logview' =>'Consumption Log',
+    'outofstock' =>'Out of stock Items',
+
     'usercheckout' =>'Checkout by',
     'low' =>'Reorder Point',
     'usedby' => 'Used by',
