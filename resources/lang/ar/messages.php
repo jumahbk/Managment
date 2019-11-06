@@ -16,6 +16,7 @@ return [
     'locationview' => 'توزيع المخزون',
     'amountused' => 'الكمية المستخدمه',
     'nearestexp' => 'صلاحية الانتهاء',
+    'serialtomove' => 'البحث بالرقم التسلسلي',
     'serialnumbers' => 'الارقام التسلسليه',
     'productinfo'=>'معلومات الصنف',
     'phone'=> 'رقم الهاتف',

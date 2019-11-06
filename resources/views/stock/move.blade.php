@@ -12,7 +12,7 @@
         <div class="kt-portlet__head">
             <div class="kt-portlet__head-label">
                 <h3 class="kt-portlet__head-title">
-                    {{    __('messages.newstock')}}
+                    {{    __('messages.serialtomove')}}
                 </h3>
             </div>
         </div>
