@@ -16,7 +16,7 @@ return [
     'low' =>'Reorder Point',
     'usedby' => 'Used by',
     'nearestexp' => 'Nearest Expiry',
-    'serialtomove' => 'Serial number to move',
+    'serialtomove' => 'Search by serial number',
     'pleaselogin' => 'Please log in',
     'showvendorinfo' => 'Vendor Details',
     'locationview' => 'Location Details',
