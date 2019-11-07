@@ -37,7 +37,7 @@ Route::get('/stock/{id}/product', 'StockController@product')->middleware('auth')
 
 Route::get('/employees/{id}/deactivate', 'EmployeeController@deactivate')->middleware('auth');
 Route::get('/employees/{id}/activate', 'EmployeeController@activate')->middleware('auth');;
-
+Route::get('/warehouses/{id}/edit', 'WarehouseController@edit')->middleware('auth');;
 Route::get('/warehouses/{id}/deactivate', 'WarehouseController@deactivate')->middleware('auth');;
 Route::get('/warehouses/{id}/activate', 'WarehouseController@activate')->middleware('auth');;
 

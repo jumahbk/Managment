@@ -187,7 +187,7 @@
                                         <tr>
                                             <th>
 
-                                                {{    __('messages.companyname')}}
+                                                {{    __('messages.englishName')}}
 
                                             </th>
                                             <th>
@@ -195,17 +195,13 @@
                                                 {{    __('messages.branchname')}}
 
                                             </th>
+
                                             <th>
 
-                                                {{    __('messages.englishName')}}
+                                                {{    __('messages.companyname')}}
 
                                             </th>
-                                            <th>
 
-                                                {{    __('messages.arabicName')}}
-
-
-                                            </th>
                                             <th>
 
                                                 {{    __('messages.actions')}}
@@ -217,11 +213,13 @@
 
                                         @foreach($data as $d)
                                             <tr role="row" class="even">
-                                                <td class="">{{$d->branch->company->englishName}} - {{$d->branch->company->arabicName}}</td>
+                                                <td class="">{{$d->englishName}}</td>
                                                 <td class="">{{$d->branch->englishName}} - {{$d->branch->arabicName}}</td>
 
-                                                <td class="">{{$d->englishName}}</td>
-                                                <td class="">{{$d->arabicName}}</td>
+
+
+                                                <td class="">{{$d->branch->company->englishName}} - {{$d->branch->company->arabicName}}</td>
+
 
                                                 <td class="">
                                                     @if($d->deleted == 0)
@@ -237,7 +235,7 @@
                                                         </a>
 
                                                     @endif
-                                                    <a href="/warehousees/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                    <a href="/warehouses/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                                         {{    __('messages.edit')}}
 
                                                     </a>

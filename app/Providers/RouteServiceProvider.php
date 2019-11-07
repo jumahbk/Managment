@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Nationality;
+use App\Warehouse;
 use App\Product;
 use App\Title;
 use App\Type;

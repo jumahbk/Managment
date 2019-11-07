@@ -28,6 +28,7 @@ return [
     'batchcost'=>'Batch Cost',
     'unit'=>'Unit of Sale',
     'batch'=> 'Batch No.',
+    'editwarehouse' => 'Edit warehouse',
     'batchview' => 'Batch Details',
     'productview'=>'Product Details',
     'expdate' => 'Expiry',

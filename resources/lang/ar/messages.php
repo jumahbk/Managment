@@ -20,6 +20,7 @@ return [
     'serialnumbers' => 'الارقام التسلسليه',
     'productinfo'=>'معلومات الصنف',
     'phone'=> 'رقم الهاتف',
+    'editwarehouse' => 'تعديل مخزن',
     'contactName'=> 'اسم المندوب الرئيسي',
     'contactName2'=> 'اسم المندوب الثانوي',
     'cr'=> 'السجل التجاري',

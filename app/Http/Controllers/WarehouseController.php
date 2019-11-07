@@ -114,10 +114,11 @@ class WarehouseController extends Controller
      * @param  \App\Warehouse  $warehouse
      * @return \Illuminate\Http\Response
      */
-    public function edit(Warehouse $t)
+    public function edit($id)
     {
-
-        return view('warehouses.edit', compact('t','t'));
+        $companies = Branch::all();
+        $wa = Warehouse::find($id);
+        return view('/warehouses.edit', compact('companies','wa'));
     }
 
     /**
