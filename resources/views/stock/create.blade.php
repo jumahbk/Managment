@@ -39,7 +39,7 @@
                         <div class="col-lg-3">
                             <select class="form-control" name="product_id">
                                 @foreach($p as $t)
-                                    <option value="{{$t->id}}"> {{$t->englishName}} </option>
+                                    <option value="{{$t->id}}"> {{$t->englishName}} {{$t->unit->englishName}} </option>
                                 @endforeach
                             </select>
                         </div>
