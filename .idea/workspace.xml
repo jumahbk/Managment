@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d71528-7b63-4ee8-b313-02f2a717b2f9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/stock/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/stock/createNOQR.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,14 +131,14 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/products" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/stock" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/stock" />
       <recent name="$PROJECT_DIR$/resources/views/products" />
       <recent name="$PROJECT_DIR$/resources/views/vendors" />
-      <recent name="$PROJECT_DIR$/resources/views/stock" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/employees" />
     </key>
