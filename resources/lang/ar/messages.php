@@ -21,6 +21,7 @@ return [
     'productinfo'=>'معلومات الصنف',
     'phone'=> 'رقم الهاتف',
     'editwarehouse' => 'تعديل مخزن',
+    'quantity' => 'الكميه',
     'contactName'=> 'اسم المندوب الرئيسي',
     'contactName2'=> 'اسم المندوب الثانوي',
     'cr'=> 'السجل التجاري',

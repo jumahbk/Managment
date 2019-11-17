@@ -116,14 +116,21 @@
 
 
 
-                <div class="kt-portlet__body col-md-12">
+                <div class="kt-portlet__body col-md-9">
                     <div class="form-group row form-group-marginless kt-margin-t-20">
-                        <label class="col-lg-3 col-form-label"> {{    __('messages.serialnumbers')}}</label>
-                        <div class="col-lg-12">
-                            <input type="hidden" id="batch" name="batch" value="1" />
-                            <textarea id="serial" name="serial" type="text" class="form-control" rows="20" cols="500" ></textarea>
+
+
+
+                        <label class="col-lg-3 col-form-label">{{    __('messages.quantity')}}:</label>
+                        <div class="col-lg-3">
+                            <input id="q" value="1" name="q" type="number" class="form-control">
                         </div>
+
+
+
                     </div>
+
+
                 </div>
 
 

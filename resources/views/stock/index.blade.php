@@ -58,6 +58,10 @@
                                         <i class="la la-barcode"></i>
                                         {{    __('messages.productview')}}
                                     </a>&nbsp;
+                                    <a href="/stock/noqr" class="btn btn-brand btn-elevate btn-icon-sm">
+                                        <i class="la la-plus"></i>
+                                        {{    __('messages.newstockqr')}}
+                                    </a>
                                     <a href="/stock/create" class="btn btn-brand btn-elevate btn-icon-sm">
                                         <i class="la la-plus"></i>
                                         {{    __('messages.newstock')}}

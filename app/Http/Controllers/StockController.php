@@ -268,6 +268,22 @@ class StockController extends Controller
         return view('stock.create' ,  compact( 'wh','u','p'));
 
     }
+
+
+
+
+    public function noqr()
+    {
+        $wh = Warehouse::all();
+        $u = Unit::all();
+        $p = Product::All();
+
+        return view('stock.createNOQR' ,  compact( 'wh','u','p'));
+
+    }
+
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -395,33 +411,74 @@ class StockController extends Controller
 
         $data = $request['serial'];
 
-        $items = preg_split('/[\s]+/', $data );
+        $q = $request['q'];
 
-        foreach ($items as $d)
+        if($q> 0)
         {
 
-            $stock = new Stock();
-            $stock->user_id = $id = \Auth::user()->id;
-            $stock->warehouse_id = $request['warehouse_id'];
-            $stock->product_id = $request['product_id'];
-            $stock->warehouse_id = $request['warehouse_id'];
-            $stock->total = $request['total'];
-            $stock->batch = trim($request['batch']);
-            $stock->notes = $request['notes'];
-            $stock->serial = trim($d);
-            $stock->receivedDate = $request['receivedDate'];
-            $stock->expDate = $request['expDate'];
 
-            try {
-                $stock->push();
-            } catch (\Illuminate\Database\QueryException $e) {
-                continue;
+            for ($i = 0 ; $i < $q ; $i++)
+            {
+
+                $stock = new Stock();
+                $stock->user_id = $id = \Auth::user()->id;
+                $stock->warehouse_id = $request['warehouse_id'];
+                $stock->product_id = $request['product_id'];
+                $stock->warehouse_id = $request['warehouse_id'];
+                $stock->total = $request['total'];
+                $stock->batch = trim($request['batch']);
+                $stock->notes = $request['notes'];
+                $stock->serial = rand() + rand() + rand();
+                $stock->receivedDate = $request['receivedDate'];
+                $stock->expDate = $request['expDate'];
+
+                try {
+                    $stock->push();
+                } catch (\Illuminate\Database\QueryException $e) {
+                    continue;
+                }
+
+
+
+
             }
 
 
 
+        }else {
+
+            $items = preg_split('/[\s]+/', $data );
+
+            foreach ($items as $d)
+            {
+
+                $stock = new Stock();
+                $stock->user_id = $id = \Auth::user()->id;
+                $stock->warehouse_id = $request['warehouse_id'];
+                $stock->product_id = $request['product_id'];
+                $stock->warehouse_id = $request['warehouse_id'];
+                $stock->total = $request['total'];
+                $stock->batch = trim($request['batch']);
+                $stock->notes = $request['notes'];
+                $stock->serial = trim($d);
+                $stock->receivedDate = $request['receivedDate'];
+                $stock->expDate = $request['expDate'];
+
+                try {
+                    $stock->push();
+                } catch (\Illuminate\Database\QueryException $e) {
+                    continue;
+                }
+
+
+
+
+            }
+
 
         }
+
+
 
 
             redirect('/stock');
