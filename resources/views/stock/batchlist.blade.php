@@ -129,6 +129,7 @@
                             <tbody>
 
                             @foreach($data as $d)
+
                                 @if($d->low <= $d->amountLeft)
                                     <tr role="row" class="even text-danger">
                                 @else
@@ -176,7 +177,11 @@
                 }
 
 
-
+            
+                    if($count == 0)
+                        {
+                            continue;
+                        }
 
                 $t = new App\StockItem();
                 $t->amountLeft = $count;

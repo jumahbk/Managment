@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="14d71528-7b63-4ee8-b313-02f2a717b2f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stock/batchlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock/batchlist.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
