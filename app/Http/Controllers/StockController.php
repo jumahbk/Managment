@@ -161,6 +161,7 @@ class StockController extends Controller
 
 
             $stock->push();
+            $stockLog->push();
 
         }else
         {
