@@ -24,6 +24,7 @@ return [
     'locationview' => 'Location Details',
     'serialnumbertomove' => 'Serial Number to Move',
     'request' => 'Request',
+    'delete' => 'Delete',
     'productview'=> 'Product View',
     'batchcost'=>'Batch Cost',
     'unit'=>'Unit of Sale',

@@ -494,11 +494,11 @@ class StockController extends Controller
      * @param  \App\Stock  $stock
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Stock $stock)
+    public function destroy($id)
     {
-        $stock->delete = true;
-        $stock->push();
-        redirect('/stock');
+        $stock = Stock::find($id);
+        $stock->delete();
+        return redirect('/stock');
 
         //
     }

@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="14d71528-7b63-4ee8-b313-02f2a717b2f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/stock/batchlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock/batchlist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_112401_create_stocks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_112401_create_stocks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stock/requested.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock/requested.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,6 +179,7 @@
       <workItem from="1572884399794" duration="5524000" />
       <workItem from="1572953020545" duration="3691000" />
       <workItem from="1573013907835" duration="11118000" />
+      <workItem from="1574007091974" duration="2249000" />
     </task>
     <servers />
   </component>

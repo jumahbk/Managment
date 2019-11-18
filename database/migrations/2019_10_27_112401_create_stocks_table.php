@@ -25,7 +25,7 @@ class CreateStocksTable extends Migration
             $table->string('batch');
             $table->integer('total')->default(1);
             $table->integer('usedUnits')->default(0);
-            $table->string('serial')->unique();
+            $table->string('serial');
             $table->string('notes')->nullable();
             $table->date('receivedDate')->nullable();
             $table->date('expDate')->nullable();

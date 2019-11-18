@@ -13,6 +13,7 @@
 Route::get('/stock/noqr','StockController@noqr' )->middleware('auth');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/stock/{id}/destroy', 'StockController@destroy')->middleware('auth');;
 
 Auth::routes();
 

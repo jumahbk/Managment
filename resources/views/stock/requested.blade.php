@@ -165,9 +165,19 @@
 
                         <div class="kt-portlet__head">
                             <div class="kt-portlet__head-label">
-                                <h3 class="kt-portlet__head-title">
+                                <h3 class="kt-portlet__head-title pr-4">
                                     {{__('messages.productinfo')}}
                                 </h3>
+
+                                <div class="kt-portlet__head-actions">
+
+                                    <a href="/stock/{{$stock->id}}/destroy" onclick="return confirm('Are you sure you want to delete? this action cannot be reversed')" class="btn btn-google btn-elevate btn-icon-sm">
+                                        <i class="la la-recycle"></i>
+                                        {{    __('messages.delete')}}
+                                    </a>
+
+
+                                </div>
                             </div>
                         </div>
 
