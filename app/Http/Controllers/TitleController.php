@@ -123,6 +123,14 @@ class TitleController extends Controller
         }
         $title->englishName = $request['englishName'];
         $title->arabicName = $request['arabicName'];
+        $med = $request['isMedical'];
+        if($med == 'on')
+        {
+            $title->isMedical = true;
+        }else
+        {
+            $title->isMedical = false;
+        }
 
         $title->push();
 

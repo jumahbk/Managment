@@ -96,8 +96,9 @@
                                                                                <select class="form-control" name="employee_id" id="employee_id">
 
                                                                                     @foreach($emps as $a)
-                                                                                       <option value="{{$a->id}}">{{$a->englishName}} - {{$a->arabicName}}</option>
-                                                                                   @endforeach
+                                                                                        {{$a->title[0]}}
+                                                                                       <option value="{{$a->id}}"> {{$a->title[2]}}</option>
+                                                                                           @endforeach
 															</select>
 
 

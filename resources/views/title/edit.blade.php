@@ -37,7 +37,26 @@ App::setLocale(Session::get('applocale'));
                     <label class="col-lg-3 col-form-label"> {{    __('messages.arabicName')}}:</label>
                     <div class="col-lg-3">
                         <input id="arabicName" name="arabicName" type="text" class="form-control" placeholder="الاسم العربي" value="{{$t->arabicName}}">
-                    </div>
+
+
+                        <label class="kt-checkbox">
+                            <input type="checkbox"
+
+
+                                   @if($t->isMedical)
+                                   checked="checked"
+                                    @endif
+
+
+                                   name="isMedical" id="isMedical"> Is Medical
+                            <span></span>
+                        </label>
+
+
+
+
+
+
 
 
                 </div>

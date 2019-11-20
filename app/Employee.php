@@ -19,7 +19,7 @@ class Employee extends Model
 
     public function title()
     {
-        return $this->belongsTo('App\Title');
+        return $this->belongsTo('App\Title', 'title_id', 'id');
     }
 
 

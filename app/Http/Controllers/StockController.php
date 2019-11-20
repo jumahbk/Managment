@@ -199,7 +199,6 @@ class StockController extends Controller
 
 
 
-
         return view('stock.requested' , compact('warning', 'stock', 'warehouses', 'emps'));
 
 
