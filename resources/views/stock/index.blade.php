@@ -135,7 +135,7 @@
                                             $serial = $s->serial;
 
                                         } else {
-                                            if($nearest > $s->expDate)
+                                            if(strtotime($nearest) > strtotime($s->expDate))
                                                 {
                                                     $nearest = $s->expDate;
                                                     $serial = $s->serial;
@@ -149,7 +149,12 @@
                                 if ($av <= $low) {
                                     $danger = true;
                                 }
+                                if(strtotime($nearest) < strtotime('+6 months'))
+                                {
+                                    $danger = true;
 
+
+                                }
 
                                 ?>
 
@@ -198,30 +203,7 @@
                                 </h3>
                             </div>
                             <div class="kt-portlet__head-toolbar">
-                                <div class="kt-portlet__head-wrapper">
-                                    <div class="kt-portlet__head-actions">
 
-                                        <a href="/stock/batchlist" class="btn btn-google btn-elevate btn-icon-sm">
-                                            <i class="la la-folder"></i>
-                                            {{    __('messages.locationview')}}
-                                        </a>
-                                        <a href="/stock/productlist" class="btn btn-dark btn-elevate btn-icon-sm">
-                                            <i class="la la-barcode"></i>
-                                            {{    __('messages.productview')}}
-                                        </a>&nbsp;
-                                        <a href="/stock/create" class="btn btn-brand btn-elevate btn-icon-sm">
-                                            <i class="la la-plus"></i>
-                                            {{    __('messages.newstock')}}
-                                        </a>
-
-                                        <a href="stock/log" class="btn btn-twitter btn-elevate btn-icon-sm">
-                                            <i class="la la-folder"></i>
-                                            {{    __('messages.logview')}}
-                                        </a>
-
-
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -282,7 +264,7 @@
                                                 $serial = $s->serial;
 
                                             } else {
-                                                if($nearest > $s->expDate)
+                                                if(strtotime($nearest) > strtotime($s->expDate))
                                                 {
                                                     $nearest = $s->expDate;
                                                     $serial = $s->serial;
@@ -294,10 +276,15 @@
 
                                     }
                                     if ($av <= $low) {
-                                        $danger = true;
+                                        $danger = false;
+
                                     }
+                                    if(strtotime($nearest) < strtotime('+6 months'))
+                                    {
+                                        $danger = false;
 
 
+                                    }
                                     ?>
 
                                     @if($av< 1)

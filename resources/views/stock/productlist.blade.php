@@ -164,10 +164,20 @@
                                 @foreach($data as $d)
 
 
-                                        @if($d->left() > 0)
-                                        <tr role="row" class="even text-info">
+                                        @if(($d->total - $d->usedUnits) > 0)
+                                        <tr role="row" class="even
 
-                                            @endif
+                                        @if(strtotime($d->expDate) < strtotime('+6 months'))
+
+                                                bg-warning
+
+@endif
+
+
+
+                                        text-info">
+
+
                                             <td class="">{{$d->product->englishName}}-{{$d->product->arabicName}}</td>
                                             <td class="">{{$d->user->name}}</td>
                                             <td class="">{{$d->warehouse->englishName}}</td>
@@ -180,6 +190,7 @@
 
 
                                         </tr>
+                                        @endif
                                         @endforeach
 
 
