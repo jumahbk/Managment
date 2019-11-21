@@ -8,6 +8,7 @@ use App\Product;
 use App\Stock;
 use App\StockItem;
 use App\Stocklog;
+use App\Title;
 use App\Unit;
 use App\Warehouse;
 use Illuminate\Http\Request;
@@ -184,7 +185,19 @@ class StockController extends Controller
     public function serial($id)
     {
         $warning = null;
-        $emps = Employee::all();
+        $employees = Employee::all();
+        $emps = [];
+        $i = 0;
+        $titles = Title::where('isMedical' , '=', true)->get();
+        foreach($titles as $t)
+        {
+            foreach($t->employees as $e)
+            {
+                $emps[$i++]  = $e;
+            }
+
+        }
+
 
         $stock = Stock::where('serial', $id)->get()->first();
 

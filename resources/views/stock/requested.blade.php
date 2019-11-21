@@ -97,7 +97,7 @@
 
                                                                                     @foreach($emps as $a)
                                                                                         {{$a->title[0]}}
-                                                                                       <option value="{{$a->id}}"> {{$a->title[2]}}</option>
+                                                                                       <option value="{{$a->id}}"> {{$a->englishName}}</option>
                                                                                            @endforeach
 															</select>
 
