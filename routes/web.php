@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/stock/update','StockController@update' )->middleware('auth');
+
 Route::get('/stock/noqr','StockController@noqr' )->middleware('auth');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
@@ -25,6 +27,7 @@ Route::post('/stock/savemove','StockController@savemove' )->middleware('auth');
 
 
 
+Route::get('/stock/{id}/edit', 'StockController@edit')->middleware('auth');;
 
 
 

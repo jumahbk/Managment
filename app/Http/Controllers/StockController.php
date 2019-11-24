@@ -439,10 +439,37 @@ class StockController extends Controller
      * @param  \App\Stock  $stock
      * @return \Illuminate\Http\Response
      */
-    public function edit(Stock $t)
+    public function edit($id)
     {
 
-        return view('stock.edit', compact('t','t'));
+        $warning = null;
+        $employees = Employee::all();
+        $emps = [];
+        $i = 0;
+        $titles = Title::where('isMedical' , '=', true)->get();
+        foreach($titles as $t)
+        {
+            foreach($t->employees as $e)
+            {
+                $emps[$i++]  = $e;
+            }
+
+        }
+
+
+        $stock = Stock::find($id);
+
+        $warehouses = null;
+        if($stock == null)
+        {
+            $warning = "Invalid Serial Number";
+        }else{
+            $warehouses = Warehouse::where('id' , '<>', $stock->warehouse_id)->get();
+
+        }
+        return view('stock.edit' , compact('warning', 'stock', 'warehouses', 'emps'));
+
+
     }
 
     /**
@@ -454,7 +481,30 @@ class StockController extends Controller
      */
     public function update(Request $request, Stock $stock)
     {
-        $this->save($request, $stock->id);
+//        "id" => "48"
+//    "product_id" => "126"
+//    "user_id" => "6"
+//    "warehouse_id" => "2"
+//    "batch" => "1"
+//    "total" => "1"
+//    "usedUnits" => "0"
+//    "serial" => "V17LA80801;2018.11;2020.10;94703JR"
+//    "notes" => null
+//    "receivedDate" => "2019-11-23"
+//    "expDate" => "2020-10-31"
+//    "cost" => "0.0"
+//    "created_at" => "2019-11-23 16:49:05"
+//    "updated_at" => "2019-11-23 16:49:05"
+
+
+        $stock ->expDate =  $request['expDate'];
+        $stock ->total =  $request['total'];
+        $stock->usedUnits = 0;
+
+        $stock ->serial =  $request['serial'];
+        $stock ->receivedDate =  $request['receivedDate'];
+
+        $stock->push();
         return redirect('/stock');
     }
     public function saveBatch(Request $request)

@@ -172,6 +172,10 @@
 
                                 <div class="kt-portlet__head-actions">
 
+                                    <a href="/stock/{{$stock->id}}/edit"  class="btn btn-twitter btn-elevate btn-icon-sm">
+                                        <i class="la la-edit"></i>
+                                        {{    __('messages.edit')}}
+                                    </a>
                                     <a href="/stock/{{$stock->id}}/destroy" onclick="return confirm('Are you sure you want to delete? this action cannot be reversed')" class="btn btn-google btn-elevate btn-icon-sm">
                                         <i class="la la-recycle"></i>
                                         {{    __('messages.delete')}}
