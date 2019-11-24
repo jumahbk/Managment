@@ -38,6 +38,7 @@ Route::get('/stock/move', 'StockController@move')->middleware('auth');
 
 Route::get('/stock/{id}/serial', 'StockController@serial')->middleware('auth');
 
+Route::get('/stock/{id}/id', 'StockController@id')->middleware('auth');
 
 
 Route::get('/stock/{id}/product', 'StockController@product')->middleware('auth');

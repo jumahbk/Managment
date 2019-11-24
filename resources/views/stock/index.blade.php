@@ -132,13 +132,13 @@
                                         if ($nearest == null) {
 
                                             $nearest = $s->expDate;
-                                            $serial = $s->serial;
+                                            $serial = $s->id;
 
                                         } else {
                                             if(strtotime($nearest) > strtotime($s->expDate))
                                                 {
                                                     $nearest = $s->expDate;
-                                                    $serial = $s->serial;
+                                                    $serial = $s->id;
                                                 }
                                         }
 
@@ -170,7 +170,7 @@
                                         <td class=""><b><a
 
                                                       @if($av > 0)
-                                                        href="/stock/{{$serial}}/serial"
+                                                        href="/stock/{{$serial}}/id"
                                                 @endif
 
                                                 >{{$d->englishName}} </a>

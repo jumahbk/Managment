@@ -117,18 +117,18 @@ class StockController extends Controller
 
         $id = $request['serial'];
 
-//        $stock = Stock::where('serial', $id)->get()->first();
-//
-//
-//        if($stock == null)
-//        {
-//            $warning = "Invalid Serial Number";
-//        }
+        $stock = Stock::where('serial', $id)->get();
 
 
-//        return view('stock.requested' , compact('warning', 'stock'));
+        $c = count($stock);
+        if($c > 1)
+        {
+            return $this->multi($stock);
+        }else{
+            return redirect('/stock/'. $id . '/serial');
 
-        return redirect('/stock/'. $id . '/serial');
+        }
+
 
 
 
@@ -175,7 +175,21 @@ class StockController extends Controller
 
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function multi($stock)
+    {
+        $data = $stock;
 
+        return view('stock.productlist', compact('data'));
+
+
+
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -217,6 +231,52 @@ class StockController extends Controller
 
 
     }
+
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function id($id)
+    {
+        $warning = null;
+        $employees = Employee::all();
+        $emps = [];
+        $i = 0;
+        $titles = Title::where('isMedical' , '=', true)->get();
+        foreach($titles as $t)
+        {
+            foreach($t->employees as $e)
+            {
+                $emps[$i++]  = $e;
+            }
+
+        }
+
+
+        $stock = Stock::find($id);
+
+        $warehouses = null;
+        if($stock == null)
+        {
+            $warning = "Invalid Serial Number";
+        }else{
+            $warehouses = Warehouse::where('id' , '<>', $stock->warehouse_id)->get();
+
+        }
+
+
+
+        return view('stock.requested' , compact('warning', 'stock', 'warehouses', 'emps'));
+
+
+
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
