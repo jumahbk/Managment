@@ -124,6 +124,7 @@
                                 $danger = false;
                                 $av = 0;
                                 $nearest = null;
+                                $id = null;
                                 $serial = null;
 
                                 foreach ($stocks as $s) {
@@ -132,13 +133,14 @@
                                         if ($nearest == null) {
 
                                             $nearest = $s->expDate;
-                                            $serial = $s->id;
-
+                                            $id = $s->id;
+                                            $serial = $s->serial;
                                         } else {
                                             if(strtotime($nearest) > strtotime($s->expDate))
                                                 {
                                                     $nearest = $s->expDate;
-                                                    $serial = $s->id;
+                                                    $id = $s->id;
+                                                    $serial = $s->serial;
                                                 }
                                         }
 
@@ -170,7 +172,7 @@
                                         <td class=""><b><a
 
                                                       @if($av > 0)
-                                                        href="/stock/{{$serial}}/id"
+                                                        href="/stock/{{$id}}/id"
                                                 @endif
 
                                                 >{{$d->englishName}} </a>
@@ -253,7 +255,7 @@
                                     $danger = false;
                                     $av = 0;
                                     $nearest = null;
-                                    $serial = null;
+                                    $id = null;
 
                                     foreach ($stocks as $s) {
                                         $av = $av + $s->left();
@@ -261,13 +263,13 @@
                                             if ($nearest == null) {
 
                                                 $nearest = $s->expDate;
-                                                $serial = $s->serial;
+                                                $id = $s->serial;
 
                                             } else {
                                                 if(strtotime($nearest) > strtotime($s->expDate))
                                                 {
                                                     $nearest = $s->expDate;
-                                                    $serial = $s->serial;
+                                                    $id = $s->serial;
                                                 }
                                             }
 
