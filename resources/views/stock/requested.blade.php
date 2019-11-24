@@ -57,13 +57,13 @@
                                 <div class="form-group row">
                                     <label for="example-text-input" class="col-4 col-form-label"> {{__('messages.unitsav')}} </label>
                                     <div class="col-8">
-                                        <input class="form-control"  disabled type="text"   value="{{$stock->left()}} :  {{$stock->product->unit->englishName}} ">
+                                        <input class="form-control"  disabled type="text"   value="{{$stock->left()}}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="example-text-input" class="col-4 col-form-label"> {{__('messages.numberofunits')}} ({{$stock->product->unit->englishName}})</label>
+                                    <label for="example-text-input" class="col-4 col-form-label"> {{__('messages.numberofunits')}} </label>
                                     <div class="col-8">
-                                        <input class="form-control" type="number"  id="howmuch" name="howmuch" max="{{$stock->left()}}" min="1" value="{{$stock->left()}}">
+                                        <input class="form-control" type="number"  id="howmuch" name="howmuch" max="{{$stock->left()}}" min="0" value="{{$stock->left()}}">
                                     </div>
                                 </div>
 
@@ -131,7 +131,7 @@
                                                                                 <select class="form-control" name="warehouse_id" id="warehouse_id">
 
                                                                                     @foreach($warehouses as $a)
-                                                                                        <option value="{{$a->id}}">{{$a->englishName}} - {{$a->arabicName}}</option>
+                                                                                        <option value="{{$a->id}}">{{$a->englishName}} </option>
                                                                                     @endforeach
 															</select>
 
