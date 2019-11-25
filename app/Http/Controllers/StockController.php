@@ -131,7 +131,7 @@ class StockController extends Controller
         $data = Stock::all();
         $wh = Warehouse::all();
         $pl = Product::all();
-        return view('stock.productlist', compact('data', 'wh', 'pl', 'id', 'wid'));
+        return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid'));
     }
 
     /**
