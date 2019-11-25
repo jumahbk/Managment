@@ -126,10 +126,12 @@ class StockController extends Controller
 
     public function productlist()
     {
+        $pid = -1;
+        $wid = -1;
         $data = Stock::all();
         $wh = Warehouse::all();
         $pl = Product::all();
-        return view('stock.productlist', compact('data', 'wh', 'pl'));
+        return view('stock.productlist', compact('data', 'wh', 'pl', 'id', 'wid'));
     }
 
     /**
