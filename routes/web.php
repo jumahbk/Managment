@@ -11,6 +11,7 @@
 |
 */
 Route::post('/stock/update','StockController@update' )->middleware('auth');
+Route::post('/stock/filter','StockController@filter' )->middleware('auth');
 
 Route::get('/stock/noqr','StockController@noqr' )->middleware('auth');
 

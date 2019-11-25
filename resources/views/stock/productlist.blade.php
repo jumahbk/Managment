@@ -80,22 +80,73 @@
                 @endif
                 <div class="kt-portlet kt-portlet--mobile">
                     <div class="kt-portlet__head kt-portlet__head--lg">
+
+                        <form class="kt-portlet__head kt-portlet__head--lg kt-form kt-form--label-right" method="POST" action="/stock/filter" >
+                            @csrf
+
                         <div class="kt-portlet__head-label">
-			<span class="kt-portlet__head-icon">
-				<i class="kt-font-brand flaticon2-line-chart"></i>
-			</span>
-                            <h3 class="kt-portlet__head-title">
-                                {{    __('messages.productlist')}}
+                             <h3 class="kt-portlet__head-title pr-2">
+                               Product Name :
+                                </h3>
+
+                                <h3 class="kt-portlet__head-title">
+
+                                <select class="form-control" name="pid" id="pid">
+                                    <option value="-1">All </option>
+                                    @foreach($pl as $w)
+                                        <option value="{{$w->id}}"
+
+                                        @if($w->id == $pid)
+                                            selected
+                                            @endif
+
+                                        >{{$w->englishName}} </option>
+                                    @endforeach
+                                </select>
                             </h3>
+
                         </div>
+
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title pr-2">
+                                Location :
+                            </h3>
+
+                            <h3 class="kt-portlet__head-title">
+
+                                <select class="form-control" name="wid" id="wid">
+                                    <option value="-1">All </option>
+
+                                    @foreach($wh as $w)
+                                        <option
+                                                @if($w->id == $wid)
+                                                selected
+                                                @endif
+
+                                                value="{{$w->id}}">{{$w->englishName}} </option>
+                                    @endforeach
+                                </select>
+                            </h3>
+
+                        </div>
+
+
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+
+                                <button type="submit" class="btn btn-success">Filter</button>
+
+                            </h3>
+
+                        </div>
+
+                        </form>
+
                         <div class="kt-portlet__head-toolbar">
                             <div class="kt-portlet__head-wrapper">
                                 <div class="kt-portlet__head-actions">
 
-                                    <a href="/stock/create" class="btn btn-brand btn-elevate btn-icon-sm">
-                                        <i class="la la-plus"></i>
-                                        {{    __('messages.addnew')}}
-                                    </a>
+
                                 </div>
                             </div>
                         </div>

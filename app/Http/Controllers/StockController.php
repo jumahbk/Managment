@@ -98,10 +98,38 @@ class StockController extends Controller
     }
 
 
+    public function filter(Request $request)
+    {
+        $pid = $request['pid'];
+        $wid = $request['wid'];
+        $data = Stock::all();
+        if($pid > -1 && $wid > -1 )
+        {
+
+            $data = Stock::where('product_id', $pid)->where('warehouse_id', $wid)->get();
+
+        }else if($pid > -1)
+        {
+
+            $data = Stock::where('product_id', $pid)->get();
+        }else if($wid > -1)
+        {
+
+            $data = Stock::where('warehouse_id', $wid)->get();
+        }
+        $wh = Warehouse::all();
+        $pl = Product::all();
+
+
+        return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid'));
+    }
+
     public function productlist()
     {
         $data = Stock::all();
-        return view('stock.productlist', compact('data'));
+        $wh = Warehouse::all();
+        $pl = Product::all();
+        return view('stock.productlist', compact('data', 'wh', 'pl'));
     }
 
     /**
