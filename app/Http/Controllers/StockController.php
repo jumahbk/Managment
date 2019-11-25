@@ -59,7 +59,6 @@ class StockController extends Controller
     public function log()
     {
         $data = Stocklog::all();
-
         return view('stock.log', compact('data'));
 
     }
@@ -133,6 +132,74 @@ class StockController extends Controller
 
 
     }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function savereturn(Request $request)
+    {
+        $id = $request['id'];
+
+        $sl = Stocklog::find($id);
+
+        $warehouse_id = $request['warehouse_id'];
+
+        $returnp = $request['returnp'];
+
+
+
+        $fullamount = $sl->amountUsed;
+
+        $si = $sl->stock;
+
+
+        $si->usedUnits = $si->usedUnits - ($fullamount * $returnp);
+
+
+
+
+        $si->warehouse_id = $warehouse_id;
+
+        $si->push();
+
+
+//        $stockId = $request['id'];
+//        $howMuch = $request['howmuch'];
+//        $option = $request['option'];
+//        $eID = $request['employee_id'];
+//        $wID = $request['warehouse_id'];
+//        $stock = Stock::find($stockId);
+//        if($option == '1')
+//        {
+//
+//            $stock->usedUnits = $stock->usedUnits + $howMuch;
+//
+//            $stockLog = new Stocklog();
+//
+//            $stockLog->stock_id = $stockId;
+//            $stockLog->user_id = Auth()->id();
+//            $stockLog->amountUsed =$howMuch;
+//            $stockLog->employee_id = $eID;
+//
+//
+//            $stock->push();
+//            $stockLog->push();
+//
+//        }else
+//        {
+//            $stock->warehouse_id = $wID;
+//            $stock->push();
+//        }
+        return redirect('/stock/');
+
+
+
+    }
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -421,7 +488,22 @@ class StockController extends Controller
 
 
     }
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Stock  $stock
+     * @return \Illuminate\Http\Response
+     */
+    public function return($id)
+    {
 
+       $sl = Stocklog::find($id);
+       $wh = Warehouse::all();
+
+       return view('stock.return', compact('sl', 'wh'));
+
+
+    }
     /**
      * Display the specified resource.
      *

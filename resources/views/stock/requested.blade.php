@@ -63,7 +63,7 @@
                                 <div class="form-group row">
                                     <label for="example-text-input" class="col-4 col-form-label"> {{__('messages.numberofunits')}} </label>
                                     <div class="col-8">
-                                        <input class="form-control" type="number"  id="howmuch" name="howmuch" max="{{$stock->left()}}" min="0" value="{{$stock->left()}}">
+                                        <input class="form-control" type="text"  id="howmuch" name="howmuch" max="{{$stock->left()}}"  value="{{$stock->left()}}">
                                     </div>
                                 </div>
 

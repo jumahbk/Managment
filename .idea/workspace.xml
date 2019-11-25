@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d71528-7b63-4ee8-b313-02f2a717b2f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/stock/return.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/stock/requested.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock/requested.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Stock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Stock.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_27_112412_create_stocklogs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_27_112412_create_stocklogs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stock/batchlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock/batchlist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stock/log.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock/log.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/stock/move.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock/move.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,19 +139,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/stock" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
-      <recent name="$PROJECT_DIR$/resources/views/inventory" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/stock" />
       <recent name="$PROJECT_DIR$/resources/views/products" />
       <recent name="$PROJECT_DIR$/resources/views/vendors" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/employees" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/resources/views/inventory" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -179,7 +187,8 @@
       <workItem from="1574249024146" duration="3234000" />
       <workItem from="1574312589001" duration="1138000" />
       <workItem from="1574322110857" duration="2407000" />
-      <workItem from="1574571794166" duration="6936000" />
+      <workItem from="1574571794166" duration="7755000" />
+      <workItem from="1574655926598" duration="4586000" />
     </task>
     <servers />
   </component>

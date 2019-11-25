@@ -129,7 +129,11 @@
                             <tbody>
 
                             @foreach($data as $d)
-
+                                @if($d->left ==0)
+                                    <?php
+                                    continue;
+                                    ?>
+                                @endif
                                 @if($d->low <= $d->amountLeft)
                                     <tr role="row" class="even text-danger">
                                 @else

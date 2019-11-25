@@ -24,7 +24,7 @@ class Stock extends Model
     }
 
 
-    public function Stocklog()
+    public function Stocklogs()
     {
         return $this->hasMany('App\Stocklog');
     }

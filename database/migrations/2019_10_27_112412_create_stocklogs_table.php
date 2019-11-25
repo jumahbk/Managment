@@ -19,7 +19,7 @@ class CreateStocklogsTable extends Migration
 
             $table->unsignedBigInteger('employee_id');
             $table->unsignedBigInteger('user_id');
-            $table->integer('amountUsed');
+            $table->double('amountUsed');
 
             $table->unsignedBigInteger('stock_id');
 

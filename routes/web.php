@@ -14,6 +14,9 @@ Route::post('/stock/update','StockController@update' )->middleware('auth');
 
 Route::get('/stock/noqr','StockController@noqr' )->middleware('auth');
 
+Route::get('/stock/{id}/return','StockController@return' )->middleware('auth');
+
+
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/stock/{id}/destroy', 'StockController@destroy')->middleware('auth');;
 
@@ -24,6 +27,7 @@ Route::get('/products/batch', 'ProductController@batch')->middleware('auth');
 
 Route::post('/','StockController@index' )->middleware('auth');
 Route::post('/stock/savemove','StockController@savemove' )->middleware('auth');
+Route::post('/stock/savereturn','StockController@savereturn' )->middleware('auth');
 
 
 

@@ -31,6 +31,10 @@
             <div class="kt-portlet__body col-md-12">
                 <div class="form-group row form-group-marginless kt-margin-t-20">
                     <h2> {{    __('messages.serialnumbertomove')}}</h2>
+
+
+
+
                     <div class="col-lg-12">
                         <input type="hidden" id="batch" name="batch" value="1" />
                         <input id="serial" name="serial" type="text" class="form-control" rows="1" cols="500" ></input>
@@ -55,3 +59,5 @@
     </div>
 
 @endsection
+
+

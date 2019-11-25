@@ -104,7 +104,11 @@
                                     {{    __('messages.serial')}}
 
                                 </th>
+                                <th>
 
+                                   ACTION
+
+                                </th>
                             </tr>
                             </thead>
                             <tbody>
@@ -115,10 +119,11 @@
                                     <tr role="row" class="even text-info">
                                         <td class=""><b>{{$d->stock->product->englishName}}</b></td>
                                         <td class=""><b>{{$d->amountUsed}}</b></td>
-                                        <td class=""><b>{{$d->amountUsed}}</b></td>
+                                        <td class=""><b>{{$d->created_at}}</b></td>
                                         <td class=""><b>{{$d->user->name}}</b></td>
                                         <td class=""><b>{{$d->employee->englishName}}</b></td>
                                         <td class=""><b>{{$d->stock->serial}}</b></td>
+                                        <td class=""><b> <a href="/stock/{{$d->id}}/return"> Return Left Over </a></b></td>
 
 
                                     </tr>
