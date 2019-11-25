@@ -126,6 +126,7 @@
                                 $nearest = null;
                                 $id = null;
                                 $serial = null;
+                                $unit = '';
 
                                 foreach ($stocks as $s) {
                                     $av = $av + $s->left();
@@ -135,6 +136,7 @@
                                             $nearest = $s->expDate;
                                             $id = $s->id;
                                             $serial = $s->serial;
+                                            $unit =  $s->product->unit->englishName;
                                         } else {
                                             if(strtotime($nearest) > strtotime($s->expDate))
                                                 {
@@ -177,7 +179,7 @@
 
                                                 >{{$d->englishName}} </a>
                                             </b></td>
-                                        <td class=" {{$danger}}"><b>{{$av}}</b></td>
+                                        <td class=" {{$danger}}"><b>{{$av}}</b> : {{$unit}}</td>
                                         <td class=""><b>{{$nearest}}</b></td>
                                         <td class=""><b>{{$serial}}</b></td>
                                     </tr>
@@ -256,7 +258,7 @@
                                     $av = 0;
                                     $nearest = null;
                                     $id = null;
-
+                                    $unit = '';
                                     foreach ($stocks as $s) {
                                         $av = $av + $s->left();
                                         if ($s->left() > 0) {
@@ -264,12 +266,15 @@
 
                                                 $nearest = $s->expDate;
                                                 $id = $s->serial;
+                                                $unit = $s->product->unit->englishName;
 
                                             } else {
                                                 if(strtotime($nearest) > strtotime($s->expDate))
                                                 {
                                                     $nearest = $s->expDate;
                                                     $id = $s->serial;
+                                                    $unit = $s->product->unit->englishName;
+
                                                 }
                                             }
 
@@ -306,7 +311,7 @@
 
                                                     >{{$d->englishName}} </a>
                                                 </b></td>
-                                            <td class=" {{$danger}}"><b>{{$av}}</b></td>
+                                            <td class=" {{$danger}}"><b>{{$av}}</b> : {{$unit}}</td>
                                             <td class=""><b>{{$nearest}}</b></td>
                                             <td class=""><b>{{$serial}}</b></td>
                                         </tr>
