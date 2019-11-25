@@ -229,7 +229,7 @@
                                         text-info">
 
 
-                                            <td class="">{{$d->product->englishName}}-{{$d->product->arabicName}}</td>
+                                            <td class="">{{$d->product->englishName}}</td>
                                             <td class="">{{$d->user->name}}</td>
                                             <td class="">{{$d->warehouse->englishName}}</td>
                                             <td class="">{{$d->batch}}</td>
