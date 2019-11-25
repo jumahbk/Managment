@@ -59,7 +59,7 @@
                             <input type="hidden" name="id" value="{{$stock->id}}" />
                             <div class="kt-portlet__body">
                                 <div class="form-group row">
-                                    <label for="example-text-input" class="col-4 col-form-label"> {{__('messages.unitsav')}} </label>
+                                    <label for="example-text-input" class="col-4 col-form-label"> {{__('messages.unitsav')}} : {{$stock->product->unit->englishName}}</label>
                                     <div class="col-8">
                                         <input class="form-control"   name='total' type="text"   value="{{$stock->left()}}">
                                     </div>
