@@ -183,7 +183,7 @@ class StockController extends Controller
 
         $returnp = $request['returnp'];
 
-
+        $sl->returned = $returnp;
 
         $fullamount = $sl->amountUsed;
 
@@ -198,7 +198,7 @@ class StockController extends Controller
         $si->warehouse_id = $warehouse_id;
 
         $si->push();
-
+        $sl->push();
 
 //        $stockId = $request['id'];
 //        $howMuch = $request['howmuch'];
@@ -720,7 +720,7 @@ class StockController extends Controller
 
 
 
-            redirect('/stock');
+            redirect('/stock/log');
 
 
 

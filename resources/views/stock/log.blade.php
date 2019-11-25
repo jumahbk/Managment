@@ -123,8 +123,13 @@
                                         <td class=""><b>{{$d->user->name}}</b></td>
                                         <td class=""><b>{{$d->employee->englishName}}</b></td>
                                         <td class=""><b>{{$d->stock->serial}}</b></td>
-                                        <td class=""><b> <a href="/stock/{{$d->id}}/return"> Return Left Over </a></b></td>
 
+                                        @if($d->returned  == 0)
+                                        <td class=""><b> <a href="/stock/{{$d->id}}/return"> Return Left Over </a></b></td>
+                                        @else
+                                            <td class="">Returned {{$d->returned}}</td>
+
+                                        @endif
 
                                     </tr>
                                     @endforeach
