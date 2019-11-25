@@ -233,7 +233,7 @@
                                             <td class="">{{$d->user->name}}</td>
                                             <td class="">{{$d->warehouse->englishName}}</td>
                                             <td class="">{{$d->batch}}</td>
-                                            <td class="">{{$d->total - $d->usedUnits}} , {{$d->product->unit->englishName}}</td>
+                                            <td class="">{{$d->total - $d->usedUnits}} : {{$d->product->unit->englishName}}</td>
                                             <td class=""><b><a href="/stock/{{$d->id}}/id">{{$d->serial}}</a></b></td>
                                             <td class="">{{$d->notes}}</td>
                                             <td class=""><a href="/stock/{{$d->serial}}">{{$d->receivedDate}}</a></td>

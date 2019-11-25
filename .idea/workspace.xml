@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d71528-7b63-4ee8-b313-02f2a717b2f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/stock/productlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock/productlist.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -181,6 +182,7 @@
       <workItem from="1574322110857" duration="2407000" />
       <workItem from="1574571794166" duration="7755000" />
       <workItem from="1574655926598" duration="8776000" />
+      <workItem from="1574697213737" duration="268000" />
     </task>
     <servers />
   </component>

@@ -117,9 +117,9 @@ class StockController extends Controller
 
             $data = Stock::where('warehouse_id', $wid)->get();
         }
-        $wh = Warehouse::all();
-        $pl = Product::all();
-
+        $wh = Warehouse::all()->sortBy('englishName');;
+        $pl = Product::all()->sortBy('englishName');;
+        $data = $data->sortBy('englishName');
 
         return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid'));
     }
@@ -129,8 +129,12 @@ class StockController extends Controller
         $pid = -1;
         $wid = -1;
         $data = Stock::all();
-        $wh = Warehouse::all();
-        $pl = Product::all();
+        $wh = Warehouse::all()->sortBy('englishName');;
+        $pl = Product::all()->sortBy('englishName');;
+
+
+        $data = $data->sortBy('englishName');
+
         return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid'));
     }
 
