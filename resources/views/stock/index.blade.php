@@ -95,9 +95,17 @@
                                     {{    __('messages.productname')}}
 
                                 </th>
+
                                 <th>
 
-                                    {{    __('messages.totalleft')}}
+                                    Item Count
+
+                                </th>
+
+
+                                <th>
+
+                                    Unit Count
 
                                 </th>
                                 <th>
@@ -127,10 +135,12 @@
                                 $id = null;
                                 $serial = null;
                                 $unit = '';
+                                $unitCount = 0;
 
                                 foreach ($stocks as $s) {
                                     $av = $av + $s->left();
                                     if ($s->left() > 0) {
+                                        $unitCount++;
                                         if ($nearest == null) {
 
                                             $nearest = $s->expDate;
@@ -179,6 +189,8 @@
 
                                                 >{{$d->englishName}} </a>
                                             </b></td>
+                                        <td class=" {{$danger}}"><b>{{$unitCount}}</b></td>
+
                                         <td class=" {{$danger}}"><b>{{$av}}</b> : {{$unit}}</td>
                                         <td class=""><b>{{$nearest}}</b></td>
                                         <td class=""><b>{{$serial}}</b></td>

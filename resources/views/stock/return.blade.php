@@ -31,13 +31,6 @@
 
 
 
-                <div class="kt-portlet__head">
-                    <div class="kt-portlet__head-label">
-                        <h3 class="kt-portlet__head-title">
-                            {{ $sl->stock->product->englishName }} - Exp. {{ $sl->stock->expDate }} - Serial {{ $sl->stock->serial }}
-                        </h3>
-                    </div>
-                </div>
 
                 <!--begin::Form-->
                 <form class="kt-form kt-form--label-right" method="POST" action="/stock/savereturn" >
@@ -46,69 +39,64 @@
                     <input type="hidden" name="id" value="{{$sl->id}}" />
                     <div class="kt-portlet__body">
                         <div class="form-group row mr-0">
-                            <label for="example-text-input" class="col-4 col-form-label"> Amount reserved for <b>{{$sl->employee->englishName}} </b></label>
+                            <label for="example-text-input" class="col-4 col-form-label"> Product Name</label>
+                            <div class="col-3">
+                                <input class="form-control"  disabled type="text"   value=" {{ $sl->stock->product->englishName }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row mr-0">
+                            <label for="example-text-input" class="col-4 col-form-label"> Exp. Date:</label>
+                            <div class="col-3">
+                                <input class="form-control"   disabled type="date"   value="{{ $sl->stock->expDate }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row mr-0">
+                            <label for="example-text-input" class="col-4 col-form-label">Serial No.</label>
+                            <div class="col-3">
+                                <input class="form-control"   disabled type="text"   value="{{ $sl->stock->serial }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row mr-0">
+                            <label for="example-text-input" class="col-4 col-form-label">Reserved for</label>
+                            <div class="col-3">
+                                <input class="form-control"   disabled type="text"   value="{{ $sl->employee->englishName }}">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row mr-0">
+                            <label for="example-text-input" class="col-4 col-form-label"> Amount reserved</label>
                             <div class="col-3">
                                 <input class="form-control"  id="fullamount" name="fullamount" disabled type="text"   value="{{$sl->amountUsed}}">
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-lg-12">
-                                <label class="kt-option">
 
-                                    <span class="kt-option__label">
-																			<span class="kt-option__head">
-																				<span class="kt-option__title">
-																					Percentage to return:
-																				</span>
-
-																			</span>
-																			<span class="kt-option__body">
-
-
-                                                                                <select class="form-control" name="returnp" id="returnp">
-
-                                                                                    @for($i = 5 ; $i < 105 ; $i = $i + 5)
-                                                                                        <option value="{{$i/100}}">{{$i}}% </option>
-                                                                                    @endfor
-															</select>
-
-																			</span>
-																		</span>
-                                </label>
+                        <div class="form-group row mr-0">
+                            <label for="example-text-input" class="col-4 col-form-label"> 	Amount to return ({{$sl->stock->product->unit->englishName}}):</label>
+                            <div class="col-3">
+                                <input class="form-control" type="number" name="returnp" value="0" id="returnp" min="0" max="{{$sl->amountUsed}}" />
                             </div>
+                        </div>
 
+
+                        <div class="form-group row mr-0">
+                            <label for="example-text-input" class="col-4 col-form-label"> 		Return to:</label>
+                            <div class="col-3">
+                                <select class="form-control" name="warehouse_id" id="warehouse_id">
+
+                                    @foreach($wh as $a)
+                                        <option value="{{$a->id}}">{{$a->englishName}} </option>
+                                    @endforeach
+                                </select>                            </div>
                         </div>
 
 
 
-                        <div class="form-group row">
-                            <div class="col-lg-12">
-                                <label class="kt-option">
 
-                                    <span class="kt-option__label">
-																			<span class="kt-option__head">
-																				<span class="kt-option__title">
-																					Return to:
-																				</span>
-
-																			</span>
-																			<span class="kt-option__body">
-
-
-                                                                                <select class="form-control" name="warehouse_id" id="warehouse_id">
-
-                                                                                    @foreach($wh as $a)
-                                                                                        <option value="{{$a->id}}">{{$a->englishName}} </option>
-                                                                                    @endforeach
-															</select>
-
-																			</span>
-																		</span>
-                                </label>
-                            </div>
-
-                        </div>
 
                     </div>
                     <div class="kt-portlet__foot">

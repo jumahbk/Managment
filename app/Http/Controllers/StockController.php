@@ -190,7 +190,7 @@ class StockController extends Controller
         $si = $sl->stock;
 
 
-        $si->usedUnits = $si->usedUnits - ($fullamount * $returnp);
+        $si->usedUnits = $si->usedUnits - $returnp;
 
 
 
@@ -227,7 +227,7 @@ class StockController extends Controller
 //            $stock->warehouse_id = $wID;
 //            $stock->push();
 //        }
-        return redirect('/stock/');
+        return redirect('/stock/productlist');
 
 
 
@@ -270,7 +270,7 @@ class StockController extends Controller
             $stock->warehouse_id = $wID;
             $stock->push();
         }
-        return redirect('/stock/move');
+        return redirect('/stock/productlist');
 
 
 
