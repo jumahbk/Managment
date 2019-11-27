@@ -12,6 +12,8 @@
 */
 Route::post('/stock/update','StockController@update' )->middleware('auth');
 Route::post('/stock/filter','StockController@filter' )->middleware('auth');
+Route::post('/stock/filtergroup','StockController@filtergroup' )->middleware('auth');
+Route::post('/stock/relocategroup','StockController@relocategroup' )->middleware('auth');
 
 Route::get('/stock/noqr','StockController@noqr' )->middleware('auth');
 
@@ -41,6 +43,7 @@ Route::get('/stock/requested', 'StockController@requested')->middleware('auth');
 
 Route::get('/stock/batchlist', 'StockController@batchlist')->middleware('auth');
 Route::get('/stock/productlist', 'StockController@productlist')->middleware('auth');
+Route::get('/stock/batchmove', 'StockController@batchmove')->middleware('auth');
 
 Route::get('/stock/move', 'StockController@move')->middleware('auth');
 

@@ -96,10 +96,33 @@ class StockController extends Controller
         $wh = Warehouse::all();
         return view('stock.batchlist', compact('data', 'wh', 'products'));
     }
+    public function filtergroup(Request $request)
+    {
 
+        $pid = $request['pid'];
+        $wid = $request['wid'];
+        $data = Stock::all();
+        if ($pid > -1 && $wid > -1) {
+
+            $data = Stock::where('product_id', $pid)->where('warehouse_id', $wid)->get();
+
+        } else if ($pid > -1) {
+
+            $data = Stock::where('product_id', $pid)->get();
+        } else if ($wid > -1) {
+
+            $data = Stock::where('warehouse_id', $wid)->get();
+        }
+        $wh = Warehouse::all()->sortBy('englishName');;
+        $pl = Product::all()->sortBy('englishName');;
+        $data = $data->sortBy('englishName');
+
+        return view('stock.batchmove', compact('data', 'wh', 'pl', 'pid', 'wid'));
+    }
 
     public function filter(Request $request)
     {
+
         $pid = $request['pid'];
         $wid = $request['wid'];
         $data = Stock::all();
@@ -123,7 +146,51 @@ class StockController extends Controller
 
         return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid'));
     }
+    public function relocategroup(Request $request)
+    {
 
+        $wid = $request['wid'];
+       $select = $request['selected'];
+        if($select)
+        {
+            $count = count($select);
+            for($i = 0 ; $i < $count ; $i++)
+            {
+                $id = $select[$i];
+                $s = Stock::find($id);
+                $s->warehouse_id = $wid;
+                $s->push();
+            }
+        }
+
+        return $this->productlistwa($wid);
+    }
+    public function batchmove()
+    {
+        $pid = -1;
+        $wid = -1;
+        $data = Stock::all();
+        $wh = Warehouse::all()->sortBy('englishName');;
+        $pl = Product::all()->sortBy('englishName');;
+
+
+        $data = $data->sortBy('englishName');
+
+        return view('stock.batchmove', compact('data', 'wh', 'pl', 'pid', 'wid'));
+    }
+    public function productlistwa($wid)
+    {
+        $pid = -1;
+
+        $data  = Stock::where('warehouse_id', $wid)->get();
+        $wh = Warehouse::all()->sortBy('englishName');;
+        $pl = Product::all()->sortBy('englishName');;
+
+
+        $data = $data->sortBy('englishName');
+
+        return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid'));
+    }
     public function productlist()
     {
         $pid = -1;
