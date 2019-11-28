@@ -85,11 +85,7 @@
                             <thead>
                             <tr>
 
-                                <th>
 
-                                    {{    __('messages.vendorname')}}
-
-                                </th>
                                 <th>
 
                                     {{    __('messages.productname')}}
@@ -113,9 +109,10 @@
                                     {{    __('messages.nearestexp')}}
 
                                 </th>
+
                                 <th>
 
-                                    {{    __('messages.serial')}}
+                                    {{    __('messages.vendorname')}}
 
                                 </th>
 
@@ -180,7 +177,6 @@
                                     <tr role="row" class="even text-info">
 
                                         @endif
-                                        <td class=""><b>{{$d->vendor->englishName}}</b></td>
                                         <td class=""><b><a
 
                                                       @if($av > 0)
@@ -193,7 +189,8 @@
 
                                         <td class=" {{$danger}}"><b>{{$av}}</b> : {{$unit}}</td>
                                         <td class=""><b>{{$nearest}}</b></td>
-                                        <td class=""><b>{{$serial}}</b></td>
+                                        <td class=""><b>{{$d->vendor->englishName}}</b></td>
+
                                     </tr>
                                     @endif
                                     @endforeach
