@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/problems/update','ProblemController@update' )->middleware('auth');
+
 Route::post('/stock/update','StockController@update' )->middleware('auth');
 Route::post('/stock/filter','StockController@filter' )->middleware('auth');
 Route::post('/stock/filtergroup','StockController@filtergroup' )->middleware('auth');
@@ -86,6 +88,7 @@ Route::resource('nationalities','NationalityController')->middleware('auth');;
 Route::resource('employees','EmployeeController')->middleware('auth');;
 Route::resource('companies','CompanyController')->middleware('auth');;
 Route::resource('vendors','VendorController')->middleware('auth');;
+Route::resource('problems','ProblemController')->middleware('auth');;
 
 Route::get('/lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang'])->middleware('auth');;
 
