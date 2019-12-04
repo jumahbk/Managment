@@ -43,6 +43,8 @@ Route::get('/stock/requested', 'StockController@requested')->middleware('auth');
 
 Route::get('/stock/batchlist', 'StockController@batchlist')->middleware('auth');
 Route::get('/stock/productlist', 'StockController@productlist')->middleware('auth');
+Route::get('/stock/productlistDis', 'StockController@productlistDis')->middleware('auth');
+
 Route::get('/stock/batchmove', 'StockController@batchmove')->middleware('auth');
 
 Route::get('/stock/move', 'StockController@move')->middleware('auth');

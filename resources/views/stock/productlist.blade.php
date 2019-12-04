@@ -5,7 +5,11 @@
     App::setLocale(Session::get('applocale'));
 
     $locale = App::getLocale();
-
+    $filter = 0;
+    if(isset($dp))
+    {
+        $filter = $dp;
+    }
     ?>
 
 
@@ -56,6 +60,16 @@
                                 <select class="form-control" name="pid" id="pid">
                                     <option value="-1">All </option>
                                     @foreach($pl as $w)
+                                        @if($w->deleted == 1)
+                                            @continue;
+                                        @elseif($filter == -1)
+
+                                        @elseif($filter == 1 && $w->disposable != 1)
+                                            @continue;
+                                        @elseif($filter != 1 && $w->disposable ==1)
+                                            @continue;
+                                        @endif
+
                                         <option value="{{$w->id}}"
 
                                         @if($w->id == $pid)
@@ -168,6 +182,16 @@
                                 <tbody>
 
                                 @foreach($data as $d)
+
+
+
+                                    @if($filter == -1)
+
+                                    @elseif($filter == 1 && $d->product->disposable != 1)
+                                        @continue;
+                                    @elseif($filter != 1 && $d->product->disposable ==1)
+                                        @continue;
+                                    @endif
 
 
                                         @if(($d->total - $d->usedUnits) > 0)

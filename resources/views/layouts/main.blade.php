@@ -282,6 +282,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rell"  ><a href="/stock/productlist" class="kt-menu__link "><span class="kt-menu__link-text">Product List</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
                                     </li>
+                                    <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rell"  ><a href="/stock/productlistDis" class="kt-menu__link "><span class="kt-menu__link-text">Disposables List</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+
+                                    </li>
                                     <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rell"  ><a href="/stock/log" class="kt-menu__link "><span class="kt-menu__link-text">Consumption Log</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
                                     </li>

@@ -193,6 +193,7 @@ class StockController extends Controller
     }
     public function productlist()
     {
+        $dp = 0;
         $pid = -1;
         $wid = -1;
         $data = Stock::all();
@@ -202,8 +203,23 @@ class StockController extends Controller
 
         $data = $data->sortBy('englishName');
 
-        return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid'));
+        return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid','dp'));
     }
+    public function productlistDis()
+    {
+        $dp = 1;
+        $pid = -1;
+        $wid = -1;
+        $data = Stock::all();
+        $wh = Warehouse::all()->sortBy('englishName');;
+        $pl = Product::all()->sortBy('englishName');;
+
+
+        $data = $data->sortBy('englishName');
+
+        return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid', 'dp'));
+    }
+
 
     /**
      * Store a newly created resource in storage.
