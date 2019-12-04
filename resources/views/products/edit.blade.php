@@ -43,6 +43,16 @@ App::setLocale(Session::get('applocale'));
                                                 value="{{$tz->id}}"> {{$tz->englishName}} -  {{$tz->arabicName}} </option>
                                     @endforeach
                                 </select>                    </div>
+                            <div class="col-lg-3">
+                                <label class="kt-checkbox">
+                                    {{$t->disposable}}
+                                    <input type="checkbox"  name="disposable" value="1"
+                                           @if($t->disposable==1)
+                                           checked="checked"
+                                            @endif
+                                    > Disposable Product
+                                    <span></span></label>
+                            </div>
 
                         </div></div>
 

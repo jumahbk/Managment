@@ -177,6 +177,7 @@ class ProductController extends Controller
     }
     public function save(Request $request, $id)
     {
+
         if($request['batch'] == 1)
         {
             return $this->saveBatch($request);
@@ -189,10 +190,22 @@ class ProductController extends Controller
         $product->englishName = $request['englishName'];
         $product->arabicName = $request['arabicName'];
         $product->vendor_id = $request['vendor_id'];
+        if($request['disposable'] == 1)
+        {
+            $product->disposable = 1;
+        }else{
+            $product->disposable = 0;
+        }
+        if($request['low'])
+        {
+            $product->low = $request['low'];
+        }else{
+            $product->low = 5;
+        }
 
-        $product->low = $request['low'];
 
-        $product->unit_id = $request['unit_id'];
+
+
 
         $product->push();
 

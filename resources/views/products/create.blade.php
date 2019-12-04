@@ -49,7 +49,7 @@
 
                         <label class="col-lg-3 col-form-label">{{    __('messages.min')}}:</label>
                         <div class="col-lg-3">
-                            <input id="low" name="low" type="number" class="form-control">
+                            <input id="low" name="low" type="number" class="form-control" value="15">
                         </div>
                     </div>
 
