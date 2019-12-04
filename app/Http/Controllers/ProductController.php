@@ -17,7 +17,7 @@ class ProductController extends Controller
     public function index()
     {
 
-        $data = Product::all();
+        $data = Product::all()->sortBy('englishName');
         $vendors = Vendor::all();
         $u = Unit::all();
 
@@ -75,7 +75,7 @@ class ProductController extends Controller
     public function activate($id)
     {
         $request = Product::find($id);
-        $request->deleted = false;
+        $request->disable = 0;
         $request->push();
         return redirect('/products');
 
@@ -94,9 +94,11 @@ class ProductController extends Controller
     public function deactivate($id)
     {
         $product = Product::find($id);
+        $product->disable = 1;
 //        $product->deleted = true;
-//        $product->push();
-        $product->delete();
+        $product->push();
+
+//        $product->delete();
         return redirect('/products');
 
 

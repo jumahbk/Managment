@@ -520,7 +520,7 @@ class StockController extends Controller
     {
         $wh = Warehouse::all();
         $u = Unit::all();
-        $p = Product::All();
+        $p = Product::where('disable' , '<>', 1)->get()->sortBy('englishName');
 
         return view('stock.create' ,  compact( 'wh','u','p'));
 
@@ -533,7 +533,7 @@ class StockController extends Controller
     {
         $wh = Warehouse::all();
         $u = Unit::all();
-        $p = Product::All();
+        $p = Product::where('disable' , '<>', 1)->get()->sortBy('englishName');
 
         return view('stock.createNOQR' ,  compact( 'wh','u','p'));
 

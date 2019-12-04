@@ -230,32 +230,19 @@
                                 <thead>
                                 <tr>
 
-                                    <th>
 
-                                        {{    __('messages.vendorname')}}
-
-                                    </th>
                                     <th>
 
                                         {{    __('messages.productname')}}
 
                                     </th>
+
+
                                     <th>
 
-                                        {{    __('messages.totalleft')}}
+                                        {{    __('messages.vendorname')}}
 
                                     </th>
-                                    <th>
-
-                                        {{    __('messages.nearestexp')}}
-
-                                    </th>
-                                    <th>
-
-                                        {{    __('messages.serial')}}
-
-                                    </th>
-
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -311,24 +298,12 @@
 
                                     @if($av< 1)
 
-                                    @if($danger)
-                                        <tr role="row" class="even bg-warning text-dark">
-                                    @else
                                         <tr role="row" class="even text-info">
-
-                                            @endif
-                                            <td class=""><b>{{$d->vendor->englishName}}</b></td>
-                                            <td class=""><b><a
-
-                                                            @if($av > 0)
-                                                            href="/stock/{{$serial}}/serial"
-                                                            @endif
-
-                                                    >{{$d->englishName}} </a>
+                                            <td class=""><b>{{$d->englishName}}
                                                 </b></td>
-                                            <td class=" {{$danger}}"><b>{{$av}}</b> : {{$unit}}</td>
-                                            <td class=""><b>{{$nearest}}</b></td>
-                                            <td class=""><b>{{$serial}}</b></td>
+                                            <td class=""><b>{{$d->vendor->englishName}}</b></td>
+
+
                                         </tr>
                                         @endif
                                         @endforeach
@@ -568,12 +543,6 @@
                         <table class="table">
                             <thead>
                             <tr>
-
-                                <th>
-
-                                    {{    __('messages.vendorname')}}
-
-                                </th>
                                 <th>
 
                                     {{    __('messages.productname')}}
@@ -581,19 +550,10 @@
                                 </th>
                                 <th>
 
-                                    {{    __('messages.totalleft')}}
+                                    {{    __('messages.vendorname')}}
 
                                 </th>
-                                <th>
 
-                                    {{    __('messages.nearestexp')}}
-
-                                </th>
-                                <th>
-
-                                    {{    __('messages.serial')}}
-
-                                </th>
 
                             </tr>
                             </thead>
@@ -649,26 +609,13 @@
                                 ?>
 
                                 @if($av< 1)
+                                    <tr role="row" class="even text-info">
+                                        <td class=""><b>{{$d->englishName}}
+                                            </b></td>
+                                        <td class=""><b>{{$d->vendor->englishName}}</b></td>
 
-                                    @if($danger)
-                                        <tr role="row" class="even bg-warning text-dark">
-                                    @else
-                                        <tr role="row" class="even text-info">
 
-                                            @endif
-                                            <td class=""><b>{{$d->vendor->englishName}}</b></td>
-                                            <td class=""><b><a
-
-                                                            @if($av > 0)
-                                                            href="/stock/{{$serial}}/serial"
-                                                            @endif
-
-                                                    >{{$d->englishName}} </a>
-                                                </b></td>
-                                            <td class=" {{$danger}}"><b>{{$av}}</b> : {{$unit}}</td>
-                                            <td class=""><b>{{$nearest}}</b></td>
-                                            <td class=""><b>{{$serial}}</b></td>
-                                        </tr>
+                                    </tr>
                                     @endif
                                     @endforeach
                             </tbody>
