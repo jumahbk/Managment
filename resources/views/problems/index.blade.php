@@ -173,7 +173,7 @@
 
 
 
-                                                        /td>
+                                                        </td>
                                                 <td class="">{{$d->user->name}}</td>
 
                                                 <td class="">{{$d->issue}}</td>
