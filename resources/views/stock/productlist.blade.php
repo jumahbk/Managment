@@ -5,7 +5,7 @@
     App::setLocale(Session::get('applocale'));
 
     $locale = App::getLocale();
-    $filter = 0;
+    $filter = -1;
     if(isset($dp))
     {
         $filter = $dp;

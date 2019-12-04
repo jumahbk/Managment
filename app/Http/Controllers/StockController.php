@@ -143,8 +143,8 @@ class StockController extends Controller
         $wh = Warehouse::all()->sortBy('englishName');;
         $pl = Product::all()->sortBy('englishName');;
         $data = $data->sortBy('englishName');
-
-        return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid'));
+        $dp = -1;
+        return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid', 'dp'));
     }
     public function relocategroup(Request $request)
     {
