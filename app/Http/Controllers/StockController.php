@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 use App\Branch;
 use App\Employee;
@@ -22,6 +23,10 @@ class StockController extends Controller
      */
     public function index()
     {
+        $test = DB::table('Stocks')
+            ->groupBy('created_at')->get();
+
+        dd($test);
         $products = Product::all();
         $data= [];
         $i = 0;
@@ -61,6 +66,19 @@ class StockController extends Controller
         $data = Stocklog::all();
         return view('stock.log', compact('data'));
 
+    }
+    public function batchlistedit(Request $request)
+    {
+        $pid = -1;
+        $wid = -1;
+        $data = Stock::all();
+        $wh = Warehouse::all()->sortBy('englishName');;
+        $pl = Product::all()->sortBy('englishName');;
+
+
+        $data = $data->sortBy('englishName');
+
+        return view('stock.batchlistedit', compact('data', 'wh', 'pl', 'pid', 'wid'));
     }
     public function batchlist()
     {
