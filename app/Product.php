@@ -21,5 +21,8 @@ class Product extends Model
         return $this->belongsTo('App\Unit','unit_id', 'id');
     }
 
-
+    public function stockdeletes()
+    {
+        return $this->hasMany('App\Stockdelete');
+    }
 }

@@ -294,6 +294,24 @@ class StockController extends Controller
 
         return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid','dp'));
     }
+
+    public function deletelog()
+    {
+        $dp = 0;
+        $pid = -1;
+        $wid = -1;
+        $data = Stockdelete::all();
+        $wh = Warehouse::all()->sortBy('englishName');;
+        $pl = Product::all()->sortBy('englishName');;
+
+
+        $data = $data->sortBy('englishName');
+
+        return view('stock.deletelist', compact('data', 'wh', 'pl', 'pid', 'wid','dp'));
+    }
+
+
+
     public function productlistDis()
     {
         $dp = 1;
