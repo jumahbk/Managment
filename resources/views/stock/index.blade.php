@@ -71,7 +71,10 @@
                                         <i class="la la-folder"></i>
                                         {{    __('messages.logview')}}
                                     </a>
-
+                                    <a href="stock/batchlistedit" class="btn btn-google btn-elevate btn-icon-sm">
+                                        <i class="la la-trash"></i>
+                                        DELETE
+                                    </a>
 
                                 </div>
                             </div>

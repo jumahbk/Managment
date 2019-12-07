@@ -36,7 +36,7 @@
                 <div class="kt-portlet kt-portlet--mobile">
                     <div class="kt-portlet__head kt-portlet__head--lg">
 
-                        <form class="kt-portlet__head kt-portlet__head--lg kt-form kt-form--label-right" method="POST" action="/stock/filtergroup" >
+                        <form class="kt-portlet__head kt-portlet__head--lg kt-form kt-form--label-right" method="POST" action="/stock/groupdelete" >
                             @csrf
 
                             <div class="kt-portlet__head-label">
@@ -106,7 +106,7 @@
                             </div>
                         </div>
                     </div>
-                    <form class="kt-portlet__head kt-portlet__head--lg kt-form kt-form--label-right" method="POST" action="/stock/deletegroup" >
+                    <form class="kt-portlet__head kt-portlet__head--lg kt-form kt-form--label-right" method="POST" action="/stock/batchdelete" >
 
                     <div class="kt-portlet__body">
 
@@ -122,13 +122,31 @@
 
                             <label class="col-lg-2 col-form-label m-0 ">Reason for delete</label>
                             <div class="col-lg-3 m-0">
-                                <input id="cost" name="cost"  value='0' type="text" class="form-control">
+                                <input id="rs" name="rs"   type="text" class="form-control">
                             </div>
 
                             <div class="col-lg-1 m-0">
-                                <input id="total"  class="btn btn-success" value="Delete" name="total" type="submit" class="form-control">
+                                <input  class="btn btn-google" value="Delete"  type="submit" class="form-control"   onclick=" return verify()" >
                             </div>
 
+                            <script>
+
+                                function verify() {
+
+
+                                    var r = document.getElementById("rs").value;
+
+                                    if(r.length < 5)
+                                    {
+                                        alert('Please provide a valid reason for deletion')
+                                        return false;
+                                    }
+
+                                    return confirm('Are you sure you want to delete? this action cannot be reversed');
+
+                                }
+
+                            </script>
 
                         </div>
                         <div class="table-wrapper-scroll-y my-custom-scrollbar">
@@ -209,7 +227,7 @@
                                                     text-info">
 
                                                 <td>
-                                                    <input type="checkbox"  name="selected" value="{{$d->id}}">
+                                                    <input type="checkbox"  name="selected[]" value="{{$d->id}}">
 
 
                                                 </td>
@@ -246,10 +264,9 @@
                     <script>
 
                         function selectall(source) {
-                            checkboxes = document.getElementsByName('selected');
+                            checkboxes = document.getElementsByName('selected[]');
                             for(var i=0, n=checkboxes.length;i<n;i++) {
-                                checkboxes[i].checked = source.checked;
-                                alert(i);
+                                checkboxes[i].checked = "checked";
                             }
                         }
 

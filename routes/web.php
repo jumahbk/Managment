@@ -13,9 +13,17 @@
 Route::post('/problems/update','ProblemController@update' )->middleware('auth');
 
 Route::post('/stock/update','StockController@update' )->middleware('auth');
+
+
+Route::post('/stock/groupdelete','StockController@batchlisteditfilter' )->middleware('auth');
+
 Route::post('/stock/filter','StockController@filter' )->middleware('auth');
 Route::post('/stock/filtergroup','StockController@filtergroup' )->middleware('auth');
 Route::post('/stock/relocategroup','StockController@relocategroup' )->middleware('auth');
+
+
+Route::post('/stock/batchdelete','StockController@batchdelete' )->middleware('auth');
+
 
 Route::get('/stock/noqr','StockController@noqr' )->middleware('auth');
 

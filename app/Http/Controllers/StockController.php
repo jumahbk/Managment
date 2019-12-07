@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Stockdelete;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 use App\Branch;
@@ -26,7 +28,7 @@ class StockController extends Controller
         $test = DB::table('Stocks')
             ->groupBy('created_at')->get();
 
-        dd($test);
+
         $products = Product::all();
         $data= [];
         $i = 0;
@@ -80,6 +82,32 @@ class StockController extends Controller
 
         return view('stock.batchlistedit', compact('data', 'wh', 'pl', 'pid', 'wid'));
     }
+
+    public function batchlisteditfilter(Request $request)
+    {
+
+        $pid = $request['pid'];
+        $wid = $request['wid'];
+        $data = Stock::all();
+        if ($pid > -1 && $wid > -1) {
+
+            $data = Stock::where('product_id', $pid)->where('warehouse_id', $wid)->get();
+
+        } else if ($pid > -1) {
+
+            $data = Stock::where('product_id', $pid)->get();
+        } else if ($wid > -1) {
+
+            $data = Stock::where('warehouse_id', $wid)->get();
+        }
+        $wh = Warehouse::all()->sortBy('englishName');;
+        $pl = Product::all()->sortBy('englishName');;
+        $data = $data->sortBy('englishName');
+
+        return view('stock.batchlistedit', compact('data', 'wh', 'pl', 'pid', 'wid'));
+    }
+
+
     public function batchlist()
     {
         $products = Product::all();
@@ -183,6 +211,49 @@ class StockController extends Controller
 
         return $this->productlistwa($wid);
     }
+
+    public function batchdelete(Request $request)
+    {
+
+
+        $select = $request['selected'];
+        if($select)
+        {
+            $count = count($select);
+            for($i = 0 ; $i < $count ; $i++)
+            {
+                $id = $select[$i];
+                $s = Stock::find($id);
+                $d = new Stockdelete();
+                $d->oldId = $s-> id;
+                $d->product_id = $s->product_id ;
+                $d->user_id = Auth::id() ;
+                $d->warehouse_id = $s-> warehouse_id;
+                $d-> batch= $s->batch ;
+                $d->total = $s->total ;
+                $d-> usedUnits= $s->usedUnits ;
+                $d-> serial= $s->serial ;
+                $d-> notes= $s->notes ;
+                $d->receivedDate = $s->receivedDate ;
+                $d->expDate = $s->expDate ;
+                $d-> cost= $s-> cost;
+                $d-> rs= $s-> $request['rs'];
+                $d-> warehouse_id= $s->warehouse_id ;
+                $d->push();
+
+                $s->delete();
+
+
+
+
+
+
+            }
+        }
+        return redirect('/stock');
+    }
+
+
     public function batchmove()
     {
         $pid = -1;

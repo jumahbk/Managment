@@ -40,8 +40,12 @@ App::setLocale(Session::get('applocale'));
                                                 @endif
 
 
-                                                value="{{$tz->id}}"> {{$tz->englishName}} -  {{$tz->arabicName}} </option>
+                                                value="{{$tz->id}}"> {{$tz->englishName}} -  {{$tz->arabicName}}
+                                        </option>
+
                                     @endforeach
+
+
                                 </select>                    </div>
                             <div class="col-lg-3">
                                 <label class="kt-checkbox">

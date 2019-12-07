@@ -294,6 +294,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rell"  ><a href="/problems" class="kt-menu__link "><span class="kt-menu__link-text">Problem Reporting</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
                                     </li>
+
                                     <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="false"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Settings</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                         <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                             <ul class="kt-menu__subnav">
