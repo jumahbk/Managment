@@ -237,7 +237,7 @@ class StockController extends Controller
                 $d->receivedDate = $s->receivedDate ;
                 $d->expDate = $s->expDate ;
                 $d-> cost= $s-> cost;
-                $d-> rs= $s-> $request['rs'];
+                $d-> rs= $request['rs'];
                 $d-> warehouse_id= $s->warehouse_id ;
                 $d->push();
 
