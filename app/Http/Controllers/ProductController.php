@@ -190,6 +190,7 @@ class ProductController extends Controller
         $product->englishName = $request['englishName'];
         $product->arabicName = $request['arabicName'];
         $product->vendor_id = $request['vendor_id'];
+        $product->unit_id = $request['unit_id'];
         if($request['disposable'] == 1)
         {
             $product->disposable = 1;
