@@ -96,10 +96,10 @@
                                                                                <select class="form-control" name="employee_id" id="employee_id">
 
                                                                                     @foreach($emps as $a)
-                                                                                        {{$a->title[0]}}
+                                                                                       {{$a->title[0]}}
                                                                                        <option value="{{$a->id}}"> {{$a->englishName}}</option>
-                                                                                           @endforeach
-															</select>
+                                                                                   @endforeach
+														                    	</select>
 
 
 																			</span>
@@ -147,11 +147,16 @@
                                 <div class="kt-form__actions">
                                     <div class="row">
                                         <div class="col-9">
-                                        </div>
-                                        <div class="col-3">
-                                            <button type="submit" class="btn btn-success">Submit</button>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-success">Submit</button>
+
+                                                <button type="submit" class="btn btn-google" onclick="return confirm('You are returning this item to vendor? this action cannot be reversed')"  name="return" id="return" value="1">Return to vendor</button>
+
+
+                                            </div>
 
                                         </div>
+
                                     </div>
                                 </div>
                             </div>

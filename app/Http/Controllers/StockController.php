@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Stockdelete;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 
 use App\Branch;
@@ -439,7 +440,18 @@ class StockController extends Controller
         $eID = $request['employee_id'];
         $wID = $request['warehouse_id'];
         $stock = Stock::find($stockId);
-        if($option == '1')
+        if($request['return']==1)
+        {
+            $date = new \DateTime('now');
+           // echo $date->format('D M d, Y G:i');
+
+            $stock->returned_at = $date;
+            $stock->returned_amount = $howMuch;
+            $stock->usedUnits = $stock->usedUnits + $howMuch;
+            $stock->push();
+
+        }
+        else if($option == '1')
         {
 
             $stock->usedUnits = $stock->usedUnits + $howMuch;
