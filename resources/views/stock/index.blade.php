@@ -132,6 +132,7 @@
 
                                 $stocks = $d->stocks;
                                 $danger = false;
+                                $dateDanger = false;
                                 $av = 0;
                                 $nearest = null;
                                 $id = null;
@@ -172,7 +173,7 @@
                                 }
                                 if(strtotime($nearest) < strtotime('+6 months'))
                                 {
-                                    $danger = true;
+                                    $dateDanger = true;
 
 
                                 }
@@ -188,8 +189,11 @@
                                     @if($unitCount == 0)
                                     btn-google
 
-                                    @elseif($av <= $low || $danger)
+                                    @elseif($danger)
                                             btn-warning
+
+                                    @elseif($dateDanger)
+                                            btn-twitter
                                     @endif
 
                                     ">
