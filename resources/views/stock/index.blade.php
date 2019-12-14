@@ -187,7 +187,9 @@
 
                                     @if($unitCount == 0)
                                     btn-google
-                                    @else
+
+                                    @elseif($av <= $low || $danger)
+                                            btn-warning
                                     @endif
 
                                     ">
