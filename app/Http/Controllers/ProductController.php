@@ -197,6 +197,15 @@ class ProductController extends Controller
         }else{
             $product->disposable = 0;
         }
+
+        if($request['fav'] == 1)
+        {
+            $product->fav = 1;
+        }else{
+            $product->fav = 0;
+        }
+
+
         if($request['low'])
         {
             $product->low = $request['low'];

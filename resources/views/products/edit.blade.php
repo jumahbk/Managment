@@ -49,7 +49,6 @@ App::setLocale(Session::get('applocale'));
                                 </select>                    </div>
                             <div class="col-lg-3">
                                 <label class="kt-checkbox">
-                                    {{$t->disposable}}
                                     <input type="checkbox"  name="disposable" value="1"
                                            @if($t->disposable==1)
                                            checked="checked"
@@ -57,7 +56,16 @@ App::setLocale(Session::get('applocale'));
                                     > Disposable Product
                                     <span></span></label>
                             </div>
+                            <div class="col-lg-3">
+                                <label class="kt-checkbox">
 
+                                    <input type="checkbox"  name="fav" value="1"
+                                           @if($t->fav==1)
+                                           checked="checked"
+                                            @endif
+                                    > Mark Important
+                                    <span></span></label>
+                            </div>
                         </div></div>
 
                     <div class="kt-portlet__body col-md-9">
