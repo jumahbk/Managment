@@ -358,14 +358,15 @@
 
                             @foreach($products as $d)
                                 <?php
-
                                 $low = $d->low;
-                                if($d->disposable == 1)
+                                if($d->fav == 1 || $d->disposable ==1 )
                                 {
                                     continue;
                                 }
+                                $first = 1;
                                 $stocks = $d->stocks;
                                 $danger = false;
+                                $dateDanger = false;
                                 $av = 0;
                                 $nearest = null;
                                 $id = null;
@@ -374,25 +375,35 @@
                                 $unitCount = 0;
 
                                 foreach ($stocks as $s) {
-                                    $av = $av + $s->left();
-                                    if ($s->left() > 0) {
-                                        $unitCount++;
-                                        if ($nearest == null) {
 
+
+                                    $av = $av + $s->left();
+                                    if($s->left()>0)
+                                    {
+                                        $unitCount++;
+
+                                    }
+                                    if ($first == 1 ) {
+                                        $first = null;
+                                        if($s->left()>0){
+                                            $nearest = $s->expDate;
+
+                                        }else{
+                                            $nearest = '10-10-2030';
+                                        }
+                                        $id = $s->id;
+                                        $serial = $s->serial;
+                                        $unit =  $s->product->unit->englishName;
+                                    } else {
+                                        if(strtotime($nearest) > strtotime($s->expDate) && $s->left() > 0)
+                                        {
                                             $nearest = $s->expDate;
                                             $id = $s->id;
                                             $serial = $s->serial;
-                                            $unit =  $s->product->unit->englishName;
-                                        } else {
-                                            if(strtotime($nearest) > strtotime($s->expDate))
-                                            {
-                                                $nearest = $s->expDate;
-                                                $id = $s->id;
-                                                $serial = $s->serial;
-                                            }
                                         }
-
                                     }
+
+
 
 
                                 }
@@ -401,147 +412,54 @@
                                 }
                                 if(strtotime($nearest) < strtotime('+6 months'))
                                 {
-                                    $danger = true;
+                                    $dateDanger = true;
 
 
                                 }
 
+
                                 ?>
 
-                                @if($av >0)
 
-                                    @if($danger)
-                                        <tr role="row" class="even bg-warning text-dark">
-                                    @else
-                                        <tr role="row" class="even text-info">
 
+
+                                <tr role="row" class="even
+
+                                    @if($unitCount == 0)
+                                        btn-google
+
+@elseif($danger)
+                                        btn-warning
+
+@elseif($dateDanger)
+                                        btn-twitter
+@endif
+
+                                        ">
+
+
+                                    <td ><b><a
+
+                                                    @if($av > 0)
+                                                    href="/stock/{{$id}}/id"
+                                                    @endif
+
+                                            >{{$d->englishName}} </a>
+                                        </b></td>
+                                    <td ><b>{{$unitCount}}</b></td>
+
+                                    <td ><b>{{$av}}</b> : {{$unit}}</td>
+                                    <td ><b>
+
+                                            @if($unitCount > 0)
+                                                {{$nearest}}
                                             @endif
-                                            <td class=""><b><a
 
-                                                            @if($av > 0)
-                                                            href="/stock/{{$id}}/id"
-                                                            @endif
+                                        </b></td>
+                                    <td ><b>{{$d->vendor->englishName}}</b></td>
 
-                                                    >{{$d->englishName}} </a>
-                                                </b></td>
-                                            <td class=" {{$danger}}"><b>{{$unitCount}}</b></td>
+                                </tr>
 
-                                            <td class=" {{$danger}}"><b>{{$av}}</b> : {{$unit}}</td>
-                                            <td class=""><b>{{$nearest}}</b></td>
-                                            <td class=""><b>{{$d->vendor->englishName}}</b></td>
-
-                                        </tr>
-                                    @endif
-                                    @endforeach
-                            </tbody>
-                        </table>
-
-
-                    </div>
-                </div>
-
-
-
-
-
-                <div class="kt-portlet kt-portlet--mobile">
-                    <div class="kt-portlet__head kt-portlet__head--lg">
-                        <div class="kt-portlet__head-label">
-			<span class="kt-portlet__head-icon">
-				<i class="kt-font-brand flaticon2-line-chart"></i>
-			</span>
-                            <h3 class="kt-portlet__head-title">
-                                {{    __('messages.outofstock')}}
-                            </h3>
-                        </div>
-                        <div class="kt-portlet__head-toolbar">
-
-                        </div>
-                    </div>
-
-                    <div class="kt-portlet__body">
-
-
-                        <table class="table">
-                            <thead>
-                            <tr>
-
-
-                                <th>
-
-                                    {{    __('messages.productname')}}
-
-                                </th>
-
-
-                                <th>
-
-                                    {{    __('messages.vendorname')}}
-
-                                </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-
-                            @foreach($products as $d)
-                                <?php
-
-                                $low = $d->low;
-                                if($d->disposable == 1)
-                                {
-                                    continue;
-                                }
-                                $stocks = $d->stocks;
-                                $danger = false;
-                                $av = 0;
-                                $nearest = null;
-                                $id = null;
-                                $unit = '';
-                                foreach ($stocks as $s) {
-                                    $av = $av + $s->left();
-                                    if ($s->left() > 0) {
-                                        if ($nearest == null) {
-
-                                            $nearest = $s->expDate;
-                                            $id = $s->serial;
-                                            $unit = $s->product->unit->englishName;
-
-                                        } else {
-                                            if(strtotime($nearest) > strtotime($s->expDate))
-                                            {
-                                                $nearest = $s->expDate;
-                                                $id = $s->serial;
-                                                $unit = $s->product->unit->englishName;
-
-                                            }
-                                        }
-
-                                    }
-
-
-                                }
-                                if ($av <= $low) {
-                                    $danger = false;
-
-                                }
-                                if(strtotime($nearest) < strtotime('+6 months'))
-                                {
-                                    $danger = false;
-
-
-                                }
-                                ?>
-
-                                @if($av< 1)
-
-                                    <tr role="row" class="even text-info">
-                                        <td class=""><b>{{$d->englishName}}
-                                            </b></td>
-                                        <td class=""><b>{{$d->vendor->englishName}}</b></td>
-
-
-                                    </tr>
-                                @endif
                             @endforeach
                             </tbody>
                         </table>
@@ -550,8 +468,11 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
+
+
+
+
+
 
 
 
@@ -672,14 +593,15 @@
 
                             @foreach($products as $d)
                                 <?php
-
                                 $low = $d->low;
-                                if($d->disposable != 1)
+                                if($d->fav == 1 || $d->disposable == 0 )
                                 {
                                     continue;
                                 }
+                                $first = 1;
                                 $stocks = $d->stocks;
                                 $danger = false;
+                                $dateDanger = false;
                                 $av = 0;
                                 $nearest = null;
                                 $id = null;
@@ -688,25 +610,35 @@
                                 $unitCount = 0;
 
                                 foreach ($stocks as $s) {
-                                    $av = $av + $s->left();
-                                    if ($s->left() > 0) {
-                                        $unitCount++;
-                                        if ($nearest == null) {
 
+
+                                    $av = $av + $s->left();
+                                    if($s->left()>0)
+                                    {
+                                        $unitCount++;
+
+                                    }
+                                    if ($first == 1 ) {
+                                        $first = null;
+                                        if($s->left()>0){
+                                            $nearest = $s->expDate;
+
+                                        }else{
+                                            $nearest = '10-10-2030';
+                                        }
+                                        $id = $s->id;
+                                        $serial = $s->serial;
+                                        $unit =  $s->product->unit->englishName;
+                                    } else {
+                                        if(strtotime($nearest) > strtotime($s->expDate) && $s->left() > 0)
+                                        {
                                             $nearest = $s->expDate;
                                             $id = $s->id;
                                             $serial = $s->serial;
-                                            $unit =  $s->product->unit->englishName;
-                                        } else {
-                                            if(strtotime($nearest) > strtotime($s->expDate))
-                                            {
-                                                $nearest = $s->expDate;
-                                                $id = $s->id;
-                                                $serial = $s->serial;
-                                            }
                                         }
-
                                     }
+
+
 
 
                                 }
@@ -715,41 +647,57 @@
                                 }
                                 if(strtotime($nearest) < strtotime('+6 months'))
                                 {
-                                    $danger = true;
+                                    $dateDanger = true;
 
 
                                 }
 
+
                                 ?>
 
-                                @if($av >0)
 
-                                    @if($danger)
-                                        <tr role="row" class="even bg-warning text-dark">
-                                    @else
-                                        <tr role="row" class="even text-info">
 
+
+                                <tr role="row" class="even
+
+                                    @if($unitCount == 0)
+                                        btn-google
+
+@elseif($danger)
+                                        btn-warning
+
+@elseif($dateDanger)
+                                        btn-twitter
+@endif
+
+                                        ">
+
+
+                                    <td ><b><a
+
+                                                    @if($av > 0)
+                                                    href="/stock/{{$id}}/id"
+                                                    @endif
+
+                                            >{{$d->englishName}} </a>
+                                        </b></td>
+                                    <td ><b>{{$unitCount}}</b></td>
+
+                                    <td ><b>{{$av}}</b> : {{$unit}}</td>
+                                    <td ><b>
+
+                                            @if($unitCount > 0)
+                                                {{$nearest}}
                                             @endif
-                                            <td class=""><b><a
 
-                                                            @if($av > 0)
-                                                            href="/stock/{{$id}}/id"
-                                                            @endif
+                                        </b></td>
+                                    <td ><b>{{$d->vendor->englishName}}</b></td>
 
-                                                    >{{$d->englishName}} </a>
-                                                </b></td>
-                                            <td class=" {{$danger}}"><b>{{$unitCount}}</b></td>
+                                </tr>
 
-                                            <td class=" {{$danger}}"><b>{{$av}}</b> : {{$unit}}</td>
-                                            <td class=""><b>{{$nearest}}</b></td>
-                                            <td class=""><b>{{$d->vendor->englishName}}</b></td>
-
-                                        </tr>
-                                    @endif
-                                    @endforeach
+                            @endforeach
                             </tbody>
                         </table>
-
 
                     </div>
                 </div>
@@ -758,108 +706,7 @@
 
 
 
-                <div class="kt-portlet kt-portlet--mobile">
-                    <div class="kt-portlet__head kt-portlet__head--lg">
-                        <div class="kt-portlet__head-label">
-			<span class="kt-portlet__head-icon">
-				<i class="kt-font-brand flaticon2-line-chart"></i>
-			</span>
-                            <h3 class="kt-portlet__head-title">
-                                {{    __('messages.outofstock')}}
-                            </h3>
-                        </div>
-                        <div class="kt-portlet__head-toolbar">
 
-                        </div>
-                    </div>
-
-                    <div class="kt-portlet__body">
-
-
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>
-
-                                    {{    __('messages.productname')}}
-
-                                </th>
-                                <th>
-
-                                    {{    __('messages.vendorname')}}
-
-                                </th>
-
-
-                            </tr>
-                            </thead>
-                            <tbody>
-
-                            @foreach($products as $d)
-                                <?php
-
-                                $low = $d->low;
-                                if($d->disposable != 1)
-                                {
-                                    continue;
-                                }
-                                $stocks = $d->stocks;
-                                $danger = false;
-                                $av = 0;
-                                $nearest = null;
-                                $id = null;
-                                $unit = '';
-                                foreach ($stocks as $s) {
-                                    $av = $av + $s->left();
-                                    if ($s->left() > 0) {
-                                        if ($nearest == null) {
-
-                                            $nearest = $s->expDate;
-                                            $id = $s->serial;
-                                            $unit = $s->product->unit->englishName;
-
-                                        } else {
-                                            if(strtotime($nearest) > strtotime($s->expDate))
-                                            {
-                                                $nearest = $s->expDate;
-                                                $id = $s->serial;
-                                                $unit = $s->product->unit->englishName;
-
-                                            }
-                                        }
-
-                                    }
-
-
-                                }
-                                if ($av <= $low) {
-                                    $danger = false;
-
-                                }
-                                if(strtotime($nearest) < strtotime('+6 months'))
-                                {
-                                    $danger = false;
-
-
-                                }
-                                ?>
-
-                                @if($av< 1)
-                                    <tr role="row" class="even text-info">
-                                        <td class=""><b>{{$d->englishName}}
-                                            </b></td>
-                                        <td class=""><b>{{$d->vendor->englishName}}</b></td>
-
-
-                                    </tr>
-                                    @endif
-                                    @endforeach
-                            </tbody>
-                        </table>
-
-
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -876,112 +723,6 @@
 
 
 
-
-        @foreach($wh as $w)
-            <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
-
-            <?php
-
-
-            $wdata = [];
-            $i = 0;
-            foreach ($products as $p) {
-                $s = $p->stocks;
-
-                $count = 0;
-
-                foreach ($s as $ts) {
-
-                    if ($ts->warehouse_id == $w->id) {
-                        $count = $ts->left() + $count;
-                    }
-
-                }
-
-
-                $t = new App\StockItem();
-                $t->amountLeft = $count;
-                $t->vendorName = $p->vendor->englishName . '-' . $p->vendor->arabicName;
-                $t->productName = $p->englishName . '-' . $p->arabicName;
-
-                $wdata[$i] = $t;
-
-
-            }
-
-
-            ?>
-
-            <!--
-
-                <div class="kt-container  kt-grid__item kt-grid__item--fluid">
-
-                    <div class="kt-portlet kt-portlet--mobile">
-                        <div class="kt-portlet__head kt-portlet__head--lg">
-                            <div class="kt-portlet__head-label">
-			<span class="kt-portlet__head-icon">
-				<i class="kt-font-brand flaticon2-location"></i>
-			</span>
-                                <h3 class="kt-portlet__head-title">
-                                    {{  $w->englishName  }} - {{ $w->arabicName }}
-                                </h3>
-                            </div>
-                            <div class="kt-portlet__head-toolbar">
-                            </div>
-                        </div>
-
-                        <div class="kt-portlet__body">
-
-
-                            <table class="table">
-                                <thead>
-                                <tr>
-
-                                    <th>
-
-                                        {{    __('messages.vendorname')}}
-
-                                    </th>
-                                    <th>
-
-                                        {{    __('messages.productname')}}
-
-                                    </th>
-                                    <th>
-
-                                        {{    __('messages.totalleft')}}
-
-                                    </th>
-
-
-                                </tr>
-                                </thead>
-                                <tbody>
-
-                                @foreach($wdata as $d)
-                                    <tr role="row" class="even">
-                                        <td class="">{{$d->vendorName}}</td>
-                                        <td class="">{{$d->productName}} </td>
-                                        <td class="">{{$d->amountLeft}}</td>
-                                    </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
-
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-
-        @endforeach
-
-
-    </div>
- -->
 
 
 
