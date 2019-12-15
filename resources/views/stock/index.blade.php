@@ -161,7 +161,7 @@
                                             $serial = $s->serial;
                                             $unit =  $s->product->unit->englishName;
                                         } else {
-                                            if(strtotime($nearest) > strtotime($s->expDate))
+                                            if(strtotime($nearest) > strtotime($s->expDate) && $s->left() > 0)
                                                 {
                                                     $nearest = $s->expDate;
                                                     $id = $s->id;
