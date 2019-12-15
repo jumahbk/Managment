@@ -293,7 +293,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <ul class="kt-menu__subnav">
                                                 <li class="kt-menu__item " aria-haspopup="true"><a href="/stock/returnlog" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-rocket"></i><span class="kt-menu__link-text">Returned to vendor Log</span><span class="kt-menu__link-badge"></span></a></li>
                                             </ul>
+                                            <ul  class="kt-menu__subnav">
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="http://192.168.2.3/log/"  target="new" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-rocket"></i><span class="kt-menu__link-text">Procedure List</span><span class="kt-menu__link-badge"></span></a></li>
 
+
+                                            </ul>
 
 
 
