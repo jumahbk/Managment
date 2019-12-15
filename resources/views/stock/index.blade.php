@@ -129,7 +129,7 @@
                                 {
                                     continue;
                                 }
-
+                                $first = 1;
                                 $stocks = $d->stocks;
                                 $danger = false;
                                 $dateDanger = false;
@@ -149,11 +149,13 @@
                                             $unitCount++;
 
                                         }
-                                        if ($id == null ) {
-
+                                        if ($first == 1 ) {
+                                            $first = null;
                                             if($s->left()>0){
                                                 $nearest = $s->expDate;
 
+                                            }else{
+                                                $nearest = '10-10-2030';
                                             }
                                             $id = $s->id;
                                             $serial = $s->serial;
