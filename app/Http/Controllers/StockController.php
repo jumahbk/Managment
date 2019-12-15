@@ -205,7 +205,23 @@ class StockController extends Controller
             {
                 $id = $select[$i];
                 $s = Stock::find($id);
-                $s->warehouse_id = $wid;
+
+
+                if($request['return']==1)
+                {
+                    $howMuch = $s->total - $s->usedUnits;
+                    $date = new \DateTime('now');
+                    $s->returned_at = $date;
+                    $s->returned_amount = $howMuch;
+                    $s->usedUnits = $s->usedUnits + $howMuch;
+
+
+                }else
+                {
+                    $s->warehouse_id = $wid;
+
+                }
+
                 $s->push();
             }
         }
