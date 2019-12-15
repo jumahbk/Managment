@@ -34,6 +34,7 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/stock/{id}/destroy', 'StockController@destroy')->middleware('auth');;
 
 Auth::routes();
+Route::get('/stock/returnlog', 'StockController@returnLog')->middleware('auth');
 
 Route::get('/stock/log', 'StockController@log')->middleware('auth');
 Route::get('/products/batch', 'ProductController@batch')->middleware('auth');

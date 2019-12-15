@@ -285,8 +285,19 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rell"  ><a href="/stock/productlistDis" class="kt-menu__link "><span class="kt-menu__link-text">Disposables List</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
                                     </li>
-                                    <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rell"  ><a href="/stock/log" class="kt-menu__link "><span class="kt-menu__link-text">Consumption Log</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <li class="kt-menu__item kt-menu__item--here kt-menu__item--open kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="false"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Logs</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                        <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
+                                            <ul class="kt-menu__subnav">
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="/stock/log" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-rocket"></i><span class="kt-menu__link-text">Consumption Log</span><span class="kt-menu__link-badge"></span></a></li>
+                                            </ul>
+                                            <ul class="kt-menu__subnav">
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="/stock/returnlog" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-rocket"></i><span class="kt-menu__link-text">Returned to vendor Log</span><span class="kt-menu__link-badge"></span></a></li>
+                                            </ul>
 
+
+
+
+                                        </div>
                                     </li>
                                     <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rell"  ><a href="/stock/batchmove" class="kt-menu__link "><span class="kt-menu__link-text">Batch Relocate</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
@@ -381,7 +392,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <div class="tab-pane fade show kt-scroll active" id="kt_quick_panel_tab_notifications" role="tabpanel">
                 <div class="kt-notification">
                     <a href="#" class="kt-notification__item">
-                        <div class="kt-notification__item-icon">
+                        <div class="kt-notification__item-icon"
                             <i class="flaticon2-line-chart kt-font-success"></i>
                         </div>
                         <div class="kt-notification__item-details">

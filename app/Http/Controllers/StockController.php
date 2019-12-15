@@ -70,6 +70,15 @@ class StockController extends Controller
         return view('stock.log', compact('data'));
 
     }
+
+    public function returnLog()
+    {
+        $data = Stock::whereNotNull('returned_at')->get()->sortBy('returned_at');
+        return view('stock.returnlog', compact('data'));
+
+    }
+
+
     public function batchlistedit(Request $request)
     {
         $pid = -1;
