@@ -134,7 +134,7 @@
                                 $danger = false;
                                 $dateDanger = false;
                                 $av = 0;
-                                $nearest = '10-10-3000';
+                                $nearest = null;
                                 $id = null;
                                 $serial = null;
                                 $unit = '';
@@ -149,7 +149,7 @@
                                             $unitCount++;
 
                                         }
-                                        if ($nearest == null ) {
+                                        if ($nearest == null) {
 
                                             $nearest = $s->expDate;
                                             $id = $s->id;
