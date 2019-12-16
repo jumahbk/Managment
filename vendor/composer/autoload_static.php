@@ -405,6 +405,7 @@ class ComposerStaticInitb213a1bcc34ad6bebd9e873e8464e745
     );
 
     public static $classMap = array (
+        'App\\Bill' => __DIR__ . '/../..' . '/app/Bill.php',
         'App\\Branch' => __DIR__ . '/../..' . '/app/Branch.php',
         'App\\Company' => __DIR__ . '/../..' . '/app/Company.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
@@ -429,6 +430,7 @@ class ComposerStaticInitb213a1bcc34ad6bebd9e873e8464e745
         'App\\Http\\Controllers\\ProblemController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProblemController.php',
         'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
         'App\\Http\\Controllers\\StockController' => __DIR__ . '/../..' . '/app/Http/Controllers/StockController.php',
+        'App\\Http\\Controllers\\StockdeleteController' => __DIR__ . '/../..' . '/app/Http/Controllers/StockdeleteController.php',
         'App\\Http\\Controllers\\StocklogController' => __DIR__ . '/../..' . '/app/Http/Controllers/StocklogController.php',
         'App\\Http\\Controllers\\TitleController' => __DIR__ . '/../..' . '/app/Http/Controllers/TitleController.php',
         'App\\Http\\Controllers\\TypeController' => __DIR__ . '/../..' . '/app/Http/Controllers/TypeController.php',
@@ -436,6 +438,7 @@ class ComposerStaticInitb213a1bcc34ad6bebd9e873e8464e745
         'App\\Http\\Controllers\\VendorController' => __DIR__ . '/../..' . '/app/Http/Controllers/VendorController.php',
         'App\\Http\\Controllers\\WarehouseController' => __DIR__ . '/../..' . '/app/Http/Controllers/WarehouseController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'App\\Http\\Mailable' => __DIR__ . '/../..' . '/app/MailableMail.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',

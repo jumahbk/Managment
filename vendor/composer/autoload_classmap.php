@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Bill' => $baseDir . '/app/Bill.php',
     'App\\Branch' => $baseDir . '/app/Branch.php',
     'App\\Company' => $baseDir . '/app/Company.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
@@ -30,6 +31,7 @@ return array(
     'App\\Http\\Controllers\\ProblemController' => $baseDir . '/app/Http/Controllers/ProblemController.php',
     'App\\Http\\Controllers\\ProductController' => $baseDir . '/app/Http/Controllers/ProductController.php',
     'App\\Http\\Controllers\\StockController' => $baseDir . '/app/Http/Controllers/StockController.php',
+    'App\\Http\\Controllers\\StockdeleteController' => $baseDir . '/app/Http/Controllers/StockdeleteController.php',
     'App\\Http\\Controllers\\StocklogController' => $baseDir . '/app/Http/Controllers/StocklogController.php',
     'App\\Http\\Controllers\\TitleController' => $baseDir . '/app/Http/Controllers/TitleController.php',
     'App\\Http\\Controllers\\TypeController' => $baseDir . '/app/Http/Controllers/TypeController.php',
@@ -37,6 +39,7 @@ return array(
     'App\\Http\\Controllers\\VendorController' => $baseDir . '/app/Http/Controllers/VendorController.php',
     'App\\Http\\Controllers\\WarehouseController' => $baseDir . '/app/Http/Controllers/WarehouseController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
+    'App\\Http\\Mailable' => $baseDir . '/app/MailableMail.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
