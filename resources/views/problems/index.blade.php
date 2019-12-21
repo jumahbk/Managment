@@ -49,6 +49,9 @@
                                         <thead>
                                         <tr>
                                             <th>
+                                                ID
+                                            </th>
+                                            <th>
 
                                                 Date Created
 
@@ -80,7 +83,7 @@
 
                                         @foreach($ps as $d)
                                             <tr role="row" class="even">
-
+                                                <td><a href="/{{$d->id}}/edit">{{$d->id}}</a></td>
                                                 <td class="">{{$d->created_at}}</td>
                                                 <td class="">
                                                             @if($d->done)
