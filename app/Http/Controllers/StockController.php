@@ -120,7 +120,7 @@ class StockController extends Controller
 
     public function batchlist()
     {
-        $products = Product::all();
+        $products = Product::where('disable' , '=', 0)->get();
         $data= [];
         $i = 0;
         foreach($products as $p )
@@ -612,7 +612,7 @@ class StockController extends Controller
      */
     public function move()
     {
-        $products = Product::all();
+        $products = Product::where('disable' , '=', 0)->get();
         $data= [];
         $i = 0;
         foreach($products as $p )
