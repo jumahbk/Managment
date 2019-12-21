@@ -83,7 +83,7 @@
 
                                         @foreach($ps as $d)
                                             <tr role="row" class="even">
-                                                <td><a href="/{{$d->id}}/edit">{{$d->id}}</a></td>
+                                                <td><a href="title/{{$d->id}}/edit">{{$d->id}}</a></td>
                                                 <td class="">{{$d->created_at}}</td>
                                                 <td class="">
                                                             @if($d->done)
