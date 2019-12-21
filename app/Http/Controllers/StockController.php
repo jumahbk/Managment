@@ -30,7 +30,7 @@ class StockController extends Controller
             ->groupBy('created_at')->get();
 
 
-        $products = Product::all();
+        $products = Product::where('disable' , '=', 0)->get();;
         $data= [];
         $i = 0;
         foreach($products as $p )
