@@ -304,7 +304,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         </div>
                                     </li>
 
-                                    <li class="kt-menu__item kt-menu__item--here kt-menu__item--open kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="false"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Logs</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <li class="kt-menu__item kt-menu__item--here kt-menu__item--open kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="false"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Requests</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                         <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                             <ul class="kt-menu__subnav">
                                                 <li class="kt-menu__item " aria-haspopup="true"><a href="/request/" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-rocket"></i><span class="kt-menu__link-text">My Requests</span><span class="kt-menu__link-badge"></span></a></li>
