@@ -102,7 +102,10 @@
                                 @if(date('Ymd') == date('Ymd', strtotime($d->created_at)))
 
                                     <tr role="row" class="even text-info">
+
+                                        @if($d->stock->product)
                                         <td class=""><b>{{$d->stock->product->englishName}}</b></td>
+                                        @endif
                                         <td class=""><b>{{$d->amountUsed}}</b></td>
                                         <td class=""><b>{{$d->created_at}}</b></td>
                                         <td class=""><b>{{$d->user->name}}</b></td>
