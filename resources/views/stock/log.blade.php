@@ -217,7 +217,9 @@
                             <tbody>
 
                             @foreach($data as $d)
-
+                                @if($d->stock == null)
+                                    @continue;
+                                @endif
                                 @if(date('Ymd') != date('Ymd', strtotime($d->created_at)))
 
                                     <tr role="row" class="even text-info">
