@@ -17,48 +17,35 @@ class CreateRequestsTable extends Migration
             $table->bigIncrements('id');
 
             $table->date('creationDate');
+
+
             $table->unsignedBigInteger('creator')->nullable();
-            $table->unsignedBigInteger('waiting')->nullable();
-            $table->unsignedBigInteger('doctor')->nullable();
-            $table->unsignedBigInteger('manager')->nullable();
-            $table->unsignedBigInteger('pharm')->nullable();
-            $table->unsignedBigInteger('waitingon')->nullable();
+            $table->unsignedBigInteger('first')->nullable();
+            $table->unsignedBigInteger('second')->nullable();
+            $table->unsignedBigInteger('third')->nullable();
+            $table->unsignedBigInteger('final')->nullable();
 
-            $table->unsignedBigInteger('department_id');
+            $table->date('firstDate');
+            $table->date('secondDate');
+            $table->date('thirdDate');
+            $table->date('finalDate');
 
-            $table->unsignedBigInteger('accountant')->nullable();
 
             $table->string('comments')->nullable();
 
+
             $table->unsignedBigInteger('product_id');
-
-
-
-
-
-
-
 
 
             $table->integer('amount')->default(0);
             $table->boolean('approved')->default('false');
 
 
-
-            $table->index('waitingon');
-
             $table->index('creator')->nullable();
-            $table->index('waiting')->nullable();
-            $table->index('doctor')->nullable();
-            $table->index('manager')->nullable();
-            $table->index('pharm')->nullable();
-
-            $table->index('department_id');
-
-            $table->index('accountant')->nullable();
-
-            $table->string('comments')->nullable();
-
+            $table->index('first')->nullable();
+            $table->index('second')->nullable();
+            $table->index('third')->nullable();
+            $table->index('final')->nullable();
             $table->index('product_id');
 
 

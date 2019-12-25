@@ -101,7 +101,8 @@ Route::resource('nationalities','NationalityController')->middleware('auth');;
 Route::resource('employees','EmployeeController')->middleware('auth');;
 Route::resource('companies','CompanyController')->middleware('auth');;
 Route::resource('vendors','VendorController')->middleware('auth');;
-Route::resource('problems','ProblemController')->middleware('auth');;
+Route::resource('problems','ProblemController')->middleware('auth');
+Route::resource('requests', 'RequestController')->middleware('auth');
 
 Route::get('/lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang'])->middleware('auth');;
 
