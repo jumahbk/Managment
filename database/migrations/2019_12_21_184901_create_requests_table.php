@@ -16,19 +16,18 @@ class CreateRequestsTable extends Migration
         Schema::create('requests', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            $table->date('creationDate');
-
-
             $table->unsignedBigInteger('creator')->nullable();
             $table->unsignedBigInteger('first')->nullable();
             $table->unsignedBigInteger('second')->nullable();
             $table->unsignedBigInteger('third')->nullable();
             $table->unsignedBigInteger('final')->nullable();
 
-            $table->date('firstDate');
-            $table->date('secondDate');
-            $table->date('thirdDate');
-            $table->date('finalDate');
+            $table->date('createDate')->nullable();
+            $table->date('firstDate')->nullable();
+
+            $table->date('secondDate')->nullable();
+            $table->date('thirdDate')->nullable();
+            $table->date('finalDate')->nullable();
 
 
             $table->string('comments')->nullable();
@@ -41,11 +40,11 @@ class CreateRequestsTable extends Migration
             $table->boolean('approved')->default('false');
 
 
-            $table->index('creator')->nullable();
-            $table->index('first')->nullable();
-            $table->index('second')->nullable();
-            $table->index('third')->nullable();
-            $table->index('final')->nullable();
+            $table->index('creator');
+            $table->index('first');
+            $table->index('second');
+            $table->index('third');
+            $table->index('final');
             $table->index('product_id');
 
 

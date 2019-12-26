@@ -30,7 +30,7 @@ class StockController extends Controller
             ->groupBy('created_at')->get();
 
 
-        $products = Product::where('disable' , '=', 0)->get();;
+        $products = Product::where('disable' , '=', 0)->get()->sortBy('englishName');;
         $data= [];
         $i = 0;
         foreach($products as $p )
@@ -85,7 +85,7 @@ class StockController extends Controller
         $wid = -1;
         $data = Stock::all();
         $wh = Warehouse::all()->sortBy('englishName');;
-        $pl = Product::all()->sortBy('englishName');;
+        $pl = Product::where('disable' , '=', 0)->get()->sortBy('englishName');;
 
 
         $data = $data->sortBy('englishName');
@@ -111,7 +111,7 @@ class StockController extends Controller
             $data = Stock::where('warehouse_id', $wid)->get();
         }
         $wh = Warehouse::all()->sortBy('englishName');;
-        $pl = Product::all()->sortBy('englishName');;
+        $pl = Product::where('disable' , '=', 0)->get()->sortBy('englishName');;
         $data = $data->sortBy('englishName');
 
         return view('stock.batchlistedit', compact('data', 'wh', 'pl', 'pid', 'wid'));
@@ -170,7 +170,7 @@ class StockController extends Controller
             $data = Stock::where('warehouse_id', $wid)->get();
         }
         $wh = Warehouse::all()->sortBy('englishName');;
-        $pl = Product::all()->sortBy('englishName');;
+        $pl = Product::where('disable' , '=', 0)->get()->sortBy('englishName');;
         $data = $data->sortBy('englishName');
 
         return view('stock.batchmove', compact('data', 'wh', 'pl', 'pid', 'wid'));
@@ -197,7 +197,7 @@ class StockController extends Controller
             $data = Stock::where('warehouse_id', $wid)->get();
         }
         $wh = Warehouse::all()->sortBy('englishName');;
-        $pl = Product::all()->sortBy('englishName');;
+        $pl = Product::where('disable' , '=', 0)->get()->sortBy('englishName');;
         $data = $data->sortBy('englishName');
         $dp = -1;
         return view('stock.productlist', compact('data', 'wh', 'pl', 'pid', 'wid', 'dp'));
@@ -286,7 +286,7 @@ class StockController extends Controller
         $wid = -1;
         $data = Stock::all();
         $wh = Warehouse::all()->sortBy('englishName');;
-        $pl = Product::all()->sortBy('englishName');;
+        $pl = Product::where('disable' , '=', 0)->get()->sortBy('englishName');;
 
 
         $data = $data->sortBy('englishName');
@@ -299,7 +299,7 @@ class StockController extends Controller
 
         $data  = Stock::where('warehouse_id', $wid)->get();
         $wh = Warehouse::all()->sortBy('englishName');;
-        $pl = Product::all()->sortBy('englishName');;
+        $pl = Product::where('disable' , '=', 0)->get()->sortBy('englishName');;
 
 
         $data = $data->sortBy('englishName');
@@ -313,7 +313,7 @@ class StockController extends Controller
         $wid = -1;
         $data = Stock::all();
         $wh = Warehouse::all()->sortBy('englishName');;
-        $pl = Product::all()->sortBy('englishName');;
+        $pl = Product::where('disable' , '=', 0)->get()->sortBy('englishName');;
 
 
         $data = $data->sortBy('englishName');
@@ -328,7 +328,7 @@ class StockController extends Controller
         $wid = -1;
         $data = Stockdelete::all();
         $wh = Warehouse::all()->sortBy('englishName');;
-        $pl = Product::all()->sortBy('englishName');;
+        $pl = Product::where('disable' , '=', 0)->get()->sortBy('englishName');;
 
 
         $data = $data->sortBy('englishName');
@@ -345,7 +345,7 @@ class StockController extends Controller
         $wid = -1;
         $data = Stock::all();
         $wh = Warehouse::all()->sortBy('englishName');;
-        $pl = Product::all()->sortBy('englishName');;
+        $pl = Product::where('disable' , '=', 0)->get()->sortBy('englishName');;
 
 
         $data = $data->sortBy('englishName');
