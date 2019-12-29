@@ -104,6 +104,8 @@ Route::resource('vendors','VendorController')->middleware('auth');;
 Route::resource('problems','ProblemController')->middleware('auth');
 Route::resource('requests', 'RequestController')->middleware('auth');
 Route::resource('users', 'UserController')->middleware('auth');
+Route::resource('roles','RoleController')->middleware('auth');
+Route::resource('stockroles','StockroleController')->middleware('auth');
 
 Route::get('/lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang'])->middleware('auth');;
 
