@@ -6,6 +6,7 @@ use App\Role;
 use App\Stockrole;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -33,6 +34,33 @@ class UserController extends Controller
     }
 
     /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function disable($id)
+    {
+        $user = User::find($id);
+        $user->disabled = 1;
+        $user->push();
+        return redirect('/users');
+    }
+
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function enable($id)
+    {
+        $user = User::find($id);
+        $user->disabled = 0;
+        $user->push();
+        return redirect('/users');
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -40,7 +68,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $password = Hash::make($request['password']);
+        $name = $request['name'];
+        $email =$request['email'];
+        $role_id =$request['role_id'];
+        $stockrole_id =$request['stockrole_id'];
+
+        $user = new User();
+        $user->name = $name;
+        $user->password = $password;
+        $user->email = $email;
+        $user->role = $role_id;
+        $user->stock_request_role = $stockrole_id;
+        $user->push();
+        return redirect('/users');
     }
 
     /**
@@ -62,7 +103,10 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        $sr = Stockrole::all();
+        $r = Role::all();
+
+        return view('users.edit', compact('sr', 'r', 'user'));
     }
 
     /**
@@ -74,7 +118,24 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $password= '';
+        if($request['password']) {
+            $password = Hash::make($request['password']);
+        }
+        $name = $request['name'];
+        $email =$request['email'];
+        $role_id =$request['role_id'];
+        $stockrole_id =$request['stockrole_id'];
+
+        $user->name = $name;
+        if($request['password']) {
+            $user->password = $password;
+        }
+        $user->email = $email;
+        $user->role = $role_id;
+        $user->stock_request_role = $stockrole_id;
+        $user->push();
+        return redirect('/users');
     }
 
     /**

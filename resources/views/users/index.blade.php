@@ -121,17 +121,21 @@
                                                     @if($d->disabled == 0)
 
                                                         <a href="/users/{{$d->id}}/disable" class="btn btn-google btn-elevate btn-icon-sm">
-                                                            <i class="la la-trash"></i>
                                                             Disable
                                                         </a>
 
 
                                                     @else
-                                                        <a href="/users/{{$d->id}}/enable" class="btn btn-font-light btn-elevate btn-icon-sm">
-                                                            <i class="la la-check"></i>
+                                                        <a href="/users/{{$d->id}}/enable" class="btn btn-twitter btn-font-light btn-elevate btn-icon-sm">
                                                             Enable
                                                         </a>
                                                     @endif
+
+                                                        <a href="/users/{{$d->id}}/edit" class="btn btn-facebook btn-font-light btn-elevate btn-icon-sm">
+
+                                                            edit
+                                                        </a>
+
 
                                                 </td>
 

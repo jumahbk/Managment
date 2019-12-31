@@ -14,8 +14,10 @@
                     </div>
                 </div>
                 <!--begin::Form-->
-                <form method="POST" action="/users"  class="kt-form">
+                <form method="POST"  action="{{ route('users.update',$user->id)}}"  class="kt-form">
+                    @method('PATCH')
                     @csrf
+
                     <div class="kt-portlet__body">
                         <div class="form-group form-group-last">
                             <div class="alert alert-secondary" role="alert">
@@ -27,11 +29,11 @@
                         </div>
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text"  name='name' class="form-control"  placeholder="Enter email">
+                            <input type="text"  value="{{$user->name}}" name='name' class="form-control"  placeholder="Enter email">
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email"  name="email" class="form-control"  placeholder="Enter email">
+                            <input type="email"  name="email" value="{{$user->email}}" class="form-control"  placeholder="Enter email">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
@@ -45,8 +47,15 @@
                             <select class="form-control" name="role_id">
 
                                 @foreach($r as $p)
+                                    @if($p->role == $p->id)
+                                        selected
+                                    @endif
+                                    <option
+                                            @if($user->role == $p->id)
+                                            selected
+                                            @endif
 
-                                    <option value="{{$p->id}}">{{$p->englishName}}</option>
+                                            value="{{$p->id}}">{{$p->englishName}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -56,7 +65,12 @@
 
                                 @foreach($sr as $p)
 
-                                    <option value="{{$p->id}}">{{$p->englishName}}</option>
+                                    <option
+                                            @if($user->stock_request_role == $p->id)
+                                            selected
+                                            @endif
+
+                                            value="{{$p->id}}">{{$p->englishName}}</option>
                                 @endforeach
                             </select>
                         </div>

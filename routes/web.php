@@ -81,6 +81,11 @@ Route::get('/branches/{id}/activate', 'BranchController@activate')->middleware('
 Route::get('/products/{id}/deactivate', 'ProductController@deactivate')->middleware('auth');;
 Route::get('/products/{id}/activate', 'ProductController@activate')->middleware('auth');;
 
+Route::get('/users/{id}/enable', 'UserController@enable')->middleware('auth');;
+Route::get('/users/{id}/disable', 'UserController@disable')->middleware('auth');;
+
+
+
 Route::resource('stock','StockController')->middleware('auth');;
 
 Route::resource('products','ProductController')->middleware('auth');;
