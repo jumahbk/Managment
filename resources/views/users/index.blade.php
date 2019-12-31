@@ -53,7 +53,7 @@
                                 <div class="kt-portlet__head-actions">
 
                                     &nbsp;
-                                    <a href="/products/create" class="btn btn-brand btn-elevate btn-icon-sm">
+                                    <a href="/users/create" class="btn btn-brand btn-elevate btn-icon-sm">
                                         <i class="la la-plus"></i>
                                         {{    __('messages.addnew')}}
                                     </a>
