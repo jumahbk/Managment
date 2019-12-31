@@ -310,7 +310,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <li class="kt-menu__item " aria-haspopup="true"><a href="/requests/" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-rocket"></i><span class="kt-menu__link-text">My Requests</span><span class="kt-menu__link-badge"></span></a></li>
                                             </ul>
                                             <ul class="kt-menu__subnav">
-                                                <li class="kt-menu__item " aria-haspopup="true"><a href="/request/create" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-rocket"></i><span class="kt-menu__link-text">Create Request</span><span class="kt-menu__link-badge"></span></a></li>
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="/requests/create" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-rocket"></i><span class="kt-menu__link-text">Create Request</span><span class="kt-menu__link-badge"></span></a></li>
                                             </ul>
                                         </div>
                                     </li>
