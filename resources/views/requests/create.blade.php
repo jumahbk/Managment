@@ -37,35 +37,42 @@
                             <label for="exampleSelect1">First Approval</label>
                             <select class="form-control" id="product_id">
 
-                                @foreach($products as $p)
-
-                                    <option value="{{$p->id}}">{{$p->englishName}}</option>
+                                @foreach($sr as $p)
+                                    @if($p->englishName == 'Doctor')
+                                        @foreach($p->users as $z)
+                                            <option value="{{$z->id}}">{{$z->name}}</option>
+                                        @endforeach
+                                    @endif
                                 @endforeach
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleSelect1">Second Approval</label>
+                            <label for="exampleSelect1">Pharmacist</label>
                             <select class="form-control" id="product_id">
 
-                                @foreach($products as $p)
-
-                                    <option value="{{$p->id}}">{{$p->englishName}}</option>
+                                @foreach($sr as $p)
+                                    @if($p->englishName == 'Pharmacist')
+                                        @foreach($p->users as $z)
+                                            <option value="{{$z->id}}">{{$z->name}}</option>
+                                        @endforeach
+                                    @endif
                                 @endforeach
                             </select>
                         </div>
-
                         <div class="form-group">
-                            <label for="exampleSelect1">Third Approval</label>
+                            <label for="exampleSelect1">Accountant</label>
                             <select class="form-control" id="product_id">
 
-                                @foreach($products as $p)
-
-                                    <option value="{{$p->id}}">{{$p->englishName}}</option>
+                                @foreach($sr as $p)
+                                    @if($p->englishName == 'Accountant')
+                                        @foreach($p->users as $z)
+                                            <option value="{{$z->id}}">{{$z->name}}</option>
+                                        @endforeach
+                                    @endif
                                 @endforeach
                             </select>
                         </div>
-
 
 
 
