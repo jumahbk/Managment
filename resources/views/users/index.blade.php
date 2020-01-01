@@ -114,8 +114,28 @@
                                                 <td class="">{{$d->name}} </td>
 
                                                 <td class="">{{$d->email}}</td>
-                                                <td class="">{{$d->role}}</td>
-                                                <td class="">{{$d->stock_request_role}}</td>
+
+
+                                                <td class="">
+                                                    @foreach($r as $role)
+
+                                                        @if($role->id == $d->role)
+                                                    {{$role->englishName}}
+                                                    @endif
+                                                    @endforeach
+
+                                                </td>
+                                                <td class="">
+
+                                                    @foreach($sr as $role)
+
+                                                        @if($role->id == $d->stock_request_role)
+                                                            {{$role->englishName}}
+                                                        @endif
+                                                    @endforeach
+
+
+                                                </td>
                                                 <td class="">
 
                                                     @if($d->disabled == 0)

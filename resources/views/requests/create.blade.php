@@ -24,7 +24,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleSelect1">Request Product</label>
-                            <select class="form-control" id="product_id">
+                            <select class="form-control" name="product_id">
 
                                 @foreach($products as $p)
 
@@ -34,12 +34,12 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleSelect1">First Approval</label>
-                            <select class="form-control" id="product_id">
+                            <label for="exampleSelect1">Doctor's Approval</label>
+                            <select class="form-control" name="doctor">
 
                                 @foreach($sr as $p)
-                                    @if($p->englishName == 'Doctor')
-                                        @foreach($p->users as $z)
+                                    @if($p->englishName == 'Doctor' || $p->englishName == 'Manager')
+                                    @foreach($p->users as $z)
                                             <option value="{{$z->id}}">{{$z->name}}</option>
                                         @endforeach
                                     @endif
@@ -49,10 +49,10 @@
 
                         <div class="form-group">
                             <label for="exampleSelect1">Pharmacist</label>
-                            <select class="form-control" id="product_id">
+                            <select class="form-control" name="pharmacist">
 
                                 @foreach($sr as $p)
-                                    @if($p->englishName == 'Pharmacist')
+                                    @if($p->englishName == 'Pharmacist' || $p->englishName == 'Manager')
                                         @foreach($p->users as $z)
                                             <option value="{{$z->id}}">{{$z->name}}</option>
                                         @endforeach
@@ -62,10 +62,11 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleSelect1">Accountant</label>
-                            <select class="form-control" id="product_id">
+                            <select class="form-control" name="accountant">
 
                                 @foreach($sr as $p)
-                                    @if($p->englishName == 'Accountant')
+                                    {{$p->englishName}}
+                                    @if($p->englishName == 'Accountant' || $p->englishName == 'Manager')
                                         @foreach($p->users as $z)
                                             <option value="{{$z->id}}">{{$z->name}}</option>
                                         @endforeach
@@ -80,7 +81,7 @@
 
                         <div class="form-group">
                             <label for="exampleInputPassword1">Proposed Quantity</label>
-                            <input type="number" class="form-control"  >
+                            <input type="number" name='amount' class="form-control"  >
                         </div>
 
 

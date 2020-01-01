@@ -346,6 +346,12 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <ul class="kt-menu__subnav">
                                                 <li class="kt-menu__item " aria-haspopup="true"><a href="/users" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-rocket"></i><span class="kt-menu__link-text">Users</span><span class="kt-menu__link-badge"></span></a></li>
                                             </ul>
+                                            <ul class="kt-menu__subnav">
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="/roles" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-rocket"></i><span class="kt-menu__link-text">Roles</span><span class="kt-menu__link-badge"></span></a></li>
+                                            </ul>
+                                            <ul class="kt-menu__subnav">
+                                                <li class="kt-menu__item " aria-haspopup="true"><a href="/stockroles" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-rocket"></i><span class="kt-menu__link-text">Stock Roles</span><span class="kt-menu__link-badge"></span></a></li>
+                                            </ul>
 
                                         </div>
                                     </li>
