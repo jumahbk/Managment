@@ -23,11 +23,9 @@ class RequestController extends Controller
     }
     public function index()
     {
-        $products = Product::where('disable' , '=', 0)->get()->sortBy('englishName');;;
-        $sr = Stockrole::all();
 
 
-        return view('requests.index', compact('products', 'sr'));
+        return view('requests.index');
 
     }
     /**
