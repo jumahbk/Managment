@@ -225,6 +225,16 @@ class StockController extends Controller
                     $s->usedUnits = $s->usedUnits + $howMuch;
 
 
+                }else if($request['riyadh']==1)
+                {
+                    $howMuch = $s->total - $s->usedUnits;
+                    $date = new \DateTime('now');
+                    $s->returned_at = $date;
+                    $s->notes = 'RELOCATE TO RIYADH';
+                    $s->returned_amount = $howMuch;
+                    $s->usedUnits = $s->usedUnits + $howMuch;
+
+
                 }else
                 {
                     $s->warehouse_id = $wid;

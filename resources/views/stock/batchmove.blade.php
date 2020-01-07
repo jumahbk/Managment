@@ -273,7 +273,7 @@
                                     </div>
 
 
-                                    <div class="kt-portlet__head-label col-lg-2">
+                                    <div class="kt-portlet__head-label col-lg-12">
                                         <h3 class="kt-portlet__head-title pr-2">
                                             <input type="submit" value="Relocate" class="btn btn-success" />
 
@@ -281,6 +281,11 @@
 
                                         <h3 class="kt-portlet__head-title pr-2">
                                             <button type="submit" class="btn btn-google" onclick="return confirm('You are returning this item to vendor? this action cannot be reversed')"  name="return" id="return" value="1">Return to vendor</button>
+
+                                        </h3>
+
+                                        <h3 class="kt-portlet__head-title pr-2">
+                                            <button type="submit" class="btn btn-facebook" onclick="return confirm('You are relocating this item to Riyadh Branch? this action cannot be reversed')"  name="riyadh" id="riyadh" value="1">Relocate to Riyadh</button>
 
                                         </h3>
 
