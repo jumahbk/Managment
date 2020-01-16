@@ -67,7 +67,17 @@ class StockController extends Controller
     public function log()
     {
         $data = Stocklog::all();
-        return view('stock.log', compact('data'));
+        $currentMonth = date('m');
+        $currentyear = date('Y');
+        $dt =  $currentyear  . '-' . $currentMonth . '- 1';
+        echo $dt;
+        $thisMonthData = Stocklog::where('created_at' , '>=' , $dt)->get();
+        $collection = collect($thisMonthData);
+        $grouped = $collection->groupBy('product_id');
+
+    //    $grouped->toArray();
+        dd($grouped);
+        //return view('stock.log', compact('data'));
 
     }
 
