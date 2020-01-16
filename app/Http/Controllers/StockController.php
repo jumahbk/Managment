@@ -69,15 +69,28 @@ class StockController extends Controller
         $data = Stocklog::all();
         $currentMonth = date('m');
         $currentyear = date('Y');
-        $dt =  $currentyear  . '-' . $currentMonth . '- 1';
-        echo $dt;
+        $currentDate = date('d');
+       // dd($currentDate);
+        $dt =  $currentyear  . '-' . $currentMonth . '-01';
+        $startdt =  $currentyear  . '-01-01';
+        $tdt =  $currentyear  . '-' . $currentMonth . '-' . $currentDate;
+
+
         $thisMonthData = Stocklog::where('created_at' , '>=' , $dt)->get();
+        $todaysData = Stocklog::where('created_at' , '==' , $tdt)->get();
+        $thisYearData =Stocklog::where('created_at' , '>=' , $startdt)->get();
+
+        $mc = count($thisMonthData);
+        $tc = count($todaysData);
+        $yc = count($thisYearData);
+
+
         $collection = collect($thisMonthData);
         $grouped = $collection->groupBy('product_id');
 
     //    $grouped->toArray();
-        dd($grouped);
-        //return view('stock.log', compact('data'));
+//        dd($grouped);
+        return view('stock.log', compact('data', 'mc', 'tc', 'yc' ,'currentyear'));
 
     }
 
