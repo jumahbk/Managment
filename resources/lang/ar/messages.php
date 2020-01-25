@@ -12,6 +12,7 @@ return [
     |
     */
     'logview' =>'سجل الاستهلاك',
+    'departmentlist'=>'قائمة الاقسام',
     'date' => 'تاريخ الاستهلاك',
     'locationview' => 'توزيع المخزون',
     'amountused' => 'الكمية المستخدمه',

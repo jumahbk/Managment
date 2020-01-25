@@ -85,6 +85,7 @@ Route::get('/users/{id}/enable', 'UserController@enable')->middleware('auth');;
 Route::get('/users/{id}/disable', 'UserController@disable')->middleware('auth');;
 
 
+Route::resource('departments','DepartmentController')->middleware('auth');;
 
 Route::resource('stock','StockController')->middleware('auth');;
 

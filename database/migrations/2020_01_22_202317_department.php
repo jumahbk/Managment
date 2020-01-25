@@ -13,7 +13,22 @@ class Department extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('departments', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('arabicName');
+            $table->string('englishName');
+
+            $table->unsignedBigInteger('branch_id');
+
+            $table->unsignedBigInteger('employee_id');
+
+            $table->boolean('deleted')->default(false);
+
+            $table->index('company_id');
+            $table->index('employee_id');
+
+            $table->timestamps();
+        });
     }
 
     /**
