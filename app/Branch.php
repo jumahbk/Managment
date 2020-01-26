@@ -16,4 +16,8 @@ class Branch extends Model
     {
         return $this->hasMany('App\Warehouse');
     }
+    public function departments()
+    {
+        return $this->hasMany('App\Department');
+    }
 }

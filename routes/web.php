@@ -43,6 +43,7 @@ Route::post('/','StockController@index' )->middleware('auth');
 Route::post('/stock/savemove','StockController@savemove' )->middleware('auth');
 Route::post('/stock/savereturn','StockController@savereturn' )->middleware('auth');
 
+Route::post('/departments/restore','DepartmentController@restore' )->middleware('auth');
 
 
 Route::get('/stock/{id}/edit', 'StockController@edit')->middleware('auth');;

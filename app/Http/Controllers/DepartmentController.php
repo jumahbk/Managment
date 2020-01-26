@@ -71,8 +71,11 @@ class DepartmentController extends Controller
         $department->englishName = $request['englishName'];
         $department->arabicName = $request['arabicName'];
         $department->employee_id = $request['employee_id'];
-        $department->employee_id = $request['branch_id'];
+        $department->branch_id = $request['branch_id'];
+
         $department->push();
+
+        return redirect('/departments');
 
 
 
@@ -85,7 +88,11 @@ class DepartmentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $d = Department::find($id);
+        $companies = Company::all();
+        $branches = Branch::all();
+        $employees = Employee::all();
+        return view('departments.edit' ,  compact( 'd', 'companies','branches', 'employees'));
     }
 
     /**
@@ -97,7 +104,8 @@ class DepartmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        return $this->save($request,$id);
     }
 
     /**
@@ -108,6 +116,25 @@ class DepartmentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return  $this->updateDeleted($id, 1);
+    }
+
+    public function updateDeleted($id, $value)
+    {
+        $d = Department::find($id);
+        $d->deleted = $value;
+        $d->push();
+        return redirect('/departments/');
+    }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function restore(Request $request)
+    {
+        $id = $request['id'];
+        return  $this->updateDeleted($id, 0);
     }
 }

@@ -10,6 +10,10 @@ class Company extends Model
     {
         return $this->hasMany('App\Employee');
     }
+    public function departments()
+    {
+        return $this->hasMany('App\Department');
+    }
 
     public function branches()
     {

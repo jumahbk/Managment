@@ -82,7 +82,7 @@
                                             </th>
                                             <th>
 
-                                                {{    __('messages.arabicName')}}
+                                                Representative
 
 
                                             </th>
@@ -97,26 +97,36 @@
 
                                         @foreach($data as $d)
                                             <tr role="row" class="even">
-                                                <td class="">{{$d->company->englishName}} - {{$d->company->arabicName}}</td>
-                                                <td class="">{{$d->company->englishName}} - {{$d->company->arabicName}}</td>
+                                                <td class="">{{$d->branch->company->englishName}} </td>
+                                                <td class="">{{$d->branch->englishName}} </td>
                                                 <td class="">{{$d->englishName}}</td>
-                                                <td class="">{{$d->arabicName}}</td>
+                                                <td class="">{{$d->employee->englishName}}</td>
 
                                                 <td class="">
                                                     @if($d->deleted == 0)
-                                                    <a href="/branches/{{$d->id}}/deactivate" class="btn btn-label-danger btn-bold btn-icon-h kt-margin-l-10">
+                                                        <form action="{{ route('departments.destroy',$d->id) }}" method="POST">
+
+                                                            @csrf
+                                                            @method('DELETE')
+                                                    <button type="submit" class="btn btn-label-danger btn-bold btn-icon-h kt-margin-l-10">
                                                         {{    __('messages.deactivate')}}
 
-                                                    </a>
+                                                    </button>
+                                                        </form>
                                                     @else
 
-                                                        <a href="/branches/{{$d->id}}/activate" class="btn btn-label-info btn-bold btn-icon-h kt-margin-l-10">
-                                                            {{    __('messages.activate')}}
+                                                        <form action="/departments/restore" method="POST">
 
-                                                        </a>
+                                                            @csrf
+                                                            <input type="hidden" name="id" value="{{$d->id}}">
+                                                            <button type="submit" class="btn btn-label-twitter btn-bold btn-icon-h kt-margin-l-10">
+                                                                {{    __('messages.activate')}}
+
+                                                            </button>
+                                                        </form>
 
                                                     @endif
-                                                    <a href="/branches/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                    <a href="/departments/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                                         {{    __('messages.edit')}}
 
                                                     </a>

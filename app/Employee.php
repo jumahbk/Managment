@@ -10,7 +10,10 @@ class Employee extends Model
     {
         return $this->belongsTo('App\Company','company_id', 'id');
     }
-
+    public function department()
+    {
+        return $this->hasOne('App\Department');
+    }
     public function nationality()
     {
         return $this->belongsTo('App\Nationality');
