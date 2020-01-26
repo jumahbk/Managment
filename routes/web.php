@@ -44,6 +44,7 @@ Route::post('/stock/savemove','StockController@savemove' )->middleware('auth');
 Route::post('/stock/savereturn','StockController@savereturn' )->middleware('auth');
 
 Route::post('/departments/restore','DepartmentController@restore' )->middleware('auth');
+Route::post('/rooms/restore','RoomController@restore' )->middleware('auth');
 
 
 Route::get('/stock/{id}/edit', 'StockController@edit')->middleware('auth');;
@@ -85,6 +86,7 @@ Route::get('/products/{id}/activate', 'ProductController@activate')->middleware(
 Route::get('/users/{id}/enable', 'UserController@enable')->middleware('auth');;
 Route::get('/users/{id}/disable', 'UserController@disable')->middleware('auth');;
 
+Route::resource('rooms','RoomController')->middleware('auth');;
 
 Route::resource('departments','DepartmentController')->middleware('auth');;
 

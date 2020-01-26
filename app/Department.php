@@ -12,10 +12,9 @@ class Department extends Model
 
     }
 
-    public function company()
+    public function rooms()
     {
-        return $this->branch->company;
-
+        return $this->hasMany('App\Room');
     }
 
     public function branch()
