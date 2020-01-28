@@ -42,10 +42,12 @@ Route::get('/products/batch', 'ProductController@batch')->middleware('auth');
 Route::post('/','StockController@index' )->middleware('auth');
 Route::post('/stock/savemove','StockController@savemove' )->middleware('auth');
 Route::post('/stock/savereturn','StockController@savereturn' )->middleware('auth');
+Route::post('/banks/restore','BankController@restore' )->middleware('auth');
 
 Route::post('/departments/restore','DepartmentController@restore' )->middleware('auth');
 Route::post('/rooms/restore','RoomController@restore' )->middleware('auth');
 
+Route::post('/banks/restore','BankController@restore' )->middleware('auth');
 
 Route::get('/stock/{id}/edit', 'StockController@edit')->middleware('auth');;
 
@@ -87,6 +89,7 @@ Route::get('/users/{id}/enable', 'UserController@enable')->middleware('auth');;
 Route::get('/users/{id}/disable', 'UserController@disable')->middleware('auth');;
 
 Route::resource('rooms','RoomController')->middleware('auth');;
+Route::resource('banks','BankController')->middleware('auth');;
 
 Route::resource('departments','DepartmentController')->middleware('auth');;
 

@@ -405,6 +405,7 @@ class ComposerStaticInitb213a1bcc34ad6bebd9e873e8464e745
     );
 
     public static $classMap = array (
+        'App\\Bank' => __DIR__ . '/../..' . '/app/Bank.php',
         'App\\Bill' => __DIR__ . '/../..' . '/app/Bill.php',
         'App\\Branch' => __DIR__ . '/../..' . '/app/Branch.php',
         'App\\Clinic' => __DIR__ . '/../..' . '/app/Clinic.php',
@@ -437,6 +438,7 @@ class ComposerStaticInitb213a1bcc34ad6bebd9e873e8464e745
         'App\\Http\\Controllers\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductController.php',
         'App\\Http\\Controllers\\RequestController' => __DIR__ . '/../..' . '/app/Http/Controllers/RequestController.php',
         'App\\Http\\Controllers\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoleController.php',
+        'App\\Http\\Controllers\\RoomController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoomController.php',
         'App\\Http\\Controllers\\StockController' => __DIR__ . '/../..' . '/app/Http/Controllers/StockController.php',
         'App\\Http\\Controllers\\StockdeleteController' => __DIR__ . '/../..' . '/app/Http/Controllers/StockdeleteController.php',
         'App\\Http\\Controllers\\StocklogController' => __DIR__ . '/../..' . '/app/Http/Controllers/StocklogController.php',
