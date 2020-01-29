@@ -161,9 +161,47 @@
             <!-- end:: Content -->							</div>
     </div>
 
-
-
-
-
+    <div class="col-md-6">
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-blue-sharp"></i>
+                    <span class="caption-subject font-blue-sharp bold uppercase">Default Tree</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="evts" class="demo"></div>
+            <script>
+                $('#evts')
+                    .on("changed.jstree", function (e, data) {
+                        if(data.selected.length) {
+                            alert('The selected node is: ' + data.instance.get_node(data.selected[0]).text);
+                        }
+                    })
+                    .jstree({
+                        'core' : {
+                            'multiple' : false,
+                            'data' : [
+                                { "text" : "Root node", "children" : [
+                                        { "text" : "Child node 1", "id" : 1 },
+                                        { "text" : "Child node 2" }
+                                    ]}
+                            ]
+                        }
+                    });
+            </script>
+        </div>
+    </div>
 
 @endsection
+
