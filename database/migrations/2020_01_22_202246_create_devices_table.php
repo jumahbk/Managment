@@ -15,6 +15,28 @@ class CreateDevicesTable extends Migration
     {
         Schema::create('devices', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->string('englishName')->nullable();
+            $table->string('arabicName')->nullable();
+            $table->unsignedBigInteger('room_id')->nullable();
+            $table->unsignedBigInteger('department_id');
+            $table->unsignedBigInteger('vendor_id')->nullable();
+
+            $table->date('purchased')->nullable();
+
+            $table->date('warranty')->nullable();
+
+
+            $table->index('room_id');
+            $table->index('department_id');
+            $table->index('vendor_id');
+
+
+
+
+
+
+
             $table->timestamps();
         });
     }
