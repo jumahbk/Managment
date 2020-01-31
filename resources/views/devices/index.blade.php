@@ -47,7 +47,7 @@
                             <div class="kt-portlet__head">
                                 <div class="kt-portlet__head-label">
                                     <h3 class="kt-portlet__head-title">
-                                        Bank List
+                                        Device List
                                     </h3>
                                 </div>
 
@@ -63,12 +63,13 @@
                                                     <thead class="border-bottom">
                                                     <tr>
 
-                                                        <td style=" ">SHORT</td>
-                                                        <td style=" ">NAME</td>
-                                                        <td style=" ">1st CONTACT</td>
+                                                        <td style=" ">Name</td>
+                                                        <td style=" ">Room</td>
+                                                        <td style=" ">Department</td>
 
-                                                        <td style=" ">2ND CONTACT</td>
-                                                        <td style=" ">Actions</td>
+                                                        <td style=" ">Vendor</td>
+                                                        <td style=" ">Warranty</td>
+                                                        <td style=" ">Vendor</td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -76,27 +77,26 @@
                                                     @foreach($data as $d)
                                                     <tr class="border-bottom">
                                                         <td>
-                                                            {{$d->short}}
-                                                        </td>
-                                                        <td>
                                                             {{$d->englishName}}
                                                         </td>
-
-
                                                         <td>
-                                                            <span class="kt-widget11__title"> {{$d->mainContact}}</span>
-                                                            <span class="kt-widget11__sub"> {{$d->mainContactNumber}}</span>
-                                                            <span class="kt-widget11__sub"> {{$d->mainContactEmail}}</span>
+                                                            {{$d->room->englishName}}
                                                         </td>
                                                         <td>
-                                                            <span class="kt-widget11__title"> {{$d->secondContact}}</span>
-                                                            <span class="kt-widget11__sub"> {{$d->secondContactNumber}}</span>
-                                                            <span class="kt-widget11__sub"> {{$d->secondContactEmail}}</span>
+                                                            {{$d->department->englishName}}
                                                         </td>
+
+                                                        <td>
+                                                            {{$d->vendor->englishName}}
+                                                        </td>
+                                                        <td>
+                                                           <?php echo $d->getExpiry() ?>
+                                                        </td>
+
                                                         <td>
 
                                                             @if($d->deleted == 0)
-                                                                <form action="{{ route('banks.destroy',$d->id) }}" method="POST">
+                                                                <form action="{{ route('devices.destroy',$d->id) }}" method="POST">
 
                                                                     @csrf
                                                                     @method('DELETE')
@@ -107,7 +107,7 @@
                                                                 </form>
                                                             @else
 
-                                                                <form action="/banks/restore" method="POST">
+                                                                <form action="/devices/restore" method="POST">
 
                                                                     @csrf
                                                                     <input type="hidden" name="id" value="{{$d->id}}">
@@ -119,14 +119,14 @@
 
                                                             @endif
                                                             <span class="kt-widget11__sub">
-                                                            <a href="/banks/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                                                 Restore
 
                                                             </a>
 
                                                             </span>
 
-                                                                <a href="/banks/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                                <a href="/devices/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                                                     {{    __('messages.edit')}}
 
                                                                 </a>

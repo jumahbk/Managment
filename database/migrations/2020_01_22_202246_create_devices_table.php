@@ -31,7 +31,7 @@ class CreateDevicesTable extends Migration
             $table->index('department_id');
             $table->index('vendor_id');
 
-
+            $table->boolean('deleted')->default(false);
 
 
 

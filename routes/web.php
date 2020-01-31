@@ -90,6 +90,7 @@ Route::get('/users/{id}/disable', 'UserController@disable')->middleware('auth');
 
 Route::resource('rooms','RoomController')->middleware('auth');;
 Route::resource('banks','BankController')->middleware('auth');;
+Route::resource('devices','DeviceController')->middleware('auth');;
 
 Route::resource('departments','DepartmentController')->middleware('auth');;
 

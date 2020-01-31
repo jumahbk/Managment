@@ -18,7 +18,7 @@
 
 
 
-        <form method="POST" action="/banks"  class="kt-form pt-5">
+        <form method="POST" action="/devices"  class="kt-form pt-5">
             @csrf
 
 <div class="row">
@@ -30,7 +30,7 @@
         <div class="kt-portlet__head">
             <div class="kt-portlet__head-label">
                 <h3 class="kt-portlet__head-title">
-                    Bank Details
+                   Add new device
                 </h3>
             </div>
         </div>
@@ -48,8 +48,34 @@
                     <input type="text" class="form-control"  name="arabicName">
                 </div>
                 <div class="form-group">
-                    <label>Short Form Name</label>
-                    <input type="text" class="form-control"  name="short">
+                    <label>Department</label>
+                    <div >
+                        <select class="form-control" name="department_id">
+                            @foreach($departments as $t)
+                                <option value="{{$t->id}}"> {{$t->englishName}} </option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <div >
+                        <select class="form-control" name="room_id">
+                            @foreach($rooms as $t)
+                                <option value="{{$t->id}}"> {{$t->englishName}} </option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Vendor</label>
+                    <div>
+                        <select class="form-control" name="vendor_id">
+                            @foreach($vendors as $t)
+                                <option value="{{$t->id}}"> {{$t->englishName}} </option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
 
             </div>
@@ -64,7 +90,7 @@
             <div class="kt-portlet__head">
                 <div class="kt-portlet__head-label">
                     <h3 class="kt-portlet__head-title">
-                        Contact Details
+                         Details
                     </h3>
                 </div>
             </div>
@@ -75,31 +101,18 @@
             <div class="kt-portlet__body">
 
                 <div class="form-group">
-                    <label>Primary Contact</label>
-                    <input type="text" class="form-control"  name="mainContact">
+                    <label>Purchase Date</label>
+                    <div >
+                        <input class="form-control" type="date" value="1900-01-01" name="purchased">
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label>Primary Email</label>
-                    <input type="email" class="form-control"  name="mainContactNumber">
+                    <label>Warranty Expiry</label>
+                    <div >
+                        <input class="form-control" type="date" value="1900-01-01" name="warranty">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Primary Phone</label>
-                    <input type="number" class="form-control"  name="mainContactEmail">
-                </div>
-                <div class="kt-separator kt-separator--dashed"></div>
 
-                <div class="form-group">
-                    <label>Secondary Contact</label>
-                    <input type="text" class="form-control"  name="secondContact">
-                </div>
-                <div class="form-group">
-                    <label>Secondary Email</label>
-                    <input type="email" class="form-control"  name="secondContactNumber">
-                </div>
-                <div class="form-group">
-                    <label>Secondary Phone</label>
-                    <input type="number" class="form-control"  name="secondContactEmail">
-                </div>
             <div class="kt-portlet__foot">
                 <div class="kt-form__actions">
                     <button type="submit" class="btn btn-brand">Submit</button>
