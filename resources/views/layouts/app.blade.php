@@ -28,13 +28,13 @@ License: You must have a valid license purchased only from themeforest(the above
 <head>
     <base href="../../">
     <meta charset="utf-8" />
-    <title>{{$title}}</title>
+    <title>fffff{{$title}}</title>
     <meta name="description" content="State colors">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--begin::Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
-
+defsdfsdfsdfsdfsdf
     <!--end::Fonts -->
 
     <!--begin::Global Theme Styles(used by all pages) -->
@@ -117,7 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="{{  asset('assets/plugins/custom/uppy/dist/uppy.min.css') }}" rel="stylesheet" type="text/css" />
 
     <!--end:: Vendor Plugins for custom pages -->
-
+    <script src="assets/plugins/general/jquery/dist/jquery.js" type="text/javascript"></script>
     <!--end::Global Theme Styles -->
 
     <!--begin::Layout Skins(used by all pages) -->
@@ -1189,7 +1189,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--begin::Global Theme Bundle(used by all pages) -->
 
 <!--begin:: Vendor Plugins -->
-<script src="assets/plugins/general/jquery/dist/jquery.js" type="text/javascript"></script>
+
 <script src="assets/plugins/general/popper.js/dist/umd/popper.js" type="text/javascript"></script>
 <script src="assets/plugins/general/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="assets/plugins/general/js-cookie/src/js.cookie.js" type="text/javascript"></script>
@@ -1309,30 +1309,30 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="assets/plugins/custom/tinymce/themes/silver/theme.js" type="text/javascript"></script>
 <script src="assets/plugins/custom/tinymce/themes/mobile/theme.js" type="text/javascript"></script>
 
-<script src="assets/plugins/custom/datatables.net/js/jquery.dataTables.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-bs4/js/dataTables.bootstrap4.js" type="text/javascript"></script>
+{{--<script src="assets/plugins/custom/datatables.net/js/jquery.dataTables.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-bs4/js/dataTables.bootstrap4.js" type="text/javascript"></script>--}}
 <script src="assets/plugins/custom/js/global/integration/plugins/datatables.init.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-autofill/js/dataTables.autoFill.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-autofill-bs4/js/autoFill.bootstrap4.min.js" type="text/javascript"></script>
+{{--<script src="assets/plugins/custom/datatables.net-autofill/js/dataTables.autoFill.min.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-autofill-bs4/js/autoFill.bootstrap4.min.js" type="text/javascript"></script>--}}
 <script src="assets/plugins/custom/jszip/dist/jszip.min.js" type="text/javascript"></script>
 <script src="assets/plugins/custom/pdfmake/build/pdfmake.min.js" type="text/javascript"></script>
 <script src="assets/plugins/custom/pdfmake/build/vfs_fonts.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-buttons/js/buttons.colVis.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-buttons/js/buttons.flash.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-buttons/js/buttons.html5.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-buttons/js/buttons.print.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-colreorder/js/dataTables.colReorder.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-fixedcolumns/js/dataTables.fixedColumns.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-keytable/js/dataTables.keyTable.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-responsive/js/dataTables.responsive.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-rowgroup/js/dataTables.rowGroup.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-rowreorder/js/dataTables.rowReorder.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-scroller/js/dataTables.scroller.min.js" type="text/javascript"></script>
-<script src="assets/plugins/custom/datatables.net-select/js/dataTables.select.min.js" type="text/javascript"></script>
+{{--<script src="assets/plugins/custom/datatables.net-buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-buttons/js/buttons.colVis.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-buttons/js/buttons.flash.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-buttons/js/buttons.html5.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-buttons/js/buttons.print.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-colreorder/js/dataTables.colReorder.min.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-fixedcolumns/js/dataTables.fixedColumns.min.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-keytable/js/dataTables.keyTable.min.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-responsive/js/dataTables.responsive.min.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-rowgroup/js/dataTables.rowGroup.min.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-rowreorder/js/dataTables.rowReorder.min.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-scroller/js/dataTables.scroller.min.js" type="text/javascript"></script>--}}
+{{--<script src="assets/plugins/custom/datatables.net-select/js/dataTables.select.min.js" type="text/javascript"></script>--}}
 
 <!--end::Page Vendors -->
 

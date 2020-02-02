@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Account' => $baseDir . '/app/Account.php',
+    'App\\Accountspayable' => $baseDir . '/app/Accountspayable.php',
     'App\\Bank' => $baseDir . '/app/Bank.php',
     'App\\Bill' => $baseDir . '/app/Bill.php',
     'App\\Branch' => $baseDir . '/app/Branch.php',
@@ -19,6 +20,7 @@ return array(
     'App\\Devicecontract' => $baseDir . '/app/Devicecontract.php',
     'App\\Employee' => $baseDir . '/app/Employee.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AccountController' => $baseDir . '/app/Http/Controllers/AccountController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
     'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'App\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -32,6 +34,7 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\DataController' => $baseDir . '/app/Http/Controllers/DataController.php',
     'App\\Http\\Controllers\\DepartmentController' => $baseDir . '/app/Http/Controllers/DepartmentController.php',
+    'App\\Http\\Controllers\\DeviceController' => $baseDir . '/app/Http/Controllers/DeviceController.php',
     'App\\Http\\Controllers\\EmployeeController' => $baseDir . '/app/Http/Controllers/EmployeeController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'App\\Http\\Controllers\\ItemController' => $baseDir . '/app/Http/Controllers/ItemController.php',

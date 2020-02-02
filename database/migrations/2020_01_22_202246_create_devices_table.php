@@ -22,14 +22,22 @@ class CreateDevicesTable extends Migration
             $table->unsignedBigInteger('department_id');
             $table->unsignedBigInteger('vendor_id')->nullable();
 
+            $table->unsignedBigInteger('device_id')->nullable();
+
+
             $table->date('purchased')->nullable();
 
             $table->date('warranty')->nullable();
+
+            $table->double('cost')->default(0);
+            $table->boolean('vat')->default(false);
+            $table->boolean('charged')->default(false);
 
 
             $table->index('room_id');
             $table->index('department_id');
             $table->index('vendor_id');
+            $table->index('device_id');
 
             $table->boolean('deleted')->default(false);
 

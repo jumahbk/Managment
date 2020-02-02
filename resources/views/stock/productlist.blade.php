@@ -132,7 +132,7 @@
 
                         <div class="table-wrapper-scroll-y my-custom-scrollbar">
 
-                            <table class="table table-bordered table-striped mb-0">
+                            <table id="stocktable" class="table table-bordered table-striped mb-0">
                                 <thead>
                                 <tr>
 
@@ -236,7 +236,12 @@
 
             </div>
         </div>
+        <script>
+            $(document).ready(function() {
+                $('#stocktable').DataTable();
+            } );
 
+        </script>
 
 
 

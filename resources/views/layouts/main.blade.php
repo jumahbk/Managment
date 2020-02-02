@@ -24,6 +24,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <title>{{$title}}</title>
     <meta name="description" content="Latest updates and statistic charts">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!--begin::Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Asap+Condensed:500">
@@ -69,6 +70,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
     <!--end:: Vendor Plugins -->
     <link href="/assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 
     <!--begin:: Vendor Plugins for custom pages -->
     <link href="/assets/plugins/custom/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
@@ -1354,6 +1356,17 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="/assets/plugins/custom/tinymce/themes/mobile/theme.js" type="text/javascript"></script>
 <!--begin::Page Vendors(used by this page) -->
 <script src="/assets/plugins/custom/jstree/jstree.bundle.js" type="text/javascript"></script>
+
+
+<!--begin::Page Vendors(used by this page) -->
+<script src="/assets/plugins/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+
+<!--end::Page Vendors -->
+
+<!--begin::Page Scripts(used by this page) -->
+<script src="/assets/js/pages/crud/datatables/basic/basic.js" type="text/javascript"></script>
+
+
 
 <!--end::Page Vendors -->
 

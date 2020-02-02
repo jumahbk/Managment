@@ -57,7 +57,9 @@ class DeviceController extends Controller
      */
     public function show($id)
     {
-        //
+        $d = Device::find($id);
+
+        return view('devices.show' ,  compact( 'd'));
     }
 
 
