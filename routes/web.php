@@ -95,6 +95,8 @@ Route::resource('devices','DeviceController')->middleware('auth');;
 Route::resource('departments','DepartmentController')->middleware('auth');;
 
 Route::resource('stock','StockController')->middleware('auth');;
+Route::resource('dcontracts','DevicecontractsController')->middleware('auth');;
+Route::get('/dcontracts/{id}/create', 'DevicecontractsController@create')->middleware('auth');
 
 Route::resource('products','ProductController')->middleware('auth');;
 Route::resource('branches','BranchController')->middleware('auth');;
