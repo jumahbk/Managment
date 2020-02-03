@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Bank;
+use App\Device;
+use App\Devicecontract;
 use Illuminate\Http\Request;
 
 class DevicecontractsController extends Controller
@@ -23,7 +26,10 @@ class DevicecontractsController extends Controller
      */
     public function create($id)
     {
-       return redirect('https://google.com');
+        $device_id = $id;
+        $device = Device::find($id);
+
+        return view('dcontracts.create', compact('device','device_id'));
     }
 
     /**
@@ -34,7 +40,34 @@ class DevicecontractsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->save($request, -1);
+        return redirect('/banks');
+    }
+
+
+
+
+    public function save(Request $request, $id)
+    {
+
+        $deviceContract = new Devicecontract();
+        if($id !== -1)
+        {
+            $deviceContract = Devicecontract::find($id);
+        }
+        $deviceContract->details = $request['details'];
+        $deviceContract->startDate = $request['startDate'];
+        $deviceContract->endDate = $request['endDate'];
+        $deviceContract->amount = $request['amount'];
+
+        $deviceContract->device_id = $request['device_id'];
+
+        $deviceContract->push();
+
+        return redirect('/devices');
+
+
+
     }
 
     /**
