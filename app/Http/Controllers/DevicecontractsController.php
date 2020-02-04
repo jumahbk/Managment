@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Storage;
 use App\Bank;
 use App\Device;
 use App\Devicecontract;
@@ -41,7 +41,7 @@ class DevicecontractsController extends Controller
     public function store(Request $request)
     {
         $this->save($request, -1);
-        return redirect('/banks');
+   //     return redirect('/banks');
     }
 
 
@@ -49,6 +49,36 @@ class DevicecontractsController extends Controller
 
     public function save(Request $request, $id)
     {
+
+        $file = $request->file('attachemnt1');
+
+        //Display File Name
+        echo 'File Name: '.$file->getClientOriginalName();
+        echo '<br>';
+
+        //Display File Extension
+        echo 'File Extension: '.$file->getClientOriginalExtension();
+        echo '<br>';
+
+        //Display File Real Path
+        echo 'File Real Path: '.$file->getRealPath();
+        echo '<br>';
+        Storage::disk('local')->putFile('storage/test.pdf', $file);
+//        Storage::disk('local')->putFile()
+        echo asset('storage/test.pdf');
+
+
+
+        //Move Uploaded File
+       // $destinationPath = '/storage';
+       // $file->move($destinationPath,$file->getClientOriginalName());
+        if($file)
+        {
+            return;
+        }
+
+
+
 
         $deviceContract = new Devicecontract();
         if($id !== -1)
@@ -64,7 +94,7 @@ class DevicecontractsController extends Controller
 
         $deviceContract->push();
 
-        return redirect('/devices');
+     //   return redirect('/devices');
 
 
 

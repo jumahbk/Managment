@@ -18,7 +18,7 @@
 
 
 
-        <form method="POST" action="/dcontracts"  class="kt-form pt-5">
+        <form method="POST" action="/dcontracts" enctype="multipart/form-data" class="kt-form pt-5">
             @csrf
 
 <div class="row">
@@ -41,26 +41,32 @@
             <div class="kt-portlet__body">
                 <div class="form-group">
                     <label>Start Date</label>
-                    <input type="date" class="form-control"  name="englishName">
+                    <input type="date" class="form-control"  name="startDate">
                 </div>
                 <div class="form-group">
                     <label>End Date</label>
-                    <input type="date" class="form-control"  name="arabicName">
+                    <input type="date" class="form-control"  name="endDate">
                 </div>
 
                 <div class="form-group">
                     <label>Details</label>
-                    <textarea  class="form-control"  name="arabicName"> </textarea>
+                    <textarea  class="form-control"  name="details"> </textarea>
                 </div>
 
                 <div class="form-group">
                     <label>Amount</label>
-                    <input type="text" class="form-control"  name="arabicName">
+                    <input type="text" class="form-control"  name="amount">
                 </div>
 
                 <div class="form-group">
                     <label class="kt-checkbox">
-                        <input type="checkbox"> Includes VAT
+                        <input type="checkbox" name="vat"> Includes VAT
+                        <span></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="kt-checkbox">
+                        <input type="checkbox" name="chargeAccount"> Charge Account?
                         <span></span>
                     </label>
                 </div>
@@ -92,7 +98,7 @@
                     <label>Attachment 1</label>
                     <div></div>
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="attachemnt1">
+                        <input type="file" class="custom-file-input" name="attachemnt1">
                         <label class="custom-file-label" for="customFile">Choose file</label>
                     </div>
                 </div>
@@ -100,7 +106,7 @@
                     <label>Attachment 2</label>
                     <div></div>
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="attachemnt2">
+                        <input type="file" class="custom-file-input" name="attachemnt2">
                         <label class="custom-file-label" for="customFile">Choose file</label>
                     </div>
                 </div>
@@ -108,7 +114,7 @@
                     <label>Attachment 3</label>
                     <div></div>
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="attachemnt3">
+                        <input type="file" class="custom-file-input" name="attachemnt3">
                         <label class="custom-file-label" for="customFile">Choose file</label>
                     </div>
                 </div>
