@@ -21,6 +21,20 @@ class Device extends Model
         return $this->belongsTo('App\Room','room_id', 'id');
 
     }
+    public function Parent()
+    {
+        return $this->belongsTo('App\Device','device_id', 'id');
+
+    }
+    public function Devicecontracts()
+    {
+        return $this->hasMany('App\Devicecontract');
+    }
+
+    public function Devices()
+    {
+        return $this->hasMany('App\Device');
+    }
 
     public function getExpiry()
     {

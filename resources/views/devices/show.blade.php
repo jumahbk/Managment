@@ -21,21 +21,21 @@
                 <div class="kt-portlet__head-wrapper">
                     <div class="kt-portlet__head-actions">
 
-                        <a href="/stock/batchlist" class="btn btn-warning btn-elevate btn-icon-sm">
+                        <a href="/dcontracts/{{$d->id}}/create" class="btn btn-warning btn-elevate btn-icon-sm">
                             <i class="la la-folder"></i>
                             Add Maintainance Contract
                         </a>
-                        <a href="/stock/productlist" class="btn btn-dark btn-elevate btn-icon-sm">
+                        <a href="/devices/{{$d->id}}/create" class="btn btn-dark btn-elevate btn-icon-sm">
                             <i class="la la-barcode"></i>
                             Add Component
                         </a>&nbsp;
-                        <a href="/stock/noqr" class="btn btn-brand btn-elevate btn-icon-sm">
+                        <a href="/devices/{{$d->id}}/edit" class="btn btn-brand btn-elevate btn-icon-sm">
                             <i class="la la-plus"></i>
                            Edit
                         </a>
 
 
-                        <a href="stock/batchlistedit" class="btn btn-google btn-elevate btn-icon-sm">
+                        <a href="/devices/{{$d->id}}/destroy" class="btn btn-google btn-elevate btn-icon-sm">
                             <i class="la la-trash"></i>
                             Decommission
                         </a>
@@ -206,38 +206,96 @@
 
                 <div class="kt-portlet__body">
 
-                    <table class="table table-bordered" id="kt_table_2">
-                        <thead>
+                    <table class="table" id="kt_table_2">
+                        <thead class="border-bottom">
                         <tr>
-                            <th>#</th>
-                            <th>Details</th>
 
-                            <th>End</th>
-                            <th>Cost</th>
-                            <th>Attachment 1</th>
-                            <th>Attachment 2</th>
-                            <th>Attachment 3</th>
-
-
-                            <th>Actions</th>
+                            <td style=" ">Device</td>
+                            <td style=" ">Expiry</td>
+                            <td>Details</td>
+                            <td style=" ">Attachment 1</td>
+                            <td style=" ">Attachment 2</td>
+                            <td style=" ">Attachment 3</td>
+                            <td style=" ">Actions</td>
                         </tr>
                         </thead>
                         <tbody>
-                        <?php
-                        $counter = 1;
-                        ?>
-                        <tr>
-                            <td>{{$counter++}}</td>
-                            <td>61715-075</td>
-                            <td>China</td>
-                            <td>Tieba</td>
-                            <td>746 Pine View Junction</td>
-                            <td>Nixie Sailor</td>
 
-                            <td>3</td>
-                            <td nowrap></td>
-                        </tr>
+                        @foreach($d->Devicecontracts as $data)
+                            <tr class="border-bottom">
+                                <td>
+                                    <a href="/devices/{{$data->device->id}}">  {{$data->device->englishName}}</a>
+                                </td>
+                                <td>
+                                    {{$data->endDate}}
+                                </td>
+                                <td>
+                                    {{$data->details}}
+                                </td>
 
+                                <td>
+                                    @if($data->attachemnt1 != null)
+                                        <a href="{{$data->attachemnt1}}">Download</a>
+                                    @endif
+                                </td>
+                                <td>
+                                    @if($data->attachemnt2 != null)
+                                        <a href="{{$data->attachemnt2}}">Download</a>
+                                    @endif
+                                </td>
+                                <td>
+                                    @if($data->attachemnt3 != null)
+                                        <a href="{{$data->attachemnt3}}">Download</a>
+                                    @endif
+                                </td>
+
+
+                                <td>
+
+                                    @if($data->deleted == 0)
+                                        <form action="{{ route('devices.destroy',$d->id) }}" method="POST">
+
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-label-danger btn-bold btn-icon-h kt-margin-l-10">
+                                                {{    __('messages.deactivate')}}
+
+                                            </button>
+                                        </form>
+                                    @else
+
+                                        <form action="/devices/restore" method="POST">
+
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{$d->id}}">
+                                            <button type="submit" class="btn btn-label-twitter btn-bold btn-icon-h kt-margin-l-10">
+                                                {{    __('messages.activate')}}
+
+                                            </button>
+                                        </form>
+
+                                    @endif
+                                    <span class="kt-widget11__sub">
+                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                                Restore
+
+                                                            </a>
+
+                                                            </span>
+
+                                    <a href="/devices/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                        {{    __('messages.edit')}}
+
+                                    </a>
+
+
+
+
+
+                                </td>
+
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
 

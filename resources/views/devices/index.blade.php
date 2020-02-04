@@ -77,7 +77,7 @@
                                                     @foreach($data as $d)
                                                     <tr class="border-bottom">
                                                         <td>
-                                                            {{$d->englishName}}
+                                                           <a href="/devices/{{$d->id}}"> {{$d->englishName}}</a>
                                                         </td>
                                                         <td>
                                                             {{$d->room->englishName}}

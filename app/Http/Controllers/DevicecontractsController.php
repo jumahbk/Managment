@@ -18,8 +18,8 @@ class DevicecontractsController extends Controller
      */
     public function index()
     {
-        $d = Devicecontract::all();
-        return View('dcontracts.index', compact('d'));
+        $data = Devicecontract::all();
+        return View('dcontracts.index', compact('data'));
     }
 
     /**

@@ -63,13 +63,13 @@
                                                     <thead class="border-bottom">
                                                     <tr>
 
-                                                        <td style=" ">Name</td>
-                                                        <td style=" ">Room</td>
-                                                        <td style=" ">Department</td>
-
-                                                        <td style=" ">Vendor</td>
-                                                        <td style=" ">Warranty</td>
-                                                        <td style=" ">Vendor</td>
+                                                        <td style=" ">Device</td>
+                                                        <td style=" ">Expiry</td>
+                                                        <td>Details</td>
+                                                        <td style=" ">Attachment 1</td>
+                                                        <td style=" ">Attachment 2</td>
+                                                        <td style=" ">Attachment 3</td>
+                                                        <td style=" ">Actions</td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -77,21 +77,31 @@
                                                     @foreach($data as $d)
                                                     <tr class="border-bottom">
                                                         <td>
-                                                            {{$d->englishName}}
+                                                            <a href="/devices/{{$d->device->id}}">  {{$d->device->englishName}}</a>
                                                         </td>
                                                         <td>
-                                                            {{$d->room->englishName}}
+                                                            {{$d->endDate}}
                                                         </td>
                                                         <td>
-                                                            {{$d->department->englishName}}
+                                                            {{$d->details}}
                                                         </td>
 
                                                         <td>
-                                                            {{$d->vendor->englishName}}
+                                                            @if($d->attachemnt1 != null)
+                                                           <a href="{{$d->attachemnt1}}">Download</a>
+                                                            @endif
                                                         </td>
                                                         <td>
-                                                           <?php echo $d->getExpiry() ?>
+                                                            @if($d->attachemnt2 != null)
+                                                            <a href="{{$d->attachemnt2}}">Download</a>
+                                                            @endif
                                                         </td>
+                                                        <td>
+                                                            @if($d->attachemnt3 != null)
+                                                            <a href="{{$d->attachemnt3}}">Download</a>
+                                                            @endif
+                                                        </td>
+
 
                                                         <td>
 
