@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Date;
 use Storage;
 use App\Bank;
+use DateTime;
 use App\Device;
 use App\Devicecontract;
 use Illuminate\Http\Request;
@@ -16,7 +18,8 @@ class DevicecontractsController extends Controller
      */
     public function index()
     {
-        //
+        $d = Devicecontract::all();
+        return View('dcontracts.index', compact('d'));
     }
 
     /**
@@ -50,36 +53,6 @@ class DevicecontractsController extends Controller
     public function save(Request $request, $id)
     {
 
-        $file = $request->file('attachemnt1');
-
-        //Display File Name
-        echo 'File Name: '.$file->getClientOriginalName();
-        echo '<br>';
-
-        //Display File Extension
-        echo 'File Extension: '.$file->getClientOriginalExtension();
-        echo '<br>';
-
-        //Display File Real Path
-        echo 'File Real Path: '.$file->getRealPath();
-        echo '<br>';
-        Storage::disk('local')->putFile('storage/test.pdf', $file);
-//        Storage::disk('local')->putFile()
-        echo asset('storage/test.pdf');
-
-
-
-        //Move Uploaded File
-       // $destinationPath = '/storage';
-       // $file->move($destinationPath,$file->getClientOriginalName());
-        if($file)
-        {
-            return;
-        }
-
-
-
-
         $deviceContract = new Devicecontract();
         if($id !== -1)
         {
@@ -88,9 +61,48 @@ class DevicecontractsController extends Controller
         $deviceContract->details = $request['details'];
         $deviceContract->startDate = $request['startDate'];
         $deviceContract->endDate = $request['endDate'];
-        $deviceContract->amount = $request['amount'];
+        if($request->amount){
+            $deviceContract->amount = $request['amount'];
 
+        }else
+        {
+            $request->amount = 0;
+        }
         $deviceContract->device_id = $request['device_id'];
+
+        if($request->file('attachemnt1'))
+        {
+            $now = new DateTime();
+            $file = $request->file('attachemnt1');
+            $name  =  $file->getClientOriginalName();
+            $name = $now->getTimestamp() . '_' . $name;
+            $name = str_replace(' ', '',  $name);
+            Storage::putFileAs('public', $file, $name);
+            $deviceContract->attachemnt1 =  asset('storage/'.$name);
+        }
+
+        if($request->file('attachemnt2'))
+        {
+            $now = new DateTime();
+            $file = $request->file('attachemnt2');
+            $name  =  $file->getClientOriginalName();
+            $name = $now->getTimestamp() . '_' . $name;
+            $name = str_replace(' ', '',  $name);
+            Storage::putFileAs('public', $file, $name);
+            $deviceContract->attachemnt2 =  asset('storage/'.$name);
+        }
+
+        if($request->file('attachemnt3'))
+        {
+            $now = new DateTime();
+            $file = $request->file('attachemnt3');
+            $name  =  $file->getClientOriginalName();
+            $name = $now->getTimestamp() . '_' . $name;
+            $name = str_replace(' ', '',  $name);
+            Storage::putFileAs('public', $file, $name);
+            $deviceContract->attachemnt3 =  asset('storage/'.$name);
+        }
+
 
         $deviceContract->push();
 
