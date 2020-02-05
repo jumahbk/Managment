@@ -118,7 +118,8 @@ class StockController extends Controller
 
 
         $thisMonthData = Stocklog::where('created_at' , '>=' , $dt)->get();
-        $todaysData = Stocklog::where('created_at' , '==' , $tdt)->get();
+        $todaysData = Stocklog::where('created_at' , '>' , $tdt)->get();
+
         $thisYearData =Stocklog::where('created_at' , '>=' , $startdt)->get();
 
         $mc = count($thisMonthData);
