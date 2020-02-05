@@ -31,7 +31,7 @@ class Device extends Model
         return $this->hasMany('App\Devicecontract');
     }
 
-    public function Devices()
+    public function devices()
     {
         return $this->hasMany('App\Device');
     }

@@ -43,7 +43,7 @@ class DevicecontractsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->save($request, -1);
+        return $this->save($request, -1);
    //     return redirect('/banks');
     }
 
@@ -103,10 +103,9 @@ class DevicecontractsController extends Controller
             $deviceContract->attachemnt3 =  asset('storage/'.$name);
         }
 
-
         $deviceContract->push();
 
-     //   return redirect('/devices');
+      return redirect('/devices/'. $request['device_id']);
 
 
 

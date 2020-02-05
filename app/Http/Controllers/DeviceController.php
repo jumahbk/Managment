@@ -36,6 +36,20 @@ class DeviceController extends Controller
         $departments = Department::all();
         return view('devices.create' ,  compact( 'rooms','vendors', 'departments'));
     }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function component($id)
+    {
+        $parent = Device::find($id);
+               $rooms = Room::all();
+        $vendors = Vendor::all();
+        $departments = Department::all();
+        return view('devices.create' ,  compact( 'rooms','vendors', 'departments', 'parent'));
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -45,8 +59,8 @@ class DeviceController extends Controller
      */
     public function store(Request $request)
     {
-        $this->save($request, -1);
-        return redirect('/devices');
+        return $this->save($request, -1);
+
     }
 
     /**
@@ -65,7 +79,6 @@ class DeviceController extends Controller
 
     public function save(Request $request, $id)
     {
-
         $device = new Device();
         if($id !== -1)
         {
@@ -81,9 +94,23 @@ class DeviceController extends Controller
 
         $device->warranty = $request['warranty'];
 
+        if($request['device_id'])
+        {
+            $device->device_id = $request['device_id'];
+        }
+
+
+
         $device->push();
 
-        return redirect('/devices');
+        if($request['device_id'])
+        {
+            return redirect('/devices/'.$request['device_id']);
+
+        }else{
+            return redirect('/devices');
+
+        }
 
 
 

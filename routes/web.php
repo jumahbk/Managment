@@ -81,6 +81,7 @@ Route::get('/warehouses/{id}/activate', 'WarehouseController@activate')->middlew
 
 Route::get('/branches/{id}/deactivate', 'BranchController@deactivate')->middleware('auth');;
 Route::get('/branches/{id}/activate', 'BranchController@activate')->middleware('auth');;
+Route::get('/devices/{id}/create', 'DeviceController@component')->middleware('auth');;
 
 Route::get('/products/{id}/deactivate', 'ProductController@deactivate')->middleware('auth');;
 Route::get('/products/{id}/activate', 'ProductController@activate')->middleware('auth');;

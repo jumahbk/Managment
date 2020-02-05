@@ -23,7 +23,7 @@
 
                         <a href="/dcontracts/{{$d->id}}/create" class="btn btn-warning btn-elevate btn-icon-sm">
                             <i class="la la-folder"></i>
-                            Add Maintainance Contract
+                            Add Maintenance Contract
                         </a>
                         <a href="/devices/{{$d->id}}/create" class="btn btn-dark btn-elevate btn-icon-sm">
                             <i class="la la-barcode"></i>
@@ -57,7 +57,16 @@
                     <div class="kt-portlet__head">
                         <div class="kt-portlet__head-label">
                             <h3 class="kt-portlet__head-title">
+                                @if($d->device_id)
+
+                                    Component Information <a href="/devices/{{$d->device_id}}">( Part of {{$d->parent->englishName}})</a>
+
+                                    @else
+
+
                                 Device Information
+
+                                    @endif
                             </h3>
                         </div>
                     </div>
@@ -68,11 +77,11 @@
                     <div class="kt-portlet__body">
                         <div class="form-group">
                             <label>English Name</label>
-                            <input type="text" class="form-control"  disabled = "true" name="englishName">
+                            <input type="text" class="form-control"  value="{{$d->englishName}}" disabled = "true" name="englishName">
                         </div>
                         <div class="form-group">
                             <label>Arabic Name</label>
-                            <input type="text" class="form-control"  valu disabled = "true" name="arabicName">
+                            <input type="text" class="form-control"  value="{{$d->arabicName}}" disabled = "true" name="arabicName">
                         </div>
                         <div class="form-group">
                             <label>Department</label>
@@ -157,25 +166,81 @@
 
                 <div class="kt-portlet__body">
 
-                    <table class="table table-bordered" id="kt_table_3">
-                        <thead>
+                    <table class="table">
+                        <thead class="border-bottom">
                         <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Actions</th>
+
+                            <td style=" ">Name</td>
+                            <td style=" ">Room</td>
+                            <td style=" ">Department</td>
+
+                            <td style=" ">Vendor</td>
+                            <td style=" ">Warranty</td>
+                            <td style=" "></td>
+                            <td></td>
                         </tr>
                         </thead>
                         <tbody>
-                        <?php
-                        $counter = 1;
-                        ?>
-                        <tr>
-                            <td>{{$counter++}}</td>
-                            <td>61715-075</td>
 
-                            <td nowrap></td>
-                        </tr>
+                        @foreach($d->devices as $dz)
+                            <tr class="border-bottom">
+                                <td>
+                                    <a href="/devices/{{$dz->id}}"> {{$dz->englishName}}</a>
+                                </td>
+                                <td>
+                                    {{$dz->room->englishName}}
+                                </td>
+                                <td>
+                                    {{$dz->department->englishName}}
+                                </td>
 
+                                <td>
+                                    {{$dz->vendor->englishName}}
+                                </td>
+                                <td>
+                                    <?php echo $dz->getExpiry() ?>
+                                </td>
+
+                                <td>
+
+                                    @if($d->deleted == 0)
+                                        <form action="{{ route('devices.destroy',$dz->id) }}" method="POST">
+
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-label-danger btn-bold btn-icon-h kt-margin-l-10">
+                                                {{    __('messages.deactivate')}}
+
+                                            </button>
+                                        </form>
+                                    @else
+
+                                        <form action="/devices/restore" method="POST">
+
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{$dz->id}}">
+                                            <button type="submit" class="btn btn-label-twitter btn-bold btn-icon-h kt-margin-l-10">
+                                                {{    __('messages.activate')}}
+
+                                            </button>
+                                        </form>
+
+                                    @endif
+
+                                </td><td>
+                                    <a href="/devices/{{$dz->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                        {{    __('messages.edit')}}
+
+                                    </a>
+
+
+
+
+
+                                </td>
+
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
 
@@ -216,7 +281,8 @@
                             <td style=" ">Attachment 1</td>
                             <td style=" ">Attachment 2</td>
                             <td style=" ">Attachment 3</td>
-                            <td style=" ">Actions</td>
+                            <td style=" "></td>
+                            <td style=" "></td>
                         </tr>
                         </thead>
                         <tbody>
@@ -275,14 +341,8 @@
                                         </form>
 
                                     @endif
-                                    <span class="kt-widget11__sub">
-                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
-                                                                Restore
 
-                                                            </a>
-
-                                                            </span>
-
+                                </td><td>
                                     <a href="/devices/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                         {{    __('messages.edit')}}
 

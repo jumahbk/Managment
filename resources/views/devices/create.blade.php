@@ -30,7 +30,14 @@
         <div class="kt-portlet__head">
             <div class="kt-portlet__head-label">
                 <h3 class="kt-portlet__head-title">
-                   Add new device
+                    @if(isset ( $parent))
+                           Add component to {{$parent->englishName}}
+
+                        <input type="hidden" class="form-control"  name="device_id" value="{{$parent->id}}">
+
+                    @else
+                           Add new device
+                    @endif
                 </h3>
             </div>
         </div>
