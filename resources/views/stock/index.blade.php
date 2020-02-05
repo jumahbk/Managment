@@ -82,7 +82,7 @@
                     <div class="kt-portlet__body">
 
 
-                        <table class="table">
+                        <table class="table" id ='kt_table_2'>
                             <thead>
                             <tr>
 
@@ -317,7 +317,7 @@
                     <div class="kt-portlet__body">
 
 
-                        <table class="table">
+                        <table class="table" id ='kt_table_3'>
                             <thead>
                             <tr>
 
@@ -552,7 +552,7 @@
                     <div class="kt-portlet__body">
 
 
-                        <table class="table">
+                        <table class="table" id ='kt_table_4'>
                             <thead>
                             <tr>
 
@@ -717,7 +717,39 @@
 
 
 
+                    <script>
+                        $(document).ready(function() {
+                            $('#kt_table_1').DataTable( {
+                                "paging":   false
 
+
+                            } );
+                        });
+                        $(document).ready(function() {
+                            $('#kt_table_2').DataTable( {
+                                "paging":   false
+
+
+                            } );
+                        });
+                        $(document).ready(function() {
+                            $('#kt_table_3').DataTable( {
+                                "paging":   false
+
+
+                            } );
+                        });
+                        $(document).ready(function() {
+                                $('#kt_table_4').DataTable( {
+                                    "paging":   false
+
+
+                                } );
+                        }
+
+
+                        );
+                    </script>
 
 
 
