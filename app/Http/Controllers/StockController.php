@@ -64,6 +64,47 @@ class StockController extends Controller
         return view('stock.index', compact('data', 'wh', 'products'));
     }
 
+
+    public function fav()
+    {
+        $test = DB::table('Stocks')
+            ->groupBy('created_at')->get();
+
+
+        $products = Product::where('disable' , '=', 0)->get()->sortBy('englishName');;
+        $data= [];
+        $i = 0;
+        foreach($products as $p )
+        {
+            $s = $p->stocks;
+
+            $count = 0;
+
+            foreach($s as $ts)
+            {
+
+                $count = $ts->left() + $count;
+            }
+
+
+
+
+            $t = new StockItem();
+            $t->productID = $p->id;
+
+            $t->amountLeft = $count;
+            $t->vendorName = $p->vendor->englishName . '-' . $p->vendor->arabicName;
+            $t->productName = $p->englishName . '-' . $p->arabicName;
+
+            $data[$i] = $t;
+
+
+        }
+
+        $wh = Warehouse::all();
+        return view('stock.fav', compact('data', 'wh', 'products'));
+    }
+
     public function log()
     {
         $data = Stocklog::all();
