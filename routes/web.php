@@ -123,6 +123,7 @@ Route::resource('requests', 'RequestController')->middleware('auth');
 Route::resource('users', 'UserController')->middleware('auth');
 Route::resource('roles','RoleController')->middleware('auth');
 Route::resource('stockroles','StockroleController')->middleware('auth');
+Route::resource('lettertypes','LetterTypeController')->middleware('auth');;
 
 Route::get('/lang/{lang}', ['as' => 'lang.switch', 'uses' => 'LanguageController@switchLang'])->middleware('auth');;
 
