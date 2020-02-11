@@ -12,33 +12,29 @@ Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-templa
 Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
 License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 -->
-
 <html direction="rtl" dir="rtl" style="direction: rtl" >
+
 <!-- begin::Head -->
 <head>
-    <base href="">
+    <base href="../../../">
     <meta charset="utf-8" />
-    <title>Metronic | Dashboard</title>
-    <meta name="description" content="Latest updates and statistic charts">
+    <title>Metronic | Pricing Tables 1</title>
+    <meta name="description" content="Pricing table example">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--begin::Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Asap+Condensed:500">
 
     <!--end::Fonts -->
-    <link href="8/assets/css/pages/pricing/pricing-1.css" rel="stylesheet" type="text/css" />
 
-    <!--begin::Page Vendors Styles(used by this page) -->
-    <link href="8/assets/plugins/custom/fullcalendar/fullcalendar.bundle.rtl.css" rel="stylesheet" type="text/css" />
+    <!--begin::Page Custom Styles(used by this page) -->
+    <link href="8/assets/css/pages/pricing/pricing-1.rtl.css" rel="stylesheet" type="text/css" />
 
-    <!--end::Page Vendors Styles -->
+    <!--end::Page Custom Styles -->
 
     <!--begin::Global Theme Styles(used by all pages) -->
     <link href="8/assets/plugins/global/plugins.bundle.rtl.css" rel="stylesheet" type="text/css" />
     <link href="8/assets/css/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
-
-
-
 
     <!--end::Global Theme Styles -->
 
@@ -76,7 +72,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- begin:: Header -->
             <div id="kt_header" class="kt-header kt-grid__item  kt-header--fixed " data-ktheader-minimize="on">
                 <div class="kt-header__top">
-                    <div class="kt-container ">
+                    <div class="kt-container  kt-container--fluid ">
 
                         <!-- begin:: Brand -->
                         <div class="kt-header__brand   kt-grid__item" id="kt_header_brand">
@@ -883,14 +879,14 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                 </div>
                 <div class="kt-header__bottom">
-                    <div class="kt-container ">
+                    <div class="kt-container  kt-container--fluid ">
 
                         <!-- begin: Header Menu -->
                         <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
                         <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
                             <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
                                 <ul class="kt-menu__nav ">
-                                    <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a href="index.html" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Dashboards</span><i class="kt-menu__hor-arrow la la-angle-down"></i><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="hover" aria-haspopup="true"><a href="index.html" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Dashboards</span><i class="kt-menu__hor-arrow la la-angle-down"></i><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                         <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                             <ul class="kt-menu__subnav">
                                                 <li class="kt-menu__item " aria-haspopup="true"><a href="dashboards/fluid.html" class="kt-menu__link "><i class="kt-menu__link-icon flaticon2-architecture-and-city"></i><span class="kt-menu__link-text">Fluid Width</span></a></li>
@@ -952,6 +948,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             <li class="kt-menu__item " aria-haspopup="true"><a href="components/extended/toastr.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Toastr</span></a></li>
                                                             <li class="kt-menu__item " aria-haspopup="true"><a href="components/extended/sweetalert2.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">SweetAlert2</span></a></li>
                                                             <li class="kt-menu__item " aria-haspopup="true"><a href="components/extended/dual-listbox.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Dual Listbox</span></a></li>
+                                                            <li class="kt-menu__item " aria-haspopup="true"><a href="components/extended/cropper.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Image Cropper</span></a></li>
                                                         </ul>
                                                     </div>
                                                 </li>
@@ -1335,14 +1332,14 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Pages</span><i class="kt-menu__hor-arrow la la-angle-down"></i><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                    <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-text">Pages</span><i class="kt-menu__hor-arrow la la-angle-down"></i><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                         <div class="kt-menu__submenu  kt-menu__submenu--fixed kt-menu__submenu--center" style="width:1000px">
                                             <div class="kt-menu__subnav">
                                                 <ul class="kt-menu__content">
-                                                    <li class="kt-menu__item ">
+                                                    <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here">
                                                         <h3 class="kt-menu__heading kt-menu__toggle"><span class="kt-menu__link-text">Pricing Tables</span><i class="kt-menu__ver-arrow la la-angle-right"></i></h3>
                                                         <ul class="kt-menu__inner">
-                                                            <li class="kt-menu__item " aria-haspopup="true"><a href="custom/pages/pricing/pricing-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Pricing Tables 1</span></a></li>
+                                                            <li class="kt-menu__item  kt-menu__item--active " aria-haspopup="true"><a href="custom/pages/pricing/pricing-1.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Pricing Tables 1</span></a></li>
                                                             <li class="kt-menu__item " aria-haspopup="true"><a href="custom/pages/pricing/pricing-2.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Pricing Tables 2</span></a></li>
                                                             <li class="kt-menu__item " aria-haspopup="true"><a href="custom/pages/pricing/pricing-3.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Pricing Tables 3</span></a></li>
                                                             <li class="kt-menu__item " aria-haspopup="true"><a href="custom/pages/pricing/pricing-4.html" class="kt-menu__link "><i class="kt-menu__link-bullet kt-menu__link-bullet--line"><span></span></i><span class="kt-menu__link-text">Pricing Tables 4</span></a></li>
@@ -1401,40 +1398,36 @@ License: You must have a valid license purchased only from themeforest(the above
             </div>
 
             <!-- end:: Header -->
-            <div class="kt-container  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch">
+            <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch">
                 <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
                     <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
 
                         <!-- begin:: Subheader -->
                         <div class="kt-subheader   kt-grid__item" id="kt_subheader">
-                            <div class="kt-container ">
+                            <div class="kt-container  kt-container--fluid ">
                                 <div class="kt-subheader__main">
                                     <h3 class="kt-subheader__title">
-                                        Dashboard </h3>
+                                        Pricing Tables 1 </h3>
                                     <span class="kt-subheader__separator kt-hidden"></span>
                                     <div class="kt-subheader__breadcrumbs">
                                         <a href="#" class="kt-subheader__breadcrumbs-home"><i class="flaticon2-shelter"></i></a>
                                         <span class="kt-subheader__breadcrumbs-separator"></span>
                                         <a href="" class="kt-subheader__breadcrumbs-link">
-                                            Dashboards </a>
+                                            Pages </a>
+                                        <span class="kt-subheader__breadcrumbs-separator"></span>
+                                        <a href="" class="kt-subheader__breadcrumbs-link">
+                                            Pricing Tables 1 </a>
 
                                         <!-- <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active">Active link</span> -->
                                     </div>
                                 </div>
                                 <div class="kt-subheader__toolbar">
                                     <div class="kt-subheader__wrapper">
-                                        <a href="#" class="btn kt-subheader__btn-daterange" id="kt_dashboard_daterangepicker" data-toggle="kt-tooltip" title="Select dashboard daterange" data-placement="left">
-                                            <span class="kt-subheader__btn-daterange-title" id="kt_dashboard_daterangepicker_title">Today</span>&nbsp;
-                                            <span class="kt-subheader__btn-daterange-date" id="kt_dashboard_daterangepicker_date">Aug 16</span>
+                                        <a href="#" class="btn kt-subheader__btn-primary">
+                                            Actions &nbsp;
 
                                             <!--<i class="flaticon2-calendar-1"></i>-->
-                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--sm">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                    <rect x="0" y="0" width="24" height="24" />
-                                                    <path d="M4.875,20.75 C4.63541667,20.75 4.39583333,20.6541667 4.20416667,20.4625 L2.2875,18.5458333 C1.90416667,18.1625 1.90416667,17.5875 2.2875,17.2041667 C2.67083333,16.8208333 3.29375,16.8208333 3.62916667,17.2041667 L4.875,18.45 L8.0375,15.2875 C8.42083333,14.9041667 8.99583333,14.9041667 9.37916667,15.2875 C9.7625,15.6708333 9.7625,16.2458333 9.37916667,16.6291667 L5.54583333,20.4625 C5.35416667,20.6541667 5.11458333,20.75 4.875,20.75 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                                                    <path d="M2,11.8650466 L2,6 C2,4.34314575 3.34314575,3 5,3 L19,3 C20.6568542,3 22,4.34314575 22,6 L22,15 C22,15.0032706 21.9999948,15.0065399 21.9999843,15.009808 L22.0249378,15 L22.0249378,19.5857864 C22.0249378,20.1380712 21.5772226,20.5857864 21.0249378,20.5857864 C20.7597213,20.5857864 20.5053674,20.4804296 20.317831,20.2928932 L18.0249378,18 L12.9835977,18 C12.7263047,14.0909841 9.47412135,11 5.5,11 C4.23590829,11 3.04485894,11.3127315 2,11.8650466 Z M6,7 C5.44771525,7 5,7.44771525 5,8 C5,8.55228475 5.44771525,9 6,9 L15,9 C15.5522847,9 16,8.55228475 16,8 C16,7.44771525 15.5522847,7 15,7 L6,7 Z" fill="#000000" />
-                                                </g>
-                                            </svg> </a>
+                                        </a>
                                         <div class="dropdown dropdown-inline" data-toggle="kt-tooltip" title="Quick actions" data-placement="left">
                                             <a href="#" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success kt-svg-icon--md">
@@ -1501,12 +1494,14 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- end:: Subheader -->
 
                         <!-- begin:: Content -->
-                        <!-- begin:: Content -->
-                        <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+                        <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+
 
                             @yield('content')
 
+
                         </div>
+
                         <!-- end:: Content -->
                     </div>
                 </div>
@@ -1514,10 +1509,10 @@ License: You must have a valid license purchased only from themeforest(the above
 
             <!-- begin:: Footer -->
             <div class="kt-footer  kt-grid__item" id="kt_footer">
-                <div class="kt-container ">
+                <div class="kt-container  kt-container--fluid ">
                     <div class="kt-footer__wrapper">
                         <div class="kt-footer__copyright">
-                            2019&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Keenthemes</a>
+                            2020&nbsp;&copy;&nbsp;<a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">Keenthemes</a>
                         </div>
                         <div class="kt-footer__menu">
                             <a href="http://keenthemes.com/metronic" target="_blank" class="kt-link">About</a>
@@ -2141,6 +2136,83 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
             </div>
         </div>
+        <div class="kt-demo-panel__item ">
+            <div class="kt-demo-panel__item-title">
+                Demo 16
+            </div>
+            <div class="kt-demo-panel__item-preview">
+                <img src="8/assets/media//demos/preview/demo16.jpg" alt="" />
+                <div class="kt-demo-panel__item-preview-overlay">
+                    <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                </div>
+            </div>
+        </div>
+        <div class="kt-demo-panel__item ">
+            <div class="kt-demo-panel__item-title">
+                Demo 17
+            </div>
+            <div class="kt-demo-panel__item-preview">
+                <img src="8/assets/media//demos/preview/demo17.jpg" alt="" />
+                <div class="kt-demo-panel__item-preview-overlay">
+                    <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                </div>
+            </div>
+        </div>
+        <div class="kt-demo-panel__item ">
+            <div class="kt-demo-panel__item-title">
+                Demo 18
+            </div>
+            <div class="kt-demo-panel__item-preview">
+                <img src="8/assets/media//demos/preview/demo18.jpg" alt="" />
+                <div class="kt-demo-panel__item-preview-overlay">
+                    <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                </div>
+            </div>
+        </div>
+        <div class="kt-demo-panel__item ">
+            <div class="kt-demo-panel__item-title">
+                Demo 19
+            </div>
+            <div class="kt-demo-panel__item-preview">
+                <img src="8/assets/media//demos/preview/demo19.jpg" alt="" />
+                <div class="kt-demo-panel__item-preview-overlay">
+                    <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                </div>
+            </div>
+        </div>
+        <div class="kt-demo-panel__item ">
+            <div class="kt-demo-panel__item-title">
+                Demo 20
+            </div>
+            <div class="kt-demo-panel__item-preview">
+                <img src="8/assets/media//demos/preview/demo20.jpg" alt="" />
+                <div class="kt-demo-panel__item-preview-overlay">
+                    <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                </div>
+            </div>
+        </div>
+        <div class="kt-demo-panel__item ">
+            <div class="kt-demo-panel__item-title">
+                Demo 21
+            </div>
+            <div class="kt-demo-panel__item-preview">
+                <img src="8/assets/media//demos/preview/demo21.jpg" alt="" />
+                <div class="kt-demo-panel__item-preview-overlay">
+                    <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                </div>
+            </div>
+        </div>
+        <div class="kt-demo-panel__item ">
+            <div class="kt-demo-panel__item-title">
+                Demo 22
+            </div>
+            <div class="kt-demo-panel__item-preview">
+                <img src="8/assets/media//demos/preview/demo22.jpg" alt="" />
+                <div class="kt-demo-panel__item-preview-overlay">
+                    <a href="#" class="btn btn-brand btn-elevate disabled">Coming soon</a>
+                </div>
+            </div>
+        </div>
         <a href="https://1.envato.market/EA4JP" target="_blank" class="kt-demo-panel__purchase btn btn-brand btn-elevate btn-bold btn-upper">
             Buy Metronic Now!
         </a>
@@ -2383,8 +2455,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="8/assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
 <script src="8/assets/js/scripts.bundle.js" type="text/javascript"></script>
 
-
-<!--end::Page Scripts -->
+<!--end::Global Theme Bundle -->
 </body>
 
 <!-- end::Body -->
