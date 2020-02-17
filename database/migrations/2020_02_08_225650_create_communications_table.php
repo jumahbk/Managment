@@ -18,7 +18,7 @@ class CreateCommunicationsTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('attachment1')->nullable();
             $table->string('attachment2')->nullable();
-            $table->string('attachment2')->nullable();
+            $table->string('attachment3')->nullable();
             $table->string('phone')->nullable();
             $table->string('source_id')->nullable();
             $table->unsignedBigInteger('communicator_id')->nullable();

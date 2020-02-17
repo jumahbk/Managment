@@ -1,3 +1,6 @@
+<?php
+$title = 'نظام المراسلات';
+?>
 <!DOCTYPE html>
 
 <!--
@@ -18,7 +21,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <head>
     <base href="../../../">
     <meta charset="utf-8" />
-    <title>Metronic | Pricing Tables 1</title>
+    <title>{{$title}}</title>
     <meta name="description" content="Pricing table example">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

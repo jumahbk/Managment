@@ -7,91 +7,166 @@
     $locale = App::getLocale();
 
     ?>
-    <div class="kt-portlet">
-        <div class="kt-portlet__head">
-            <div class="kt-portlet__head-label">
-			<span class="kt-portlet__head-icon">
-			<i class="la la-leaf"></i>
-			</span>
-                <h3 class="kt-portlet__head-title">
-                    Fluid Pricing Table
-                </h3>
-            </div>
-        </div>
-        <div class="kt-portlet__body">
-            <div class="kt-pricing-1">
-                <div class="kt-pricing-1__items row">
-                    <div class="kt-pricing-1__item col-lg-3">
-                        <div class="kt-pricing-1__visual">
-                            <div class="kt-pricing-1__hexagon1"></div>
-                            <div class="kt-pricing-1__hexagon2"></div>
-                            <span class="kt-pricing-1__icon kt-font-brand"><i class="fa flaticon-piggy-bank"></i></span>
-                        </div>
-                        <span class="kt-pricing-1__price">Free</span>
-                        <h2 class="kt-pricing-1__subtitle">1 End Product License</h2>
-                        <span class="kt-pricing-1__description">
-						<span>Lorem ipsum aret</span>
-						<span>sed do eiusmod</span>
-						<span>magna siad ali</span>
-					</span>
-                        <div class="kt-pricing-1__btn">
-                            <button type="button" class="btn btn-brand btn-custom btn-pill btn-wide btn-uppercase btn-bolder btn-sm">Purchase</button>
-                        </div>
-                    </div>
-                    <div class="kt-pricing-1__item col-lg-3">
-                        <div class="kt-pricing-1__visual">
-                            <div class="kt-pricing-1__hexagon1"></div>
-                            <div class="kt-pricing-1__hexagon2"></div>
-                            <span class="kt-pricing-1__icon kt-font-success"><i class="fa flaticon-confetti"></i></span>
-                        </div>
-                        <span class="kt-pricing-1__price">69<span class="kt-pricing-1__label">$</span></span>
-                        <h2 class="kt-pricing-1__subtitle">Business License</h2>
-                        <span class="kt-pricing-1__description">
-						<span>Lorem ipsum</span>
-						<span>sed do eiusmod</span>
-						<span>magna siad enim aliqua</span>
-					</span>
-                        <div class="kt-pricing-1__btn">
-                            <button type="button" class="btn btn-success btn-wide btn-uppercase btn-bolder btn-sm">Purchase</button>
-                        </div>
-                    </div>
-                    <div class="kt-pricing-1__item col-lg-3">
-                        <div class="kt-pricing-1__visual">
-                            <div class="kt-pricing-1__hexagon1"></div>
-                            <div class="kt-pricing-1__hexagon2"></div>
-                            <span class="kt-pricing-1__icon kt-font-danger"><i class="fa flaticon-rocket"></i></span>
-                        </div>
-                        <span class="kt-pricing-1__price">548<span class="kt-pricing-1__label">$</span></span>
-                        <h2 class="kt-pricing-1__subtitle">Enterprice License</h2>
-                        <span class="kt-pricing-1__description">
-						<span>Lorem ipsum dolor</span>
-						<span>sed do eiusmod</span>
-						<span>magna siad enim</span>
-					</span>
-                        <div class="kt-pricing-1__btn">
-                            <button type="button" class="btn btn-danger btn-wide btn-uppercase btn-bolder btn-sm">Purchase</button>
-                        </div>
-                    </div>
-                    <div class="kt-pricing-1__item col-lg-3">
-                        <div class="kt-pricing-1__visual">
-                            <div class="kt-pricing-1__hexagon1"></div>
-                            <div class="kt-pricing-1__hexagon2"></div>
-                            <span class="kt-pricing-1__icon kt-font-warning"><i class="fa flaticon-gift"></i></span>
-                        </div>
-                        <span class="kt-pricing-1__price">899<span class="kt-pricing-1__label">$</span></span>
-                        <h2 class="kt-pricing-1__subtitle">Custom License</h2>
-                        <span class="kt-pricing-1__description">
-						<span>Lorem ipsum</span>
-						<span>sed do eiusmod tem</span>
-						<span>magna siad enim</span>
-					</span>
-                        <div class="kt-pricing-1__btn">
-                            <button type="button" class="btn btn-warning btn-wide btn-uppercase btn-bolder btn-sm">Purchase</button>
-                        </div>
+
+
+
+
+    <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
+        <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+
+            <!-- begin:: Content Head -->
+            <div class="kt-subheader   kt-grid__item" id="kt_subheader">
+                <div class="kt-container ">
+
+                    <div class="kt-subheader__toolbar">
+
                     </div>
                 </div>
             </div>
+            <!-- end:: Content Head -->
+            <!-- begin:: Content -->
+            <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+                @if(isset($warning))
+                    <div class="alert alert-light alert-elevate" role="alert">
+
+
+                        <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+                        <div class="alert-text">
+
+                            {{$warning}}
+                        </div>
+
+                    </div>
+                @endif
+
+
+                <div class="col-xl-12">
+
+                    <!--begin:: Widgets/Application Sales-->
+                    <div class="kt-portlet kt-portlet--height-fluid">
+                        <div class="kt-portlet__head">
+                            <div class="kt-portlet__head-label">
+                                <h3 class="kt-portlet__head-title">
+                                    انواع الخطابات
+                                </h3>
+                            </div>
+
+                        </div>
+                        <div class="kt-portlet__body">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="kt_widget11_tab1_content">
+
+                                    <!--begin::Widget 11-->
+                                    <div class="kt-widget11">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="border-bottom">
+                                                <tr>
+
+                                                    <td style=" ">الاسم</td>
+
+                                                    <td style=" ">تعديل</td>
+                                                    <td style=" ">مسح</td>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                @foreach($data as $d)
+                                                    <tr class="border-bottom">
+                                                        <td>
+                                                            {{$d->englishName}}
+                                                        </td>
+
+                                                        <td>
+
+
+                                                                <form action="{{ route('lettertypes.destroy',$d->id) }}" method="POST">
+
+                                                                    @csrf
+                                                                    @method('DELETE')
+                                                                    <button type="submit" class="btn btn-label-danger btn-bold btn-icon-h kt-margin-l-10">
+                                                                        مسح
+
+                                                                    </button>
+                                                                </form>
+
+                                                        </td><td>
+                                                            <a href="/lettertypes/{{$d->id}}/edit" class="btn btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                                {{    __('messages.edit')}}
+
+                                                            </a>
+
+
+
+
+
+                                                        </td>
+
+                                                    </tr>
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="kt-widget11__action kt-align-right">
+                                        </div>
+                                    </div>
+
+                                    <!--end::Widget 11-->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--end:: Widgets/Application Sales-->
+                </div>
+
+            </div>
+        </div>	</div>
+    <!-- end:: Content -->							</div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-social-dribbble font-blue-sharp"></i>
+                    <span class="caption-subject font-blue-sharp bold uppercase">Default Tree</span>
+                </div>
+                <div class="actions">
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-cloud-upload"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-wrench"></i>
+                    </a>
+                    <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                        <i class="icon-trash"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="evts" class="demo"></div>
+            <script>
+                $('#evts')
+                    .on("changed.jstree", function (e, data) {
+                        if(data.selected.length) {
+                            alert('The selected node is: ' + data.instance.get_node(data.selected[0]).text);
+                        }
+                    })
+                    .jstree({
+                        'core' : {
+                            'multiple' : false,
+                            'data' : [
+                                { "text" : "Root node", "children" : [
+                                        { "text" : "Child node 1", "id" : 1 },
+                                        { "text" : "Child node 2" }
+                                    ]}
+                            ]
+                        }
+                    });
+            </script>
         </div>
     </div>
 
 @endsection
+

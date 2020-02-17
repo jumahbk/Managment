@@ -99,6 +99,7 @@ Route::resource('departments','DepartmentController')->middleware('auth');;
 Route::resource('stock','StockController')->middleware('auth');;
 Route::resource('dcontracts','DevicecontractsController')->middleware('auth');;
 Route::get('/dcontracts/{id}/create', 'DevicecontractsController@create')->middleware('auth');
+Route::resource('csources','CommunicatorsController')->middleware('auth');;
 
 Route::resource('products','ProductController')->middleware('auth');;
 Route::resource('branches','BranchController')->middleware('auth');;
