@@ -26,6 +26,7 @@ class CreateCommunicationsTable extends Migration
             $table->unsignedBigInteger('letter_type_id')->nullable();
 
             $table->index('communicator_id');
+            $table->boolean('deleted')->default('false');
 
             $table->index('letter_type_id');
             $table->boolean('in')->default('true');

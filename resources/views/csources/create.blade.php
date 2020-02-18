@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.com')
 
 @section('content')
 
@@ -18,119 +18,93 @@
 
 
 
-        <form method="POST" action="/devices"  class="kt-form pt-5">
-            @csrf
+    <form method="POST" action="/csources"  class="kt-form pt-5">
+        @csrf
 
-<div class="row">
-
-
-    <div class="col-md-6">
-
-    <div class="kt-portlet">
-        <div class="kt-portlet__head">
-            <div class="kt-portlet__head-label">
-                <h3 class="kt-portlet__head-title">
-                    @if(isset ( $parent))
-                           Add component to {{$parent->englishName}}
-
-                        <input type="hidden" class="form-control"  name="device_id" value="{{$parent->id}}">
-
-                    @else
-                           Add new device
-                    @endif
-                </h3>
-            </div>
-        </div>
+        <div class="row">
 
 
-        <!--begin::Form-->
+            <div class="col-md-6">
 
-            <div class="kt-portlet__body">
-                <div class="form-group">
-                    <label>English Name</label>
-                    <input type="text" class="form-control"  name="englishName">
-                </div>
-                <div class="form-group">
-                    <label>Arabic Name</label>
-                    <input type="text" class="form-control"  name="arabicName">
-                </div>
-                <div class="form-group">
-                    <label>Department</label>
-                    <div >
-                        <select class="form-control" name="department_id">
-                            @foreach($departments as $t)
-                                <option value="{{$t->id}}"> {{$t->englishName}} </option>
-                            @endforeach
-                        </select>
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                انشاء جهة تواصل
+                            </h3>
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label>Location</label>
-                    <div >
-                        <select class="form-control" name="room_id">
-                            @foreach($rooms as $t)
-                                <option value="{{$t->id}}"> {{$t->englishName}} </option>
-                            @endforeach
-                        </select>
+
+
+
+
+
+                    <!--begin::Form-->
+
+                    <div class="kt-portlet__body">
+                        <div class="form-group">
+                            <label>جهة التواصل</label>
+                            <input type="text" class="form-control"  name="name">
+                        </div>
+                        <div class="form-group">
+                            <label>مسؤول التواصل</label>
+                            <input type="text" class="form-control"  name="contactName">
+                        </div>
+                        <div class="form-group">
+                            <label>العنوان</label>
+                            <input type="text" class="form-control"  name="address">
+                        </div>
+
                     </div>
-                </div>
-                <div class="form-group">
-                    <label>Vendor</label>
-                    <div>
-                        <select class="form-control" name="vendor_id">
-                            @foreach($vendors as $t)
-                                <option value="{{$t->id}}"> {{$t->englishName}} </option>
-                            @endforeach
-                        </select>
-                    </div>
+                    <!--end::Form-->
                 </div>
 
             </div>
-        <!--end::Form-->
-    </div>
 
-</div>
+            <div class="col-md-6">
 
-    <div class="col-md-6">
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                معلومات الاتصال
+                            </h3>
+                        </div>
+                    </div>
 
-        <div class="kt-portlet">
-            <div class="kt-portlet__head">
-                <div class="kt-portlet__head-label">
-                    <h3 class="kt-portlet__head-title">
-                         Details
-                    </h3>
+
+                    <!--begin::Form-->
+
+                    <div class="kt-portlet__body">
+
+
+                        <div class="form-group">
+                            <label>البريد الالكتروني</label>
+                            <input type="email" class="form-control"  name="email">
+                        </div>
+                        <div class="form-group">
+                            <label>رقم الهاتف</label>
+                            <input type="number" class="form-control"  name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label>رقم الجوال</label>
+                            <input type="number" class="form-control"  name="mobile">
+                        </div>
+                        <div class="form-group">
+                            <label>رقم الفاكس</label>
+                            <input type="number" class="form-control"  name="fax">
+                        </div>
+                        <div class="kt-portlet__foot">
+                            <div class="kt-form__actions">
+                                <button type="submit" class="btn btn-brand">حفظ</button>
+                            </div>
+                        </div>
+
+                        <!--end::Form-->
+                    </div>
+
                 </div>
             </div>
-
-
-            <!--begin::Form-->
-
-            <div class="kt-portlet__body">
-
-                <div class="form-group">
-                    <label>Purchase Date</label>
-                    <div >
-                        <input class="form-control" type="date" value="1900-01-01" name="purchased">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Warranty Expiry</label>
-                    <div >
-                        <input class="form-control" type="date" value="1900-01-01" name="warranty">
-                    </div>
-                </div>
-
-            <div class="kt-portlet__foot">
-                <div class="kt-form__actions">
-                    <button type="submit" class="btn btn-brand">Submit</button>
-                </div>
-            </div>
-
-            <!--end::Form-->
-        </div>
-
-    </div>
-</div>
     </form>
 
 

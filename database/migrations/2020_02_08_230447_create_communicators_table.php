@@ -18,6 +18,7 @@ class CreateCommunicatorsTable extends Migration
 
             $table->string('contactName')->nullable();
             $table->string('name')->nullable();
+            $table->string('mobile')->nullable();
 
             $table->string('phone')->nullable();
             $table->string('fax')->nullable();
@@ -26,7 +27,7 @@ class CreateCommunicatorsTable extends Migration
 
             $table->string('address')->nullable();
 
-
+            $table->boolean('deleted')->default(false);
 
 
             $table->timestamps();

@@ -31,7 +31,7 @@ class CommunicatorsController extends Controller
     {
         $t = 'اضافة نوع خطاب';
 
-        return View('lettertypes.create', compact('t'));
+        return View('csources.create', compact('t'));
     }
 
     /**
@@ -43,7 +43,7 @@ class CommunicatorsController extends Controller
     public function store(Request $request)
     {
         $this->save($request, -1);
-        return redirect('/lettertypes');
+        return redirect('/csources');
     }
 
     /**
@@ -61,14 +61,19 @@ class CommunicatorsController extends Controller
     public function save(Request $request, $id)
     {
 
-        $lt = new LetterType();
+        $lt = new Communicators();
         if($id !== -1)
         {
-            $lt = Bank::find($id);
+            $lt = Communicators::find($id);
         }
-        $lt->englishName = $request['englishName'];
-        $lt->arabicName = $request['englishName'];
+        $lt->phone = $request['phone'];
+        $lt->email = $request['email'];
 
+        $lt->address = $request['address'];
+        $lt->fax = $request['fax'];
+        $lt->name = $request['name'];
+        $lt->contactName = $request['contactName'];
+        $lt->mobile = $request['mobile'];
 
         $lt->push();
 

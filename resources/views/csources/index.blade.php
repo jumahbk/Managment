@@ -49,7 +49,7 @@
                             <div class="kt-portlet__head">
                                 <div class="kt-portlet__head-label">
                                     <h3 class="kt-portlet__head-title">
-                                        Device List
+                                     جهات الاتصال
                                     </h3>
                                 </div>
                                 <div class="kt-portlet__head-toolbar">
@@ -57,9 +57,9 @@
                                         <div class="kt-portlet__head-actions">
 
                                             &nbsp;
-                                            <a href="./devices/create" class="btn btn-brand btn-elevate btn-icon-sm">
+                                            <a href="./csources/create" class="btn btn-brand btn-elevate btn-icon-sm">
                                                 <i class="la la-plus"></i>
-                                                {{    __('messages.addnew')}}
+                                               اضافة سجل
                                             </a>
                                         </div>
                                     </div>
@@ -76,14 +76,17 @@
                                                     <thead class="border-bottom">
                                                     <tr>
 
-                                                        <td style=" ">Name</td>
-                                                        <td style=" ">Room</td>
-                                                        <td style=" ">Department</td>
+                                                        <td style=" ">الجهه</td>
+                                                        <td style=" ">العنوان</td>
+                                                        <td style=" ">مسؤول التواصل</td>
+                                                        <td style=" ">الهاتف</td>
 
-                                                        <td style=" ">Vendor</td>
-                                                        <td style=" ">Warranty</td>
-                                                        <td style=" "></td>
-                                                        <td style=" "></td>
+                                                        <td style=" ">الجوال</td>
+                                                        <td style=" ">الايميل</td>
+                                                        <td style=" ">الفاكس</td>
+
+                                                        <td style=" ">تعديل</td>
+                                                        <td style=" ">مسح</td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -91,21 +94,27 @@
                                                     @foreach($data as $d)
                                                     <tr class="border-bottom">
                                                         <td>
-                                                           <a href="/devices/{{$d->id}}"> {{$d->englishName}}</a>
+                                                           {{$d->name}}
                                                         </td>
                                                         <td>
-                                                            {{$d->room->englishName}}
+                                                            {{$d->contactName}}
                                                         </td>
                                                         <td>
-                                                            {{$d->department->englishName}}
+                                                            {{$d->address}}
+                                                        </td>
+                                                        <td>
+                                                            {{$d->phone}}
+                                                        </td>
+                                                        <td>
+                                                            {{$d->mobile}}
+                                                        </td>
+                                                        <td>
+                                                            {{$d->email}}
+                                                        </td>
+                                                        <td>
+                                                            {{$d->fax}}
                                                         </td>
 
-                                                        <td>
-                                                            {{$d->vendor->englishName}}
-                                                        </td>
-                                                        <td>
-                                                           <?php echo $d->getExpiry() ?>
-                                                        </td>
 
                                                         <td>
 
