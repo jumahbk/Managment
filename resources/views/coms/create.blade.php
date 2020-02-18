@@ -1,9 +1,6 @@
-@extends('layouts.main')
+@extends('layouts.com')
 
 @section('content')
-
-
-
 
 
 
@@ -30,7 +27,7 @@
                     <div class="kt-portlet__head">
                         <div class="kt-portlet__head-label">
                             <h3 class="kt-portlet__head-title">
-                                Bank Details
+                                معلومات الصادر
                             </h3>
                         </div>
                     </div>
@@ -40,16 +37,26 @@
 
                     <div class="kt-portlet__body">
                         <div class="form-group">
-                            <label>English Name</label>
-                            <input type="text" class="form-control"  name="englishName">
+                            <label>الجهه</label>
+                            <select class="form-control" name="source_id">
+
+                                <option value="-1"> جهه جديده</option>
+                                <option value="1"> نوع  </option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <label>Arabic Name</label>
-                            <input type="text" class="form-control"  name="arabicName">
+                            <label>نوع الصادر</label>
+                            <select class="form-control" name="letterType_id" onchange="letterType()">
+
+                                <option value="-1"> نوع جديد </option>
+                                <option value="1"> نوع  </option>
+
+
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Short Form Name</label>
-                            <input type="text" class="form-control"  name="short">
+
                         </div>
 
                     </div>
@@ -58,7 +65,7 @@
 
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 hidden" name="letterTypeDiv" id="letterTypeDiv">
 
                 <div class="kt-portlet">
                     <div class="kt-portlet__head">
@@ -114,5 +121,18 @@
     </form>
 
 
+<script>
+    function letterType(){
+    var x = document.getElementById("letterTypeDiv");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+    }
+
+
+
+</script>
 
 @endsection

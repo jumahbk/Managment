@@ -89,6 +89,7 @@ Route::get('/products/{id}/activate', 'ProductController@activate')->middleware(
 
 Route::get('/users/{id}/enable', 'UserController@enable')->middleware('auth');;
 Route::get('/users/{id}/disable', 'UserController@disable')->middleware('auth');;
+Route::resource('coms','CommunicationController')->middleware('auth');;
 
 Route::resource('rooms','RoomController')->middleware('auth');;
 Route::resource('banks','BankController')->middleware('auth');;
