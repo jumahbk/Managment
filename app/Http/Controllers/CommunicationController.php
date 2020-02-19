@@ -6,7 +6,9 @@ use App\Bank;
 use App\Communicators;
 use App\Http\Controllers\Controller;
 use App\LetterType;
+use DateTime;
 use Illuminate\Http\Request;
+use Storage;
 
 class CommunicationController extends Controller
 {
@@ -32,9 +34,9 @@ class CommunicationController extends Controller
     {
         $t = 'انشاء صادر جديد';
         $currentMonth = date('m');
-        $currentyear = date('Y');
+        $currentyear = date('y');
         $currentDate = date('d');
-        $inid = $currentyear . '/' .$currentMonth .'/' . $currentDate . '/' . date('His');
+        $inid = $currentMonth .'/' . $currentDate . '/' . date('s') .''. rand(1,9);
 
         $dests = Communicators::all();
         $ltypes = LetterType::all();
@@ -77,6 +79,38 @@ class CommunicationController extends Controller
         $lt->englishName = $request['englishName'];
         $lt->arabicName = $request['englishName'];
 
+        if($request->file('attachemnt1'))
+        {
+            $now = new DateTime();
+            $file = $request->file('attachemnt1');
+            $name  =  $file->getClientOriginalName();
+            $name = $now->getTimestamp() . '_' . $name;
+            $name = str_replace(' ', '',  $name);
+            Storage::putFileAs('public', $file, $name);
+            $deviceContract->attachemnt1 =  asset('storage/'.$name);
+        }
+
+        if($request->file('attachemnt2'))
+        {
+            $now = new DateTime();
+            $file = $request->file('attachemnt2');
+            $name  =  $file->getClientOriginalName();
+            $name = $now->getTimestamp() . '_' . $name;
+            $name = str_replace(' ', '',  $name);
+            Storage::putFileAs('public', $file, $name);
+            $deviceContract->attachemnt2 =  asset('storage/'.$name);
+        }
+
+        if($request->file('attachemnt3'))
+        {
+            $now = new DateTime();
+            $file = $request->file('attachemnt3');
+            $name  =  $file->getClientOriginalName();
+            $name = $now->getTimestamp() . '_' . $name;
+            $name = str_replace(' ', '',  $name);
+            Storage::putFileAs('public', $file, $name);
+            $deviceContract->attachemnt3 =  asset('storage/'.$name);
+        }
 
         $lt->push();
 
