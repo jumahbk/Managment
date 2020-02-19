@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Bank;
+use App\Communicators;
 use App\Http\Controllers\Controller;
 use App\LetterType;
 use Illuminate\Http\Request;
@@ -35,7 +36,10 @@ class CommunicationController extends Controller
         $currentDate = date('d');
         $inid = $currentyear . '/' .$currentMonth .'/' . $currentDate . '/' . date('His');
 
-        return View('coms.create', compact('t', 'inid'));
+        $dests = Communicators::all();
+        $ltypes = LetterType::all();
+
+        return View('coms.create', compact('t', 'inid','dests', 'ltypes'));
     }
 
     /**

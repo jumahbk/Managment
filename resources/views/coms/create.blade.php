@@ -21,7 +21,7 @@
         <div class="row">
 
 
-            <div class="col-md-6">
+            <div class="col-md-7">
 
                 <div class="kt-portlet">
                     <div class="kt-portlet__head">
@@ -43,27 +43,72 @@
                         
                         <div class="form-group">
                             <label>الجهه</label>
-                            <select class="form-control" name="source_id">
+                            <select class="form-control" name="source_id" id="source_id"onchange="destination()">
 
                                 <option value="-1"> جهه جديده</option>
-                                <option value="1"> نوع  </option>
+                                @foreach($dests as $d)
+                                    <option value="{{$d->id}}">  {{$d->name}} </option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
                             <label>نوع الصادر</label>
-                            <select class="form-control" name="letterType_id" onchange="letterType()">
+                            <select class="form-control" name="letterType_id" id="letterType_id" onchange="letterType()">
 
                                 <option value="-1"> نوع جديد </option>
-                                <option value="1"> نوع  </option>
+                                @foreach($ltypes as $d)
+                                    <option value="{{$d->id}}">  {{$d->englishName}} </option>
+                                @endforeach
 
 
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label>موضوع الصادر</label>
+                            <input type="text" class="form-control"  name="subject">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>ملاحظات</label>
+                            <input type="text" class="form-control"  name="notes">
+                        </div>
+
+                        <div class="form-group">
+                            <label>التاريخ</label>
+                            <input type="date" class="form-control"  name="startDate">
+                        </div>
+                        <div class="form-group">
+                            <label>مرفقات ١</label>
+                            <div></div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="attachemnt1">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>مرفقات ٢</label>
+                            <div></div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="attachemnt2">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>مرفقات ٣</label>
+                            <div></div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="attachemnt3">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                        </div>
+
+
 
 
                         <div class="kt-portlet__foot">
                             <div class="kt-form__actions">
-                                <button type="submit" class="btn btn-brand">حفظ</button>
+                                <button type="submit" class="btn btn-brand  align-right">حفظ</button>
                             </div>
                         </div>
 
@@ -73,9 +118,9 @@
 
             </div>
 
-            <div class="col-md-6 hidden" name="letterTypeDiv" id="letterTypeDiv">
+            <div class="col-md-5 hidden" name="letterTypeDiv" id="letterTypeDiv">
 
-                <div class="row">
+                <div class="row" id="typediv">
 
                     <div class="kt-portlet">
                         <div class="kt-portlet__head">
@@ -102,7 +147,7 @@
                     </div>
 
                 </div>
-                <div class="row">
+                <div class="row" id="destinationdiv">
 
                     <div class="kt-portlet">
                         <div class="kt-portlet__head">
@@ -169,8 +214,10 @@
 
 <script>
     function letterType(){
-    var x = document.getElementById("letterTypeDiv");
-    if (x.style.display === "none") {
+    var x = document.getElementById("typediv");
+        var e = document.getElementById("letterType_id");
+        var selected = e.options[e.selectedIndex].value;
+    if (selected === "-1") {
         x.style.display = "block";
     } else {
         x.style.display = "none";
@@ -178,7 +225,16 @@
     }
 
 
-
+    function destination(){
+        var x = document.getElementById("destinationdiv");
+        var e = document.getElementById("source_id");
+        var selected = e.options[e.selectedIndex].value;
+        if (selected === "-1") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
 </script>
 
 @endsection
