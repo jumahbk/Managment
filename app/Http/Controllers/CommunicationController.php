@@ -17,6 +17,7 @@ class CommunicationController extends Controller
     public function index()
     {
 
+
         $t = 'قائمة انواع الخطابات';
 
         $data = LetterType::all();
@@ -29,8 +30,12 @@ class CommunicationController extends Controller
     public function create()
     {
         $t = 'انشاء صادر جديد';
+        $currentMonth = date('m');
+        $currentyear = date('Y');
+        $currentDate = date('d');
+        $inid = $currentyear . '/' .$currentMonth .'/' . $currentDate . '/' . date('His');
 
-        return View('coms.create', compact('t'));
+        return View('coms.create', compact('t', 'inid'));
     }
 
     /**

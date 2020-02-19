@@ -37,6 +37,11 @@
 
                     <div class="kt-portlet__body">
                         <div class="form-group">
+                            <h3>     رقم الصادر {{$inid}}  </h3>
+
+                        </div>
+                        
+                        <div class="form-group">
                             <label>الجهه</label>
                             <select class="form-control" name="source_id">
 
@@ -54,9 +59,12 @@
 
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label>Short Form Name</label>
 
+
+                        <div class="kt-portlet__foot">
+                            <div class="kt-form__actions">
+                                <button type="submit" class="btn btn-brand">حفظ</button>
+                            </div>
                         </div>
 
                     </div>
@@ -67,56 +75,94 @@
 
             <div class="col-md-6 hidden" name="letterTypeDiv" id="letterTypeDiv">
 
-                <div class="kt-portlet">
-                    <div class="kt-portlet__head">
-                        <div class="kt-portlet__head-label">
-                            <h3 class="kt-portlet__head-title">
-                                Contact Details
-                            </h3>
-                        </div>
-                    </div>
+                <div class="row">
 
-
-                    <!--begin::Form-->
-
-                    <div class="kt-portlet__body">
-
-                        <div class="form-group">
-                            <label>Primary Contact</label>
-                            <input type="text" class="form-control"  name="mainContact">
-                        </div>
-                        <div class="form-group">
-                            <label>Primary Email</label>
-                            <input type="email" class="form-control"  name="mainContactNumber">
-                        </div>
-                        <div class="form-group">
-                            <label>Primary Phone</label>
-                            <input type="number" class="form-control"  name="mainContactEmail">
-                        </div>
-                        <div class="kt-separator kt-separator--dashed"></div>
-
-                        <div class="form-group">
-                            <label>Secondary Contact</label>
-                            <input type="text" class="form-control"  name="secondContact">
-                        </div>
-                        <div class="form-group">
-                            <label>Secondary Email</label>
-                            <input type="email" class="form-control"  name="secondContactNumber">
-                        </div>
-                        <div class="form-group">
-                            <label>Secondary Phone</label>
-                            <input type="number" class="form-control"  name="secondContactEmail">
-                        </div>
-                        <div class="kt-portlet__foot">
-                            <div class="kt-form__actions">
-                                <button type="submit" class="btn btn-brand">Submit</button>
+                    <div class="kt-portlet">
+                        <div class="kt-portlet__head">
+                            <div class="kt-portlet__head-label">
+                                <h3 class="kt-portlet__head-title">
+                                    اضافة نوع خطاب
+                                </h3>
                             </div>
                         </div>
 
+
+                        <!--begin::Form-->
+
+                        <div class="kt-portlet__body">
+                            <div class="form-group">
+                                <label>الاسم</label>
+                                <input type="text" class="form-control"  name="englishName">
+                            </div>
+
+
+
+                        </div>
                         <!--end::Form-->
                     </div>
 
                 </div>
+                <div class="row">
+
+                    <div class="kt-portlet">
+                        <div class="kt-portlet__head">
+                            <div class="kt-portlet__head-label">
+                                <h3 class="kt-portlet__head-title">
+                                    انشاء جهة تواصل
+                                </h3>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <!--begin::Form-->
+
+                        <div class="kt-portlet__body">
+                            <div class="form-group">
+                                <label>جهة التواصل</label>
+                                <input type="text" class="form-control"  name="name">
+                            </div>
+                            <div class="form-group">
+                                <label>مسؤول التواصل</label>
+                                <input type="text" class="form-control"  name="contactName">
+                            </div>
+                            <div class="form-group">
+                                <label>العنوان</label>
+                                <input type="text" class="form-control"  name="address">
+                            </div>
+
+                            <div class="form-group">
+                                <label>البريد الالكتروني</label>
+                                <input type="email" class="form-control"  name="email">
+                            </div>
+                            <div class="form-group">
+                                <label>رقم الهاتف</label>
+                                <input type="number" class="form-control"  name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label>رقم الجوال</label>
+                                <input type="number" class="form-control"  name="mobile">
+                            </div>
+                            <div class="form-group">
+                                <label>رقم الفاكس</label>
+                                <input type="number" class="form-control"  name="fax">
+                            </div>
+
+
+                        </div>
+                        <!--end::Form-->
+
+
+
+
+                    </div>
+
+                </div>
+
+
+
             </div>
     </form>
 
