@@ -38,7 +38,7 @@
                     <div class="kt-portlet__body">
                         <div class="form-group">
                             <h3>     رقم الصادر {{$inid}}  </h3>
-
+                        <input type="hidden" name="internal_id" value="{{$inid}}">
                         </div>
                         
                         <div class="form-group">
@@ -67,7 +67,7 @@
                             <label>موضوع الصادر</label>
                             <input type="text" class="form-control"  name="subject">
                         </div>
-
+                            <input type="hidden" name="in" value="false">
 
                         <div class="form-group">
                             <label>ملاحظات</label>
@@ -76,7 +76,7 @@
 
                         <div class="form-group">
                             <label>التاريخ</label>
-                            <input type="date" class="form-control"  name="startDate">
+                            <input type="date" class="form-control"  name="actionDate">
                         </div>
                         <div class="form-group">
                             <label>مرفقات ١</label>

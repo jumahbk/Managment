@@ -38,6 +38,7 @@ class CreateCommunicationsTable extends Migration
             $table->index('communicator_id');
             $table->index('letter_type_id');
 
+            $table->index('user_id');
 
             $table->boolean('deleted')->default('false');
 

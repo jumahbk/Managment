@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Bank;
+use App\Communication;
 use App\Communicators;
 use App\Http\Controllers\Controller;
 use App\LetterType;
 use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Storage;
 
 class CommunicationController extends Controller
@@ -71,14 +73,30 @@ class CommunicationController extends Controller
     public function save(Request $request, $id)
     {
 
-        $lt = new LetterType();
+        $c = new Communication();
         if($id !== -1)
         {
-            $lt = Bank::find($id);
+            $lt = Communication::find($id);
         }
-        $lt->englishName = $request['englishName'];
-        $lt->arabicName = $request['englishName'];
 
+        $c->communicator_id =  $request['source_id'];
+        $c->letter_type_id =  $request['letterType_id'];
+        $c->subject =  $request['subject'];
+        $c->notes =  $request['notes'];
+        $c->actionDate =  $request['actionDate'];
+        $c->in =  $request['in'];
+        $c->user_id = Auth::id() ;
+        $c->internal_id =  $request['internal_id'];
+
+
+        //HANDLE NEW LETTER TYPE
+
+
+
+        // HANDLE NEW DESTINATION
+
+
+        
         if($request->file('attachemnt1'))
         {
             $now = new DateTime();
@@ -87,7 +105,7 @@ class CommunicationController extends Controller
             $name = $now->getTimestamp() . '_' . $name;
             $name = str_replace(' ', '',  $name);
             Storage::putFileAs('public', $file, $name);
-            $deviceContract->attachemnt1 =  asset('storage/'.$name);
+            $c->attachemnt1 =  asset('storage/'.$name);
         }
 
         if($request->file('attachemnt2'))
@@ -98,7 +116,7 @@ class CommunicationController extends Controller
             $name = $now->getTimestamp() . '_' . $name;
             $name = str_replace(' ', '',  $name);
             Storage::putFileAs('public', $file, $name);
-            $deviceContract->attachemnt2 =  asset('storage/'.$name);
+            $c->attachemnt2 =  asset('storage/'.$name);
         }
 
         if($request->file('attachemnt3'))
@@ -109,7 +127,7 @@ class CommunicationController extends Controller
             $name = $now->getTimestamp() . '_' . $name;
             $name = str_replace(' ', '',  $name);
             Storage::putFileAs('public', $file, $name);
-            $deviceContract->attachemnt3 =  asset('storage/'.$name);
+            $c->attachemnt3 =  asset('storage/'.$name);
         }
 
         $lt->push();
