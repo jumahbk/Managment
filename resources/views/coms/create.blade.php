@@ -15,7 +15,7 @@
 
 
 
-    <form method="POST" action="/banks"  class="kt-form pt-5">
+    <form method="POST" action="/coms"  class="kt-form pt-5">
         @csrf
 
         <div class="row">

@@ -91,12 +91,37 @@ class CommunicationController extends Controller
 
         //HANDLE NEW LETTER TYPE
 
+        if($c->communicator_id == -1)
+        {
+            $lt = new Communicators();
+
+            $lt->phone = $request['phone'];
+            $lt->email = $request['email'];
+
+            $lt->address = $request['address'];
+            $lt->fax = $request['fax'];
+            $lt->name = $request['name'];
+            $lt->contactName = $request['contactName'];
+            $lt->mobile = $request['mobile'];
+
+            $lt->push();
+
+            $c->communicator_id = $lt->id;
+        }
+        if($c->letter_type_id== -1)
+        {
+            $lt = new LetterType();
+            $lt->englishName = $request['englishName'];
+            $lt->arabicName = $request['englishName'];
+            $lt->push();
+            $c->letter_type_id = $lt->id;
+        }
 
 
         // HANDLE NEW DESTINATION
 
 
-        
+
         if($request->file('attachemnt1'))
         {
             $now = new DateTime();
