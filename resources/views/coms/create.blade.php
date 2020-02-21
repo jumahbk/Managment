@@ -53,7 +53,7 @@
                         </div>
                         <div class="form-group">
                             <label>نوع الصادر</label>
-                            <select class="form-control" name="letterType_id" id="letterType_id" onchange="letterType()">
+                            <select class="form-control" name="lettertype_id" id="letterType_id" onchange="letterType()">
 
                                 <option value="-1"> نوع جديد </option>
                                 @foreach($ltypes as $d)

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Communicators extends Model
+class Lettertype extends Model
 {
     public function communications()
     {

@@ -1,97 +1,205 @@
 @extends('layouts.com')
 
 @section('content')
-    <?php
-    App::setLocale(Session::get('applocale'));
 
-    $locale = App::getLocale();
 
-    ?>
-    <div class="kt-portlet">
-        <div class="kt-portlet__head">
-            <div class="kt-portlet__head-label">
-			<span class="kt-portlet__head-icon">
-			<i class="la la-leaf"></i>
-			</span>
-                <h3 class="kt-portlet__head-title">
-                    Fluid Pricing Table
-                </h3>
-            </div>
-        </div>
-        <div class="kt-portlet__body">
-            <div class="kt-pricing-1">
-                <div class="kt-pricing-1__items row">
-                    <div class="kt-pricing-1__item col-lg-3">
-                        <div class="kt-pricing-1__visual">
-                            <div class="kt-pricing-1__hexagon1"></div>
-                            <div class="kt-pricing-1__hexagon2"></div>
-                            <span class="kt-pricing-1__icon kt-font-brand"><i class="fa flaticon-piggy-bank"></i></span>
-                        </div>
-                        <span class="kt-pricing-1__price">Free</span>
-                        <h2 class="kt-pricing-1__subtitle">1 End Product License</h2>
-                        <span class="kt-pricing-1__description">
-						<span>Lorem ipsum aret</span>
-						<span>sed do eiusmod</span>
-						<span>magna siad ali</span>
-					</span>
-                        <div class="kt-pricing-1__btn">
-                            <button type="button" class="btn btn-brand btn-custom btn-pill btn-wide btn-uppercase btn-bolder btn-sm">Purchase</button>
-                        </div>
-                    </div>
-                    <div class="kt-pricing-1__item col-lg-3">
-                        <div class="kt-pricing-1__visual">
-                            <div class="kt-pricing-1__hexagon1"></div>
-                            <div class="kt-pricing-1__hexagon2"></div>
-                            <span class="kt-pricing-1__icon kt-font-success"><i class="fa flaticon-confetti"></i></span>
-                        </div>
-                        <span class="kt-pricing-1__price">69<span class="kt-pricing-1__label">$</span></span>
-                        <h2 class="kt-pricing-1__subtitle">Business License</h2>
-                        <span class="kt-pricing-1__description">
-						<span>Lorem ipsum</span>
-						<span>sed do eiusmod</span>
-						<span>magna siad enim aliqua</span>
-					</span>
-                        <div class="kt-pricing-1__btn">
-                            <button type="button" class="btn btn-success btn-wide btn-uppercase btn-bolder btn-sm">Purchase</button>
-                        </div>
-                    </div>
-                    <div class="kt-pricing-1__item col-lg-3">
-                        <div class="kt-pricing-1__visual">
-                            <div class="kt-pricing-1__hexagon1"></div>
-                            <div class="kt-pricing-1__hexagon2"></div>
-                            <span class="kt-pricing-1__icon kt-font-danger"><i class="fa flaticon-rocket"></i></span>
-                        </div>
-                        <span class="kt-pricing-1__price">548<span class="kt-pricing-1__label">$</span></span>
-                        <h2 class="kt-pricing-1__subtitle">Enterprice License</h2>
-                        <span class="kt-pricing-1__description">
-						<span>Lorem ipsum dolor</span>
-						<span>sed do eiusmod</span>
-						<span>magna siad enim</span>
-					</span>
-                        <div class="kt-pricing-1__btn">
-                            <button type="button" class="btn btn-danger btn-wide btn-uppercase btn-bolder btn-sm">Purchase</button>
-                        </div>
-                    </div>
-                    <div class="kt-pricing-1__item col-lg-3">
-                        <div class="kt-pricing-1__visual">
-                            <div class="kt-pricing-1__hexagon1"></div>
-                            <div class="kt-pricing-1__hexagon2"></div>
-                            <span class="kt-pricing-1__icon kt-font-warning"><i class="fa flaticon-gift"></i></span>
-                        </div>
-                        <span class="kt-pricing-1__price">899<span class="kt-pricing-1__label">$</span></span>
-                        <h2 class="kt-pricing-1__subtitle">Custom License</h2>
-                        <span class="kt-pricing-1__description">
-						<span>Lorem ipsum</span>
-						<span>sed do eiusmod tem</span>
-						<span>magna siad enim</span>
-					</span>
-                        <div class="kt-pricing-1__btn">
-                            <button type="button" class="btn btn-warning btn-wide btn-uppercase btn-bolder btn-sm">Purchase</button>
-                        </div>
+    <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch" id="kt_body">
+        <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+
+            <!-- begin:: Content Head -->
+            <div class="kt-subheader align-right  kt-grid__item" id="kt_subheader">
+
+                <div class="kt-portlet__head-toolbar">
+                    <div class="kt-portlet__head-wrapper">
+
                     </div>
                 </div>
+
+
             </div>
-        </div>
+            <!-- end:: Content Head -->
+            <!-- begin:: Content -->
+            <div class="kt-container  kt-grid__item kt-grid__item--fluid">
+                @if(isset($warning))
+                    <div class="alert alert-light alert-elevate" role="alert">
+
+
+                        <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
+                        <div class="alert-text">
+
+                            {{$warning}}
+                        </div>
+
+                    </div>
+                @endif
+
+
+                <div class="col-xl-12">
+
+                    <!--begin:: Widgets/Application Sales-->
+                    <div class="kt-portlet kt-portlet--height-fluid">
+                        <div class="kt-portlet__head">
+                            <div class="kt-portlet__head-label">
+                                <h3 class="kt-portlet__head-title">
+                                    قائمة الصادر
+                                </h3>
+                            </div>
+                            <div class="kt-portlet__head-toolbar">
+                                <div class="kt-portlet__head-wrapper">
+                                    <div class="kt-portlet__head-actions">
+
+                                        &nbsp;
+                                        <a href="./coms/create" class="btn btn-brand btn-elevate btn-icon-sm">
+                                            <i class="la la-plus"></i>
+                                            صادر جديد
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kt-portlet__body">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="kt_widget11_tab1_content">
+
+                                    <!--begin::Widget 11-->
+                                    <div class="kt-widget11">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="border-bottom">
+                                                <tr>
+
+                                                    <td style=" ">نوع الخطاب</td>
+                                                    <td style=" ">الجهه</td>
+                                                    <td style=" ">الموضوع</td>
+
+                                                    <td style=" ">التاريخ</td>
+                                                    <td style=" ">١</td>
+                                                    <td style=" ">٢</td>
+                                                    <td style=" ">٣</td>
+
+                                                    <td style=" "></td>
+                                                    <td style=" "></td>
+
+
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                @foreach($data as $d)
+                                                    <tr class="border-bottom">
+                                                        <td>
+                                                           {{$d->letterType->englishName}}
+                                                        </td>
+                                                        <td>
+                                                            {{$d->communicators->name}}
+                                                        </td>
+                                                        <td>
+                                                            {{$d->subject}}
+                                                        </td>
+                                                        <td>
+                                                            {{$d->notes}}
+                                                        </td>
+                                                        <td>
+                                                            {{$d->actionDate}}
+                                                        </td>
+                                                        <td>
+                                                            {{$d->attachment1}}
+
+                                                        </td>
+                                                        <td>
+                                                            {{$d->attachment2}}
+
+                                                        </td>
+                                                        <td>
+                                                            {{$d->attachment3}}
+
+                                                        </td>
+
+                                                        <td width="50px">
+
+                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                                 رد
+
+                                                            </a>
+
+
+
+
+
+                                                        </td>
+
+                                                        <td width="50px">
+
+                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                                التفاصيل
+
+                                                            </a>
+
+
+
+
+
+                                                        </td>
+
+
+                                                        <td width="50px">
+
+                                                            @if($d->deleted == 0)
+                                                                <form action="{{ route('devices.destroy',$d->id) }}" method="POST">
+
+                                                                    @csrf
+                                                                    @method('DELETE')
+                                                                    <button type="submit" class="btn btn-thin btn-label-danger btn-bold btn-icon-h kt-margin-l-10">
+                                                                        مسح
+
+                                                                    </button>
+                                                                </form>
+                                                            @else
+
+                                                                <form action="/devices/restore" method="POST">
+
+                                                                    @csrf
+                                                                    <input type="hidden" name="id" value="{{$d->id}}">
+
+                                                                </form>
+
+                                                            @endif
+                                                        </td><td width="50px">
+
+                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                               تعديل
+
+                                                            </a>
+
+
+
+
+
+                                                        </td>
+
+                                                    </tr>
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="kt-widget11__action kt-align-right">
+                                        </div>
+                                    </div>
+
+                                    <!--end::Widget 11-->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--end:: Widgets/Application Sales-->
+                </div>
+
+            </div>
+        </div>	</div>
+    <!-- end:: Content -->							</div>
     </div>
+
 
 @endsection

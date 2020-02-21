@@ -8,7 +8,7 @@ use App\Company;
 use App\Department;
 use App\Devicecontract;
 use App\Http\Controllers\Controller;
-use App\LetterType;
+use App\Lettertype;
 use Illuminate\Http\Request;
 
 class LetterTypeController extends Controller
@@ -23,7 +23,7 @@ class LetterTypeController extends Controller
 
         $t = 'قائمة انواع الخطابات';
 
-        $data = LetterType::all();
+        $data = Lettertype::all();
 
         return View('lettertypes.index', compact('data', 't'));
     }
@@ -64,7 +64,7 @@ class LetterTypeController extends Controller
     public function save(Request $request, $id)
     {
 
-        $lt = new LetterType();
+        $lt = new Lettertype();
         if($id !== -1)
         {
             $lt = Bank::find($id);
@@ -114,7 +114,7 @@ class LetterTypeController extends Controller
      */
     public function destroy($id)
     {
-        LetterType::destroy($id);
+        Lettertype::destroy($id);
         return redirect('/lettertypes');
     }
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Bank;
 use App\Communicators;
 use App\Http\Controllers\Controller;
-use App\LetterType;
+use App\Lettertype;
 use Illuminate\Http\Request;
 
 class CommunicatorsController extends Controller
@@ -116,7 +116,7 @@ class CommunicatorsController extends Controller
      */
     public function destroy($id)
     {
-        LetterType::destroy($id);
+        Lettertype::destroy($id);
         return redirect('/lettertypes');
     }
 

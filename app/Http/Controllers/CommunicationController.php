@@ -6,7 +6,7 @@ use App\Bank;
 use App\Communication;
 use App\Communicators;
 use App\Http\Controllers\Controller;
-use App\LetterType;
+use App\Lettertype;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -25,9 +25,9 @@ class CommunicationController extends Controller
 
         $t = 'قائمة انواع الخطابات';
 
-        $data = LetterType::all();
+        $data = Communication::all();
 
-        return View('lettertypes.index', compact('data', 't'));
+        return View('coms.index', compact('data', 't'));
     }
 
 
@@ -41,7 +41,7 @@ class CommunicationController extends Controller
         $inid = $currentMonth .'/' . $currentDate . '/' . date('s') .''. rand(1,9);
 
         $dests = Communicators::all();
-        $ltypes = LetterType::all();
+        $ltypes = Lettertype::all();
 
         return View('coms.create', compact('t', 'inid','dests', 'ltypes'));
     }
@@ -80,7 +80,7 @@ class CommunicationController extends Controller
         }
 
         $c->communicator_id =  $request['source_id'];
-        $c->letter_type_id =  $request['letterType_id'];
+        $c->lettertype_id =  $request['lettertype_id'];
         $c->subject =  $request['subject'];
         $c->notes =  $request['notes'];
         $c->actionDate =  $request['actionDate'];
@@ -108,13 +108,13 @@ class CommunicationController extends Controller
 
             $c->communicator_id = $lt->id;
         }
-        if($c->letter_type_id== -1)
+        if($c->lettertype_id== -1)
         {
-            $lt = new LetterType();
+            $lt = new Lettertype();
             $lt->englishName = $request['englishName'];
             $lt->arabicName = $request['englishName'];
             $lt->push();
-            $c->letter_type_id = $lt->id;
+            $c->lettertype_id = $lt->id;
         }
 
 
@@ -155,9 +155,9 @@ class CommunicationController extends Controller
             $c->attachemnt3 =  asset('storage/'.$name);
         }
 
-        $lt->push();
+        $c->push();
 
-        return redirect('/lettertypes');
+        return redirect('/coms');
 
 
 
@@ -196,7 +196,7 @@ class CommunicationController extends Controller
      */
     public function destroy($id)
     {
-        LetterType::destroy($id);
+        Lettertype::destroy($id);
         return redirect('/lettertypes');
     }
 

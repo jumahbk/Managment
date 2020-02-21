@@ -16,6 +16,9 @@ class CreateCommunicationsTable extends Migration
         Schema::create('communications', function (Blueprint $table) {
             $table->bigIncrements('id');
 
+            $table->unsignedBigInteger('parent_id')->nullable();
+
+
             $table->unsignedBigInteger('user_id')->nullable();
 
             $table->string('attachment1')->nullable();
@@ -33,13 +36,13 @@ class CreateCommunicationsTable extends Migration
 
 
             $table->unsignedBigInteger('communicator_id')->nullable();
-            $table->unsignedBigInteger('letter_type_id')->nullable();
+            $table->unsignedBigInteger('lettertype_id')->nullable();
 
             $table->index('communicator_id');
-            $table->index('letter_type_id');
+            $table->index('lettertype_id');
 
             $table->index('user_id');
-
+            $table->index('parent_id');
             $table->boolean('deleted')->default('false');
 
             $table->boolean('in')->default('true');

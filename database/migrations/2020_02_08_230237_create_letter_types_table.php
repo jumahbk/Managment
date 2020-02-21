@@ -13,7 +13,7 @@ class CreateLetterTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('letter_types', function (Blueprint $table) {
+        Schema::create('lettertypes', function (Blueprint $table) {
             $table->bigIncrements('id');
 
             $table->string('englishName')->nullable();
