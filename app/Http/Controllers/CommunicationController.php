@@ -29,6 +29,7 @@ class CommunicationController extends Controller
 
         return View('coms.index', compact('data', 't'));
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -60,7 +61,21 @@ class CommunicationController extends Controller
         return View('coms.inbox', compact('data', 't'));
     }
 
+    public function answer($id)
+    {
+        $t = 'انشاء صادر جديد';
+        $parentid = $id;
+        $currentMonth = date('m');
+        $currentyear = date('y');
+        $currentDate = date('d');
+        $parent = Communication::find($id);
+        $inid = $currentMonth .'/' . $currentDate . '/' . date('s') .''. rand(1,9);
 
+        $dests = Communicators::all();
+        $ltypes = Lettertype::all();
+
+        return View('coms.answer', compact('t', 'inid','dests', 'ltypes','parentid','parent'));
+    }
     public function create()
     {
         $t = 'انشاء صادر جديد';
@@ -129,6 +144,7 @@ class CommunicationController extends Controller
         $c->in =  $request['in'];
         $c->user_id = Auth::id() ;
         $c->internal_id =  $request['internal_id'];
+        $c->parent_id =  $request['parent_id'];
 
 
         //HANDLE NEW LETTER TYPE
