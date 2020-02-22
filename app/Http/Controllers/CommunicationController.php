@@ -29,7 +29,36 @@ class CommunicationController extends Controller
 
         return View('coms.index', compact('data', 't'));
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function outbox()
+    {
 
+
+        $t = 'قائمة انواع الخطابات';
+
+        $data = Communication::all();
+
+        return View('coms.outbox', compact('data', 't'));
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function inbox()
+    {
+
+
+        $t = 'قائمة انواع الخطابات';
+
+        $data = Communication::all();
+
+        return View('coms.inbox', compact('data', 't'));
+    }
 
 
     public function create()
@@ -46,6 +75,20 @@ class CommunicationController extends Controller
         return View('coms.create', compact('t', 'inid','dests', 'ltypes'));
     }
 
+    public function increate()
+    {
+        $t = 'انشاء وارد جديد';
+        $currentMonth = date('m');
+        $currentyear = date('y');
+        $currentDate = date('d');
+        $inid = $currentMonth .'/' . $currentDate . '/' . date('s') .''. rand(1,9);
+
+        $dests = Communicators::all();
+        $ltypes = Lettertype::all();
+
+        return View('coms.increate', compact('t', 'inid','dests', 'ltypes'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -54,8 +97,7 @@ class CommunicationController extends Controller
      */
     public function store(Request $request)
     {
-        $this->save($request, -1);
-        return redirect('/lettertypes');
+        return $this->save($request, -1);
     }
 
     /**
@@ -79,7 +121,7 @@ class CommunicationController extends Controller
             $lt = Communication::find($id);
         }
 
-        $c->communicator_id =  $request['source_id'];
+        $c->communicator_id =  $request['communicator_id'];
         $c->lettertype_id =  $request['lettertype_id'];
         $c->subject =  $request['subject'];
         $c->notes =  $request['notes'];
@@ -130,7 +172,8 @@ class CommunicationController extends Controller
             $name = $now->getTimestamp() . '_' . $name;
             $name = str_replace(' ', '',  $name);
             Storage::putFileAs('public', $file, $name);
-            $c->attachemnt1 =  asset('storage/'.$name);
+            $c->attachment1 =  asset('storage/'.$name);
+
         }
 
         if($request->file('attachemnt2'))
@@ -141,7 +184,7 @@ class CommunicationController extends Controller
             $name = $now->getTimestamp() . '_' . $name;
             $name = str_replace(' ', '',  $name);
             Storage::putFileAs('public', $file, $name);
-            $c->attachemnt2 =  asset('storage/'.$name);
+            $c->attachment2 =  asset('storage/'.$name);
         }
 
         if($request->file('attachemnt3'))
@@ -152,7 +195,7 @@ class CommunicationController extends Controller
             $name = $now->getTimestamp() . '_' . $name;
             $name = str_replace(' ', '',  $name);
             Storage::putFileAs('public', $file, $name);
-            $c->attachemnt3 =  asset('storage/'.$name);
+            $c->attachment3 =  asset('storage/'.$name);
         }
 
         $c->push();

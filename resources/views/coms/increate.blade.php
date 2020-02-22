@@ -27,7 +27,7 @@
                     <div class="kt-portlet__head">
                         <div class="kt-portlet__head-label">
                             <h3 class="kt-portlet__head-title">
-                                معلومات الصادر
+                                معلومات الوارد
                             </h3>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
 
                     <div class="kt-portlet__body">
                         <div class="form-group">
-                            <h3>     رقم الصادر {{$inid}}  </h3>
+                            <h3>     رقم الوارد {{$inid}}  </h3>
                         <input type="hidden" name="internal_id" value="{{$inid}}">
                         </div>
                         
@@ -52,7 +52,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>نوع الصادر</label>
+                            <label>نوع الوارد</label>
                             <select class="form-control" name="lettertype_id" id="letterType_id" onchange="letterType()">
 
                                 <option value="-1"> نوع جديد </option>
@@ -64,10 +64,14 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>موضوع الصادر</label>
+                            <label>رقم الوارد من المصدر</label>
+                            <input type="text" class="form-control"  name="source_id">
+                        </div>
+                        <div class="form-group">
+                            <label>موضوع الوارد</label>
                             <input type="text" class="form-control"  name="subject">
                         </div>
-                            <input type="hidden" name="in" value="false">
+                            <input type="hidden" name="in" value="true">
 
                         <div class="form-group">
                             <label>ملاحظات</label>

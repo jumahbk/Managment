@@ -88,18 +88,18 @@
                                                         </td>
 
                                                         <td>
-                                                            @if($d->attachemnt1 != null)
-                                                           <a href="{{$d->attachemnt1}}">Download</a>
+                                                            @if($d->attatchment1 != null)
+                                                           <a href="{{$d->attatchment1}}">Download</a>
                                                             @endif
                                                         </td>
                                                         <td>
-                                                            @if($d->attachemnt2 != null)
-                                                            <a href="{{$d->attachemnt2}}">Download</a>
+                                                            @if($d->attatchment2 != null)
+                                                            <a href="{{$d->attatchment2}}">Download</a>
                                                             @endif
                                                         </td>
                                                         <td>
-                                                            @if($d->attachemnt3 != null)
-                                                            <a href="{{$d->attachemnt3}}">Download</a>
+                                                            @if($d->attatchment3 != null)
+                                                            <a href="{{$d->attatchment3}}">Download</a>
                                                             @endif
                                                         </td>
 

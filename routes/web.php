@@ -32,6 +32,9 @@ Route::get('/stock/{id}/return','StockController@return' )->middleware('auth');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/stock/{id}/destroy', 'StockController@destroy')->middleware('auth');;
+Route::get('/coms/increate', 'CommunicationController@increate')->middleware('auth');;
+Route::get('/coms/inbox', 'CommunicationController@inbox')->middleware('auth');;
+Route::get('/coms/outbox', 'CommunicationController@outbox')->middleware('auth');;
 
 Auth::routes();
 Route::get('/stock/returnlog', 'StockController@returnLog')->middleware('auth');
