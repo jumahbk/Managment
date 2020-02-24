@@ -25,7 +25,7 @@ class CommunicationController extends Controller
 
         $t = 'قائمة انواع الخطابات';
 
-        $data = Communication::all();
+        $data = Communication::where('parent_id' , '=', null)->get();
 
         return View('coms.index', compact('data', 't'));
     }
@@ -123,7 +123,16 @@ class CommunicationController extends Controller
      */
     public function show($id)
     {
-        //
+
+        $t = 'قائمة انواع الخطابات';
+
+        $d = Communication::find($id);
+        $kids = Communication::where('parent_id' , '=', $d->id)->get();
+
+        return View('coms.show', compact('d', 'kids', 't'));
+
+
+
     }
 
 

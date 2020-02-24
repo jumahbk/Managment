@@ -122,7 +122,7 @@
 
                                                         <td width="50px">
 
-                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}/answer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
                                                                  رد
 
                                                             </a>
@@ -135,7 +135,7 @@
 
                                                         <td width="50px">
 
-                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                                                 التفاصيل
 
                                                             </a>
@@ -150,7 +150,7 @@
                                                         <td width="50px">
 
                                                             @if($d->deleted == 0)
-                                                                <form action="{{ route('devices.destroy',$d->id) }}" method="POST">
+                                                                <form action="{{ route('coms.destroy',$d->id) }}" method="POST">
 
                                                                     @csrf
                                                                     @method('DELETE')
@@ -161,7 +161,7 @@
                                                                 </form>
                                                             @else
 
-                                                                <form action="/devices/restore" method="POST">
+                                                                <form action="/coms/restore" method="POST">
 
                                                                     @csrf
                                                                     <input type="hidden" name="id" value="{{$d->id}}">
@@ -171,7 +171,7 @@
                                                             @endif
                                                         </td><td width="50px">
 
-                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                                                تعديل
 
                                                             </a>
@@ -324,7 +324,7 @@
 
                                                         <td width="50px">
 
-                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}/edit" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
                                                                 رد
 
                                                             </a>
@@ -337,7 +337,7 @@
 
                                                         <td width="50px">
 
-                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                                                 التفاصيل
 
                                                             </a>
@@ -352,7 +352,7 @@
                                                         <td width="50px">
 
                                                             @if($d->deleted == 0)
-                                                                <form action="{{ route('devices.destroy',$d->id) }}" method="POST">
+                                                                <form action="{{ route('coms.destroy',$d->id) }}" method="POST">
 
                                                                     @csrf
                                                                     @method('DELETE')
@@ -363,7 +363,7 @@
                                                                 </form>
                                                             @else
 
-                                                                <form action="/devices/restore" method="POST">
+                                                                <form action="/coms/restore" method="POST">
 
                                                                     @csrf
                                                                     <input type="hidden" name="id" value="{{$d->id}}">
@@ -373,7 +373,7 @@
                                                             @endif
                                                         </td><td width="50px">
 
-                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                                                 تعديل
 
                                                             </a>
