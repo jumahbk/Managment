@@ -26,6 +26,8 @@ class CreateCommunicationsTable extends Migration
             $table->string('attachment3')->nullable();
             $table->string('internal_id')->nullable();
             $table->string('source_id')->nullable();
+            $table->integer('attachmentCount')->default(0);
+            $table->string('hdate')->nullable();
 
             $table->date('actionDate')->nullable();
 

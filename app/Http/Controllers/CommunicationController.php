@@ -7,6 +7,7 @@ use App\Communication;
 use App\Communicators;
 use App\Http\Controllers\Controller;
 use App\Lettertype;
+use App\Yearcounter;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -80,10 +81,12 @@ class CommunicationController extends Controller
     {
         $t = 'انشاء صادر جديد';
         $currentMonth = date('m');
-        $currentyear = date('y');
+        $currentyear = date('Y');
         $currentDate = date('d');
-        $inid = $currentMonth .'/' . $currentDate . '/' . date('s') .''. rand(1,9);
+        $inid = $currentDate .'/' .  $currentMonth . '/' .$currentyear  . '/' . date('s') .''. rand(1,9);
+        $counter = Yearcounter::where('year' , '=', (int) $currentyear)->get()->first();
 
+        $inid = $counter->year . '/' . ($counter->count + 1);
         $dests = Communicators::all();
         $ltypes = Lettertype::all();
 
@@ -154,7 +157,7 @@ class CommunicationController extends Controller
         $c->user_id = Auth::id() ;
         $c->internal_id =  $request['internal_id'];
         $c->parent_id =  $request['parent_id'];
-
+        $c->attachmentCount =  $request['attachmentCount'];
 
         //HANDLE NEW LETTER TYPE
 
@@ -224,6 +227,10 @@ class CommunicationController extends Controller
         }
 
         $c->push();
+        $currentyear = date('Y');
+        $counter = Yearcounter::where('year' , '=', (int) $currentyear)->get()->first();
+        $counter->count = $counter->count + 1;
+        $counter->push();
 
         return redirect('/coms');
 
