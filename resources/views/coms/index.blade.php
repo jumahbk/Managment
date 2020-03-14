@@ -70,6 +70,11 @@
 
                                                     <td style=" ">نوع الخطاب</td>
                                                     <td style=" ">الجهه</td>
+                                                    <td style=" ">الرقم الداخلي</td>
+
+
+
+
                                                     <td style=" ">الموضوع</td>
                                                     <td style=" ">ملاحظات</td>
                                                     <td style=" ">التاريخ</td>
@@ -95,6 +100,10 @@
                                                         <td>
                                                             {{$d->communicators->name}}
                                                         </td>
+                                                        <td>
+                                                            {{$d->internal_id}}
+                                                        </td>
+
                                                         <td>
                                                             {{$d->subject}}
                                                         </td>
@@ -271,6 +280,8 @@
 
                                                     <td style=" ">نوع الخطاب</td>
                                                     <td style=" ">الجهه</td>
+                                                    <td style=" "> رقم الجهه</td>
+
                                                     <td style=" ">الموضوع</td>
                                                     <td style=" ">ملاحظات</td>
                                                     <td style=" ">التاريخ</td>
@@ -297,6 +308,9 @@
                                                         <td>
                                                             {{$d->communicators->name}}
                                                         </td>
+                                                            <td>
+                                                                {{$d->source_id}}
+                                                            </td>
                                                         <td>
                                                             {{$d->subject}}
                                                         </td>
