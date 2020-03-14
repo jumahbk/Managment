@@ -67,11 +67,14 @@ class CommunicationController extends Controller
         $t = 'انشاء صادر جديد';
         $parentid = $id;
         $currentMonth = date('m');
-        $currentyear = date('y');
+        $currentyear = date('Y');
         $currentDate = date('d');
         $parent = Communication::find($id);
         $inid = $currentMonth .'/' . $currentDate . '/' . date('s') .''. rand(1,9);
 
+        $counter = Yearcounter::where('year' , '=', (int) $currentyear)->get()->first();
+
+        $inid = $counter->year . '/' . ($counter->count + 1);
         $dests = Communicators::all();
         $ltypes = Lettertype::all();
 
