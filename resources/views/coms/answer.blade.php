@@ -27,7 +27,13 @@
                     <div class="kt-portlet__head">
                         <div class="kt-portlet__head-label">
                             <h3 class="kt-portlet__head-title">
-                                رد صادر على
+
+
+
+
+                                ملحق ل
+
+
                                 {{$parent->subject}} - {{$parent->internal_id}} - {{ $parent->source_id }}
                             </h3>
                         </div>
@@ -48,7 +54,12 @@
 
                                 <option value="-1"> جهه جديده</option>
                                 @foreach($dests as $d)
-                                    <option value="{{$d->id}}">  {{$d->name}} </option>
+                                    <option value="{{$d->id}}"
+                                    @if($parent->communicator_id == $d->id)
+                                    selected
+                                    @endif
+
+                                    >  {{$d->name}} </option>
                                 @endforeach
                             </select>
                         </div>
@@ -58,7 +69,15 @@
 
                                 <option value="-1"> نوع جديد </option>
                                 @foreach($ltypes as $d)
-                                    <option value="{{$d->id}}">  {{$d->englishName}} </option>
+                                    <option value="{{$d->id}}"
+
+                                            @if($parent->lettertype_id == $d->id)
+                                            selected
+                                            @endif
+
+
+
+                                    >    {{$d->englishName}} </option>
                                 @endforeach
 
 
@@ -137,7 +156,7 @@
 
             <div class="col-md-5 hidden" name="letterTypeDiv" id="letterTypeDiv">
 
-                <div class="row" id="typediv">
+                <div class="row none" id="typediv">
 
                     <div class="kt-portlet">
                         <div class="kt-portlet__head">
@@ -230,6 +249,12 @@
 
 
 <script>
+    var j = document.getElementById("typediv");
+    j.style.display = "none";
+    var z = document.getElementById("destinationdiv");
+    z.style.display = "none";
+
+
     function letterType(){
     var x = document.getElementById("typediv");
         var e = document.getElementById("letterType_id");

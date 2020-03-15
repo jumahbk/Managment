@@ -104,12 +104,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel"  aria-haspopup="false"><a href="/coms/" class="kt-menu__link "><span class="kt-menu__link-text">الرئيسيه</span><i class="kt-menu__hor-arrow la la-angle-down"></i></a>
 
                                     </li>
-                                    <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel"  aria-haspopup="false"><a href="/coms/outbox/" class="kt-menu__link "><span class="kt-menu__link-text">الصادر</span><i class="kt-menu__hor-arrow la la-angle-down"></i></a>
 
-                                    </li>
-                                    <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel"  aria-haspopup="false"><a href="/coms/inbox/" class="kt-menu__link "><span class="kt-menu__link-text">الوارد</span><i class="kt-menu__hor-arrow la la-angle-down"></i></a>
-
-                                    </li>
                                     <li class="kt-menu__item  kt-menu__item--open kt-menu__item--here kt-menu__item--submenu kt-menu__item--rel" aria-haspopup="false"><a href="/csources/" class="kt-menu__link"><span class="kt-menu__link-text">الجهات</span><i class="kt-menu__hor-arrow la la-angle-down"></i></a>
 
                                     </li>

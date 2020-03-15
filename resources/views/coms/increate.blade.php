@@ -77,10 +77,27 @@
                             <label>ملاحظات</label>
                             <input type="text" class="form-control"  name="notes">
                         </div>
+                        <div class="form-group">
+                            <label>عدد الملحقات</label>
+                            <input type="number" class="form-control"  value='0' name="attachmentCount">
+                        </div>
 
                         <div class="form-group">
                             <label>التاريخ</label>
                             <input type="date" class="form-control"  name="actionDate">
+                        </div>
+                        <div class="form-group">
+                            <label> التاريخ الهجري</label>
+                            <div class="row">
+                                <label class="p-3">اليوم </label>
+                                <input type="number" class="form-control col-md-1"  name="hday">
+
+                                <label class="p-3">الشهر </label>
+                                <input type="number" class="form-control col-md-1"  name="hm">
+
+                                <label class="p-3">السنه </label>
+                                <input type="number" class="form-control col-md-1"  name="hy">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label>مرفقات ١</label>

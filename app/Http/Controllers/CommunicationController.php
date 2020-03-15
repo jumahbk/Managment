@@ -100,9 +100,11 @@ class CommunicationController extends Controller
     {
         $t = 'انشاء وارد جديد';
         $currentMonth = date('m');
-        $currentyear = date('y');
+        $currentyear = date('Y');
         $currentDate = date('d');
-        $inid = $currentMonth .'/' . $currentDate . '/' . date('s') .''. rand(1,9);
+        $inid = $currentDate .'/' .  $currentMonth . '/' .$currentyear  . '/' . date('s') .''. rand(1,9);
+        $counter = Yearcounter::where('year' , '=', (int) $currentyear)->get()->first();
+        $inid = $counter->year . '/' . ($counter->count + 1);
 
         $dests = Communicators::all();
         $ltypes = Lettertype::all();
