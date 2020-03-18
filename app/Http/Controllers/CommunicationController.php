@@ -82,7 +82,12 @@ class CommunicationController extends Controller
         $inid = $counter->year . '/' . ($counter->count + 1);
         $dests = Communicators::all();
         $ltypes = Lettertype::all();
+        if($id> -1){
 
+            $parent = Communication::find($id);
+            return View('coms.create', compact('t', 'inid','dests', 'ltypes', 'in', 'parent'));
+
+        }
         return View('coms.create', compact('t', 'inid','dests', 'ltypes', 'in'));
     }
 

@@ -24,9 +24,28 @@
             <div class="col-md-7">
 
                 <div class="kt-portlet">
+
+                    @if(@isset($parent))
+
+
+                        <div class="kt-portlet__body">
+                            <div class="form-group">
+                                <label>         ملحق ل</label>
+                                <input disabled type="text" value="{{$parent->subject}}" class="form-control" >
+                                <input disabled type="text" value="{{$parent->internal_id}}"      class="form-control" >
+                                <input disabled type="text" value="{{$parent->source_id}}" class="form-control"  >
+                                <input type="hidden" name="parent_id" value="{{$parent->id}}">
+
+                            </div>
+
+                        </div>
+
+
+                    @endif
+
                     <div class="kt-portlet__body">
                                 <div class="form-group">
-                                    <label>اتجاه التواصل</label>
+                                    <h1>اتجاه التواصل</h1>
                                     <select class="form-control" name="in" id="in"onchange="destination()">
 
                                         <option

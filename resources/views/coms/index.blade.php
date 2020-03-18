@@ -131,14 +131,14 @@
 
                                                         <td width="100px">
 
-                                                            <a href="/coms/{{$d->id}}/inasnwer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}/true/answer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
                                                                 رد وارد
 
                                                             </a>
                                                         </td>
                                                         <td width="100px">
 
-                                                            <a href="/coms/{{$d->id}}/outanswer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}/false/answer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
                                                                 رد صادر
 
                                                             </a>
@@ -149,7 +149,7 @@
 
                                                         <td width="100px">
 
-                                                            <a href="/coms/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                                                 التفاصيل
 
                                                             </a>
@@ -308,14 +308,14 @@
 
                                                         <td width="100px">
 
-                                                            <a href="/coms/{{$d->id}}/inanswer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}/true/answer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
                                                                 رد وارد
 
                                                             </a>
                                                         </td>
                                                             <td width="100px">
 
-                                                            <a href="/coms/{{$d->id}}/outanswer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}/false/answer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
                                                                 رد صادر
 
                                                             </a>
@@ -326,7 +326,7 @@
 
                                                         <td width="100px">
 
-                                                            <a href="/coms/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                                                 التفاصيل
 
                                                             </a>
