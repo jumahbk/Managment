@@ -135,9 +135,9 @@
 
                                                         <td width="50px">
 
-                                                            <a href="/coms/{{$d->id}}/answer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
-                                                                رد
-sdfsdf
+                                                            <a href="/coms/{{$d->id}}/outanswer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                                رد صادر
+
                                                             </a>
 
 
@@ -146,6 +146,18 @@ sdfsdf
 
                                                         </td>
 
+                                                            <td width="50px">
+
+                                                                <a href="/coms/{{$d->id}}/inanswer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                                    رد وارد
+
+                                                                </a>
+
+
+
+
+
+                                                            </td>
                                                         <td width="50px">
 
                                                             <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">

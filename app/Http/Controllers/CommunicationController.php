@@ -62,7 +62,26 @@ class CommunicationController extends Controller
         return View('coms.inbox', compact('data', 't'));
     }
 
-    public function answer($id)
+    public function inanswer($id)
+    {
+        $t = 'انشاء صادر جديد';
+        $parentid = $id;
+        $currentMonth = date('m');
+        $currentyear = date('Y');
+        $currentDate = date('d');
+        $parent = Communication::find($id);
+        $inid = $currentMonth .'/' . $currentDate . '/' . date('s') .''. rand(1,9);
+
+        $counter = Yearcounter::where('year' , '=', (int) $currentyear)->get()->first();
+
+        $inid = $counter->year . '/' . ($counter->count + 1);
+        $dests = Communicators::all();
+        $ltypes = Lettertype::all();
+
+        return View('coms.answer', compact('t', 'inid','dests', 'ltypes','parentid','parent'));
+    }
+
+    public function outanswer($id)
     {
         $t = 'انشاء صادر جديد';
         $parentid = $id;
@@ -163,6 +182,9 @@ class CommunicationController extends Controller
         $c->internal_id =  $request['internal_id'];
         $c->parent_id =  $request['parent_id'];
         $c->attachmentCount =  $request['attachmentCount'];
+        $c->hd =$request['hd'];
+        $c->hy =$request['hy'];
+        $c->hm =$request['hm'];
 
         //HANDLE NEW LETTER TYPE
 

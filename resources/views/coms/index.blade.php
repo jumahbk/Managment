@@ -129,22 +129,27 @@
                                                             @endif
                                                         </td>
 
-                                                        <td width="50px">
+                                                        <td width="100px">
 
-                                                            <a href="/coms/{{$d->id}}/answer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
-                                                                 رد
+                                                            <a href="/coms/{{$d->id}}/inasnwer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                                رد وارد
+
+                                                            </a>
+                                                        </td>
+                                                        <td width="100px">
+
+                                                            <a href="/coms/{{$d->id}}/outanswer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                                رد صادر
 
                                                             </a>
 
 
 
-
-
                                                         </td>
 
-                                                        <td width="50px">
+                                                        <td width="100px">
 
-                                                            <a href="/coms/{{$d->id}}" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
+                                                            <a href="/coms/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                                                 التفاصيل
 
                                                             </a>
@@ -155,41 +160,6 @@
 
                                                         </td>
 
-
-                                                        <td width="50px">
-
-                                                            @if($d->deleted == 0)
-                                                                <form action="{{ route('coms.destroy',$d->id) }}" method="POST">
-
-                                                                    @csrf
-                                                                    @method('DELETE')
-                                                                    <button type="submit" class="btn btn-thin btn-label-danger btn-bold btn-icon-h kt-margin-l-10">
-                                                                        مسح
-
-                                                                    </button>
-                                                                </form>
-                                                            @else
-
-                                                                <form action="/coms/restore" method="POST">
-
-                                                                    @csrf
-                                                                    <input type="hidden" name="id" value="{{$d->id}}">
-
-                                                                </form>
-
-                                                            @endif
-                                                        </td><td width="50px">
-
-                                                            <a href="/coms/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
-                                                               تعديل
-
-                                                            </a>
-
-
-
-
-
-                                                        </td>
 
                                                     </tr>
                                                     @endif
@@ -336,20 +306,25 @@
                                                             @endif
                                                         </td>
 
-                                                        <td width="50px">
+                                                        <td width="100px">
 
-                                                            <a href="/coms/{{$d->id}}/edit" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
-                                                                رد
+                                                            <a href="/coms/{{$d->id}}/inanswer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                                رد وارد
+
+                                                            </a>
+                                                        </td>
+                                                            <td width="100px">
+
+                                                            <a href="/coms/{{$d->id}}/outanswer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
+                                                                رد صادر
 
                                                             </a>
 
 
 
-
-
                                                         </td>
 
-                                                        <td width="50px">
+                                                        <td width="100px">
 
                                                             <a href="/coms/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
                                                                 التفاصيل
@@ -363,40 +338,7 @@
                                                         </td>
 
 
-                                                        <td width="50px">
 
-                                                            @if($d->deleted == 0)
-                                                                <form action="{{ route('coms.destroy',$d->id) }}" method="POST">
-
-                                                                    @csrf
-                                                                    @method('DELETE')
-                                                                    <button type="submit" class="btn btn-thin btn-label-danger btn-bold btn-icon-h kt-margin-l-10">
-                                                                        مسح
-
-                                                                    </button>
-                                                                </form>
-                                                            @else
-
-                                                                <form action="/coms/restore" method="POST">
-
-                                                                    @csrf
-                                                                    <input type="hidden" name="id" value="{{$d->id}}">
-
-                                                                </form>
-
-                                                            @endif
-                                                        </td><td width="50px">
-
-                                                            <a href="/coms/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
-                                                                تعديل
-
-                                                            </a>
-
-
-
-
-
-                                                        </td>
 
                                                     </tr>
                                                         @endif

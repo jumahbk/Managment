@@ -32,9 +32,11 @@
 
 
                                 ملحق ل
+                                <div class="row">{{$parent->subject}}</div>
+                                <div class="row">{{$parent->internal_id}}</div>
+                                <div class="row">{{$parent->source_id}}</div>
 
 
-                                {{$parent->subject}} - {{$parent->internal_id}} - {{ $parent->source_id }}
                             </h3>
                         </div>
                     </div>
@@ -44,7 +46,7 @@
 
                     <div class="kt-portlet__body">
                         <div class="form-group">
-                            <h3>     رقم الصادر {{$inid}}  </h3>
+                            <h3>     رقم التتبع  {{$inid}}  </h3>
                         <input type="hidden" name="internal_id" value="{{$inid}}">
                         </div>
                         

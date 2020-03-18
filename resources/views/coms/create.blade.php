@@ -88,7 +88,7 @@
                             <label> التاريخ الهجري</label>
                             <div class="row">
                                 <label class="p-3">اليوم </label>
-                                <input type="number" class="form-control col-md-1"  name="hday">
+                                <input type="number" class="form-control col-md-1"  name="hd">
 
                                 <label class="p-3">الشهر </label>
                                 <input type="number" class="form-control col-md-1"  name="hm">
