@@ -62,44 +62,15 @@ class CommunicationController extends Controller
         return View('coms.inbox', compact('data', 't'));
     }
 
-    public function inanswer($id)
+    public function answer($id, $in)
     {
-        $t = 'انشاء صادر جديد';
-        $parentid = $id;
-        $currentMonth = date('m');
-        $currentyear = date('Y');
-        $currentDate = date('d');
-        $parent = Communication::find($id);
-        $inid = $currentMonth .'/' . $currentDate . '/' . date('s') .''. rand(1,9);
-
-        $counter = Yearcounter::where('year' , '=', (int) $currentyear)->get()->first();
-
-        $inid = $counter->year . '/' . ($counter->count + 1);
-        $dests = Communicators::all();
-        $ltypes = Lettertype::all();
-
-        return View('coms.answer', compact('t', 'inid','dests', 'ltypes','parentid','parent'));
-    }
-
-    public function outanswer($id)
-    {
-        $t = 'انشاء صادر جديد';
-        $parentid = $id;
-        $currentMonth = date('m');
-        $currentyear = date('Y');
-        $currentDate = date('d');
-        $parent = Communication::find($id);
-        $inid = $currentMonth .'/' . $currentDate . '/' . date('s') .''. rand(1,9);
-
-        $counter = Yearcounter::where('year' , '=', (int) $currentyear)->get()->first();
-
-        $inid = $counter->year . '/' . ($counter->count + 1);
-        $dests = Communicators::all();
-        $ltypes = Lettertype::all();
-
-        return View('coms.answer', compact('t', 'inid','dests', 'ltypes','parentid','parent'));
+        return $this->docreate($id, $in);
     }
     public function create()
+    {
+        return $this->docreate(-1,false);
+    }
+    public function docreate($id, $in)
     {
         $t = 'انشاء صادر جديد';
         $currentMonth = date('m');
@@ -112,23 +83,12 @@ class CommunicationController extends Controller
         $dests = Communicators::all();
         $ltypes = Lettertype::all();
 
-        return View('coms.create', compact('t', 'inid','dests', 'ltypes'));
+        return View('coms.create', compact('t', 'inid','dests', 'ltypes', 'in'));
     }
 
     public function increate()
     {
-        $t = 'انشاء وارد جديد';
-        $currentMonth = date('m');
-        $currentyear = date('Y');
-        $currentDate = date('d');
-        $inid = $currentDate .'/' .  $currentMonth . '/' .$currentyear  . '/' . date('s') .''. rand(1,9);
-        $counter = Yearcounter::where('year' , '=', (int) $currentyear)->get()->first();
-        $inid = $counter->year . '/' . ($counter->count + 1);
-
-        $dests = Communicators::all();
-        $ltypes = Lettertype::all();
-
-        return View('coms.increate', compact('t', 'inid','dests', 'ltypes'));
+        return $this->docreate(-1, 1);
     }
 
     /**

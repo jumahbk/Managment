@@ -24,12 +24,27 @@
             <div class="col-md-7">
 
                 <div class="kt-portlet">
-                    <div class="kt-portlet__head">
-                        <div class="kt-portlet__head-label">
-                            <h3 class="kt-portlet__head-title">
-                                معلومات الصادر
-                            </h3>
-                        </div>
+                    <div class="kt-portlet__body">
+                                <div class="form-group">
+                                    <label>اتجاه التواصل</label>
+                                    <select class="form-control" name="in" id="in"onchange="destination()">
+
+                                        <option
+
+
+                                                value="false">صادر</option>
+                                        <option
+                                                @if($in == true)
+
+                                                selected
+                                                @endif
+
+
+                                                value="true">وارد</option>
+
+                                    </select>
+                                </div>
+
                     </div>
 
 
@@ -37,7 +52,7 @@
 
                     <div class="kt-portlet__body">
                         <div class="form-group">
-                            <h3>     رقم الصادر {{$inid}}  </h3>
+                            <h3>    الرقم الداخلي {{$inid}}  </h3>
                         <input type="hidden" name="internal_id" value="{{$inid}}">
                         </div>
                         
@@ -67,7 +82,6 @@
                             <label>موضوع الصادر</label>
                             <input type="text" class="form-control"  name="subject">
                         </div>
-                            <input type="hidden" name="in" value="false">
 
                         <div class="form-group">
                             <label>ملاحظات</label>

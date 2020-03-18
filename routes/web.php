@@ -35,7 +35,7 @@ Route::get('/stock/{id}/destroy', 'StockController@destroy')->middleware('auth')
 Route::get('/coms/increate', 'CommunicationController@increate')->middleware('auth');;
 Route::get('/coms/inbox', 'CommunicationController@inbox')->middleware('auth');;
 Route::get('/coms/outbox', 'CommunicationController@outbox')->middleware('auth');;
-Route::get('/coms/{id}/answer', 'CommunicationController@answer')->middleware('auth');;
+Route::get('/coms/{id}/{int}/answer', 'CommunicationController@answer')->middleware('auth');;
 
 Auth::routes();
 Route::get('/stock/returnlog', 'StockController@returnLog')->middleware('auth');
