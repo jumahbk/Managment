@@ -14,7 +14,7 @@ class  Communication extends Model
 
     public function communications()
     {
-        return $this->hasMany('App\Communication');
+        return $this->hasMany('App\Communication','id','id');
     }
 
 
