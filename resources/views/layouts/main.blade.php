@@ -117,12 +117,14 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <!-- begin:: Page -->
 
+
 <!-- begin:: Header Mobile -->
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
     <div class="kt-header-mobile__logo">
         <a href="/stock/">
             <img alt="Logo" src="/assets/media/logos/logo-10-sm.png" />
         </a>
+
 
        <!--
 
@@ -257,10 +259,17 @@ License: You must have a valid license purchased only from themeforest(the above
                         <!-- begin:: Header Topbar -->
                         <div class="kt-header__topbar-item dropdown  pt-3">
                             <div class="kt-header__topbar-wrapper" >
-                                @if(Auth()->user())
+                                <a href="{{ url('/coms') }}" class="btn btn-twitter  btn-icon-sm">
 
-                                <a href="{{ url('/logout') }}" class="btn btn-google btn-google btn-icon-sm">
-                                    <i class="la la-paypal"></i>
+                                    الصادر
+                                </a>
+
+
+
+                            @if(Auth()->user())
+
+                                <a href="{{ url('/logout') }}" class="btn btn-google btn-icon-sm">
+
                                     {{Auth()->user()->name}} logout
                                 </a>
 
@@ -274,10 +283,13 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                 </div>
                 <div class="kt-header__bottom">
+
                     <div class="kt-container ">
 
                         <!-- begin: Header Menu -->
                         <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
+
+
                         <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
                             <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile ">
                                 <ul class="kt-menu__nav ">

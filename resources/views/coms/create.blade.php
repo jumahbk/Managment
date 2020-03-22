@@ -71,7 +71,9 @@
 
                     <div class="kt-portlet__body">
                         <div class="form-group">
-                            <h3>    الرقم الداخلي {{$inid}}  </h3>
+                            <h3>    الرقم الداخلي {{$inid}}  <a href="#" class="flaticon-technology" id="printOut"></a>  </h3>
+
+
                         <input type="hidden" name="internal_id" value="{{$inid}}">
                         </div>
                         
@@ -294,5 +296,20 @@
         }
     }
 </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 
+    <script type="text/javascript">
+        $(function(){
+            $('#printOut').click(function(e){
+                e.preventDefault();
+                var w = window.open();
+                var printOne = 'صادر رقم : ';
+                printOne = printOne +  ' {{$inid}}';
+                w.document.write('<html><head> <style>@page { size: auto;  margin: 0mm; } </style> </head><body><b>' + printOne  + '</b></body></html>');
+                w.window.print();
+                w.document.close();
+                return false;
+            });
+        });
+    </script>
 @endsection
