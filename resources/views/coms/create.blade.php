@@ -46,12 +46,12 @@
                     <div class="kt-portlet__body">
                                 <div class="form-group">
                                     <h1>اتجاه التواصل</h1>
-                                    <select class="form-control" name="in" id="in"onchange="destination()">
+                                    <select class="form-control" name="in" id="in"onchange="destinationinout()">
 
                                         <option
 
 
-                                                value="false">صادر</option>
+                                                value=1>صادر</option>
                                         <option
                                                 @if($in == true)
 
@@ -59,7 +59,7 @@
                                                 @endif
 
 
-                                                value="true">وارد</option>
+                                                value=2>وارد</option>
 
                                     </select>
                                 </div>
@@ -69,14 +69,20 @@
 
                     <!--begin::Form-->
 
-                    <div class="kt-portlet__body">
+                    <div class="kt-portlet__body" >
                         <div class="form-group">
                             <h3>    الرقم الداخلي {{$inid}}  <a href="#" class="flaticon-technology" id="printOut"></a>  </h3>
 
 
                         <input type="hidden" name="internal_id" value="{{$inid}}">
                         </div>
-                        
+
+
+                        <div class="form-group" id="sourceidblock" name="sourceidblock">
+                            <label>رقم الوارد من المصدر</label>
+                            <input type="text" class="form-control"  name="source_id">
+                        </div>
+
                         <div class="form-group">
                             <label>الجهه</label>
                             <select class="form-control" name="communicator_id" id="source_id"onchange="destination()">
@@ -88,7 +94,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>نوع الصادر</label>
+                            <label>نوع الخطاب</label>
                             <select class="form-control" name="lettertype_id" id="letterType_id" onchange="letterType()">
 
                                 <option value="-1"> نوع جديد </option>
@@ -100,7 +106,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>موضوع الصادر</label>
+                            <label>موضوع الخطاب</label>
                             <input type="text" class="form-control"  name="subject">
                         </div>
 
@@ -295,6 +301,19 @@
             x.style.display = "none";
         }
     }
+    function destinationinout(){
+
+        var x = document.getElementById("sourceidblock");
+        var e = document.getElementById("in");
+        var selected = e.options[e.selectedIndex].value;
+        if (selected == 2) {
+            x.style.display = "block";
+        } else if (selected == 1){
+            x.style.display = "none";
+
+        }
+    }
+    destinationinout()
 </script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 

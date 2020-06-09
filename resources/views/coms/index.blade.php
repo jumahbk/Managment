@@ -69,6 +69,7 @@
                                                 <tr>
 
                                                     <td style=" ">نوع الخطاب</td>
+
                                                     <td style=" ">الجهه</td>
                                                     <td style=" ">الرقم الداخلي</td>
 
@@ -92,11 +93,12 @@
                                                 <tbody>
 
                                                 @foreach($data as $d)
-                                                    @if($d->in === 'false')
+                                                    @if($d->in == 1)
                                                     <tr class="border-bottom">
                                                         <td>
                                                            {{$d->letterType->englishName}}
                                                         </td>
+
                                                         <td>
                                                             {{$d->communicators->name}}
                                                         </td>
@@ -132,20 +134,11 @@
                                                         <td width="100px">
 
                                                             <a href="/coms/{{$d->id}}/true/answer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
-                                                                رد وارد
+                                                                رد
 
                                                             </a>
                                                         </td>
-                                                        <td width="100px">
 
-                                                            <a href="/coms/{{$d->id}}/false/answer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
-                                                                رد صادر
-
-                                                            </a>
-
-
-
-                                                        </td>
 
                                                         <td width="100px">
 
@@ -249,6 +242,7 @@
                                                 <tr>
 
                                                     <td style=" ">نوع الخطاب</td>
+
                                                     <td style=" ">الجهه</td>
                                                     <td style=" "> رقم الجهه</td>
 
@@ -270,12 +264,13 @@
                                                 <tbody>
 
                                                 @foreach($data as $d)
-                                                    @if($d->in === 'true')
+                                                    @if($d->in == 2)
 
                                                         <tr class="border-bottom">
                                                         <td>
                                                             {{$d->letterType->englishName}}
                                                         </td>
+
                                                         <td>
                                                             {{$d->communicators->name}}
                                                         </td>
@@ -310,20 +305,11 @@
                                                         <td width="100px">
 
                                                             <a href="/coms/{{$d->id}}/true/answer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
-                                                                رد وارد
+                                                                رد
 
                                                             </a>
                                                         </td>
-                                                            <td width="100px">
 
-                                                            <a href="/coms/{{$d->id}}/false/answer" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
-                                                                رد صادر
-
-                                                            </a>
-
-
-
-                                                        </td>
 
 
                                                         <td width="100px">
@@ -339,34 +325,7 @@
 
                                                         </td>
 
-                                                            <td width="100px">
 
-                                                                @if($d->communications->count())
-                                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#replies{{$d->id}}">
-                                                                    Launch demo modal
-                                                                </button>
-                                                                <div class="modal fade" id="replies{{$d->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                                    <div class="modal-dialog" role="document">
-                                                                        <div class="modal-content">
-                                                                            <div class="modal-header">
-                                                                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                                    <span aria-hidden="true">&times;</span>
-                                                                                </button>
-                                                                            </div>
-                                                                            <div class="modal-body">
-                                                                                ...
-                                                                            </div>
-                                                                            <div class="modal-footer">
-                                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                                                <button type="button" class="btn btn-primary">Save changes</button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                @endif
-                                                            </td>
 
 
                                                     </tr>

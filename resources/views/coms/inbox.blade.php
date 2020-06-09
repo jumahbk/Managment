@@ -93,7 +93,7 @@
                                                 <tbody>
 
                                                 @foreach($data as $d)
-                                                    @if($d->in === 'true')
+                                                    @if($d->in == 1)
 
                                                         <tr class="border-bottom">
                                                         <td>

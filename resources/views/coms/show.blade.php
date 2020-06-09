@@ -49,13 +49,10 @@
                                     <div class="kt-portlet__head-actions">
 
                                         &nbsp;
-                                        <a href="./coms/{{$d->id}}/create" class="btn btn-brand btn-elevate btn-icon-sm">
+
+                                        <a href="./coms/{{$d->id}}/true/answer" class="btn btn-brand btn-elevate btn-icon-sm">
                                             <i class="la la-plus"></i>
-                                            صادر جديد
-                                        </a>
-                                        <a href="./coms/{{$d->id}}/1/answer" class="btn btn-brand btn-elevate btn-icon-sm">
-                                            <i class="la la-plus"></i>
-                                            وارد جديد
+                             خطاب ملحق
                                         </a>
                                     </div>
                                 </div>
@@ -124,40 +121,7 @@
 
 
 
-                                                        <td width="50px">
 
-                                                            @if($d->deleted == 0)
-                                                                <form action="{{ route('devices.destroy',$d->id) }}" method="POST">
-
-                                                                    @csrf
-                                                                    @method('DELETE')
-                                                                    <button type="submit" class="btn btn-thin btn-label-danger btn-bold btn-icon-h kt-margin-l-10">
-                                                                        مسح
-
-                                                                    </button>
-                                                                </form>
-                                                            @else
-
-                                                                <form action="/devices/restore" method="POST">
-
-                                                                    @csrf
-                                                                    <input type="hidden" name="id" value="{{$d->id}}">
-
-                                                                </form>
-
-                                                            @endif
-                                                        </td><td width="50px">
-
-                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
-                                                               تعديل
-
-                                                            </a>
-
-
-
-
-
-                                                        </td>
 
                                                     </tr>
 
@@ -293,25 +257,10 @@
                                                             @endif
                                                         </td>
 
-                                                        <td width="50px">
 
-                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-brand btn-bold btn-icon-h kt-margin-l-10">
-                                                                رد
-
-                                                            </a>
-
-
-
-
-
-                                                        </td>
 
                                                         <td width="50px">
 
-                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
-                                                                التفاصيل
-
-                                                            </a>
 
 
 
@@ -320,42 +269,10 @@
                                                         </td>
 
 
-                                                        <td width="50px">
 
-                                                            @if($d->deleted == 0)
-                                                                <form action="{{ route('devices.destroy',$d->id) }}" method="POST">
-
-                                                                    @csrf
-                                                                    @method('DELETE')
-                                                                    <button type="submit" class="btn btn-thin btn-label-danger btn-bold btn-icon-h kt-margin-l-10">
-                                                                        مسح
-
-                                                                    </button>
-                                                                </form>
-                                                            @else
-
-                                                                <form action="/devices/restore" method="POST">
-
-                                                                    @csrf
-                                                                    <input type="hidden" name="id" value="{{$d->id}}">
-
-                                                                </form>
-
-                                                        </td><td width="50px">
-
-                                                            <a href="/devices/{{$d->id}}/edit" class="btn btn-thin btn-label-warning btn-bold btn-icon-h kt-margin-l-10">
-                                                                تعديل
-
-                                                            </a>
-
-
-
-
-
-                                                        </td>
 
                                                     </tr>
-                                                        @endif
+
                                                 @endforeach
                                                 </tbody>
                                             </table>
